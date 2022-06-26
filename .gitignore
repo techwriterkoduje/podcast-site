@@ -30,3 +30,12 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# yarn 3 no zero-installs
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
