@@ -3,6 +3,7 @@ export type Post = {
   date: string;
   title: string;
   episodeId: string;
+  contents?: string;
 };
 
 export type AllPosts = {
