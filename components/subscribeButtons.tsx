@@ -43,7 +43,7 @@ const subscribeLinks = [
 
 export default function SubscribeButtons() {
   return (
-    <CenteredSection additionalStyles="flex flex-wrap justify-center gap-4 p-6">
+    <CenteredSection additionalStyles="flex flex-wrap justify-center gap-4 py-6">
       {subscribeLinks.map(({ to, label }) => (
         <Link href={to} key={label}>
           <Button>{label}</Button>

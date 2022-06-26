@@ -1,8 +1,12 @@
+import { GetStaticProps } from 'next/types';
+import EpisodeEmbed from '../components/episodeEmbed';
 import Hero from '../components/hero';
 import Layout from '../components/layout';
 import SubscribeButtons from '../components/subscribeButtons';
+import { getSortedPosts } from '../lib/blog';
+import { AllPosts } from '../types';
 
-export default function Home() {
+export default function Home({ allPosts }: AllPosts) {
   return (
     <Layout
       title="Witaj na stronie podcastu"
@@ -10,6 +14,17 @@ export default function Home() {
     >
       <Hero />
       <SubscribeButtons />
+      {allPosts && <EpisodeEmbed episodeId={allPosts[0].id} />}
     </Layout>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  const allPosts = await getSortedPosts();
+  console.log({allPosts})
+  return {
+    props: {
+      allPosts,
+    },
+  };
+};
