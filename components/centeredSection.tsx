@@ -5,6 +5,9 @@ type CenteredSectionProps = {
 
 export default function CenteredSection({
   additionalStyles,
+  children,
 }: CenteredSectionProps) {
-  return <section className={`max-w-2xl ${additionalStyles}`}></section>;
+  return (
+    <section className={`max-w-2xl ${additionalStyles}`}>{children}</section>
+  );
 }
