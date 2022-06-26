@@ -1,4 +1,5 @@
 ---
+episodeId: '24-Tech-Writer-publikuje-inaczej--czyli-API-do-dokumentacji-eo4j7f'
 title: '#24 Tech Writer publikuje inaczej, czyli API do dokumentacji'
 ---
 
@@ -13,7 +14,3 @@ rozwiązanie nie jest zalecane, a do tego stwarza szereg problemów. A może by 
 stworzyć API dla dokumentacji i serwować treść za pomocą endpointów? Rozważamy
 czy takie rozwiązanie jest możliwe, czy ma sens i w jakich sytuacjach mogłoby
 się sprawdzić.
-
-import AnchorEmbed from '@site/src/components/AnchorEmbed';
-
-<AnchorEmbed episodeId="24-Tech-Writer-publikuje-inaczej--czyli-API-do-dokumentacji-eo4j7f" />

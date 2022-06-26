@@ -1,5 +1,5 @@
 type CenteredSectionProps = {
-  additionalStyles: string;
+  additionalStyles?: string;
   children: React.ReactNode;
 };
 

@@ -1,4 +1,5 @@
 ---
+episodeId: '11-Robot-dokumentuje-cz-2---automatyzacja-kontra-ludzie-e9fvag/a-a15cigr'
 title: '#11 Robot dokumentuje część 2 - automatyzacja kontra ludzie'
 ---
 
@@ -8,7 +9,3 @@ w branży tłumaczeniowej. Widziała jak automatyzacja doprowadziła do
 marginalizacji "białkowych" tłumaczy. Jej doświadczenia doprowadziły nas do
 rozważań o przyszłości komunikacji technicznej. Czy przyszłość rysuje się
 optymistycznie dla Technical Writerów, czy raczej w ciemnych barwach?
-
-import AnchorEmbed from '@site/src/components/AnchorEmbed';
-
-<AnchorEmbed episodeId="11-Robot-dokumentuje-cz-2---automatyzacja-kontra-ludzie-e9fvag/a-a15cigr" />

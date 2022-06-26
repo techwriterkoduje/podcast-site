@@ -1,4 +1,5 @@
 ---
+episodeId: '40-Tech-Writer-spenia-swoje-marzenia--czyli-co-i-jak-mona-zautomatyzowa-e1foo3d'
 title:
   '#40 Tech Writer spełnia swoje marzenia, czyli co i jak można zautomatyzować'
 ---
@@ -58,7 +59,3 @@ licencji Creative Commons license CC BY 4.0
   koduje: https://techwriterkoduje.pl/dita-as-code
 - AutoIt: https://www.autoitscript.com/site/
 - Bitnami: https://github.com/bitnami
-
-import AnchorEmbed from '@site/src/components/AnchorEmbed';
-
-<AnchorEmbed episodeId="40-Tech-Writer-spenia-swoje-marzenia--czyli-co-i-jak-mona-zautomatyzowa-e1foo3d" />

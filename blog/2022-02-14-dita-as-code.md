@@ -1,4 +1,5 @@
 ---
+episodeId: '39-DITA-as-code--czyli-klasyczny-standard-w-nowoczesnym-wydaniu-e1e6nvo'
 title: '#39 DITA as code, czyli klasyczny standard w nowoczesnym wydaniu'
 ---
 
@@ -47,7 +48,3 @@ licencji Creative Commons license CC BY 4.0
 - Git hooks: https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks
 - "Readability – what is it and how do I improve it?", Paweł Kowaluk (soap!
   2018): https://www.youtube.com/watch?v=LzrHrIOHhz8
-
-import AnchorEmbed from '@site/src/components/AnchorEmbed';
-
-<AnchorEmbed episodeId="39-DITA-as-code--czyli-klasyczny-standard-w-nowoczesnym-wydaniu-e1e6nvo" />

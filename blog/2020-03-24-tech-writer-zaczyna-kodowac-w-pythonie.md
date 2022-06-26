@@ -1,4 +1,5 @@
 ---
+episodeId: '14-Tech-Writer-zaczyna-kodowa-w-Pythonie--czyli-o-narzdziach-i-dobrych-praktykach-ebrd81/a-a1oq0t8'
 title:
   '#14 Tech Writer zaczyna kodować w Pythonie, czyli o narzędziach i dobrych
   praktykach'
@@ -9,7 +10,3 @@ kodowania w Pythonie i jakich błędów unikać zaczynając swoją przygodę z t
 językiem programowania. Spora dawka wiedzy dla początkujących Pythonistów. Ale
 jeśli kodujesz w Pythonie od jakiegoś czasu i chcesz się upewnić, że stosujesz
 dobre praktyki, to ten odcinek jest też dla Ciebie.
-
-import AnchorEmbed from '@site/src/components/AnchorEmbed';
-
-<AnchorEmbed episodeId="14-Tech-Writer-zaczyna-kodowa-w-Pythonie--czyli-o-narzdziach-i-dobrych-praktykach-ebrd81/a-a1oq0t8" />

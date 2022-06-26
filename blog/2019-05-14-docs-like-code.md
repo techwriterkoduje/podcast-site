@@ -1,4 +1,5 @@
 ---
+episodeId: '1-Docs-like-code---rozwaania-praktyczne-i-filozoficzne-e41dsc'
 title: '#1 Docs like code - rozważania praktyczne i filozoficzne'
 ---
 
@@ -7,7 +8,3 @@ się coraz bardziej popularny wśród Tech Writerów w IT. Głównym założenie
 traktowanie dokumentacji jak kodu pod kątem procesów oraz narzędzi, których
 używamy do jej tworzenia. Ale czy to wszystko? Staramy się przyjrzeć dokładniej
 temu trendowi, żeby odkryć co jeszcze może się za nim kryć.
-
-import AnchorEmbed from '@site/src/components/AnchorEmbed';
-
-<AnchorEmbed episodeId="1-Docs-like-code---rozwaania-praktyczne-i-filozoficzne-e41dsc" />

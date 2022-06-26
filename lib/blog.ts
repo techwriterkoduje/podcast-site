@@ -13,12 +13,13 @@ export function getSortedPosts(): Post[] {
     const fullPath = path.join(postsDir, fileName);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const metadata = matter(fileContents);
-    const title = metadata.data.title;
+    const { title, episodeId } = metadata.data;
 
     return {
       id,
       date,
       title,
+      episodeId,
     };
   });
 

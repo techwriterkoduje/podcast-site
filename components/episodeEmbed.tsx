@@ -4,10 +4,13 @@ type EpisodeEmbedProps = {
 
 export default function EpisodeEmbed({ episodeId }: EpisodeEmbedProps) {
   return (
-    <iframe
-      src={`https://anchor.fm/docdeveloper/embed/episodes/${episodeId}`}
-      frameBorder="0"
-      scrolling="no"
-    ></iframe>
+    <div className="w-[800px] max-w-full">
+      <iframe
+        src={`https://anchor.fm/docdeveloper/embed/episodes/${episodeId}`}
+        frameBorder="0"
+        scrolling="no"
+        className="w-full"
+      ></iframe>
+    </div>
   );
 }

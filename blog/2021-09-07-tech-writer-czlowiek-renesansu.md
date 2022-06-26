@@ -1,4 +1,5 @@
 ---
+episodeId: '34-Tech-Writer-dokumentuje--testuje--koduje--lokalizuje-i-projektuje--czyli-czowiek-renesansu-w-dokumentacji-e16q3at'
 title:
   '#34 Tech Writer dokumentuje, testuje, koduje, lokalizuje i projektuje, czyli
   człowiek renesansu w dokumentacji'
@@ -18,7 +19,3 @@ _Muzyka w intro oraz dźwięki pochodzą z kolekcji "107 Free Retro Game Sounds"
 dostępnej na stronie <https://dominik-braun.net>, udostępnianej na podstawie
 licencji
 [Creative Commons license CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)._
-
-import AnchorEmbed from '@site/src/components/AnchorEmbed';
-
-<AnchorEmbed episodeId="34-Tech-Writer-dokumentuje--testuje--koduje--lokalizuje-i-projektuje--czyli-czowiek-renesansu-w-dokumentacji-e16q3at" />

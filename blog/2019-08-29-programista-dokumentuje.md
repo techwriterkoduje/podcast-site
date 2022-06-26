@@ -1,4 +1,5 @@
 ---
+episodeId: '7-Programista-dokumentuje--czyli-nowoczesny-technical-writing-e54pnt/a-aluh84'
 title: '#7 Programista dokumentuje, czyli nowoczesny technical writing'
 ---
 
@@ -11,7 +12,3 @@ koduje, a programista dokumentuje. Rozmawiamy o przyszłości Technical Writeró
 o tym jak stać się elastycznym specjalistą od treśći i nie zamykać się w silosie
 oraz mierzymy się ze stereotypami związanymi z podejściem programistów do
 dokumentacji i z ich postrzeganiem roli Tech Writera. Posłuchajcie!
-
-import AnchorEmbed from '@site/src/components/AnchorEmbed';
-
-<AnchorEmbed episodeId="7-Programista-dokumentuje--czyli-nowoczesny-technical-writing-e54pnt/a-aluh84" />

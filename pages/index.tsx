@@ -14,14 +14,13 @@ export default function Home({ allPosts }: AllPosts) {
     >
       <Hero />
       <SubscribeButtons />
-      {allPosts && <EpisodeEmbed episodeId={allPosts[0].id} />}
+        {allPosts && <EpisodeEmbed episodeId={allPosts[0].episodeId} />}
     </Layout>
   );
 }
 
 export const getStaticProps: GetStaticProps = async () => {
   const allPosts = await getSortedPosts();
-  console.log({allPosts})
   return {
     props: {
       allPosts,

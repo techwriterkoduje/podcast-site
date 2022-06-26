@@ -1,4 +1,5 @@
 ---
+episodeId: '38-Tech-Writer-walczy-z-hakerami--czyli-jak-zadba-o-bezpieczestwo-dokumentacji-e1cbmce'
 title:
   '#38 Tech Writer walczy z hakerami, czyli jak zadbać o bezpieczeństwo
   dokumentacji'
@@ -45,7 +46,3 @@ licencji Creative Commons license CC BY 4.0
   https://en.wikipedia.org/wiki/Non-disclosure\_agreement
 - Kevin Mitnick: https://en.wikipedia.org/wiki/Kevin\_Mitnick
 - Profil Mateusza Olejarki na LinkedIn: https://pl.linkedin.com/in/molejarka
-
-import AnchorEmbed from '@site/src/components/AnchorEmbed';
-
-<AnchorEmbed episodeId="38-Tech-Writer-walczy-z-hakerami--czyli-jak-zadba-o-bezpieczestwo-dokumentacji-e1cbmce" />

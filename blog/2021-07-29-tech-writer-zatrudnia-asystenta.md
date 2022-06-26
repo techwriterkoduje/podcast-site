@@ -1,4 +1,5 @@
 ---
+episodeId: '32-Tech-Writer-zatrudnia-asystenta--czyli-sztuczna-inteligencja-w-subie-dokumentacji-e14sn4p'
 title:
   '#32 Tech Writer zatrudnia asystenta, czyli sztuczna inteligencja w służbie
   dokumentacji'
@@ -19,7 +20,3 @@ _Muzyka w intro oraz dźwięki pochodzą z kolekcji "107 Free Retro Game Sounds"
 dostępnej na stronie <https://dominik-braun.net>, udostępnianej na podstawie
 licencji
 [Creative Commons license CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)._
-
-import AnchorEmbed from '@site/src/components/AnchorEmbed';
-
-<AnchorEmbed episodeId="32-Tech-Writer-zatrudnia-asystenta--czyli-sztuczna-inteligencja-w-subie-dokumentacji-e14sn4p" />

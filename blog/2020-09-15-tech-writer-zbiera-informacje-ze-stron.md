@@ -1,4 +1,5 @@
 ---
+episodeId: '21-Tech-Writer-zbiera-informacje-ze-stron--czyli-jak-mona-wykorzysta-web-scraping-ejj0ah/a-a375vf3'
 title:
   '#21 Tech Writer zbiera informacje ze stron, czyli jak można wykorzystać web
   scraping'
@@ -25,7 +26,3 @@ używamy do tworzenia instrukcji jest wystarczająco przejrzysty.
 Co można jeszcze zrobić za pomocą web scrapingu? Jakie inne testy są potrzebne w
 świecie dokumentacji technicznej i pisania ustrukturyzowanego? Zapraszamy do
 słuchania.
-
-import AnchorEmbed from '@site/src/components/AnchorEmbed';
-
-<AnchorEmbed episodeId="21-Tech-Writer-zbiera-informacje-ze-stron--czyli-jak-mona-wykorzysta-web-scraping-ejj0ah/a-a375vf3" />
