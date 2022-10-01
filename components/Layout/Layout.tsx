@@ -2,6 +2,8 @@ import Head from "next/head";
 import Header from "./Header";
 import styles from "./Layout.module.css";
 
+const podcastTitle = process.env.podcastTitle;
+
 type LayoutProps = {
   title: string;
   description: string;
@@ -18,7 +20,10 @@ export default function Layout({
   return (
     <>
       <Head>
-        <title>{title}</title>
+        <title>
+          {title}
+          {!isHome ? ` | ${podcastTitle}` : ""}
+        </title>
         <meta name="description" content={description} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -28,7 +33,9 @@ export default function Layout({
       <main className={styles.main}>{children}</main>
 
       <footer className={styles.footer}>
-        <div>Copyright © {new Date().getFullYear()} Tech Writer koduje</div>
+        <div>
+          Copyright © {new Date().getFullYear()} {podcastTitle}
+        </div>
         <div>Logo stworzone przez rad89</div>
       </footer>
     </>
