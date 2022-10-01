@@ -40,7 +40,10 @@ const Home: NextPage<HomePageProps> = ({ episodeId }) => {
           height={cellSize}
         />
       </h1>
-      <AnchorEmbed episodeId={episodeId} />
+      <section>
+        <h2>Najnowszy odcinek</h2>
+        <AnchorEmbed episodeId={episodeId} />
+      </section>
     </Layout>
   );
 };

@@ -1,0 +1,9 @@
+.list {
+  justify-self: baseline;
+  display: flex;
+  gap: 1rem;
+}
+
+.listItem {
+  color: #fafafa;
+}

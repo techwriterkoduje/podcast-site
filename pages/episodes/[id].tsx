@@ -43,7 +43,7 @@ const Episode: NextPage<EpisodeProps> = ({ episodeData }: EpisodeProps) => {
       <div className={styles.episodePage}>
         <h1>{title}</h1>
         <div>{readableDate}</div>
-        <AnchorEmbed episodeId={episodeId} />
+        <AnchorEmbed episodeId={episodeId} style={{ margin: "3rem auto" }} />
         <div
           dangerouslySetInnerHTML={{ __html: contentHtml }}
           className={styles.episodeContents}
