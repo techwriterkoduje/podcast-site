@@ -2,6 +2,7 @@ import { readdirSync, readFileSync } from "fs";
 import { join } from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
+import remarkGfm from "remark-gfm";
 import html from "remark-html";
 import { MarkdownProps } from "../pages/episodes/[id]";
 
@@ -52,6 +53,7 @@ export async function getEpisodeData(id: string) {
 
   // markdown as HTML
   const processedContent = await remark()
+    .use(remarkGfm)
     .use(html)
     .process(matterResult.content);
   const contentHtml = processedContent.toString();

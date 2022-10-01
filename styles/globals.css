@@ -9,11 +9,6 @@ body {
   --brand-accent-color: #ed6e5f;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 * {
   box-sizing: border-box;
 }

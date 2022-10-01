@@ -39,13 +39,15 @@ export default function Episode({ episodeData }: EpisodeProps) {
   }).format(new Date(date));
   return (
     <Layout title={title} description={title}>
-      <h1>{title}</h1>
-      <div>{readableDate}</div>
-      <AnchorEmbed episodeId={episodeId} />
-      <div
-        dangerouslySetInnerHTML={{ __html: contentHtml }}
-        className={styles.episodeContents}
-      />
+      <div className={styles.episodePage}>
+        <h1>{title}</h1>
+        <div>{readableDate}</div>
+        <AnchorEmbed episodeId={episodeId} />
+        <div
+          dangerouslySetInnerHTML={{ __html: contentHtml }}
+          className={styles.episodeContents}
+        />
+      </div>
     </Layout>
   );
 }

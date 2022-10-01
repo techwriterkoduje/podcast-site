@@ -1,3 +1,7 @@
+.episodePage {
+  padding: 4rem 1rem;
+}
+
 .episodeContents {
   max-width: 60ch;
   line-height: 1.75;
