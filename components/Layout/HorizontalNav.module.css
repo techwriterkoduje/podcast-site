@@ -5,5 +5,7 @@
 }
 
 .listItem {
-  color: #fafafa;
+  color: var(--brand-white);
+  text-decoration: none;
+  font-size: 1.1rem;
 }

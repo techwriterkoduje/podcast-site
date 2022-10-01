@@ -1,5 +1,5 @@
 .link {
-  color: black;
+  color: var(--brand-black);
   font-size: 1.5rem;
   line-height: 1.5;
   text-decoration: none;

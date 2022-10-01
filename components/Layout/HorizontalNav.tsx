@@ -9,12 +9,11 @@ export default function HorizontalNav({
 }) {
   return (
     <div className={styles.list}>
-      {navLinks.map(({ href, label, dividerAfter }) => (
+      {navLinks.map(({ href, label }) => (
         <>
           <NavLink href={href} className={styles.listItem} key={label}>
             <>{label}</>
           </NavLink>
-          {dividerAfter && <div>|</div>}
         </>
       ))}
     </div>

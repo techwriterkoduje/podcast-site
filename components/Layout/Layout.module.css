@@ -6,21 +6,6 @@
   min-height: 100vh;
 }
 
-.header {
-  color: var(--brand-accent-color);
-  border-bottom: 2px solid var(--brand-accent-color);
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  height: 50px;
-}
-
-.headerLogo {
-  align-self: flex-start;
-  display: block;
-  margin-top: 1rem;
-}
-
 .footer {
   display: flex;
   align-items: center;

@@ -1,0 +1,36 @@
+.header {
+  position: relative;
+  color: var(--brand-accent-color);
+  border-bottom: 2px solid var(--brand-accent-color);
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding: 0 1rem;
+}
+
+.links {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.logo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rightSide {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.headerLogo {
+  align-self: flex-start;
+  display: block;
+  left: calc(50% - 50px);
+  margin-top: 5rem;
+}
