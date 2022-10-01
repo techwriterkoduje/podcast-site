@@ -2,14 +2,14 @@ import type { NextPage } from "next";
 import Image from "next/image";
 import AnchorEmbed from "../components/AnchorEmbed/AnchorEmbed";
 import Layout from "../components/Layout/Layout";
-import { getAllEpisodeIds, getEpisodeData } from "../lib/episodes";
+import { getAllEpisodeMetadata, getEpisodeData } from "../lib/episodes";
 import styles from "../styles/Home.module.css";
 
 const podcastTitle = process.env.podcastTitle;
 
 export async function getStaticProps() {
-  const ids = getAllEpisodeIds();
-  const latestId = ids[0].params.id;
+  const allEpisodeMetadata = getAllEpisodeMetadata();
+  const latestId = allEpisodeMetadata[0].params.id;
   const episodeData = await getEpisodeData(latestId);
   return {
     props: {

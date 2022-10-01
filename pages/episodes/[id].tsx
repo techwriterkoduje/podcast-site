@@ -1,7 +1,7 @@
 import { NextPage } from "next";
 import AnchorEmbed from "../../components/AnchorEmbed/AnchorEmbed";
 import Layout from "../../components/Layout/Layout";
-import { getAllEpisodeIds, getEpisodeData } from "../../lib/episodes";
+import { getAllEpisodeMetadata, getEpisodeData } from "../../lib/episodes";
 import styles from "./Episode.module.css";
 
 export async function getStaticProps({ params }: { params: any }) {
@@ -14,7 +14,7 @@ export async function getStaticProps({ params }: { params: any }) {
 }
 
 export async function getStaticPaths() {
-  const paths = getAllEpisodeIds();
+  const paths = getAllEpisodeMetadata();
   return {
     paths,
     fallback: false,

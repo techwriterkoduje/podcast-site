@@ -11,7 +11,7 @@ const episodesDirectory = join(process.cwd(), "episodes");
 type EpisodeIdData = {
   params: {
     id: string;
-    date: Date;
+    date: string;
   };
 };
 
@@ -25,7 +25,7 @@ function getDateFromId(id: string) {
   return new Date();
 }
 
-export function getAllEpisodeIds() {
+export function getAllEpisodeMetadata(): EpisodeIdData[] {
   const fileNames = readdirSync(episodesDirectory);
 
   const result: EpisodeIdData[] = fileNames.map((fileName) => {
@@ -34,7 +34,7 @@ export function getAllEpisodeIds() {
     return {
       params: {
         id,
-        date,
+        date: date.toDateString(),
       },
     };
   });
