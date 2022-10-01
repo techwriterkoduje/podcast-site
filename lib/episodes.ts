@@ -27,7 +27,6 @@ export function getAllEpisodeIds() {
   const result: EpisodeIdData[] = fileNames.map((fileName) => {
     const id = fileName.replace(/\.md$/, "");
     const date = getDateFromId(id);
-    console.log({ date });
     return {
       params: {
         id,
@@ -36,6 +35,8 @@ export function getAllEpisodeIds() {
     };
   });
 
+  // sort from newest to oldest
+  result.sort((a, b) => (a.params.date > b.params.date ? -1 : 1));
   return result;
 }
 
@@ -49,6 +50,7 @@ export function getEpisodeData(id: string) {
   // Combine the data with the id
   return {
     id,
+    date: getDateFromId(id).toDateString(),
     ...matterResult.data,
   };
 }

@@ -21,6 +21,7 @@ export async function getStaticPaths() {
 export type FrontMatterProps = {
   title: string;
   episodeId: string;
+  date: string;
 };
 
 type EpisodeProps = {
@@ -28,10 +29,14 @@ type EpisodeProps = {
 };
 
 export default function Episode({ episodeData }: EpisodeProps) {
-  const { episodeId, title } = episodeData;
+  const { episodeId, title, date } = episodeData;
+  const readableDate = Intl.DateTimeFormat("pl-PL", {
+    dateStyle: "full",
+  }).format(new Date(date));
   return (
     <Layout title={title} description={title}>
       <h1>{title}</h1>
+      <div>{readableDate}</div>
     </Layout>
   );
 }
