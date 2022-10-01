@@ -1,6 +1,9 @@
 import { readdirSync, readFileSync } from "fs";
 import { join } from "path";
 import matter from "gray-matter";
+import { remark } from "remark";
+import html from "remark-html";
+import { MarkdownProps } from "../pages/episodes/[id]";
 
 const episodesDirectory = join(process.cwd(), "episodes");
 
@@ -40,17 +43,26 @@ export function getAllEpisodeIds() {
   return result;
 }
 
-export function getEpisodeData(id: string) {
+export async function getEpisodeData(id: string) {
   const fullPath = join(episodesDirectory, `${id}.md`);
   const fileContents = readFileSync(fullPath, "utf8");
 
-  // Use gray-matter to parse the post metadata section
+  // markdown metadata
   const matterResult = matter(fileContents);
 
-  // Combine the data with the id
-  return {
+  // markdown as HTML
+  const processedContent = await remark()
+    .use(html)
+    .process(matterResult.content);
+  const contentHtml = processedContent.toString();
+
+  const result: MarkdownProps = {
     id,
     date: getDateFromId(id).toDateString(),
-    ...matterResult.data,
+    contentHtml,
+    title: matterResult.data.title,
+    episodeId: matterResult.data.episodeId,
   };
+
+  return result;
 }

@@ -1,8 +1,10 @@
+import AnchorEmbed from "../../components/AnchorEmbed/AnchorEmbed";
 import Layout from "../../components/Layout/Layout";
 import { getAllEpisodeIds, getEpisodeData } from "../../lib/episodes";
+import styles from "./Episode.module.css";
 
 export async function getStaticProps({ params }: { params: any }) {
-  const episodeData = getEpisodeData(params.id);
+  const episodeData = await getEpisodeData(params.id);
   return {
     props: {
       episodeData,
@@ -18,18 +20,20 @@ export async function getStaticPaths() {
   };
 }
 
-export type FrontMatterProps = {
+export type MarkdownProps = {
+  id: string;
   title: string;
   episodeId: string;
   date: string;
+  contentHtml: string;
 };
 
 type EpisodeProps = {
-  episodeData: FrontMatterProps;
+  episodeData: MarkdownProps;
 };
 
 export default function Episode({ episodeData }: EpisodeProps) {
-  const { episodeId, title, date } = episodeData;
+  const { episodeId, title, date, contentHtml } = episodeData;
   const readableDate = Intl.DateTimeFormat("pl-PL", {
     dateStyle: "full",
   }).format(new Date(date));
@@ -37,6 +41,11 @@ export default function Episode({ episodeData }: EpisodeProps) {
     <Layout title={title} description={title}>
       <h1>{title}</h1>
       <div>{readableDate}</div>
+      <AnchorEmbed episodeId={episodeId} />
+      <div
+        dangerouslySetInnerHTML={{ __html: contentHtml }}
+        className={styles.episodeContents}
+      />
     </Layout>
   );
 }
