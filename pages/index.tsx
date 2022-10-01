@@ -2,11 +2,27 @@ import type { NextPage } from "next";
 import Image from "next/image";
 import AnchorEmbed from "../components/AnchorEmbed/AnchorEmbed";
 import Layout from "../components/Layout/Layout";
+import { getAllEpisodeIds, getEpisodeData } from "../lib/episodes";
 import styles from "../styles/Home.module.css";
 
 const podcastTitle = process.env.podcastTitle;
 
-const Home: NextPage = () => {
+export async function getStaticProps() {
+  const ids = getAllEpisodeIds();
+  const latestId = ids[0].params.id;
+  const episodeData = await getEpisodeData(latestId);
+  return {
+    props: {
+      episodeId: episodeData.episodeId,
+    },
+  };
+}
+
+type HomePageProps = {
+  episodeId: string;
+};
+
+const Home: NextPage<HomePageProps> = ({ episodeId }) => {
   const cellSize = 300;
   return (
     <Layout
@@ -24,7 +40,7 @@ const Home: NextPage = () => {
           height={cellSize}
         />
       </h1>
-      <AnchorEmbed episodeId="46-Zosta-hakerem-w-subie-pokoju--czyli-o-Hack-for-Peace-sw-kilka-e1noug3" />
+      <AnchorEmbed episodeId={episodeId} />
     </Layout>
   );
 };

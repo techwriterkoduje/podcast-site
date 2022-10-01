@@ -17,13 +17,13 @@ export default function Layout({
   isHome,
   children,
 }: LayoutProps) {
+  const processedTitle: string = `${title}${
+    !isHome ? " | " + podcastTitle : ""
+  }`;
   return (
     <>
       <Head>
-        <title>
-          {title}
-          {!isHome ? ` | ${podcastTitle}` : ""}
-        </title>
+        <title>{processedTitle}</title>
         <meta name="description" content={description} />
         <link rel="icon" href="/favicon.ico" />
       </Head>

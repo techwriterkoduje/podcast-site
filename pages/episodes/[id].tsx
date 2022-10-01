@@ -1,3 +1,4 @@
+import { NextPage } from "next";
 import AnchorEmbed from "../../components/AnchorEmbed/AnchorEmbed";
 import Layout from "../../components/Layout/Layout";
 import { getAllEpisodeIds, getEpisodeData } from "../../lib/episodes";
@@ -32,7 +33,7 @@ type EpisodeProps = {
   episodeData: MarkdownProps;
 };
 
-export default function Episode({ episodeData }: EpisodeProps) {
+const Episode: NextPage<EpisodeProps> = ({ episodeData }: EpisodeProps) => {
   const { episodeId, title, date, contentHtml } = episodeData;
   const readableDate = Intl.DateTimeFormat("pl-PL", {
     dateStyle: "full",
@@ -50,4 +51,6 @@ export default function Episode({ episodeData }: EpisodeProps) {
       </div>
     </Layout>
   );
-}
+};
+
+export default Episode;
