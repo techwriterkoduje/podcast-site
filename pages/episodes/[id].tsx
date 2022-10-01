@@ -18,11 +18,13 @@ export async function getStaticPaths() {
   };
 }
 
+export type FrontMatterProps = {
+  title: string;
+  episodeId: string;
+};
+
 type EpisodeProps = {
-  episodeData: {
-    title: string;
-    episodeId: string;
-  };
+  episodeData: FrontMatterProps;
 };
 
 export default function Episode({ episodeData }: EpisodeProps) {
