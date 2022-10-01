@@ -31,7 +31,10 @@ yarn-error.log*
 # vercel
 .vercel
 
-# yarn 3 no zero-installs
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
 .pnp.*
 .yarn/*
 !.yarn/patches
