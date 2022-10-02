@@ -5,8 +5,8 @@
 .navItem {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  margin: 1rem 0;
+  gap: 3px;
+  margin: 2rem 0;
 }
 
 .episodeTitle {

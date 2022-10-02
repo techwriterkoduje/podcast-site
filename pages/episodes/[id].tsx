@@ -39,7 +39,7 @@ const Episode: NextPage<EpisodeProps> = ({ episodeData }: EpisodeProps) => {
   const { episodeId, title, date, contentHtml } = episodeData;
   return (
     <Layout title={title} description={title}>
-      <div className={styles.episodePage}>
+      <section className={styles.episodePage}>
         <BackLink href="/episode-list">lista odcinków</BackLink>
         <h1 className={styles.episodeTitle}>{title}</h1>
         <div>
@@ -52,7 +52,7 @@ const Episode: NextPage<EpisodeProps> = ({ episodeData }: EpisodeProps) => {
           dangerouslySetInnerHTML={{ __html: contentHtml }}
           className={styles.episodeContents}
         />
-      </div>
+      </section>
     </Layout>
   );
 };
