@@ -11,6 +11,10 @@ body {
   --brand-black: #1e1e1e;
 }
 
+a {
+  color: var(--brand-accent-color);
+}
+
 * {
   box-sizing: border-box;
 }
