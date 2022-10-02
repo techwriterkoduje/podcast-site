@@ -10,11 +10,9 @@ export default function HorizontalNav({
   return (
     <div className={styles.list}>
       {navLinks.map(({ href, label }) => (
-        <>
-          <NavLink href={href} className={styles.listItem} key={label}>
-            <>{label}</>
-          </NavLink>
-        </>
+        <NavLink href={href} className={styles.listItem} key={label}>
+          <>{label}</>
+        </NavLink>
       ))}
     </div>
   );

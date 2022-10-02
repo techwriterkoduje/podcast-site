@@ -35,14 +35,12 @@ export default function LeftNav({ navLinks }: { navLinks: SiteLinkProps[] }) {
       >
         <List>
           {navLinks.map(({ href, label, dividerAfter }) => (
-            <>
-              <ListItem key={label}>
-                <NavLink href={href} className={styles.link}>
-                  <>{label}</>
-                </NavLink>
-              </ListItem>
+            <ListItem key={label}>
+              <NavLink href={href} className={styles.link}>
+                <>{label}</>
+              </NavLink>
               {dividerAfter && <Divider />}
-            </>
+            </ListItem>
           ))}
         </List>
       </Drawer>
