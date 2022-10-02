@@ -1,14 +1,21 @@
 html,
 body {
+  --brand-accent-color: #ed6e5f;
+  --brand-white: #fafafa;
+  --brand-black: #1e1e1e;
+  --black-gradient: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(30, 30, 30, 1) 35%,
+    rgba(0, 0, 0, 1) 100%
+  );
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color: var(--brand-black);
+  background: var(--brand-black);
+  background: var(--black-gradient);
   color: var(--brand-white);
-  --brand-accent-color: #ed6e5f;
-  --brand-white: #fafafa;
-  --brand-black: #1e1e1e;
 }
 
 a {
