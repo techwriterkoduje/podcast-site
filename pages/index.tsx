@@ -38,9 +38,10 @@ const Home: NextPage<HomePageProps> = ({ episodeId }) => {
           layout="responsive"
           width={cellSize}
           height={cellSize}
+          style={{ backgroundColor: "black" }}
         />
       </h1>
-      <section>
+      <section className={styles.latestEpisodeSection}>
         <h2>Najnowszy odcinek</h2>
         <AnchorEmbed episodeId={episodeId} />
       </section>

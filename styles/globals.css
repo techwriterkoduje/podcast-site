@@ -33,3 +33,7 @@ body {
     background: var(--brand-black);
   }
 }
+
+.encore-anchor-light-theme {
+  background-color: transparent !important;
+}

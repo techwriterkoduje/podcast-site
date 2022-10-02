@@ -43,7 +43,9 @@ const Episode: NextPage<EpisodeProps> = ({ episodeData }: EpisodeProps) => {
         <div>
           <DateDisplay dateString={date} />
         </div>
-        <AnchorEmbed episodeId={episodeId} style={{ margin: "3rem auto" }} />
+        <div style={{ margin: "3rem auto" }}>
+          <AnchorEmbed episodeId={episodeId} />
+        </div>
         <div
           dangerouslySetInnerHTML={{ __html: contentHtml }}
           className={styles.episodeContents}
