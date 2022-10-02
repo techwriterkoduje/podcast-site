@@ -24,6 +24,7 @@ export default function Header({ showLogo }: HeaderProps) {
                 src="/logo.png"
                 width={100}
                 height={100}
+                style={{ backgroundColor: "var(--brand-black)" }}
               />
             </a>
           </Link>

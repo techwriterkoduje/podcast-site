@@ -1,4 +1,4 @@
-import { SiteLinkProps } from "./SiteNav";
+import { SiteLinkProps } from "./SiteLinks";
 import styles from "./HorizontalNav.module.css";
 import NavLink from "./NavLink";
 

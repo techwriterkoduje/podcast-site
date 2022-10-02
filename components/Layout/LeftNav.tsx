@@ -1,11 +1,10 @@
-import Divider from "@mui/material/Divider";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import Drawer from "@mui/material/Drawer";
 import { useState } from "react";
-import { SiteLinkProps } from "./SiteNav";
+import { SiteLinkProps } from "./SiteLinks";
 import NavLink from "./NavLink";
 import styles from "./LeftNav.module.css";
 
@@ -34,12 +33,12 @@ export default function LeftNav({ navLinks }: { navLinks: SiteLinkProps[] }) {
         }}
       >
         <List>
-          {navLinks.map(({ href, label, dividerAfter }) => (
+          {navLinks.map(({ href, label, icon }) => (
             <ListItem key={label}>
               <NavLink href={href} className={styles.link}>
-                <>{label}</>
+                <div>{icon}</div>
+                <div>{label}</div>
               </NavLink>
-              {dividerAfter && <Divider />}
             </ListItem>
           ))}
         </List>

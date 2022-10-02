@@ -8,7 +8,7 @@ body {
   color: var(--brand-white);
   --brand-accent-color: #ed6e5f;
   --brand-white: #fafafa;
-  --brand-black: #000;
+  --brand-black: #1e1e1e;
 }
 
 * {

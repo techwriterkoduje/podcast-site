@@ -1,0 +1,20 @@
+.pageWrapper {
+  max-width: 60ch;
+}
+
+.navItem {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 1rem 0;
+}
+
+.episodeTitle {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+.date {
+  font-style: italic;
+}

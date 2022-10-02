@@ -3,6 +3,7 @@ import Link from "next/link";
 import DateDisplay from "../components/DateDisplay/DateDisplay";
 import Layout from "../components/Layout/Layout";
 import { EpisodeMetadata, getAllEpisodeMetadata } from "../lib/episodes";
+import styles from "../styles/EpisodeList.module.css";
 
 export const getStaticProps: GetStaticProps = async () => {
   const allEpisodeMetadata = getAllEpisodeMetadata();
@@ -23,22 +24,24 @@ const EpisodeList: NextPage<EpisodeListProps> = ({ allEpisodeMetadata }) => {
       title="Lista odcinków"
       description="Wybierz odcinek podcastu do posłuchania"
     >
-      <h1>Lista odcinków</h1>
-      <ol>
-        {allEpisodeMetadata.map((episode) => {
-          const { id, date, title } = episode.params;
-          return (
-            <li key={id}>
-              <Link href={`/episodes/${id}`}>
-                <a>{title}</a>
-              </Link>
-              <div>
-                <DateDisplay dateString={date} />
+      <section className={styles.pageWrapper}>
+        <h1>Lista odcinków</h1>
+        <nav>
+          {allEpisodeMetadata.map((episode) => {
+            const { id, date, title } = episode.params;
+            return (
+              <div key={id} className={styles.navItem}>
+                <Link href={`/episodes/${id}`}>
+                  <a className={styles.episodeTitle}>{title}</a>
+                </Link>
+                <div className={styles.date}>
+                  <DateDisplay dateString={date} />
+                </div>
               </div>
-            </li>
-          );
-        })}
-      </ol>
+            );
+          })}
+        </nav>
+      </section>
     </Layout>
   );
 };
