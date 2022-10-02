@@ -34,18 +34,7 @@ const Home: NextPage<HomePageProps> = ({ episodeId }) => {
       description="Podcast dla tech writerów, którzy kodują i nie tylko"
       isHome
     >
-      <h1 className={styles.header} style={{ width: cellSize }}>
-        <div>Podcast</div>
-        <Image
-          src="/logo.png"
-          alt={podcastTitle}
-          layout="responsive"
-          width={cellSize}
-          height={cellSize}
-          style={{ backgroundColor: "black" }}
-        />
-      </h1>
-      <h2>Najnowszy odcinek</h2>
+      <h2>Najnowszy odcinek podcastu</h2>
       <AnchorEmbed episodeId={episodeId} />
       <Link href="/episode-list">
         <a
