@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 type NavLinkProps = {
-  children: JSX.Element | JSX.Element[];
+  children: JSX.Element | JSX.Element[] | string;
   href: string;
-  className: string;
+  className?: string;
 };
 
 export default function NavLink({
