@@ -41,7 +41,7 @@ const Episode: NextPage<EpisodeProps> = ({ episodeData }: EpisodeProps) => {
     <Layout title={title} description={title}>
       <div className={styles.episodePage}>
         <BackLink href="/episode-list">lista odcinków</BackLink>
-        <h1>{title}</h1>
+        <h1 className={styles.episodeTitle}>{title}</h1>
         <div>
           <DateDisplay dateString={date} />
         </div>

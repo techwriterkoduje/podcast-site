@@ -32,7 +32,7 @@ function useIframeSizes(): IframeSizes {
 
   return {
     height: 98,
-    width: 400,
+    width: 300,
   };
 }
 

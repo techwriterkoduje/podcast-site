@@ -1,7 +1,6 @@
 import { NextPage } from "next";
 import Image from "next/image";
 import Layout from "../components/Layout/Layout";
-import FourOhFour from "../public/taken.svg";
 
 const Custom404: NextPage = () => {
   return (
