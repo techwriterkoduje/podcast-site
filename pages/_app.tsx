@@ -8,15 +8,19 @@ function MyApp({ Component, pageProps }: AppProps) {
     palette: {
       mode: "dark",
       primary: {
-        main: '#ed6e5f',
-        dark: '#eb5645'
-      }
+        main: "#ed6e5f",
+        dark: "#eb5645",
+      },
+      secondary: {
+        main: "#fafafa",
+        dark: "#dbdbdb",
+      },
     },
   });
 
   return (
     <ThemeProvider theme={darkTheme}>
-      <CssBaseline/>
+      <CssBaseline />
       <Component {...pageProps} />
     </ThemeProvider>
   );

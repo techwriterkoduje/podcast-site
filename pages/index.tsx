@@ -36,18 +36,18 @@ const Home: NextPage<HomePageProps> = ({ episodeId }) => {
     >
       <h2>Najnowszy odcinek podcastu</h2>
       <AnchorEmbed episodeId={episodeId} />
-      <Link href="/episode-list">
-        <a
-          style={{
-            display: "block",
-            textAlign: "center",
-            margin: "1rem auto",
-          }}
-        >
-          Lista odcinków
-        </a>
-      </Link>
-      <h2>Znajdż nas</h2>
+
+      <Button
+        href="/episode-list"
+        color="secondary"
+        size="large"
+        variant="outlined"
+        sx={{ margin: "2rem 0" }}
+      >
+        Lista odcinków
+      </Button>
+
+      <h2>Znajdź nas</h2>
       <SubscribeButtons />
       <h2>Masz pomysł na odcinek? Chcesz być gościem?</h2>
       <Button variant="contained" href={`mailto:${email}`}>
