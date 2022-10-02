@@ -7,5 +7,5 @@ export default function DateDisplay({ dateString }: DateDisplayProps) {
     dateStyle: "full",
   }).format(new Date(dateString));
 
-  return <>{readableDate}</>;
+  return <time dateTime={dateString}>{readableDate}</time>;
 }
