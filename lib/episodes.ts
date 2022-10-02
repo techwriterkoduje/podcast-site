@@ -51,7 +51,9 @@ export function getAllEpisodeMetadata(): EpisodeMetadata[] {
   });
 
   // sort from newest to oldest
-  result.sort((a, b) => (a.params.date > b.params.date ? -1 : 1));
+  result.sort((a, b) =>
+    new Date(a.params.date) > new Date(b.params.date) ? -1 : 1
+  );
   return result;
 }
 
