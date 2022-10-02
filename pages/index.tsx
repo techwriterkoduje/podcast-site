@@ -1,12 +1,9 @@
 import Button from "@mui/material/Button";
 import type { NextPage } from "next";
-import Image from "next/image";
-import Link from "next/link";
 import AnchorEmbed from "../components/AnchorEmbed/AnchorEmbed";
 import Layout from "../components/Layout/Layout";
 import SubscribeButtons from "../components/SubscribeButtons/SubscribeButtons";
 import { getAllEpisodeMetadata, getEpisodeData } from "../lib/episodes";
-import styles from "../styles/Home.module.css";
 
 const podcastTitle = process.env.podcastTitle;
 const email = process.env.contactEmail;
@@ -27,12 +24,12 @@ type HomePageProps = {
 };
 
 const Home: NextPage<HomePageProps> = ({ episodeId }) => {
-  const cellSize = 300;
   return (
     <Layout
       title={`Podcast ${podcastTitle}`}
       description="Podcast dla tech writerów, którzy kodują i nie tylko"
       isHome
+      mainStyle={{ textAlign: "center" }}
     >
       <h2>Najnowszy odcinek podcastu</h2>
       <AnchorEmbed episodeId={episodeId} />

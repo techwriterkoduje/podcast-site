@@ -15,4 +15,5 @@
   flex-wrap: wrap;
   padding: 3rem;
   border-top: 2px solid var(--brand-accent-color);
+  text-align: center;
 }

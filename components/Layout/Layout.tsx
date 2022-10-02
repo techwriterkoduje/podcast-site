@@ -9,6 +9,7 @@ type LayoutProps = {
   description: string;
   children: JSX.Element | JSX.Element[];
   isHome?: boolean;
+  mainStyle?: React.CSSProperties;
 };
 
 export default function Layout({
@@ -16,6 +17,7 @@ export default function Layout({
   description,
   isHome,
   children,
+  mainStyle,
 }: LayoutProps) {
   const processedTitle: string = `${title}${
     !isHome ? " | " + podcastTitle : ""
@@ -30,7 +32,9 @@ export default function Layout({
 
       <Header showLogo={!isHome} />
 
-      <main className={styles.main}>{children}</main>
+      <main className={styles.main} style={mainStyle}>
+        {children}
+      </main>
 
       <footer className={styles.footer}>
         <div>
