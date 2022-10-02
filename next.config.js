@@ -4,6 +4,7 @@ const nextConfig = {
   swcMinify: true,
   env: {
     podcastTitle: "Tech Writer Koduje",
+    contactEmail: "techwriterkoduje@gmail.com",
   },
 };
 

@@ -1,11 +1,15 @@
+import Button from "@mui/material/Button";
 import type { NextPage } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import AnchorEmbed from "../components/AnchorEmbed/AnchorEmbed";
 import Layout from "../components/Layout/Layout";
+import SubscribeButtons from "../components/SubscribeButtons/SubscribeButtons";
 import { getAllEpisodeMetadata, getEpisodeData } from "../lib/episodes";
 import styles from "../styles/Home.module.css";
 
 const podcastTitle = process.env.podcastTitle;
+const email = process.env.contactEmail;
 
 export async function getStaticProps() {
   const allEpisodeMetadata = getAllEpisodeMetadata();
@@ -41,10 +45,25 @@ const Home: NextPage<HomePageProps> = ({ episodeId }) => {
           style={{ backgroundColor: "black" }}
         />
       </h1>
-      <section className={styles.latestEpisodeSection}>
-        <h2>Najnowszy odcinek</h2>
-        <AnchorEmbed episodeId={episodeId} />
-      </section>
+      <h2>Najnowszy odcinek</h2>
+      <AnchorEmbed episodeId={episodeId} />
+      <Link href="/episode-list">
+        <a
+          style={{
+            display: "block",
+            textAlign: "center",
+            margin: "1rem auto",
+          }}
+        >
+          Lista odcinków
+        </a>
+      </Link>
+      <h2>Znajdż nas</h2>
+      <SubscribeButtons />
+      <h2>Masz pomysł na odcinek? Chcesz być gościem?</h2>
+      <Button variant="contained" href={`mailto:${email}`}>
+        Napisz do nas: {email}
+      </Button>
     </Layout>
   );
 };
