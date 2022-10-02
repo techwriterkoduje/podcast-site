@@ -1,22 +1,23 @@
-import { NextPage } from "next";
+import { GetStaticProps, NextPage } from "next";
 import Link from "next/link";
+import DateDisplay from "../components/DateDisplay/DateDisplay";
 import Layout from "../components/Layout/Layout";
-import { getAllEpisodeMetadata } from "../lib/episodes";
+import { EpisodeMetadata, getAllEpisodeMetadata } from "../lib/episodes";
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const allEpisodeMetadata = getAllEpisodeMetadata();
   return {
     props: {
-      allIds: allEpisodeMetadata.map((episode) => episode.params.id),
+      allEpisodeMetadata,
     },
   };
-}
-
-type EpisodeListProps = {
-  allIds: string[];
 };
 
-const EpisodeList: NextPage<EpisodeListProps> = ({ allIds }) => {
+type EpisodeListProps = {
+  allEpisodeMetadata: EpisodeMetadata[];
+};
+
+const EpisodeList: NextPage<EpisodeListProps> = ({ allEpisodeMetadata }) => {
   return (
     <Layout
       title="Lista odcinków"
@@ -24,13 +25,19 @@ const EpisodeList: NextPage<EpisodeListProps> = ({ allIds }) => {
     >
       <h1>Lista odcinków</h1>
       <ol>
-        {allIds.map((id) => (
-          <li key={id}>
-            <Link href={`/episodes/${id}`}>
-              <a>{id}</a>
-            </Link>
-          </li>
-        ))}
+        {allEpisodeMetadata.map((episode) => {
+          const { id, date, title } = episode.params;
+          return (
+            <li key={id}>
+              <Link href={`/episodes/${id}`}>
+                <a>{title}</a>
+              </Link>
+              <div>
+                <DateDisplay dateString={date} />
+              </div>
+            </li>
+          );
+        })}
       </ol>
     </Layout>
   );

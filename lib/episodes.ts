@@ -1,6 +1,6 @@
 import { readdirSync, readFileSync } from "fs";
 import { join } from "path";
-import matter from "gray-matter";
+import matter, { GrayMatterFile } from "gray-matter";
 import { remark } from "remark";
 import remarkGfm from "remark-gfm";
 import html from "remark-html";
@@ -8,10 +8,11 @@ import { MarkdownProps } from "../pages/episodes/[id]";
 
 const episodesDirectory = join(process.cwd(), "episodes");
 
-type EpisodeIdData = {
+export type EpisodeMetadata = {
   params: {
     id: string;
     date: string;
+    title: string;
   };
 };
 
@@ -25,16 +26,26 @@ function getDateFromId(id: string) {
   return new Date();
 }
 
-export function getAllEpisodeMetadata(): EpisodeIdData[] {
+function getMarkdownFrontMatterById(id: string): GrayMatterFile<string> {
+  const fullPath = join(episodesDirectory, `${id}.md`);
+  const fileContents = readFileSync(fullPath, "utf8");
+
+  return matter(fileContents);
+}
+
+export function getAllEpisodeMetadata(): EpisodeMetadata[] {
   const fileNames = readdirSync(episodesDirectory);
 
-  const result: EpisodeIdData[] = fileNames.map((fileName) => {
+  const result: EpisodeMetadata[] = fileNames.map((fileName) => {
     const id = fileName.replace(/\.md$/, "");
     const date = getDateFromId(id);
+    const matterResult = getMarkdownFrontMatterById(id);
+
     return {
       params: {
         id,
         date: date.toDateString(),
+        title: matterResult.data.title,
       },
     };
   });
@@ -45,11 +56,7 @@ export function getAllEpisodeMetadata(): EpisodeIdData[] {
 }
 
 export async function getEpisodeData(id: string) {
-  const fullPath = join(episodesDirectory, `${id}.md`);
-  const fileContents = readFileSync(fullPath, "utf8");
-
-  // markdown metadata
-  const matterResult = matter(fileContents);
+  const matterResult = getMarkdownFrontMatterById(id);
 
   // markdown as HTML
   const processedContent = await remark()
