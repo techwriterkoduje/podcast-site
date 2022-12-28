@@ -6,7 +6,7 @@ import remarkGfm from "remark-gfm";
 import html from "remark-html";
 import { MarkdownProps } from "../pages/episodes/[id]";
 
-const episodesDirectory = join(process.cwd(), "episodes");
+const episodesDirectory = join(process.cwd(), "docs", "episodes");
 
 export type EpisodeMetadata = {
   params: {
