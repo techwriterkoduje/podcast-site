@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Header from "./Header";
-import styles from "./Layout.module.css";
+import Footer from "./Footer";
+import PageContent from "./PageContent";
 
 const podcastTitle = process.env.podcastTitle;
 
@@ -29,19 +30,9 @@ export default function Layout({
         <meta name="description" content={description} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <Header showLogo={!isHome} />
-
-      <main className={styles.main} style={mainStyle}>
-        {children}
-      </main>
-
-      <footer className={styles.footer}>
-        <div>
-          Copyright © {new Date().getFullYear()} {podcastTitle}
-        </div>
-        <div>Logo stworzone przez rad89</div>
-      </footer>
+        <Header/>
+        <PageContent/>
+        <Footer/>
     </>
   );
 }
