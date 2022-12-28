@@ -2,6 +2,25 @@ import Stack from "@mui/material/Stack";
 import Image from "next/image";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
+import ImageList from "@mui/material/ImageList";
+import ImageListItem from "@mui/material/ImageListItem";
+import ImageListItemBar from "@mui/material/ImageListItemBar";
+import SubscribeButtons from "../SubscribeButtons/SubscribeButtons";
+
+const hosts = [
+    {
+        key: "michalskowron",
+        name: "Michal Skowron",
+        img: "/michal-skowron.png",
+        alt: "Zdjęcie Michała Skowrona"
+    },
+    {
+        key: "pawelkowaluk",
+        name: "Paweł Kowaluk",
+        img: "/pawel-kowaluk.png",
+        alt: "Zdjęcie Pawła Kowaluka"
+    }
+]
 
 export default function HeroBanner() {
     return (
@@ -20,8 +39,21 @@ export default function HeroBanner() {
                     praca
                     Tech Writera może być ciekawa i rozwijająca pod kątem umiejętności technicznych.
                 </Typography>
-                <div>Prowadzący</div>
-                <div>Linki do platform</div>
+                <ImageList sx={{width: 600}} cols={2} rowHeight={164}>
+                    {hosts.map(h => (
+                        <ImageListItem
+                            key={h.key}
+                            sx={{
+                                width: "200px",
+                                height: "200px",
+                                justifyContent: "center"
+                            }}>
+                            <Image src={h.img} width="100%" height="100%" alt={h.alt}/>
+                            <ImageListItemBar position="below" title={h.name}/>
+                        </ImageListItem>
+                    ))}
+                </ImageList>
+                <SubscribeButtons/>
             </Stack>
             <Container sx={{textAlign: "center"}}>
                 <Image src="/logo.png" width="400px" height="400px"/>

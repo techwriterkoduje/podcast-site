@@ -1,7 +1,7 @@
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
-import NavLink from "./NavLink";
+import Link from "next/link";
 
 export default function ContactUs() {
     return (
@@ -10,9 +10,9 @@ export default function ContactUs() {
             gap: "1rem"
         }}>
             <Typography>Masz pomysł na odcinek? Chcesz być naszym gościem?</Typography>
-            <NavLink href="/contact">
+            <Link href="/contact">
                 <Button variant="outlined">Skontaktuj się z nami</Button>
-            </NavLink>
+            </Link>
         </Stack>
     )
 }
