@@ -6,7 +6,7 @@ import ShoutOuts from "./ShoutOuts";
 
 export default function PageContent() {
     return (
-        <Stack>
+        <Stack gap="4rem">
             <HeroBanner/>
             <LatestEpisodes/>
             <ContactUs/>
