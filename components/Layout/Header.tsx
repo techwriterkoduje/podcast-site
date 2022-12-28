@@ -1,7 +1,7 @@
 import Stack from "@mui/material/Stack";
-import NavLink from "./NavLink";
 import HomeIcon from "@mui/icons-material/Home";
 import {navLinks} from "./SiteLinks";
+import Link from "next/link";
 
 export default function Header() {
     return (
@@ -13,13 +13,13 @@ export default function Header() {
             padding: "0 1rem",
             gap: "1rem"
         }}>
-            <NavLink href="/">
+            <Link href="/">
                 <HomeIcon/>
-            </NavLink>
+            </Link>
             {navLinks.map(({href, label}) => (
-                <NavLink href={href} key={label}>
+                <Link href={href} key={label}>
                     {label}
-                </NavLink>
+                </Link>
             ))}
         </Stack>
     );
