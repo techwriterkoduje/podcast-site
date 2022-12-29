@@ -1,34 +1,26 @@
 # .github/workflows/build-and-deploy.yml
-
 name: Node.js CI
-
 on:
   push:
-    branches: [ main ]
-
+    branches: [main]
 jobs:
   build:
-		
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
-
       - uses: actions/setup-node@v2
         with:
           # update the Node version to meet your needs
           node-version: 16
           cache: npm
-
       - name: Build
         run: |
           yarn
           yarn build
           touch out/.nojekyll
-
       - name: Deploy
         # https://github.com/JamesIves/github-pages-deploy-action
-        uses: JamesIves/github-pages-deploy-action@4.4.0 
+        uses: JamesIves/github-pages-deploy-action@4.4.0
         with:
           branch: gh-pages
           folder: out
