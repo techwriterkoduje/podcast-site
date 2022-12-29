@@ -1,9 +1,9 @@
-import { GetStaticProps, NextPage } from "next";
-import Link from "next/link";
-import DateDisplay from "../components/DateDisplay/DateDisplay";
-import Layout from "../components/Layout/Layout";
-import { EpisodeMetadata, getAllEpisodeMetadata } from "../lib/episodes";
-import styles from "../styles/EpisodeList.module.css";
+import { GetStaticProps, NextPage } from 'next';
+import Link from 'next/link';
+import DateDisplay from '../components/DateDisplay/DateDisplay';
+import Layout from '../components/Layout/Layout';
+import { EpisodeMetadata, getAllEpisodeMetadata } from '../lib/episodes';
+import styles from '../styles/EpisodeList.module.css';
 
 export const getStaticProps: GetStaticProps = async () => {
   const allEpisodeMetadata = getAllEpisodeMetadata();

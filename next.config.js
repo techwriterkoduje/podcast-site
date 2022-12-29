@@ -3,8 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   env: {
-    podcastTitle: "Tech Writer Koduje",
-    contactEmail: "techwriterkoduje@gmail.com",
+    podcastTitle: 'Tech Writer Koduje',
+    contactEmail: 'techwriterkoduje@gmail.com',
   },
 };
 
