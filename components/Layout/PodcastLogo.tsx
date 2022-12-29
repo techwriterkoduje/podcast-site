@@ -1,8 +1,6 @@
-import Image from 'next/image';
-
 export default function PodcastLogo() {
   return (
-    <Image
+    <img
       src="/logo.png"
       width="400px"
       height="400px"

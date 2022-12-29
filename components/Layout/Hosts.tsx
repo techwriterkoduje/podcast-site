@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Stack from '@mui/material/Stack';
 import Container from '@mui/material/Container';
 import { Typography } from '@mui/material';
@@ -23,7 +22,7 @@ export default function Hosts() {
     <Stack direction="row" justifyContent="space-between">
       {hosts.map((h) => (
         <Container key={h.key}>
-          <Image src={h.img} width="100px" height="100px" alt={h.alt} />
+          <img src={h.img} width="100px" height="100px" alt={h.alt} />
           <Typography>{h.name}</Typography>
         </Container>
       ))}
