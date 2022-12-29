@@ -1,7 +1,6 @@
-import Head from "next/head";
-import Header from "./Header";
-import Footer from "./Footer";
-import PageContent from "./PageContent";
+import Head from 'next/head';
+import Header from './Header';
+import Footer from './Footer';
 
 const podcastTitle = process.env.podcastTitle;
 
@@ -18,10 +17,9 @@ export default function Layout({
   description,
   isHome,
   children,
-  mainStyle,
 }: LayoutProps) {
   const processedTitle: string = `${title}${
-    !isHome ? " | " + podcastTitle : ""
+    !isHome ? ' | ' + podcastTitle : ''
   }`;
   return (
     <>
@@ -30,9 +28,9 @@ export default function Layout({
         <meta name="description" content={description} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-        <Header/>
-        <PageContent/>
-        <Footer/>
+      <Header />
+      {children}
+      <Footer />
     </>
   );
 }

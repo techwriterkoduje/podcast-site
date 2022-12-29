@@ -1,6 +1,6 @@
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import Link from "next/link";
-import styles from './BackLink.module.css'
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import Link from 'next/link';
+import styles from './BackLink.module.css';
 
 type BackLinkProps = {
   href: string;

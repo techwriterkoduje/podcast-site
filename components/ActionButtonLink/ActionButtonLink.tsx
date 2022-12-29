@@ -1,4 +1,4 @@
-import Button from "@mui/material/Button";
+import Button from '@mui/material/Button';
 
 export type ActionButtonLinkProps = {
   to: string;
@@ -6,7 +6,7 @@ export type ActionButtonLinkProps = {
 };
 
 export default function ActionButtonLink({ to, label }: ActionButtonLinkProps) {
-  if (to.startsWith("http")) {
+  if (to.startsWith('http')) {
     return (
       <Button href={to} target="_blank">
         {label}

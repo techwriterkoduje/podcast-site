@@ -1,7 +1,7 @@
-import Stack from "@mui/material/Stack";
+import Stack from '@mui/material/Stack';
 import ActionButtonLink, {
   ActionButtonLinkProps,
-} from "../ActionButtonLink/ActionButtonLink";
+} from '../ActionButtonLink/ActionButtonLink';
 
 export type FeatureProps = {
   title: string;
@@ -19,11 +19,11 @@ export default function Feature({
       <h2>{title}</h2>
       <div>{description}</div>
       <Stack
-        direction={{ xs: "column", sm: "row" }}
+        direction={{ xs: 'column', sm: 'row' }}
         sx={{
-          alignItems: "center",
-          justifyContent: "center",
-          padding: "1rem 0",
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: '1rem 0',
         }}
       >
         {actionLinks.map((actionLinkProps) => (

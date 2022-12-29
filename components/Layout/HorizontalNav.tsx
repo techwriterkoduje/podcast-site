@@ -1,7 +1,7 @@
-import { SiteLinkProps } from "./SiteLinks";
-import styles from "./HorizontalNav.module.css";
-import NavLink from "./NavLink";
-import HomeIcon from "@mui/icons-material/Home";
+import { SiteLinkProps } from './SiteLinks';
+import styles from './HorizontalNav.module.css';
+import NavLink from './NavLink';
+import HomeIcon from '@mui/icons-material/Home';
 
 export default function HorizontalNav({
   navLinks,

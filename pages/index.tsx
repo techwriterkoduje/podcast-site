@@ -1,6 +1,7 @@
 import type {NextPage} from "next";
 import Layout from "../components/Layout/Layout";
 import {getAllEpisodeMetadata, getEpisodeData} from "../lib/episodes";
+import HomePage from "../components/Layout/HomePage";
 
 const podcastTitle = process.env.podcastTitle;
 const email = process.env.contactEmail;
@@ -27,6 +28,7 @@ const Home: NextPage<HomePageProps> = ({episodeId}) => {
             description="Podcast dla tech writerów, którzy kodują i nie tylko"
             isHome
             mainStyle={{textAlign: "center"}}>
+            <HomePage/>
         </Layout>
     );
 };

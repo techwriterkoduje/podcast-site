@@ -3,8 +3,8 @@ type DateDisplayProps = {
 };
 
 export default function DateDisplay({ dateString }: DateDisplayProps) {
-  const readableDate = Intl.DateTimeFormat("pl-PL", {
-    dateStyle: "full",
+  const readableDate = Intl.DateTimeFormat('pl-PL', {
+    dateStyle: 'full',
   }).format(new Date(dateString));
 
   return <time dateTime={dateString}>{readableDate}</time>;
