@@ -11,20 +11,23 @@ import Grid from "@mui/material/Unstable_Grid2";
 
 export default function HeroBanner() {
     return (
-        <Grid container alignItems="center" justifyContent="space-evenly" sx={{width: "100%"}}>
+        <Grid container alignItems="center" justifyContent="center"
+              sx={{paddingTop: "100px", margin: "0 auto", maxWidth: "1200px"}}>
             <Grid
                 lg={7}
                 container
                 alignItems="center"
                 justifyContent="center"
                 gap="2rem"
-                sx={{padding: "2rem 4rem"}}
             >
                 <PodcastDescription/>
-                <Hosts/>
                 <SubscribeButtons/>
             </Grid>
-            <PodcastLogo/>
+            <Grid
+                sx={{marginLeft: "75px"}}
+            >
+                <PodcastLogo/>
+            </Grid>
         </Grid>
     )
 }
