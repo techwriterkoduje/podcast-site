@@ -1,7 +1,6 @@
-const isGithubActions = process.env.GITHUB_ACTIONS || false;
 const repo = 'podcast-site';
-const assetPrefix = isGithubActions ? `/${repo}` : undefined;
-const basePath = isGithubActions ? `/${repo}` : undefined;
+const assetPrefix = `/${repo}`;
+const basePath = `/${repo}`;
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -12,7 +11,7 @@ const nextConfig = {
   env: {
     podcastTitle: 'Tech Writer Koduje',
     contactEmail: 'techwriterkoduje@gmail.com',
-    repo: isGithubActions ? `/${repo}/` : '',
+    repo: `/${repo}/`,
   },
   images: {
     unoptimized: true,

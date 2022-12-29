@@ -9,11 +9,15 @@ export type ActionButtonLinkProps = {
 export default function ActionButtonLink({ to, label }: ActionButtonLinkProps) {
   if (to.startsWith('http')) {
     return (
-      <Link href={to}>
-        <Button>{label}</Button>
-      </Link>
+      <Button href={to} target="_blank">
+        {label}
+      </Button>
     );
   }
 
-  return <Button href={to}>{label}</Button>;
+  return (
+    <Link href={to}>
+      <Button>{label}</Button>
+    </Link>
+  );
 }

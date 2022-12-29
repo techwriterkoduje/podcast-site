@@ -26,7 +26,7 @@ export default function Layout({
       <Head>
         <title>{processedTitle}</title>
         <meta name="description" content={description} />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href={`${process.env.repo}favicon.ico`} />
       </Head>
       <Header />
       {children}
