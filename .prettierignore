@@ -2,6 +2,7 @@
 .next/
 node_modules/
 build/
+out/
 
 # ignore main package.json - issues on Windows verifier (it's changing its content)
 package.json
