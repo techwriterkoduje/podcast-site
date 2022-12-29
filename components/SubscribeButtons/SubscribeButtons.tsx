@@ -1,5 +1,6 @@
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
+import Image from '../Image';
 
 const subscribeLinks = [
   {
@@ -54,7 +55,7 @@ export default function SubscribeButtons() {
     >
       {subscribeLinks.map((l) => (
         <Button
-          startIcon={<img width="20px" src={l.icon} alt="" />}
+          startIcon={<Image width="20px" src={l.icon} alt="" />}
           href={l.href}
           target="_blank"
           key={l.label}

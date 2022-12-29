@@ -3,6 +3,7 @@ import Typography from '@mui/material/Typography';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import Link from 'next/link';
+import Image from '../Image';
 
 const shoutOutLinks = [
   {
@@ -43,7 +44,7 @@ export default function ShoutOuts() {
             }}
           >
             <Link href={l.href}>
-              <img src={l.img} alt={l.alt} />
+              <Image src={l.img} alt={l.alt} />
             </Link>
           </ImageListItem>
         ))}

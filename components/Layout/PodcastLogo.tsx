@@ -1,6 +1,8 @@
+import Image from "../Image";
+
 export default function PodcastLogo() {
   return (
-    <img
+    <Image
       src="/logo.png"
       width="400px"
       height="400px"
