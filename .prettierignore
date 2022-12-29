@@ -1,0 +1,7 @@
+.yarn/
+.next/
+node_modules/
+build/
+
+# ignore main package.json - issues on Windows verifier (it's changing its content)
+package.json
