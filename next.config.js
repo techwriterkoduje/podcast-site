@@ -1,9 +1,7 @@
 const isGithubActions = process.env.GITHUB_ACTIONS || false;
 const repo =
   process.env.GITHUB_REPOSITORY?.replace(/.*?\//, '') | 'podcast-site';
-const assetPrefix = isGithubActions
-  ? `https://techwriterkoduje.github.io/${repo}/`
-  : '';
+const assetPrefix = isGithubActions ? `./` : '';
 const basePath = isGithubActions ? `/${repo}` : '';
 
 /** @type {import('next').NextConfig} */
@@ -18,6 +16,8 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
+    loader: 'akamai',
+    path: '',
   },
 };
 
