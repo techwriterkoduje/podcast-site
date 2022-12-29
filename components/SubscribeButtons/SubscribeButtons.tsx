@@ -54,7 +54,7 @@ export default function SubscribeButtons() {
     >
       {subscribeLinks.map((l) => (
         <Button
-          startIcon={<img width="20px" src={l.icon} />}
+          startIcon={<img width="20px" src={l.icon} alt="" />}
           href={l.href}
           target="_blank"
           key={l.label}
