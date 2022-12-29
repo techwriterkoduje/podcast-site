@@ -1,6 +1,5 @@
 const isGithubActions = process.env.GITHUB_ACTIONS || false;
-const repo =
-  process.env.GITHUB_REPOSITORY?.replace(/.*?\//, '') | 'podcast-site';
+const repo = 'podcast-site';
 const assetPrefix = isGithubActions ? `./` : '';
 const basePath = isGithubActions ? `/${repo}` : '';
 
