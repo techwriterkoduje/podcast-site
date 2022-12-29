@@ -1,8 +1,8 @@
 ---
 title:
-  "#12 Tech Writer się rekrutuje, czyli jak ważne są umiejętności techniczne"
+  '#12 Tech Writer się rekrutuje, czyli jak ważne są umiejętności techniczne'
 author: Tech Writer koduje
-episodeId: "12-Tech-Writer-si-rekrutuje--czyli-jak-wane-s-umiejtnoci-techniczne-ea9vra/a-a1b5e9o"
+episodeId: '12-Tech-Writer-si-rekrutuje--czyli-jak-wane-s-umiejtnoci-techniczne-ea9vra/a-a1b5e9o'
 ---
 
 Czy ogłoszenie o pracę mówi Ci co będziesz robił jako Technical Writer? Jak

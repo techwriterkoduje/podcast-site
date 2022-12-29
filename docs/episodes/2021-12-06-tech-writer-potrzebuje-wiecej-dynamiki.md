@@ -1,9 +1,9 @@
 ---
 title:
-  "#37 Tech Writer potrzebuje więcej dynamiki, czyli zbyt statyczne strony z
-  dokumentacją"
+  '#37 Tech Writer potrzebuje więcej dynamiki, czyli zbyt statyczne strony z
+  dokumentacją'
 author: Tech Writer koduje
-episodeId: "37-Tech-Writer-potrzebuje-wicej-dynamiki--czyli-zbyt-statyczne-strony-z-dokumentacj-e1b4hht"
+episodeId: '37-Tech-Writer-potrzebuje-wicej-dynamiki--czyli-zbyt-statyczne-strony-z-dokumentacj-e1b4hht'
 ---
 
 Dostarczanie statycznych stron z dokumentacją ostatnimi czasy wraca do łask.
@@ -17,4 +17,3 @@ _Muzyka w intro oraz dźwięki pochodzą z kolekcji "107 Free Retro Game Sounds"
 dostępnej na stronie <https://dominik-braun.net>, udostępnianej na podstawie
 licencji
 [Creative Commons license CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)._
-

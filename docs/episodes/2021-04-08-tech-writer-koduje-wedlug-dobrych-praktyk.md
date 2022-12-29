@@ -1,7 +1,7 @@
 ---
-title: "#29 Tech Writer koduje według dobrych praktyk"
+title: '#29 Tech Writer koduje według dobrych praktyk'
 author: Tech Writer koduje
-episodeId: "29-Tech-Writer-koduje-wedug-dobrych-praktyk-eubau2"
+episodeId: '29-Tech-Writer-koduje-wedug-dobrych-praktyk-eubau2'
 ---
 
 Pewnego dnia czujesz nieodpartą chęć napisania jakiegoś skryptu. Otwierasz
@@ -19,4 +19,3 @@ _Muzyka w intro oraz dźwięki pochodzą z kolekcji "107 Free Retro Game Sounds"
 dostępnej na stronie <https://dominik-braun.net>, udostępnianej na podstawie
 licencji
 [Creative Commons license CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)._
-

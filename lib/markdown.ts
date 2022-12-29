@@ -1,11 +1,11 @@
-import { readFileSync } from "fs";
-import matter, { GrayMatterFile } from "gray-matter";
-import { join, parse } from "path";
-import { remark } from "remark";
-import remarkGfm from "remark-gfm";
-import html from "remark-html";
+import { readFileSync } from 'fs';
+import matter, { GrayMatterFile } from 'gray-matter';
+import { join, parse } from 'path';
+import { remark } from 'remark';
+import remarkGfm from 'remark-gfm';
+import html from 'remark-html';
 
-export const markdownDir = join(process.cwd(), "docs");
+export const markdownDir = join(process.cwd(), 'docs');
 
 export type MarkdownProps = {
   id: string;
@@ -19,7 +19,7 @@ export type MarkdownProps = {
 export function getMarkdownMatter(
   absolutePath: string
 ): GrayMatterFile<string> {
-  const fileContents = readFileSync(absolutePath, "utf8");
+  const fileContents = readFileSync(absolutePath, 'utf8');
 
   return matter(fileContents);
 }
@@ -37,7 +37,7 @@ export function getDateFromId(id: string): Date {
 export async function getMarkdownContent(
   absolutePath: string
 ): Promise<MarkdownProps> {
-  const fileContents = readFileSync(absolutePath, "utf8");
+  const fileContents = readFileSync(absolutePath, 'utf8');
   const matterResult = matter(fileContents);
 
   const processedContent = await remark()

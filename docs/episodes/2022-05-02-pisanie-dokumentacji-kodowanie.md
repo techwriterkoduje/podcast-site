@@ -1,9 +1,9 @@
 ---
 title:
-  "#41 Tech Writer rozważa podobieństwa i różnice między kodowaniem a pisaniem
-  dokumentacji"
+  '#41 Tech Writer rozważa podobieństwa i różnice między kodowaniem a pisaniem
+  dokumentacji'
 author: Tech Writer koduje
-episodeId: "41-Tech-Writer-rozwaa-podobiestwa-i-rnice-midzy-kodowaniem-a-pisaniem-dokumentacji-e1hpf98"
+episodeId: '41-Tech-Writer-rozwaa-podobiestwa-i-rnice-midzy-kodowaniem-a-pisaniem-dokumentacji-e1hpf98'
 ---
 
 "Docs like code" czy "Docs as code" to model tworzenia dokumentacji, którego
@@ -47,4 +47,3 @@ licencji Creative Commons license CC BY 4.0
   https://pl.wikipedia.org/wiki/Test-driven_development
 - Foobar: https://pl.wikipedia.org/wiki/Foobar
 - Nuxt: https://nuxtjs.org/
-

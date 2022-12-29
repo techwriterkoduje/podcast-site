@@ -1,9 +1,9 @@
 ---
 title:
-  "#44 Rekrutacja Tech Writerów w praktyce, czyli prawie wszystko co trzeba
-  wiedzieć o rynku pracy dla technoskrybów w Polsce"
+  '#44 Rekrutacja Tech Writerów w praktyce, czyli prawie wszystko co trzeba
+  wiedzieć o rynku pracy dla technoskrybów w Polsce'
 author: Tech Writer koduje
-episodeId: "44-Rekrutacja-Tech-Writerw-w-praktyce--czyli-prawie-wszystko-co-trzeba-wiedzie-o-rynku-pracy-dla-technoskrybw-w-Polsce-e1ltot4"
+episodeId: '44-Rekrutacja-Tech-Writerw-w-praktyce--czyli-prawie-wszystko-co-trzeba-wiedzie-o-rynku-pracy-dla-technoskrybw-w-Polsce-e1ltot4'
 ---
 
 Rekrutacja to temat zawsze na czasie. Również wśród technoskrybów wzbudza on
@@ -44,4 +44,3 @@ licencji Creative Commons license CC BY 4.0
   https://www.linkedin.com/in/michal-slapak-a1a2012/
 - Profil Tomka Prusa na LinkedIn:
   https://www.linkedin.com/in/tomasz-prus-4b09b01a/
-

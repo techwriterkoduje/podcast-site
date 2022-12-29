@@ -1,7 +1,7 @@
 ---
-title: "#23 Tech Writer mierzy jakość dokumentacji, czyli co i jak sprawdzać"
+title: '#23 Tech Writer mierzy jakość dokumentacji, czyli co i jak sprawdzać'
 author: Tech Writer koduje
-episodeId: "23-Tech-Writer-mierzy-jako-dokumentacji--czyli-co-i-jak-sprawdza-emralt"
+episodeId: '23-Tech-Writer-mierzy-jako-dokumentacji--czyli-co-i-jak-sprawdza-emralt'
 ---
 
 Jak zrobić najlepszą dokumentację? Ustalamy wewnętrzne standardy i się ich
@@ -21,4 +21,3 @@ Które metryki najlepiej sprawdzały się dla nas do tej pory? Które działają
 najlepiej osobno, a które w połączeniu? Które elementy może sprawdzać automat, a
 które powinny być weryfikowane przez człowieka? Posłuchajcie, a potem dajcie nam
 znać jakie Wy macie sposoby i pomysły na mierzenie jakości dokumentacji.
-

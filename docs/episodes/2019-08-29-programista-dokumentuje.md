@@ -1,7 +1,7 @@
 ---
-title: "#7 Programista dokumentuje, czyli nowoczesny technical writing"
+title: '#7 Programista dokumentuje, czyli nowoczesny technical writing'
 author: Tech Writer koduje
-episodeId: "7-Programista-dokumentuje--czyli-nowoczesny-technical-writing-e54pnt/a-aluh84"
+episodeId: '7-Programista-dokumentuje--czyli-nowoczesny-technical-writing-e54pnt/a-aluh84'
 ---
 
 W nowoczesnej firmie software’owej nie ma ani jednego Technical Writera. W takim

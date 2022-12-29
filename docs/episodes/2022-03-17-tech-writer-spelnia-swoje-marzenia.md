@@ -1,8 +1,8 @@
 ---
 title:
-  "#40 Tech Writer spełnia swoje marzenia, czyli co i jak można zautomatyzować"
+  '#40 Tech Writer spełnia swoje marzenia, czyli co i jak można zautomatyzować'
 author: Tech Writer koduje
-episodeId: "40-Tech-Writer-spenia-swoje-marzenia--czyli-co-i-jak-mona-zautomatyzowa-e1foo3d"
+episodeId: '40-Tech-Writer-spenia-swoje-marzenia--czyli-co-i-jak-mona-zautomatyzowa-e1foo3d'
 ---
 
 Jedni marzą o drogim samochodzie a drudzy o ekskluzywnych wakacjach w ciepłych
@@ -60,4 +60,3 @@ licencji Creative Commons license CC BY 4.0
   koduje: https://techwriterkoduje.pl/dita-as-code
 - AutoIt: https://www.autoitscript.com/site/
 - Bitnami: https://github.com/bitnami
-

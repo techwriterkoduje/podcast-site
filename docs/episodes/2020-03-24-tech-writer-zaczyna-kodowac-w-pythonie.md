@@ -1,9 +1,9 @@
 ---
 title:
-  "#14 Tech Writer zaczyna kodować w Pythonie, czyli o narzędziach i dobrych
-  praktykach"
+  '#14 Tech Writer zaczyna kodować w Pythonie, czyli o narzędziach i dobrych
+  praktykach'
 author: Tech Writer koduje
-episodeId: "14-Tech-Writer-zaczyna-kodowa-w-Pythonie--czyli-o-narzdziach-i-dobrych-praktykach-ebrd81/a-a1oq0t8"
+episodeId: '14-Tech-Writer-zaczyna-kodowa-w-Pythonie--czyli-o-narzdziach-i-dobrych-praktykach-ebrd81/a-a1oq0t8'
 ---
 
 Rozmawiamy z Sebastianem Witowskim o tym jak ustawić sobie środowisko do

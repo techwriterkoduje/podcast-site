@@ -1,7 +1,7 @@
 ---
-title: "#33 Kodować każdy może, czyli o Akademii Motorola Solutions słów kilka"
+title: '#33 Kodować każdy może, czyli o Akademii Motorola Solutions słów kilka'
 author: Tech Writer koduje
-episodeId: "33-Kodowa-kady-moe--czyli-o-Akademii-Motorola-Solutions-sw-kilka-e161nnu"
+episodeId: '33-Kodowa-kady-moe--czyli-o-Akademii-Motorola-Solutions-sw-kilka-e161nnu'
 ---
 
 Czy w kilka miesięcy można nauczyć się kodowania i zostać zatrudnionym jako

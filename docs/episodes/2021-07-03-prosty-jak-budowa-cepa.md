@@ -1,9 +1,9 @@
 ---
 title:
-  "#31 Prosty jak budowa cepa, czyli Tech Writer tworzy generator stron
-  statycznych"
+  '#31 Prosty jak budowa cepa, czyli Tech Writer tworzy generator stron
+  statycznych'
 author: Tech Writer koduje
-episodeId: "31-Prosty-jak-budowa-cepa--czyli-Tech-Writer-tworzy-generator-stron-statycznych-e13oj0o"
+episodeId: '31-Prosty-jak-budowa-cepa--czyli-Tech-Writer-tworzy-generator-stron-statycznych-e13oj0o'
 ---
 
 Generatorów stron statycznych jest całkiem sporo. Jednak nie jest to powód, dla

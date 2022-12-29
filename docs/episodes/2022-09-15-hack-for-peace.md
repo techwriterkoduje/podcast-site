@@ -2,7 +2,7 @@
 title:
   '#46 Zostań hakerem w służbie pokoju, czyli o "Hack for Peace" słów kilka'
 author: Tech Writer koduje
-episodeId: "46-Zosta-hakerem-w-subie-pokoju--czyli-o-Hack-for-Peace-sw-kilka-e1noug3"
+episodeId: '46-Zosta-hakerem-w-subie-pokoju--czyli-o-Hack-for-Peace-sw-kilka-e1noug3'
 ---
 
 Trzy dni, pięć lokalizacji w różnych częściach Europy i jeden cel - stworzenie

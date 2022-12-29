@@ -1,9 +1,9 @@
 ---
 title:
-  "#45 Tech Writer wybiera pomiędzy narzędziami open source a enterprise, czyli
-  jak zbudować tech stack z przyszłością"
+  '#45 Tech Writer wybiera pomiędzy narzędziami open source a enterprise, czyli
+  jak zbudować tech stack z przyszłością'
 author: Tech Writer koduje
-episodeId: "45-Tech-Writer-wybiera-pomidzy-narzdziami-open-source-a-enterprise--czyli-jak-zbudowa-tech-stack-z-przyszoci-e1ncemn"
+episodeId: '45-Tech-Writer-wybiera-pomidzy-narzdziami-open-source-a-enterprise--czyli-jak-zbudowa-tech-stack-z-przyszoci-e1ncemn'
 ---
 
 Open source oznacza, że się nie płaci, prawda? Niezupełnie. Nie płaci się
@@ -41,4 +41,3 @@ licencji Creative Commons license CC BY 4.0
   https://fossa.com/blog/npm-packages-colors-faker-corrupted/
 - Stack Overflow: https://stackoverflow.com/
 - Skeumorfizm: https://pl.wikipedia.org/wiki/Skeumorfizm
-

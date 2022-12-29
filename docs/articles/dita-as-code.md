@@ -1,6 +1,7 @@
 ---
 title: DITA as code - a modern approach to the classic standard
-description: This article aims to show how you can use DITA in the docs as code model
+description:
+  This article aims to show how you can use DITA in the docs as code model
 ---
 
 The title of this article may raise some eyebrows among our fellow content

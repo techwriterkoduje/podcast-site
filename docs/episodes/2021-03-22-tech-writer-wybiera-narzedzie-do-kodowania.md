@@ -1,9 +1,9 @@
 ---
 title:
-  "#28 Tech Writer wybiera narzędzie do kodowania, czyli VS Code kontra IntelliJ
-  IDEA"
+  '#28 Tech Writer wybiera narzędzie do kodowania, czyli VS Code kontra IntelliJ
+  IDEA'
 author: Tech Writer koduje
-episodeId: "28-Tech-Writer-wybiera-narzdzie-do-kodowania--czyli-VS-Code-kontra-IntelliJ-IDEA-et3pcm"
+episodeId: '28-Tech-Writer-wybiera-narzdzie-do-kodowania--czyli-VS-Code-kontra-IntelliJ-IDEA-et3pcm'
 ---
 
 Co jest lepsze do pisania kodu - komercyjne środowisko programistyczne czy
@@ -20,4 +20,3 @@ _Muzyka w intro oraz dźwięki pochodzą z kolekcji "107 Free Retro Game Sounds"
 dostępnej na stronie <https://dominik-braun.net>, udostępnianej na podstawie
 licencji
 [Creative Commons license CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)._
-

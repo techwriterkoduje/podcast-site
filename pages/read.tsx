@@ -1,10 +1,10 @@
-import Feature, { FeatureProps } from "../components/Feature/Feature";
-import Layout from "../components/Layout/Layout";
-import SimplePage from "../components/SimplePage/SimplePage";
+import Feature, { FeatureProps } from '../components/Feature/Feature';
+import Layout from '../components/Layout/Layout';
+import SimplePage from '../components/SimplePage/SimplePage';
 
 const features: FeatureProps[] = [
   {
-    title: "DITA as code - a modern approach to the classic standard",
+    title: 'DITA as code - a modern approach to the classic standard',
     // imageUrl: "img/dita-as-code.jpg",
     description: (
       <>
@@ -18,13 +18,13 @@ const features: FeatureProps[] = [
     ),
     actionLinks: [
       {
-        to: "/dita-as-code",
-        label: "Czytaj artykuł",
+        to: '/dita-as-code',
+        label: 'Czytaj artykuł',
       },
     ],
   },
   {
-    title: "Tech Writer koduje w Pythonie. Przewodnik szybkiego startu.",
+    title: 'Tech Writer koduje w Pythonie. Przewodnik szybkiego startu.',
     // imageUrl: "img/python.png",
     description: (
       <>
@@ -36,13 +36,13 @@ const features: FeatureProps[] = [
     ),
     actionLinks: [
       {
-        to: "/docs/teoria",
-        label: "Czytaj przewodnik",
+        to: '/docs/teoria',
+        label: 'Czytaj przewodnik',
       },
     ],
   },
   {
-    title: "Dokumentacja do oprogramowania. Poradnik dla managerów.",
+    title: 'Dokumentacja do oprogramowania. Poradnik dla managerów.',
     // imageUrl: "img/managers.png",
     description: (
       <>
@@ -55,8 +55,8 @@ const features: FeatureProps[] = [
     ),
     actionLinks: [
       {
-        to: "https://pensjonatus.github.io/dokumentacja-do-oprogramowania/docs/przedslowie",
-        label: "Czytaj książkę",
+        to: 'https://pensjonatus.github.io/dokumentacja-do-oprogramowania/docs/przedslowie',
+        label: 'Czytaj książkę',
       },
     ],
   },

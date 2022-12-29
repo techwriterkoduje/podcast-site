@@ -1,9 +1,9 @@
 ---
 title:
-  "#30 Tech Writer radzi sobie ze sprzężeniem zwrotnym, czyli feedback do
-  dokumentacji"
+  '#30 Tech Writer radzi sobie ze sprzężeniem zwrotnym, czyli feedback do
+  dokumentacji'
 author: Tech Writer koduje
-episodeId: "30-Tech-Writer-radzi-sobie-ze-sprzeniem-zwrotnym--czyli-feedback-do-dokumentacji-e111ole"
+episodeId: '30-Tech-Writer-radzi-sobie-ze-sprzeniem-zwrotnym--czyli-feedback-do-dokumentacji-e111ole'
 ---
 
 Naszą dokumentację możemy poprawić tylko wtedy jeśli wiemy jakie kryją się w
@@ -18,4 +18,3 @@ _Muzyka w intro oraz dźwięki pochodzą z kolekcji "107 Free Retro Game Sounds"
 dostępnej na stronie <https://dominik-braun.net>, udostępnianej na podstawie
 licencji
 [Creative Commons license CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)._
-

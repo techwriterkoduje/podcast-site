@@ -1,7 +1,7 @@
 ---
-title: "#27 Tech Writer szkoli się z Pythona"
+title: '#27 Tech Writer szkoli się z Pythona'
 author: Tech Writer koduje
-episodeId: "27-Tech-Writer-szkoli-si-z-Pythona-eqaeh1"
+episodeId: '27-Tech-Writer-szkoli-si-z-Pythona-eqaeh1'
 ---
 
 Chcesz lepiej rozumieć kod, który opisujesz? Chcesz zautomatyzować żmudne
@@ -23,4 +23,3 @@ _Muzyka w intro oraz dźwięki pochodzą z kolekcji "107 Free Retro Game Sounds"
 dostępnej na stronie <https://dominik-braun.net>, udostępnianej na podstawie
 licencji
 [Creative Commons license CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)._
-

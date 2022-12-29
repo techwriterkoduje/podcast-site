@@ -1,9 +1,9 @@
 ---
 title:
-  "#21 Tech Writer zbiera informacje ze stron, czyli jak można wykorzystać web
-  scraping"
+  '#21 Tech Writer zbiera informacje ze stron, czyli jak można wykorzystać web
+  scraping'
 author: Tech Writer koduje
-episodeId: "21-Tech-Writer-zbiera-informacje-ze-stron--czyli-jak-mona-wykorzysta-web-scraping-ejj0ah/a-a375vf3"
+episodeId: '21-Tech-Writer-zbiera-informacje-ze-stron--czyli-jak-mona-wykorzysta-web-scraping-ejj0ah/a-a375vf3'
 ---
 
 Web scraping to zbieranie danych ze stron internetowych. Google, na przykład,
@@ -27,4 +27,3 @@ używamy do tworzenia instrukcji jest wystarczająco przejrzysty.
 Co można jeszcze zrobić za pomocą web scrapingu? Jakie inne testy są potrzebne w
 świecie dokumentacji technicznej i pisania ustrukturyzowanego? Zapraszamy do
 słuchania.
-

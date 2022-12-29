@@ -1,7 +1,7 @@
 ---
-title: "#35 Tech Writer chce kodować więcej"
+title: '#35 Tech Writer chce kodować więcej'
 author: Tech Writer koduje
-episodeId: "35-Tech-Writer-chce-kodowa-wicej-e198b1g"
+episodeId: '35-Tech-Writer-chce-kodowa-wicej-e198b1g'
 ---
 
 Czy Tech Writer, który trochę koduje może kodować więcej? Jakie ma opcje rozwoju
@@ -16,4 +16,3 @@ _Muzyka w intro oraz dźwięki pochodzą z kolekcji "107 Free Retro Game Sounds"
 dostępnej na stronie <https://dominik-braun.net>, udostępnianej na podstawie
 licencji
 [Creative Commons license CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)._
-

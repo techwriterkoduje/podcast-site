@@ -1,13 +1,13 @@
-import { readdirSync } from "fs";
-import { join } from "path";
+import { readdirSync } from 'fs';
+import { join } from 'path';
 import {
   getDateFromId,
   getMarkdownContent,
   getMarkdownMatter,
   markdownDir,
-} from "./markdown";
+} from './markdown';
 
-const episodesDirectory = join(markdownDir, "episodes");
+const episodesDirectory = join(markdownDir, 'episodes');
 
 export type EpisodeMetadata = {
   params: {
@@ -25,7 +25,7 @@ export function getAllEpisodeMetadata(): EpisodeMetadata[] {
   const fileNames = readdirSync(episodesDirectory);
 
   const result: EpisodeMetadata[] = fileNames.map((fileName) => {
-    const id = fileName.replace(/\.md$/, "");
+    const id = fileName.replace(/\.md$/, '');
     const date = getDateFromId(id);
     const matterResult = getMarkdownMatter(getAbsolutePathFromId(id));
 

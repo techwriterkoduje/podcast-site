@@ -1,7 +1,7 @@
 ---
-title: "#24 Tech Writer publikuje inaczej, czyli API do dokumentacji"
+title: '#24 Tech Writer publikuje inaczej, czyli API do dokumentacji'
 author: Tech Writer koduje
-episodeId: "24-Tech-Writer-publikuje-inaczej--czyli-API-do-dokumentacji-eo4j7f"
+episodeId: '24-Tech-Writer-publikuje-inaczej--czyli-API-do-dokumentacji-eo4j7f'
 ---
 
 Niektóre sposoby publikowania dokumentacji są znane wśród Tech Writerów od
@@ -15,4 +15,3 @@ rozwiązanie nie jest zalecane, a do tego stwarza szereg problemów. A może by 
 stworzyć API dla dokumentacji i serwować treść za pomocą endpointów? Rozważamy
 czy takie rozwiązanie jest możliwe, czy ma sens i w jakich sytuacjach mogłoby
 się sprawdzić.
-

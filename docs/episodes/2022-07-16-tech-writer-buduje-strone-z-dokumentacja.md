@@ -1,9 +1,9 @@
 ---
 title:
-  "#43 Tech Writer buduje stronę z dokumentacją, czyli prosty przepis jak zacząć
-  od zera"
+  '#43 Tech Writer buduje stronę z dokumentacją, czyli prosty przepis jak zacząć
+  od zera'
 author: Tech Writer koduje
-episodeId: "43-Tech-Writer-buduje-stron-z-dokumentacj--czyli-prosty-przepis-jak-zacz-od-zera-e1l2qb1"
+episodeId: '43-Tech-Writer-buduje-stron-z-dokumentacj--czyli-prosty-przepis-jak-zacz-od-zera-e1l2qb1'
 ---
 
 Zbudowanie strony z dokumentacją od zera może się wydawać nie lada wyzwaniem.
@@ -49,4 +49,3 @@ licencji Creative Commons license CC BY 4.0
 - DITA Open Toolkit (OT): https://www.dita-ot.org/
 - Oxygen XML: https://www.oxygenxml.com/
 - mr-pdf: https://www.npmjs.com/package/mr-pdf
-

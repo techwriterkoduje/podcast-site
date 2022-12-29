@@ -1,9 +1,9 @@
 ---
 title:
-  "#22 Tech Writer buduje dokumentację API, czyli Next.js, ReDoc i OpenAPI w
-  akcji"
+  '#22 Tech Writer buduje dokumentację API, czyli Next.js, ReDoc i OpenAPI w
+  akcji'
 author: Tech Writer koduje
-episodeId: "22-Tech-Writer-buduje-dokumentacj-API--czyli-Next-js--ReDoc-i-OpenAPI-w-akcji-el3gk9"
+episodeId: '22-Tech-Writer-buduje-dokumentacj-API--czyli-Next-js--ReDoc-i-OpenAPI-w-akcji-el3gk9'
 ---
 
 Next.js to framework Reacta, dzięki któremu można w elastyczny sposób tworzyć
@@ -13,4 +13,3 @@ tym jak można połączyć Next.js z narzędziem ReDoc, żeby zbudować stronę 
 dokumentacją dla wielu API stworzonych przy pomocy specyfikacji OpenAPI.
 Zastanawiamy się też jak Next.js może nam się przydać kiedy piszemy dokumentację
 w standardzie DITA.
-

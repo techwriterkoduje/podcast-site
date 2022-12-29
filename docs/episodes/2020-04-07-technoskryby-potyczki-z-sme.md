@@ -1,9 +1,9 @@
 ---
 title:
-  "#15 Technoskryby potyczki z SME, czyli jak zdobywać informacje potrzebne do
-  tworzenia dokumentacji"
+  '#15 Technoskryby potyczki z SME, czyli jak zdobywać informacje potrzebne do
+  tworzenia dokumentacji'
 author: Tech Writer koduje
-episodeId: "15-Technoskryby-potyczki-z-SME--czyli-jak-zdobywa-informacje-potrzebne-do-tworzenia-dokumentacji-ecel9n/a-a1sf1um"
+episodeId: '15-Technoskryby-potyczki-z-SME--czyli-jak-zdobywa-informacje-potrzebne-do-tworzenia-dokumentacji-ecel9n/a-a1sf1um'
 ---
 
 Jak Technical Writer radzi sobie ze zdobywaniem informacji? Co jeśli Subject

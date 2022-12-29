@@ -1,9 +1,9 @@
 ---
 title:
-  "#38 Tech Writer walczy z hakerami, czyli jak zadbać o bezpieczeństwo
-  dokumentacji"
+  '#38 Tech Writer walczy z hakerami, czyli jak zadbać o bezpieczeństwo
+  dokumentacji'
 author: Tech Writer koduje
-episodeId: "38-Tech-Writer-walczy-z-hakerami--czyli-jak-zadba-o-bezpieczestwo-dokumentacji-e1cbmce"
+episodeId: '38-Tech-Writer-walczy-z-hakerami--czyli-jak-zadba-o-bezpieczestwo-dokumentacji-e1cbmce'
 ---
 
 Stare porzekadło "Tańcz jakby nikt nie patrzył" niestety nie sprawdzi się w
@@ -47,4 +47,3 @@ licencji Creative Commons license CC BY 4.0
   https://en.wikipedia.org/wiki/Non-disclosure\_agreement
 - Kevin Mitnick: https://en.wikipedia.org/wiki/Kevin\_Mitnick
 - Profil Mateusza Olejarki na LinkedIn: https://pl.linkedin.com/in/molejarka
-
