@@ -1,5 +1,5 @@
 import Stack from "@mui/material/Stack";
-import HeroBanner from "./HeroBanner";
+import ShowBanner from "./ShowBanner";
 import LatestEpisodes from "./LatestEpisodes";
 import ContactUs from "./ContactUs";
 import ShoutOuts from "./ShoutOuts";
@@ -7,7 +7,7 @@ import ShoutOuts from "./ShoutOuts";
 export default function PageContent() {
     return (
         <Stack gap="4rem">
-            <HeroBanner/>
+            <ShowBanner/>
             <LatestEpisodes/>
             <ContactUs/>
             <ShoutOuts/>

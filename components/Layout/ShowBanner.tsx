@@ -9,7 +9,7 @@ import PodcastLogo from "./PodcastLogo";
 import Grid from "@mui/material/Unstable_Grid2";
 
 
-export default function HeroBanner() {
+export default function ShowBanner() {
     return (
         <Grid container alignItems="center" justifyContent="center"
               sx={{paddingTop: "100px", margin: "0 auto", maxWidth: "1200px"}}>
