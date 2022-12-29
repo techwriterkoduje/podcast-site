@@ -3,6 +3,8 @@ const repo = 'podcast-site';
 const assetPrefix = isGithubActions ? `./` : '';
 const basePath = isGithubActions ? `/${repo}` : '';
 
+console.log('RUNNING ON GITHUB ACTIONS?', isGithubActions);
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   assetPrefix: assetPrefix,
