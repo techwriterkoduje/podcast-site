@@ -1,25 +1,12 @@
-import { ThemeProvider, createTheme } from "@mui/material/styles";
-import CssBaseline from "@mui/material/CssBaseline";
-import "../styles/globals.css";
-import type { AppProps } from "next/app";
+import { ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import '../styles/globals.css';
+import type { AppProps } from 'next/app';
+import { websiteTheme } from '../themes/websiteTheme';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const darkTheme = createTheme({
-    palette: {
-      mode: "dark",
-      primary: {
-        main: "#ed6e5f",
-        dark: "#eb5645",
-      },
-      secondary: {
-        main: "#fafafa",
-        dark: "#dbdbdb",
-      },
-    },
-  });
-
   return (
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={websiteTheme}>
       <CssBaseline />
       <Component {...pageProps} />
     </ThemeProvider>
