@@ -31,8 +31,8 @@ const EpisodeList: NextPage<EpisodeListProps> = ({ allEpisodeMetadata }) => {
             const { id, date, title } = episode.params;
             return (
               <div key={id} className={styles.navItem}>
-                <Link href={`/episodes/${id}`}>
-                  <a className={styles.episodeTitle}>{title}</a>
+                <Link href={`/episodes/${id}`} className={styles.episodeTitle}>
+                  {title}
                 </Link>
                 <div className={styles.date}>
                   <DateDisplay dateString={date} />

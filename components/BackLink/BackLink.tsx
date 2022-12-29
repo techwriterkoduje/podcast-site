@@ -9,11 +9,9 @@ type BackLinkProps = {
 
 export default function BackLink({ href, children }: BackLinkProps) {
   return (
-    <Link href={href}>
-      <a className={styles.iconLink}>
-        <ArrowBackIcon fontSize="small" />
-        <span>{children}</span>
-      </a>
+    <Link href={href} className={styles.iconLink}>
+      <ArrowBackIcon fontSize="small" />
+      <span>{children}</span>
     </Link>
   );
 }

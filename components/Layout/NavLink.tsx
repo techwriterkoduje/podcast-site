@@ -12,8 +12,8 @@ export default function NavLink({
   className,
 }: NavLinkProps & { className?: string }) {
   return (
-    <Link href={href}>
-      <a className={className}>{children}</a>
+    <Link href={href} className={className}>
+      {children}
     </Link>
   );
 }
