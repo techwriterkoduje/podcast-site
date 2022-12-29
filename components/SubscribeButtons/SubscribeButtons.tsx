@@ -1,64 +1,70 @@
-import React from "react";
-import Button from "@mui/material/Button";
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
 
 const subscribeLinks = [
   {
-    to: "https://anchor.fm/docdeveloper/",
-    label: "Anchor.fm",
+    href: 'https://anchor.fm/docdeveloper/',
+    label: 'Anchor.fm',
+    icon: '/anchor-fm-icon.png',
   },
   {
-    to: "https://open.spotify.com/show/2jhQ1Z1nAOY686RVok7O9I",
-    label: "Spotify",
+    href: 'https://open.spotify.com/show/2jhQ1Z1nAOY686RVok7O9I',
+    label: 'Spotify',
+    icon: '/spotify-icon.png',
   },
   {
-    to: "https://player.fm/series/tech-writer-koduje",
-    label: "Player.fm",
+    href: 'https://player.fm/series/tech-writer-koduje',
+    label: 'Player.fm',
+    icon: '/player-fm-icon.png',
   },
   {
-    to: "https://podcasts.apple.com/us/podcast/tech-writer-koduje/id1463669718?uo=4",
-    label: "Apple Podcasts",
+    href: 'https://podcasts.apple.com/us/podcast/tech-writer-koduje/id1463669718?uo=4',
+    label: 'Apple Podcasts',
+    icon: '/apple-podcasts-icon.png',
   },
   {
-    to: "https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy84YWZiYTljL3BvZGNhc3QvcnNz",
-    label: "Google Podcasts",
+    href: 'https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy84YWZiYTljL3BvZGNhc3QvcnNz',
+    label: 'Google Podcasts',
+    icon: '/google-podcasts-icon.png',
   },
   {
-    to: "https://overcast.fm/itunes1463669718/tech-writer-koduje",
-    label: "Overcast",
+    href: 'https://pca.st/H7El',
+    label: 'Pocket Casts',
+    icon: '/pocket-casts-icon.png',
   },
   {
-    to: "https://pca.st/H7El",
-    label: "Pocket Casts",
-  },
-  {
-    to: "https://radiopublic.com/tech-writer-koduje-6nM7mE",
-    label: "RadioPublic",
-  },
-  {
-    to: "https://anchor.fm/s/8afba9c/podcast/rss",
-    label: "RSS",
+    href: 'https://anchor.fm/s/8afba9c/podcast/rss',
+    label: 'RSS',
+    icon: '/rss-icon.png',
   },
 ];
 
 export default function SubscribeButtons() {
   return (
-    <div
-      style={{
-        margin: "1rem auto",
-        display: "flex",
-        flexWrap: "wrap",
-        alignItems: "center",
-        justifyContent: "center",
-        gap: "1rem",
-        width: "700px",
-        maxWidth: "100%",
+    <Stack
+      direction="row"
+      sx={{
+        flexWrap: 'wrap',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: '0.25rem',
+        width: '100%',
+        maxWidth: '100%',
       }}
     >
-      {subscribeLinks.map(({ to, label }) => (
-        <Button href={to} target="_blank" key={label} variant="outlined" size="large">
-          {label}
+      {subscribeLinks.map((l) => (
+        <Button
+          startIcon={<img width="20px" src={l.icon} />}
+          href={l.href}
+          target="_blank"
+          key={l.label}
+          variant="text"
+          size="small"
+          sx={{ color: 'white' }}
+        >
+          {l.label}
         </Button>
       ))}
-    </div>
+    </Stack>
   );
 }

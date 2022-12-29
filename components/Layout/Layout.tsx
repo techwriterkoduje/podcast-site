@@ -1,6 +1,6 @@
-import Head from "next/head";
-import Header from "./Header";
-import styles from "./Layout.module.css";
+import Head from 'next/head';
+import Header from './Header';
+import Footer from './Footer';
 
 const podcastTitle = process.env.podcastTitle;
 
@@ -17,10 +17,9 @@ export default function Layout({
   description,
   isHome,
   children,
-  mainStyle,
 }: LayoutProps) {
   const processedTitle: string = `${title}${
-    !isHome ? " | " + podcastTitle : ""
+    !isHome ? ' | ' + podcastTitle : ''
   }`;
   return (
     <>
@@ -29,19 +28,9 @@ export default function Layout({
         <meta name="description" content={description} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <Header showLogo={!isHome} />
-
-      <main className={styles.main} style={mainStyle}>
-        {children}
-      </main>
-
-      <footer className={styles.footer}>
-        <div>
-          Copyright © {new Date().getFullYear()} {podcastTitle}
-        </div>
-        <div>Logo stworzone przez rad89</div>
-      </footer>
+      <Header />
+      {children}
+      <Footer />
     </>
   );
 }

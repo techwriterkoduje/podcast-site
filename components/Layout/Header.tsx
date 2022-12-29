@@ -1,36 +1,29 @@
-import Image from "next/image";
-import Link from "next/link";
-import styles from "./Header.module.css";
-import SiteNav from "./SiteNav";
+import Stack from '@mui/material/Stack';
+import HomeIcon from '@mui/icons-material/Home';
+import { navLinks } from './SiteLinks';
+import Link from 'next/link';
 
-type HeaderProps = {
-  showLogo?: boolean;
-};
-
-const podcastTitle = process.env.podcastTitle;
-
-export default function Header({ showLogo }: HeaderProps) {
+export default function Header() {
   return (
-    <nav role="nav" className={styles.header}>
-      <div className={styles.links}>
-        <SiteNav />
-      </div>
-      <div className={styles.logo}>
-        {showLogo && (
-          <Link href="/">
-            <a className={styles.headerLogo}>
-              <Image
-                alt={podcastTitle}
-                src="/logo.png"
-                width={100}
-                height={100}
-                style={{ backgroundColor: "var(--brand-black)" }}
-              />
-            </a>
-          </Link>
-        )}
-      </div>
-      <div className={styles.rightSide}></div>
-    </nav>
+    <Stack
+      direction="row"
+      sx={{
+        color: '#ed6e5f',
+        borderBottom: '2px solid #ed6e5f',
+        alignItems: 'center',
+        height: '50px',
+        padding: '0 1rem',
+        gap: '1rem',
+      }}
+    >
+      <Link href="/">
+        <HomeIcon />
+      </Link>
+      {navLinks.map(({ href, label }) => (
+        <Link href={href} key={label}>
+          {label}
+        </Link>
+      ))}
+    </Stack>
   );
 }

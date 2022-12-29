@@ -1,6 +1,6 @@
-import React from "react";
-import { useTheme } from "@mui/material/styles";
-import useMediaQuery from "@mui/material/useMediaQuery";
+import React from 'react';
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 type AnchorEmbedProps = {
   episodeId: string;
@@ -13,8 +13,8 @@ type IframeSizes = {
 
 function useIframeSizes(): IframeSizes {
   const theme = useTheme();
-  const isLarge = useMediaQuery(theme.breakpoints.up("md"));
-  const isMedium = useMediaQuery(theme.breakpoints.up("sm"));
+  const isLarge = useMediaQuery(theme.breakpoints.up('md'));
+  const isMedium = useMediaQuery(theme.breakpoints.up('sm'));
 
   if (isLarge) {
     return {
