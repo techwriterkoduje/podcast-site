@@ -1,12 +1,13 @@
-import { readdirSync, readFileSync } from "fs";
+import { readdirSync } from "fs";
 import { join } from "path";
-import matter, { GrayMatterFile } from "gray-matter";
-import { remark } from "remark";
-import remarkGfm from "remark-gfm";
-import html from "remark-html";
-import { MarkdownProps } from "../pages/episodes/[id]";
+import {
+  getDateFromId,
+  getMarkdownContent,
+  getMarkdownMatter,
+  markdownDir,
+} from "./markdown";
 
-const episodesDirectory = join(process.cwd(), "docs", "episodes");
+const episodesDirectory = join(markdownDir, "episodes");
 
 export type EpisodeMetadata = {
   params: {
@@ -16,21 +17,8 @@ export type EpisodeMetadata = {
   };
 };
 
-// id format is like: 2001-05-14-some-episode-title
-function getDateFromId(id: string) {
-  const match = id.match(/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]/);
-  if (match) {
-    return new Date(match[0]);
-  }
-
-  return new Date();
-}
-
-function getMarkdownFrontMatterById(id: string): GrayMatterFile<string> {
-  const fullPath = join(episodesDirectory, `${id}.md`);
-  const fileContents = readFileSync(fullPath, "utf8");
-
-  return matter(fileContents);
+function getAbsolutePathFromId(id: string): string {
+  return join(episodesDirectory, `${id}.md`);
 }
 
 export function getAllEpisodeMetadata(): EpisodeMetadata[] {
@@ -39,7 +27,7 @@ export function getAllEpisodeMetadata(): EpisodeMetadata[] {
   const result: EpisodeMetadata[] = fileNames.map((fileName) => {
     const id = fileName.replace(/\.md$/, "");
     const date = getDateFromId(id);
-    const matterResult = getMarkdownFrontMatterById(id);
+    const matterResult = getMarkdownMatter(getAbsolutePathFromId(id));
 
     return {
       params: {
@@ -58,22 +46,9 @@ export function getAllEpisodeMetadata(): EpisodeMetadata[] {
 }
 
 export async function getEpisodeData(id: string) {
-  const matterResult = getMarkdownFrontMatterById(id);
-
-  // markdown as HTML
-  const processedContent = await remark()
-    .use(remarkGfm)
-    .use(html)
-    .process(matterResult.content);
-  const contentHtml = processedContent.toString();
-
-  const result: MarkdownProps = {
-    id,
+  const markdownData = await getMarkdownContent(getAbsolutePathFromId(id));
+  return {
+    ...markdownData,
     date: getDateFromId(id).toDateString(),
-    contentHtml,
-    title: matterResult.data.title,
-    episodeId: matterResult.data.episodeId,
   };
-
-  return result;
 }
