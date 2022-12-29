@@ -1,12 +1,12 @@
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
-import Drawer from "@mui/material/Drawer";
-import { useState } from "react";
-import { SiteLinkProps } from "./SiteLinks";
-import NavLink from "./NavLink";
-import styles from "./LeftNav.module.css";
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+import Drawer from '@mui/material/Drawer';
+import { useState } from 'react';
+import { SiteLinkProps } from './SiteLinks';
+import NavLink from './NavLink';
+import styles from './LeftNav.module.css';
 
 export default function LeftNav({ navLinks }: { navLinks: SiteLinkProps[] }) {
   const [isOpen, setIsOpen] = useState(false);
