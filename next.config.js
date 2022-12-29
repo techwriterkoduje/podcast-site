@@ -13,6 +13,9 @@ const nextConfig = {
     podcastTitle: 'Tech Writer Koduje',
     contactEmail: 'techwriterkoduje@gmail.com',
   },
+  images: {
+    unoptimized: true,
+  },
 };
 
 module.exports = nextConfig;
