@@ -4,7 +4,7 @@ import Typography from '@mui/material/Typography';
 export default function PodcastDescription() {
   return (
     <Stack sx={{ textAlign: 'left' }} gap="2rem">
-      <Typography sx={{ fontSize: '36px', fontWeight: '600' }}>
+      <Typography variant="h1">
         Podcast o technicznej stronie tworzenia dokumentacji w IT
       </Typography>
       <Typography sx={{ fontSize: '20px' }}>
