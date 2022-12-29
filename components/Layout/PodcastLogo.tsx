@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Container from '@mui/material/Container';
 
 export default function PodcastLogo() {
   return (
