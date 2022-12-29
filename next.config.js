@@ -1,6 +1,6 @@
 const isGithubActions = process.env.GITHUB_ACTIONS || false;
 const repo = 'podcast-site';
-const assetPrefix = isGithubActions ? `./` : '';
+const assetPrefix = isGithubActions ? `${repo}/` : '';
 const basePath = isGithubActions ? `/${repo}` : '';
 
 console.log('RUNNING ON GITHUB ACTIONS?', isGithubActions);
