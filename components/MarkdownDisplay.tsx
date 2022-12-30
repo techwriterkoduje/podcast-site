@@ -1,19 +1,15 @@
 import Typography from '@mui/material/Typography';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
 
 type MarkdownDisplayProps = {
-  markdownString: string;
+  htmlString: string;
 };
 
-export default function MarkdownDisplay({
-  markdownString,
-}: MarkdownDisplayProps) {
+export default function MarkdownDisplay({ htmlString }: MarkdownDisplayProps) {
   return (
-    <Typography>
-      <ReactMarkdown remarkPlugins={[remarkGfm]}>
-        {markdownString}
-      </ReactMarkdown>
-    </Typography>
+    <Typography
+      dangerouslySetInnerHTML={{ __html: htmlString }}
+      sx={{ maxWidth: '80ch' }}
+      fontSize="1.1rem"
+    />
   );
 }

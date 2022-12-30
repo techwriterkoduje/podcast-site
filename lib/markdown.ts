@@ -1,6 +1,11 @@
 import { readFileSync } from 'fs';
 import matter, { GrayMatterFile } from 'gray-matter';
 import { join, parse } from 'path';
+import { remark } from 'remark';
+import remarkGfm from 'remark-gfm';
+import html from 'remark-html';
+import remarkPrism from 'remark-prism';
+import emoji from 'remark-emoji';
 
 export const markdownDir = join(process.cwd(), 'docs');
 
@@ -9,7 +14,7 @@ export type MarkdownProps = {
   title: string;
   episodeId: string;
   date?: string;
-  content: string;
+  contentHtml: string;
   description?: string;
 };
 
@@ -37,11 +42,19 @@ export async function getMarkdownContent(
   const fileContents = readFileSync(absolutePath, 'utf8');
   const matterResult = matter(fileContents);
 
+  const processedContent = await remark()
+    .use(remarkGfm)
+    .use(emoji)
+    .use(html, { sanitize: false })
+    .use(remarkPrism)
+    .process(matterResult.content);
+  const contentHtml = processedContent.toString();
+
   const id = parse(absolutePath).name;
 
   return {
     id: id,
-    content: matterResult.content,
+    contentHtml,
     title: matterResult.data.title,
     episodeId: matterResult.data.episodeId || null,
     description: matterResult.data.description || null,

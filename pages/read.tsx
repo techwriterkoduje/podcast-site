@@ -36,7 +36,7 @@ const features: FeatureProps[] = [
     ),
     actionLinks: [
       {
-        to: '/docs/teoria',
+        to: '/python',
         label: 'Czytaj przewodnik',
       },
     ],
