@@ -1,4 +1,4 @@
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import NorthWestIcon from '@mui/icons-material/NorthWest';
 import Link from 'next/link';
 import styles from './BackLink.module.css';
 
@@ -10,7 +10,7 @@ type BackLinkProps = {
 export default function BackLink({ href, children }: BackLinkProps) {
   return (
     <Link href={href} className={styles.iconLink}>
-      <ArrowBackIcon fontSize="small" />
+      <NorthWestIcon fontSize="small" />
       <span>{children}</span>
     </Link>
   );
