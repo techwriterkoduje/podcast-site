@@ -7,7 +7,7 @@ import NavLink from './NavLink';
 const hosts = [
   {
     key: 'michalskowron',
-    name: 'Michal Skowron',
+    name: 'Michał Skowron',
     img: '/michal-skowron.png',
     alt: 'Zdjęcie Michała Skowrona',
   },
