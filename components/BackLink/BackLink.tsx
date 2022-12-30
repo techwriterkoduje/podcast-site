@@ -4,7 +4,7 @@ import styles from './BackLink.module.css';
 
 type BackLinkProps = {
   href: string;
-  children: React.ReactElement;
+  children: React.ReactElement | string;
 };
 
 export default function BackLink({ href, children }: BackLinkProps) {

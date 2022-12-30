@@ -1,7 +1,7 @@
 import Stack from '@mui/material/Stack';
 
 type SimplePageProps = {
-  children: React.ReactElement;
+  children: React.ReactElement | string;
 };
 
 export default function SimplePage({ children }: SimplePageProps) {

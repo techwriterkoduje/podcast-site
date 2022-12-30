@@ -7,7 +7,7 @@ import EmailIcon from '@mui/icons-material/Email';
 export type SiteLinkProps = {
   label: string;
   href: string;
-  icon: React.ReactElement;
+  icon: React.ReactElement | string;
 };
 
 export const navLinks: SiteLinkProps[] = [

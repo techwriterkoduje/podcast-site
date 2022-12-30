@@ -7,7 +7,7 @@ const podcastTitle = process.env.podcastTitle;
 type LayoutProps = {
   title: string;
   description: string;
-  children: React.ReactElement;
+  children: React.ReactElement | string;
   isHome?: boolean;
   mainStyle?: React.CSSProperties;
 };
