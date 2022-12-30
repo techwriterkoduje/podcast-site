@@ -42,6 +42,7 @@ export default function ShoutOuts() {
               cursor: 'pointer',
               justifyContent: 'center',
               textAlign: 'center',
+              backgroundColor: 'white',
             }}
           >
             <NavLink href={l.href}>

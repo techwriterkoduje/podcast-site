@@ -6,12 +6,7 @@ import Hosts from './Hosts';
 
 export default function ShowBanner() {
   return (
-    <Grid
-      container
-      alignItems="center"
-      justifyContent="center"
-      sx={{ paddingTop: '75px', margin: '0 auto', maxWidth: '1200px' }}
-    >
+    <>
       <Grid
         lg={7}
         container
@@ -24,9 +19,9 @@ export default function ShowBanner() {
         <Hosts />
         <SubscribeButtons />
       </Grid>
-      <Grid sx={{ margin: 'auto' }}>
+      <Grid lg={4}>
         <PodcastLogo />
       </Grid>
-    </Grid>
+    </>
   );
 }

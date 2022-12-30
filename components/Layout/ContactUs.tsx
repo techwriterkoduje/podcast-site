@@ -7,10 +7,8 @@ export default function ContactUs() {
   return (
     <Stack
       sx={{
-        width: '1200px',
         alignItems: 'center',
         gap: '2rem',
-        margin: 'auto',
       }}
     >
       <Typography variant="h2">
