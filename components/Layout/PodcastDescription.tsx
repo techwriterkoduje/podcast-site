@@ -3,7 +3,7 @@ import Typography from '@mui/material/Typography';
 
 export default function PodcastDescription() {
   return (
-    <Stack sx={{ textAlign: 'left' }} gap="2rem">
+    <Stack sx={{ textAlign: 'left', gap: '2rem' }}>
       <Typography variant="h1">
         Podcast o technicznej stronie tworzenia dokumentacji w IT
       </Typography>
