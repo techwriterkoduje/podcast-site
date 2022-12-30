@@ -1,18 +1,21 @@
 import Stack from '@mui/material/Stack';
-import Link from 'next/link';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
+import NavLink from './NavLink';
+import Typography from '@mui/material/Typography';
 
 export default function LatestEpisodes() {
   return (
     <Stack
       sx={{
         justifyContent: 'center',
+        alignItems: 'center',
         margin: 'auto',
         gap: '2rem',
         width: '1200px',
       }}
     >
+      <Typography variant="h2">Posłuchaj ostatnich odcinków</Typography>
       <Card sx={{ width: '100%', margin: 'auto' }}>
         <iframe
           src="https://anchor.fm/docdeveloper/embed/episodes/49-Tech-Writer-testuje-narzdzia-do-mierzenia-indeksu-czytelnoci-e1sgepc"
@@ -42,11 +45,9 @@ export default function LatestEpisodes() {
           ></iframe>
         </Card>
       </Stack>
-      <Link href="/episode-list">
-        <Button variant="contained" sx={{ width: '50%', margin: 'auto' }}>
-          Wszystkie odcinki
-        </Button>
-      </Link>
+      <NavLink href="/episode-list">
+        <Button variant="contained">Wszystkie odcinki</Button>
+      </NavLink>
     </Stack>
   );
 }
