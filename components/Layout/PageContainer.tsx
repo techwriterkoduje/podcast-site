@@ -7,7 +7,7 @@ type PageContainerProps = {
 
 export default function PageContainer({ children }: PageContainerProps) {
   return (
-    <Container sx={{ padding: '3rem 1rem' }}>
+    <Container sx={{ padding: '3rem 1rem' }} maxWidth="md">
       <Stack spacing={2}>{children}</Stack>
     </Container>
   );

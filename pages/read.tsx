@@ -1,6 +1,6 @@
 import Feature, { FeatureProps } from '../components/Feature/Feature';
 import Layout from '../components/Layout/Layout';
-import SimplePage from '../components/SimplePage/SimplePage';
+import PageContainer from '../components/Layout/PageContainer';
 
 const features: FeatureProps[] = [
   {
@@ -68,11 +68,11 @@ export default function Read() {
       title="Poczytaj"
       description="Artykuły, poradniki i inne teksty w służbie technical writingu"
     >
-      <SimplePage>
+      <PageContainer>
         {features.map((featureProps) => (
           <Feature key={featureProps.title} {...featureProps} />
         ))}
-      </SimplePage>
+      </PageContainer>
     </Layout>
   );
 }
