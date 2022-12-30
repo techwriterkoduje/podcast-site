@@ -1,8 +1,9 @@
 # .github/workflows/build-and-deploy.yml
-name: Build and deploy website
+name: Test website
 on:
-  push:
-    branches: [main]
+  pull_request:
+    branches:
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -13,14 +14,7 @@ jobs:
           # update the Node version to meet your needs
           node-version: 16
           cache: npm
-      - name: Build
+      - name: Build site
         run: |
           yarn
           yarn build
-          touch out/.nojekyll
-      - name: Deploy
-        # https://github.com/JamesIves/github-pages-deploy-action
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: gh-pages
-          folder: out
