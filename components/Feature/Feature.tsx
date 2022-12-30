@@ -5,7 +5,7 @@ import ActionButtonLink, {
 
 export type FeatureProps = {
   title: string;
-  description: JSX.Element;
+  description: React.ReactElement;
   actionLinks: ActionButtonLinkProps[];
 };
 

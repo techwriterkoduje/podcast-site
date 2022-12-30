@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export type ActionButtonLinkProps = {
   to: string;
-  label: JSX.Element | JSX.Element[] | string;
+  label: React.ReactElement;
 };
 
 export default function ActionButtonLink({ to, label }: ActionButtonLinkProps) {

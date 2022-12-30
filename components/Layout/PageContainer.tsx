@@ -2,7 +2,7 @@ import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 
 type PageContainerProps = {
-  children: React.ReactElement | React.ReactElement[];
+  children: React.ReactNode;
 };
 
 export default function PageContainer({ children }: PageContainerProps) {

@@ -1,4 +1,3 @@
-import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import { GetStaticProps, NextPage } from 'next';
 import { join } from 'path';

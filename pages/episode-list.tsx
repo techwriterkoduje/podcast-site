@@ -1,6 +1,5 @@
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
 import { GetStaticProps, NextPage } from 'next';
 import Link from 'next/link';
 import DateDisplay from '../components/DateDisplay/DateDisplay';
