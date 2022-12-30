@@ -11,7 +11,9 @@ export default function MarkdownDisplay({
 }: MarkdownDisplayProps) {
   return (
     <Typography>
-      <ReactMarkdown children={markdownString} remarkPlugins={[remarkGfm]} />
+      <ReactMarkdown remarkPlugins={[remarkGfm]}>
+        {markdownString}
+      </ReactMarkdown>
     </Typography>
   );
 }
