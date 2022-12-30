@@ -4,11 +4,13 @@ import Stack from '@mui/material/Stack';
 type PageContainerProps = {
   children: React.ReactNode;
   centered?: boolean;
+  wide?: boolean;
 };
 
 export default function PageContainer({
   children,
   centered,
+  wide,
 }: PageContainerProps) {
   return (
     <Container
@@ -16,7 +18,7 @@ export default function PageContainer({
         padding: '3rem 1rem',
         minHeight: '100vh',
       }}
-      maxWidth="md"
+      maxWidth={wide ? 'lg' : 'md'}
     >
       <Stack
         spacing={2}

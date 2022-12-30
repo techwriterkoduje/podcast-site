@@ -23,7 +23,7 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 const DitaAsCode: NextPage<MarkdownProps> = ({
-  content,
+  contentHtml,
   title,
   description,
 }) => {
@@ -32,7 +32,7 @@ const DitaAsCode: NextPage<MarkdownProps> = ({
       <PageContainer>
         <BackLink href="/read">więcej artykułów</BackLink>
         <Typography variant="h1">{title}</Typography>
-        <MarkdownDisplay markdownString={content} />
+        <MarkdownDisplay htmlString={contentHtml} />
       </PageContainer>
     </Layout>
   );

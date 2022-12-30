@@ -31,7 +31,7 @@ type EpisodeProps = {
 };
 
 const Episode: NextPage<EpisodeProps> = ({ episodeData }: EpisodeProps) => {
-  const { episodeId, title, date, content } = episodeData;
+  const { episodeId, title, date, contentHtml } = episodeData;
   return (
     <Layout title={title} description={title}>
       <PageContainer>
@@ -39,7 +39,7 @@ const Episode: NextPage<EpisodeProps> = ({ episodeData }: EpisodeProps) => {
         <Typography variant="h1">{title}</Typography>
         {date && <DateDisplay dateString={date} />}
         <AnchorEmbed episodeId={episodeId} />
-        <MarkdownDisplay markdownString={content} />
+        <MarkdownDisplay htmlString={contentHtml} />
       </PageContainer>
     </Layout>
   );
