@@ -6,6 +6,7 @@ import Link from 'next/link';
 import DateDisplay from '../components/DateDisplay/DateDisplay';
 import Layout from '../components/Layout/Layout';
 import { EpisodeMetadata, getAllEpisodeMetadata } from '../lib/episodes';
+import PageContainer from '../components/Layout/PageContainer';
 
 export const getStaticProps: GetStaticProps = async () => {
   const allEpisodeMetadata = getAllEpisodeMetadata();
@@ -26,7 +27,7 @@ const EpisodeList: NextPage<EpisodeListProps> = ({ allEpisodeMetadata }) => {
       title="Lista odcinków"
       description="Wybierz odcinek podcastu do posłuchania"
     >
-      <Container sx={{ padding: '3rem 1rem' }}>
+      <PageContainer>
         <Typography variant="h1">Lista odcinków</Typography>
         <nav>
           {allEpisodeMetadata.map((episode) => {
@@ -43,7 +44,7 @@ const EpisodeList: NextPage<EpisodeListProps> = ({ allEpisodeMetadata }) => {
             );
           })}
         </nav>
-      </Container>
+      </PageContainer>
     </Layout>
   );
 };

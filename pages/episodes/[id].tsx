@@ -1,11 +1,11 @@
-import Container from '@mui/material/Container';
-import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import { NextPage } from 'next';
 import AnchorEmbed from '../../components/AnchorEmbed/AnchorEmbed';
 import BackLink from '../../components/BackLink/BackLink';
 import DateDisplay from '../../components/DateDisplay/DateDisplay';
 import Layout from '../../components/Layout/Layout';
+import PageContainer from '../../components/Layout/PageContainer';
+import MarkdownDisplay from '../../components/MarkdownDisplay';
 import { getAllEpisodeMetadata, getEpisodeData } from '../../lib/episodes';
 import { MarkdownProps } from '../../lib/markdown';
 
@@ -31,18 +31,16 @@ type EpisodeProps = {
 };
 
 const Episode: NextPage<EpisodeProps> = ({ episodeData }: EpisodeProps) => {
-  const { episodeId, title, date, contentHtml } = episodeData;
+  const { episodeId, title, date, content } = episodeData;
   return (
     <Layout title={title} description={title}>
-      <Container sx={{ padding: '3rem 1rem' }}>
-        <Stack spacing={2}>
-          <BackLink href="/episode-list">lista odcinków</BackLink>
-          <Typography variant="h1">{title}</Typography>
-          {date && <DateDisplay dateString={date} />}
-          <AnchorEmbed episodeId={episodeId} />
-          <Typography dangerouslySetInnerHTML={{ __html: contentHtml }} />
-        </Stack>
-      </Container>
+      <PageContainer>
+        <BackLink href="/episode-list">lista odcinków</BackLink>
+        <Typography variant="h1">{title}</Typography>
+        {date && <DateDisplay dateString={date} />}
+        <AnchorEmbed episodeId={episodeId} />
+        <MarkdownDisplay markdownString={content} />
+      </PageContainer>
     </Layout>
   );
 };

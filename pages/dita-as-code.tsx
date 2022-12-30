@@ -1,13 +1,16 @@
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
 import { GetStaticProps, NextPage } from 'next';
 import { join } from 'path';
 import BackLink from '../components/BackLink/BackLink';
 import Layout from '../components/Layout/Layout';
+import PageContainer from '../components/Layout/PageContainer';
+import MarkdownDisplay from '../components/MarkdownDisplay';
 import {
   getMarkdownContent,
   markdownDir,
   MarkdownProps,
 } from '../lib/markdown';
-import styles from '../styles/EpisodeList.module.css';
 
 export const getStaticProps: GetStaticProps = async () => {
   const markdownContent = await getMarkdownContent(
@@ -21,20 +24,17 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 const DitaAsCode: NextPage<MarkdownProps> = ({
-  contentHtml,
+  content,
   title,
   description,
 }) => {
   return (
     <Layout title={title} description={description || ''}>
-      <section className={styles.pageWrapper}>
+      <PageContainer>
         <BackLink href="/read">więcej artykułów</BackLink>
-        <h1>{title}</h1>
-        <div
-          dangerouslySetInnerHTML={{ __html: contentHtml }}
-          className={styles.episodeContents}
-        />
-      </section>
+        <Typography variant="h1">{title}</Typography>
+        <MarkdownDisplay markdownString={content} />
+      </PageContainer>
     </Layout>
   );
 };
