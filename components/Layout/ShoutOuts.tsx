@@ -2,8 +2,8 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-import Link from 'next/link';
 import Image from '../Image';
+import NavLink from './NavLink';
 
 const shoutOutLinks = [
   {
@@ -28,8 +28,8 @@ const shoutOutLinks = [
 
 export default function ShoutOuts() {
   return (
-    <Stack sx={{ alignItems: 'center', gap: '1rem' }}>
-      <Typography>Szanujemy i wspieramy</Typography>
+    <Stack sx={{ alignItems: 'center', gap: '2rem' }}>
+      <Typography variant="h2">Szanujemy i wspieramy</Typography>
       <ImageList sx={{ width: 600 }} cols={3} rowHeight={164}>
         {shoutOutLinks.map((l) => (
           <ImageListItem
@@ -41,11 +41,12 @@ export default function ShoutOuts() {
               width: '200px',
               cursor: 'pointer',
               justifyContent: 'center',
+              textAlign: 'center',
             }}
           >
-            <Link href={l.href}>
-              <Image src={l.img} alt={l.alt} />
-            </Link>
+            <NavLink href={l.href}>
+              <Image src={l.img} alt={l.alt} width="100%" height="100%" />
+            </NavLink>
           </ImageListItem>
         ))}
       </ImageList>

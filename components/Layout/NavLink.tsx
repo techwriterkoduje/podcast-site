@@ -1,19 +1,6 @@
-import Link from 'next/link';
+import { LinkProps, Link as MuiLink } from '@mui/material';
+import NextLink from 'next/link';
 
-type NavLinkProps = {
-  children: JSX.Element | JSX.Element[] | string;
-  href: string;
-  className?: string;
-};
-
-export default function NavLink({
-  children,
-  href,
-  className,
-}: NavLinkProps & { className?: string }) {
-  return (
-    <Link href={href} className={className}>
-      {children}
-    </Link>
-  );
+export default function NavLink(props: LinkProps<'a'>) {
+  return <MuiLink component={NextLink} {...props} />;
 }

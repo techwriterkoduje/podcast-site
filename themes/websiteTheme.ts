@@ -18,17 +18,22 @@ export const websiteTheme = createTheme({
     h1: {
       fontSize: 36,
       textAlign: 'left',
-      color: 'white',
+      color: '#fafafa',
       fontWeight: 600,
+    },
+    h2: {
+      fontSize: 30,
+      textAlign: 'left',
+      color: 'white',
+      fontWeight: 400,
     },
   },
   components: {
     MuiLink: {
       defaultProps: {
         underline: 'none',
-        sx: {
-          width: 'fit-content',
-        },
+        color: '#fafafa',
+        width: 'fit-content',
       },
     },
   },
