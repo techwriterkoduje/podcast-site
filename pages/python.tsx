@@ -7,22 +7,20 @@ import { useState } from 'react';
 import BackLink from '../components/BackLink/BackLink';
 import Layout from '../components/Layout/Layout';
 import PageContainer from '../components/Layout/PageContainer';
-import LeftNav from '../components/LeftNav/LeftNav';
+import LeftNav from '../components/GuideNavigation/LeftNav';
 import MarkdownDisplay from '../components/MarkdownDisplay';
+import PreviousNext from '../components/GuideNavigation/PreviousNext';
 import {
   getMarkdownContent,
   markdownDir,
   MarkdownProps,
 } from '../lib/markdown';
+import GuideNavigation, {
+  GuidePageProps,
+  GuidePagesProps,
+} from '../components/GuideNavigation/GuideNavigation';
 
 const guideIds = ['teoria', 'praktyka', 'co-dalej', 'podziekowania'];
-
-type GuidePageProps = {
-  pageTitle: string;
-  pageContent: string;
-};
-
-type PythonGuideProps = { guidePages: GuidePageProps[] };
 
 export const getStaticProps: GetStaticProps = async () => {
   const guideContents = await Promise.all(
@@ -49,42 +47,18 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-const Python: NextPage<PythonGuideProps> = ({ guidePages }) => {
-  const [selectedPage, setSelectedPage] = useState(guidePages[0]);
-
-  function handleMenuChange(title: string) {
-    setSelectedPage((currentlySelected) => {
-      if (title === currentlySelected.pageTitle) {
-        return currentlySelected;
-      }
-
-      const matchingPage = guidePages.find((page) => page.pageTitle === title);
-
-      return matchingPage || currentlySelected;
-    });
-  }
-
+const Python: NextPage<GuidePagesProps> = ({ guidePages }) => {
   return (
     <Layout
       title="Tech Writer koduje w Pythonie. Przewodnik szybkiego startu."
       description="Jako Tech Writer, możesz zrobić bardzo dużo przy użyciu odrobiny programowania. Nie musisz być ekspertem, wystarczy, że umiesz użyć Pythona jako narzędzia. A zacząć jest bardzo łatwo. Udostępniamy darmowy przewodnik szybkiego startu."
     >
       <PageContainer wide>
-        <Grid container spacing={2}>
-          <Grid>
-            <LeftNav
-              items={guidePages.map(({ pageTitle }) => pageTitle)}
-              changeSelectedItem={handleMenuChange}
-            />
-          </Grid>
-          <Grid>
-            <Stack spacing="1rem">
-              <BackLink href="/read">więcej artykułów</BackLink>
-              <Typography variant="h1">{selectedPage.pageTitle}</Typography>
-              <MarkdownDisplay htmlString={selectedPage.pageContent} />
-            </Stack>
-          </Grid>
-        </Grid>
+        <GuideNavigation
+          backLinkHref="/read"
+          backLinkLabel="więcej artykułów"
+          guidePages={guidePages}
+        />
       </PageContainer>
     </Layout>
   );

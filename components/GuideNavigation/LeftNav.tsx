@@ -4,15 +4,17 @@ import ListItemButton from '@mui/material/ListItemButton';
 
 type LeftNavProps = {
   items: string[];
+  selectedItem: string;
   changeSelectedItem: (item: string) => void;
 };
 
-export default function LeftNav({ items, changeSelectedItem }: LeftNavProps) {
-  const [selectedItem, setSelectedItem] = useState(items[0]);
-
+export default function LeftNav({
+  items,
+  selectedItem,
+  changeSelectedItem,
+}: LeftNavProps) {
   function handleClick(itemClicked: string) {
     changeSelectedItem(itemClicked);
-    setSelectedItem(itemClicked);
   }
   return (
     <List>
