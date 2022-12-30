@@ -2,7 +2,7 @@ import Stack from '@mui/material/Stack';
 import Container from '@mui/material/Container';
 import { Typography } from '@mui/material';
 import Image from '../Image';
-import NavLink from './NavLink';
+import NavLink from '../Layout/NavLink';
 
 const hosts = [
   {

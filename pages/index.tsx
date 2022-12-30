@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import Layout from '../components/Layout/Layout';
 import { getAllEpisodeMetadata, getEpisodeData } from '../lib/episodes';
-import HomePage from '../components/Layout/HomePage';
+import HomePage from '../components/HomePage/HomePage';
 
 const podcastTitle = process.env.podcastTitle;
 const email = process.env.contactEmail;
