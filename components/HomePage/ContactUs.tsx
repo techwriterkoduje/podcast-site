@@ -1,16 +1,14 @@
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
-import NavLink from './NavLink';
+import NavLink from '../Layout/NavLink';
 
 export default function ContactUs() {
   return (
     <Stack
       sx={{
-        width: '1200px',
         alignItems: 'center',
         gap: '2rem',
-        margin: 'auto',
       }}
     >
       <Typography variant="h2">

@@ -1,9 +1,11 @@
+import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
 import { GetStaticProps, NextPage } from 'next';
 import Link from 'next/link';
 import DateDisplay from '../components/DateDisplay/DateDisplay';
 import Layout from '../components/Layout/Layout';
 import { EpisodeMetadata, getAllEpisodeMetadata } from '../lib/episodes';
-import styles from '../styles/EpisodeList.module.css';
+import PageContainer from '../components/Layout/PageContainer';
 
 export const getStaticProps: GetStaticProps = async () => {
   const allEpisodeMetadata = getAllEpisodeMetadata();
@@ -24,24 +26,24 @@ const EpisodeList: NextPage<EpisodeListProps> = ({ allEpisodeMetadata }) => {
       title="Lista odcinków"
       description="Wybierz odcinek podcastu do posłuchania"
     >
-      <section className={styles.pageWrapper}>
-        <h1>Lista odcinków</h1>
+      <PageContainer>
+        <Typography variant="h1">Lista odcinków</Typography>
         <nav>
           {allEpisodeMetadata.map((episode) => {
             const { id, date, title } = episode.params;
             return (
-              <div key={id} className={styles.navItem}>
-                <Link href={`/episodes/${id}`} className={styles.episodeTitle}>
-                  {title}
-                </Link>
-                <div className={styles.date}>
+              <Stack key={id} sx={{ gap: '3px', margin: '2rem 0' }}>
+                <Typography variant="h5" component="h2">
+                  <Link href={`/episodes/${id}`}>{title}</Link>
+                </Typography>
+                <Typography variant="subtitle1">
                   <DateDisplay dateString={date} />
-                </div>
-              </div>
+                </Typography>
+              </Stack>
             );
           })}
         </nav>
-      </section>
+      </PageContainer>
     </Layout>
   );
 };

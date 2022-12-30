@@ -1,7 +1,6 @@
 import Stack from '@mui/material/Stack';
 import HomeIcon from '@mui/icons-material/Home';
-import { navLinks, SiteLinkProps } from './SiteLinks';
-import Link from 'next/link';
+import { navLinks } from './SiteLinks';
 import NavLink from './NavLink';
 import { useState } from 'react';
 import IconButton from '@mui/material/IconButton';
@@ -11,6 +10,14 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
+
+function LogoLink() {
+  return (
+    <NavLink href="/" sx={{ width: '24px', height: '24px' }}>
+      <HomeIcon />
+    </NavLink>
+  );
+}
 
 function HorizontalNav() {
   return (
@@ -25,9 +32,7 @@ function HorizontalNav() {
         gap: '1rem',
       }}
     >
-      <NavLink href="/" sx={{ width: '24px', height: '24px' }}>
-        <HomeIcon />
-      </NavLink>
+      <LogoLink />
       {navLinks.map(({ href, label }) => (
         <NavLink href={href} key={label} sx={{ fontSize: '1.1rem' }}>
           {label}
@@ -45,7 +50,8 @@ function LeftNav() {
   }
 
   return (
-    <>
+    <Stack alignItems="center" direction="row">
+      <LogoLink />
       <IconButton
         aria-label="Otwórz listę podstron"
         onClick={() => {
@@ -82,7 +88,7 @@ function LeftNav() {
           ))}
         </List>
       </Drawer>
-    </>
+    </Stack>
   );
 }
 

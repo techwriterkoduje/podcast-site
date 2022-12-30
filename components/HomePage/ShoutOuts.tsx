@@ -3,7 +3,7 @@ import Typography from '@mui/material/Typography';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import Image from '../Image';
-import NavLink from './NavLink';
+import NavLink from '../Layout/NavLink';
 
 const shoutOutLinks = [
   {
@@ -42,6 +42,7 @@ export default function ShoutOuts() {
               cursor: 'pointer',
               justifyContent: 'center',
               textAlign: 'center',
+              backgroundColor: 'white',
             }}
           >
             <NavLink href={l.href}>
