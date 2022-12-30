@@ -70,17 +70,21 @@ const Python: NextPage<PythonGuideProps> = ({ guidePages }) => {
       description="Jako Tech Writer, możesz zrobić bardzo dużo przy użyciu odrobiny programowania. Nie musisz być ekspertem, wystarczy, że umiesz użyć Pythona jako narzędzia. A zacząć jest bardzo łatwo. Udostępniamy darmowy przewodnik szybkiego startu."
     >
       <PageContainer wide>
-        <Stack direction="row" spacing={2}>
-          <LeftNav
-            items={guidePages.map(({ pageTitle }) => pageTitle)}
-            changeSelectedItem={handleMenuChange}
-          />
-          <Stack spacing="1rem">
-            <BackLink href="/read">więcej artykułów</BackLink>
-            <Typography variant="h1">{selectedPage.pageTitle}</Typography>
-            <MarkdownDisplay htmlString={selectedPage.pageContent} />
-          </Stack>
-        </Stack>
+        <Grid container spacing={2}>
+          <Grid>
+            <LeftNav
+              items={guidePages.map(({ pageTitle }) => pageTitle)}
+              changeSelectedItem={handleMenuChange}
+            />
+          </Grid>
+          <Grid>
+            <Stack spacing="1rem">
+              <BackLink href="/read">więcej artykułów</BackLink>
+              <Typography variant="h1">{selectedPage.pageTitle}</Typography>
+              <MarkdownDisplay htmlString={selectedPage.pageContent} />
+            </Stack>
+          </Grid>
+        </Grid>
       </PageContainer>
     </Layout>
   );
