@@ -2,19 +2,13 @@ import Button from '@mui/material/Button';
 import Grid from '@mui/material/Unstable_Grid2/Grid2';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-
-type PreviousNextProps = {
-  items: string[];
-  currentItem: string;
-  changeSelectedItem: (item: string) => void;
-};
+import { NavControlProps } from './GuideNavigation';
 
 export default function PreviousNext({
   items,
-  currentItem,
-  changeSelectedItem,
-}: PreviousNextProps) {
-  const currentIndex = items.findIndex((item) => item === currentItem);
+  currentItemId,
+}: NavControlProps) {
+  const currentIndex = items.findIndex((item) => item.pageId === currentItemId);
   function getOffsetItem(offsetNumber: number) {
     if (currentIndex + offsetNumber >= 0) {
       return items[currentIndex + offsetNumber];
@@ -23,19 +17,16 @@ export default function PreviousNext({
   const previous = getOffsetItem(-1);
   const next = getOffsetItem(1);
 
-  function handleClick(item: string) {
-    changeSelectedItem(item);
-  }
-
   return (
     <Grid container justifyContent="space-between" alignItems="center">
       <Grid>
         {previous && (
           <Button
             startIcon={<ArrowBackIcon />}
-            onClick={() => handleClick(previous)}
+            href={previous.pageId}
+            variant="outlined"
           >
-            {previous}
+            {previous.pageTitle}
           </Button>
         )}
       </Grid>
@@ -43,9 +34,10 @@ export default function PreviousNext({
         {next && (
           <Button
             endIcon={<ArrowForwardIcon />}
-            onClick={() => handleClick(next)}
+            href={next.pageId}
+            variant="outlined"
           >
-            {next}
+            {next.pageTitle}
           </Button>
         )}
       </Grid>

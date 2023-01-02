@@ -41,3 +41,13 @@ a {
 .encore-anchor-light-theme {
   background-color: transparent !important;
 }
+
+.markdown a,
+.markdown p code,
+.markdown li code {
+  line-break: anywhere;
+}
+
+.markdown .remark-highlight pre code {
+  max-width: 100%;
+}

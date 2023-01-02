@@ -1,5 +1,4 @@
 ---
-id: teoria
 title: Na początek trochę teorii
 ---
 

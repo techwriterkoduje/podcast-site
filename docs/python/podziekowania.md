@@ -1,5 +1,4 @@
 ---
-id: podziekowania
 title: Podziękowania
 ---
 

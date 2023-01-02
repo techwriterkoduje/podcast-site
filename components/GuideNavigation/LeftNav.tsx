@@ -1,31 +1,18 @@
-import { useState } from 'react';
 import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
+import { NavControlProps } from './GuideNavigation';
 
-type LeftNavProps = {
-  items: string[];
-  selectedItem: string;
-  changeSelectedItem: (item: string) => void;
-};
-
-export default function LeftNav({
-  items,
-  selectedItem,
-  changeSelectedItem,
-}: LeftNavProps) {
-  function handleClick(itemClicked: string) {
-    changeSelectedItem(itemClicked);
-  }
+export default function LeftNav({ items, currentItemId }: NavControlProps) {
   return (
     <List>
       {items.map((item) => (
         <ListItemButton
-          key={item}
-          selected={item === selectedItem}
-          onClick={() => handleClick(item)}
+          key={item.pageId}
+          selected={item.pageId === currentItemId}
+          href={item.pageId}
           sx={{ width: '200px' }}
         >
-          {item}
+          {item.pageTitle}
         </ListItemButton>
       ))}
     </List>

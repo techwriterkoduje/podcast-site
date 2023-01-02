@@ -1,6 +1,5 @@
 import Stack from '@mui/material/Stack';
-import Container from '@mui/material/Container';
-import { Typography } from '@mui/material';
+import Typography from '@mui/material/Typography';
 import Image from '../Image';
 import NavLink from '../Layout/NavLink';
 
