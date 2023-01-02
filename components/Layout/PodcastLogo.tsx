@@ -5,8 +5,8 @@ export default function PodcastLogo() {
     <Image
       src="/logo.png"
       style={{
-        maxWidth: '450px',
-        maxHeight: '450px',
+        width: '450px',
+        maxWidth: '100%',
       }}
       alt="Logo podcastu Tech Writer koduje"
     />

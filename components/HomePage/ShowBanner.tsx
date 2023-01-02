@@ -6,7 +6,10 @@ import Hosts from './Hosts';
 
 export default function ShowBanner() {
   return (
-    <>
+    <Grid container flexDirection="row-reverse">
+      <Grid lg={4}>
+        <PodcastLogo />
+      </Grid>
       <Grid
         lg={7}
         container
@@ -19,9 +22,6 @@ export default function ShowBanner() {
         <Hosts />
         <SubscribeButtons />
       </Grid>
-      <Grid lg={4}>
-        <PodcastLogo />
-      </Grid>
-    </>
+    </Grid>
   );
 }

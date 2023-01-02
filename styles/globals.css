@@ -41,3 +41,7 @@ a {
 .encore-anchor-light-theme {
   background-color: transparent !important;
 }
+
+a {
+  line-break: anywhere;
+}

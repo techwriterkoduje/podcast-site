@@ -34,7 +34,9 @@ const EpisodeList: NextPage<EpisodeListProps> = ({ allEpisodeMetadata }) => {
             return (
               <Stack key={id} sx={{ gap: '3px', margin: '2rem 0' }}>
                 <Typography variant="h5" component="h2">
-                  <Link href={`/episodes/${id}`}>{title}</Link>
+                  <Link href={`/episodes/${id}`} style={{ lineBreak: 'auto' }}>
+                    {title}
+                  </Link>
                 </Typography>
                 <Typography variant="subtitle1">
                   <DateDisplay dateString={date} />
