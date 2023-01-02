@@ -21,14 +21,22 @@ export default function PreviousNext({
     <Grid container justifyContent="space-between" alignItems="center">
       <Grid>
         {previous && (
-          <Button startIcon={<ArrowBackIcon />} href={previous.pageId}>
+          <Button
+            startIcon={<ArrowBackIcon />}
+            href={previous.pageId}
+            variant="outlined"
+          >
             {previous.pageTitle}
           </Button>
         )}
       </Grid>
       <Grid>
         {next && (
-          <Button endIcon={<ArrowForwardIcon />} href={next.pageId}>
+          <Button
+            endIcon={<ArrowForwardIcon />}
+            href={next.pageId}
+            variant="outlined"
+          >
             {next.pageTitle}
           </Button>
         )}

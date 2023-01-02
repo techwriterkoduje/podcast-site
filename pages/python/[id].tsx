@@ -28,7 +28,7 @@ export const guideIds = [
   'praktyka-8',
   'praktyka-9',
   'praktyka-10',
-  'praktyka-ready',
+  'gotowa-aplikacja',
   'praktyka-run',
   'co-dalej',
   'podziekowania',

@@ -66,4 +66,4 @@ Twój kod będzie mógł bywać w świecie, bo Twoi anglojęzyczni znajomi też 
 stanie go zrozumieć.
 
 Jeśli chcesz od razu skoczyć na głęboką wodę albo po prostu jesteś ciekaw co tu
-się wydarzy, przejdź do sekcji [Gotowa aplikacja](#gotowa-aplikacja).
+się wydarzy, przejdź do sekcji [Gotowa aplikacja](gotowa-aplikacja).
