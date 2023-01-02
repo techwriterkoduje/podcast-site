@@ -1,5 +1,4 @@
 ---
-id: co-dalej
 title: Co dalej?
 ---
 

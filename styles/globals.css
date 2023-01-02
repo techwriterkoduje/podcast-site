@@ -47,3 +47,7 @@ a {
 .markdown li code {
   line-break: anywhere;
 }
+
+.markdown .remark-highlight pre code {
+  max-width: 100%;
+}

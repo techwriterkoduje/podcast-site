@@ -14,7 +14,25 @@ import GuideNavigation, {
 import { useRouter } from 'next/router';
 import { ParsedUrlQuery } from 'querystring';
 
-export const guideIds = ['teoria', 'praktyka', 'co-dalej', 'podziekowania'];
+export const guideIds = [
+  'teoria',
+  'praktyka',
+  'praktyka-przygotowanie',
+  'praktyka-1',
+  'praktyka-2',
+  'praktyka-3',
+  'praktyka-4',
+  'praktyka-5',
+  'praktyka-6',
+  'praktyka-7',
+  'praktyka-8',
+  'praktyka-9',
+  'praktyka-10',
+  'praktyka-ready',
+  'praktyka-run',
+  'co-dalej',
+  'podziekowania',
+];
 
 export const getStaticProps: GetStaticProps = async () => {
   const guideContents = await Promise.all(
