@@ -42,6 +42,8 @@ a {
   background-color: transparent !important;
 }
 
-a {
+.markdown a,
+.markdown p code,
+.markdown li code {
   line-break: anywhere;
 }

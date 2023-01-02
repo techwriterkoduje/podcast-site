@@ -1,6 +1,7 @@
 import Feature, { FeatureProps } from '../components/Feature/Feature';
 import Layout from '../components/Layout/Layout';
 import PageContainer from '../components/Layout/PageContainer';
+import { guideIds } from './python/[id]';
 
 const features: FeatureProps[] = [
   {
@@ -36,7 +37,7 @@ const features: FeatureProps[] = [
     ),
     actionLinks: [
       {
-        to: '/python',
+        to: `/python/${guideIds[0]}`,
         label: 'Czytaj przewodnik',
       },
     ],

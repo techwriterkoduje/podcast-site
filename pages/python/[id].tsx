@@ -1,26 +1,20 @@
-import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Unstable_Grid2/Grid2';
 import { GetStaticProps, NextPage } from 'next';
 import { join } from 'path';
-import { useState } from 'react';
-import BackLink from '../components/BackLink/BackLink';
-import Layout from '../components/Layout/Layout';
-import PageContainer from '../components/Layout/PageContainer';
-import LeftNav from '../components/GuideNavigation/LeftNav';
-import MarkdownDisplay from '../components/MarkdownDisplay';
-import PreviousNext from '../components/GuideNavigation/PreviousNext';
+import Layout from '../../components/Layout/Layout';
+import PageContainer from '../../components/Layout/PageContainer';
 import {
   getMarkdownContent,
   markdownDir,
   MarkdownProps,
-} from '../lib/markdown';
+} from '../../lib/markdown';
 import GuideNavigation, {
   GuidePageProps,
   GuidePagesProps,
-} from '../components/GuideNavigation/GuideNavigation';
+} from '../../components/GuideNavigation/GuideNavigation';
+import { useRouter } from 'next/router';
+import { ParsedUrlQuery } from 'querystring';
 
-const guideIds = ['teoria', 'praktyka', 'co-dalej', 'podziekowania'];
+export const guideIds = ['teoria', 'praktyka', 'co-dalej', 'podziekowania'];
 
 export const getStaticProps: GetStaticProps = async () => {
   const guideContents = await Promise.all(
@@ -34,7 +28,8 @@ export const getStaticProps: GetStaticProps = async () => {
   );
 
   const guidePages = guideContents.map(
-    ({ title, contentHtml }): GuidePageProps => ({
+    ({ title, contentHtml, id }): GuidePageProps => ({
+      pageId: id,
       pageTitle: title,
       pageContent: contentHtml,
     })
@@ -47,7 +42,41 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
+type PythonPagePaths = {
+  params: {
+    id: string;
+  };
+}[];
+
+export async function getStaticPaths() {
+  const paths: PythonPagePaths = guideIds.map((id) => ({
+    params: {
+      id: id,
+    },
+  }));
+  return {
+    paths,
+    fallback: false,
+  };
+}
+
+function getIdFromQuery(query: ParsedUrlQuery): string {
+  const id = query.id;
+  if (typeof id === 'string') {
+    return id;
+  }
+
+  if (Array.isArray(id)) {
+    return id[0];
+  }
+
+  return '404';
+}
+
 const Python: NextPage<GuidePagesProps> = ({ guidePages }) => {
+  const router = useRouter();
+  const id = getIdFromQuery(router.query);
+
   return (
     <Layout
       title="Tech Writer koduje w Pythonie. Przewodnik szybkiego startu."
@@ -55,6 +84,7 @@ const Python: NextPage<GuidePagesProps> = ({ guidePages }) => {
     >
       <PageContainer wide>
         <GuideNavigation
+          selectedPageId={id}
           backLinkHref="/read"
           backLinkLabel="więcej artykułów"
           guidePages={guidePages}
