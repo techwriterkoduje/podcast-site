@@ -1,7 +1,7 @@
 import Feature, { FeatureProps } from '../components/Feature/Feature';
 import Layout from '../components/Layout/Layout';
 import PageContainer from '../components/Layout/PageContainer';
-import { guideIds } from './python/[id]';
+import { guideIds } from '../docs/python/guideIds';
 
 const features: FeatureProps[] = [
   {

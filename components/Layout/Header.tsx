@@ -8,7 +8,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import { useTheme } from '@mui/material/styles';
+import useTheme from '@mui/material/styles/useTheme';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 function LogoLink() {
@@ -19,7 +19,7 @@ function LogoLink() {
   );
 }
 
-function HorizontalNav() {
+function WideHeader() {
   return (
     <Stack
       direction="row"
@@ -42,7 +42,7 @@ function HorizontalNav() {
   );
 }
 
-function LeftNav() {
+function MobileHeader() {
   const [isOpen, setIsOpen] = useState(false);
 
   function toggleNav(toValue: boolean) {
@@ -57,6 +57,7 @@ function LeftNav() {
         onClick={() => {
           toggleNav(true);
         }}
+        size="large"
       >
         <MenuIcon htmlColor="white" />
       </IconButton>
@@ -97,7 +98,8 @@ export default function Header() {
   const isLargeScreen = useMediaQuery(theme.breakpoints.up('sm'));
 
   if (isLargeScreen) {
-    return <HorizontalNav />;
+    return <WideHeader />;
   }
-  return <LeftNav />;
+
+  return <MobileHeader />;
 }

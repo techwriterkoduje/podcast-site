@@ -1,7 +1,7 @@
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 
-const podcastTitle = process.env.podcastTitle;
+const podcastTitle = process.env.PODCAST_TITLE;
 
 export default function Footer() {
   return (

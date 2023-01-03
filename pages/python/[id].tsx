@@ -9,30 +9,11 @@ import {
 } from '../../lib/markdown';
 import GuideNavigation, {
   GuidePageProps,
-  GuidePagesProps,
+  GuidePages,
 } from '../../components/GuideNavigation/GuideNavigation';
 import { useRouter } from 'next/router';
 import { ParsedUrlQuery } from 'querystring';
-
-export const guideIds = [
-  'teoria',
-  'praktyka',
-  'praktyka-przygotowanie',
-  'praktyka-1',
-  'praktyka-2',
-  'praktyka-3',
-  'praktyka-4',
-  'praktyka-5',
-  'praktyka-6',
-  'praktyka-7',
-  'praktyka-8',
-  'praktyka-9',
-  'praktyka-10',
-  'gotowa-aplikacja',
-  'praktyka-run',
-  'co-dalej',
-  'podziekowania',
-];
+import { guideIds } from '../../docs/python/guideIds';
 
 export const getStaticProps: GetStaticProps = async () => {
   const guideContents = await Promise.all(
@@ -91,7 +72,7 @@ function getIdFromQuery(query: ParsedUrlQuery): string {
   return '404';
 }
 
-const Python: NextPage<GuidePagesProps> = ({ guidePages }) => {
+const Python: NextPage<GuidePages> = ({ guidePages }) => {
   const router = useRouter();
   const id = getIdFromQuery(router.query);
 

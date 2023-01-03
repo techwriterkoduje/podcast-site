@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Header from './Header';
 import Footer from './Footer';
 
-const podcastTitle = process.env.podcastTitle;
+const podcastTitle = process.env.PODCAST_TITLE;
 
 type LayoutProps = {
   title: string;
@@ -26,7 +26,7 @@ export default function Layout({
       <Head>
         <title>{processedTitle}</title>
         <meta name="description" content={description} />
-        <link rel="icon" href={`${process.env.repo}favicon.ico`} />
+        <link rel="icon" href={`${process.env.REPO}favicon.ico`} />
       </Head>
       <Header />
       {children}

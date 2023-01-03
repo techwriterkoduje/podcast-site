@@ -6,7 +6,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import BackLink from '../BackLink/BackLink';
 import MarkdownDisplay from '../MarkdownDisplay';
 import LeftNav from './LeftNav';
-import MobileNav from './MobileNav';
+import MobileGuideNavigation from './MobileGuideNavigation';
 import PreviousNext from './PreviousNext';
 
 export type GuidePageProps = {
@@ -15,9 +15,9 @@ export type GuidePageProps = {
   pageContent: string;
 };
 
-export type GuidePagesProps = { guidePages: GuidePageProps[] };
+export type GuidePages = { guidePages: GuidePageProps[] };
 
-type DocumentNavigationProps = GuidePagesProps & {
+export type GuideNavigationProps = GuidePages & {
   backLinkHref: string;
   backLinkLabel: string;
   selectedPageId: string;
@@ -33,7 +33,7 @@ export default function GuideNavigation({
   backLinkLabel,
   guidePages,
   selectedPageId,
-}: DocumentNavigationProps) {
+}: GuideNavigationProps) {
   const theme = useTheme();
   const isLargeScreen = useMediaQuery(theme.breakpoints.up('sm'));
   const fallbackPage: GuidePageProps = {
@@ -44,16 +44,24 @@ export default function GuideNavigation({
   const selectedPage =
     guidePages.find((page) => page.pageId === selectedPageId) || fallbackPage;
 
+  if (!isLargeScreen) {
+    return (
+      <MobileGuideNavigation
+        backLinkHref={backLinkHref}
+        backLinkLabel={backLinkLabel}
+        guidePages={guidePages}
+        selectedPage={selectedPage}
+        selectedPageId={selectedPageId}
+      />
+    );
+  }
+
   return (
     <Grid container spacing={2} sx={{ height: '100vh' }}>
-      {isLargeScreen ? (
-        <Grid sx={{ overflowY: 'scroll', height: '100%' }}>
-          <LeftNav items={guidePages} currentItemId={selectedPageId} />
-        </Grid>
-      ) : (
-        <MobileNav items={guidePages} currentItemId={selectedPageId} />
-      )}
-      <Grid sx={{ overflowY: 'scroll', height: '100%' }}>
+      <Grid sx={{ overflowY: 'scroll', height: '100%' }} sm={3}>
+        <LeftNav items={guidePages} currentItemId={selectedPageId} />
+      </Grid>
+      <Grid sx={{ overflowY: 'scroll', height: '100%' }} sm={9}>
         <Stack spacing="1rem">
           <BackLink href={backLinkHref}>{backLinkLabel}</BackLink>
           <Typography variant="h1">{selectedPage.pageTitle}</Typography>

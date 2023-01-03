@@ -1,27 +1,28 @@
 import type { NextPage } from 'next';
 import Layout from '../components/Layout/Layout';
-import { getAllEpisodeMetadata, getEpisodeData } from '../lib/episodes';
-import HomePage from '../components/HomePage/HomePage';
+import Grid from '@mui/material/Unstable_Grid2';
+import Container from '@mui/material/Container';
+import ShowBanner from '../components/HomePage/ShowBanner';
+import LatestEpisodes from '../components/HomePage/LatestEpisodes';
+import ContactUs from '../components/HomePage/ContactUs';
+import ShoutOuts from '../components/HomePage/ShoutOuts';
+import { getAllEpisodeData, RssItem } from '../lib/rss';
 
-const podcastTitle = process.env.podcastTitle;
-const email = process.env.contactEmail;
+const podcastTitle = process.env.PODCAST_TITLE;
 
 export async function getStaticProps() {
-  const allEpisodeMetadata = getAllEpisodeMetadata();
-  const latestId = allEpisodeMetadata[0].params.id;
-  const episodeData = await getEpisodeData(latestId);
+  const allEpisodeData = await getAllEpisodeData();
+  const props: HomePageProps = { allEpisodeData };
   return {
-    props: {
-      episodeId: episodeData.episodeId,
-    },
+    props,
   };
 }
 
 type HomePageProps = {
-  episodeId: string;
+  allEpisodeData: RssItem[];
 };
 
-const Home: NextPage<HomePageProps> = ({ episodeId }) => {
+const Home: NextPage<HomePageProps> = ({ allEpisodeData }) => {
   return (
     <Layout
       title={`Podcast ${podcastTitle}`}
@@ -29,7 +30,20 @@ const Home: NextPage<HomePageProps> = ({ episodeId }) => {
       isHome
       mainStyle={{ textAlign: 'center' }}
     >
-      <HomePage />
+      <Container>
+        <Grid
+          container
+          gap="4rem"
+          alignItems="center"
+          justifyContent="center"
+          sx={{ paddingTop: '75px' }}
+        >
+          <ShowBanner />
+          <LatestEpisodes lastThreeEpisodes={allEpisodeData.slice(0, 3)} />
+          <ContactUs />
+          <ShoutOuts />
+        </Grid>
+      </Container>
     </Layout>
   );
 };
