@@ -1,6 +1,6 @@
 import React from 'react';
-import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import useTheme from '@mui/material/styles/useTheme';
 
 type AnchorEmbedProps = {
   episodeId: string;
