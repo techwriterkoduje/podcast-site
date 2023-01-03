@@ -8,6 +8,7 @@ export default function EpisodePreview({
   audioUrl,
   title,
   anchorLink,
+  episodeLink,
 }: RssItem) {
   return (
     <Stack
@@ -24,7 +25,9 @@ export default function EpisodePreview({
         alignItems="center"
         justifyContent="space-between"
       >
-        <ActionButtonLink to={''}>Opis odcinka</ActionButtonLink>
+        <ActionButtonLink to={`/blog/${episodeLink}`}>
+          Opis odcinka
+        </ActionButtonLink>
         <ActionButtonLink to={anchorLink}>Anchor</ActionButtonLink>
       </Stack>
     </Stack>

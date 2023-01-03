@@ -70,6 +70,13 @@ function getEpisodeLink(dateString: string, episodeNumber: string) {
   return `${year}/${month}/${day}/${episodeNumber}`;
 }
 
+function replaceUrlsWithLinks(text: string): string {
+  var regularExpression =
+    /((http|https|ftp):\/\/[\w?=&.\/-;#~%-]+(?![\w\s?&.\/;#~%"=-]*>))/g;
+
+  return text.replace(regularExpression, '<a href="$1" target="_blank">$1</a>');
+}
+
 export async function getAllEpisodeData(): Promise<RssItem[]> {
   const rssUrl = process.env.RSS_URL;
 
@@ -88,7 +95,9 @@ export async function getAllEpisodeData(): Promise<RssItem[]> {
 
   return Array.from(items).map((item) => {
     const title = getContentsByTagName(item, 'title');
-    const description = getContentsByTagName(item, 'description');
+    const description = replaceUrlsWithLinks(
+      getContentsByTagName(item, 'description')
+    );
     const episodeNumber = getContentsByTagName(item, 'itunes:episode');
     const pubDate = getContentsByTagName(item, 'pubDate');
     const anchorLink = getContentsByTagName(item, 'link');
