@@ -1,12 +1,13 @@
 import Stack from '@mui/material/Stack';
-import ActionButtonLink, {
-  ActionButtonLinkProps,
-} from '../ActionButtonLink/ActionButtonLink';
+import ActionButtonLink from '../ActionButtonLink/ActionButtonLink';
 
 export type FeatureProps = {
   title: string;
   description: React.ReactElement | string;
-  actionLinks: ActionButtonLinkProps[];
+  actionLinks: {
+    to: string;
+    label: string;
+  }[];
 };
 
 export default function Feature({
@@ -26,8 +27,10 @@ export default function Feature({
           padding: '1rem 0',
         }}
       >
-        {actionLinks.map((actionLinkProps) => (
-          <ActionButtonLink key={actionLinkProps.to} {...actionLinkProps} />
+        {actionLinks.map(({ to, label }, idx) => (
+          <ActionButtonLink key={idx} to={to}>
+            {label}
+          </ActionButtonLink>
         ))}
       </Stack>
     </>

@@ -1,16 +1,22 @@
 import Typography from '@mui/material/Typography';
 import { NextPage } from 'next';
-import AnchorEmbed from '../../components/AnchorEmbed/AnchorEmbed';
+import AudioPlayer from '../../components/AudioPlayer';
 import BackLink from '../../components/BackLink/BackLink';
 import DateDisplay from '../../components/DateDisplay/DateDisplay';
 import Layout from '../../components/Layout/Layout';
 import PageContainer from '../../components/Layout/PageContainer';
 import MarkdownDisplay from '../../components/MarkdownDisplay';
-import { getAllEpisodeMetadata, getEpisodeData } from '../../lib/episodes';
-import { MarkdownProps } from '../../lib/markdown';
+import {
+  getAllEpisodeData,
+  getDateAsStrings,
+  getOneEpisodeData,
+  RssItem,
+} from '../../lib/rss';
 
 export async function getStaticProps({ params }: { params: any }) {
-  const episodeData = await getEpisodeData(params.id);
+  const slug = params.slug;
+  const [year, month, day] = slug;
+  const episodeData = await getOneEpisodeData(year, month, day);
   return {
     props: {
       episodeData,
@@ -19,7 +25,15 @@ export async function getStaticProps({ params }: { params: any }) {
 }
 
 export async function getStaticPaths() {
-  const paths = getAllEpisodeMetadata();
+  const allEpisodeData = await getAllEpisodeData();
+  const slugs = allEpisodeData.map((episode) => {
+    return [
+      ...getDateAsStrings(episode.pubDate),
+      episode.episodeNumber.toString(),
+    ];
+  });
+
+  const paths = slugs.map((slug) => ({ params: { slug } }));
   return {
     paths,
     fallback: false,
@@ -27,19 +41,19 @@ export async function getStaticPaths() {
 }
 
 type EpisodeProps = {
-  episodeData: MarkdownProps;
+  episodeData: RssItem;
 };
 
 const Episode: NextPage<EpisodeProps> = ({ episodeData }: EpisodeProps) => {
-  const { episodeId, title, date, contentHtml } = episodeData;
+  const { title, pubDate, audioUrl, description } = episodeData;
   return (
     <Layout title={title} description={title}>
       <PageContainer>
         <BackLink href="/episode-list">lista odcinków</BackLink>
         <Typography variant="h1">{title}</Typography>
-        {date && <DateDisplay dateString={date} />}
-        <AnchorEmbed episodeId={episodeId} />
-        <MarkdownDisplay htmlString={contentHtml} />
+        {pubDate && <DateDisplay dateString={pubDate} />}
+        <AudioPlayer audioSrc={audioUrl} />
+        <MarkdownDisplay htmlString={description} />
       </PageContainer>
     </Layout>
   );

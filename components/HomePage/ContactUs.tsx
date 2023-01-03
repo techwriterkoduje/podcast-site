@@ -1,7 +1,6 @@
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
-import NavLink from '../Layout/NavLink';
+import ActionButtonLink from '../ActionButtonLink/ActionButtonLink';
 
 export default function ContactUs() {
   return (
@@ -14,9 +13,7 @@ export default function ContactUs() {
       <Typography variant="h2">
         Masz pomysł na odcinek? Chcesz być naszym gościem?
       </Typography>
-      <NavLink href="/contact">
-        <Button variant="contained">Skontaktuj się z nami</Button>
-      </NavLink>
+      <ActionButtonLink to="/contact">Skontaktuj się z nami</ActionButtonLink>
     </Stack>
   );
 }

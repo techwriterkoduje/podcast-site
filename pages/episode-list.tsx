@@ -1,26 +1,23 @@
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import { GetStaticProps, NextPage } from 'next';
+import { NextPage } from 'next';
 import Link from 'next/link';
 import DateDisplay from '../components/DateDisplay/DateDisplay';
 import Layout from '../components/Layout/Layout';
-import { EpisodeMetadata, getAllEpisodeMetadata } from '../lib/episodes';
 import PageContainer from '../components/Layout/PageContainer';
+import { getAllEpisodeData, RssItem } from '../lib/rss';
 
-export const getStaticProps: GetStaticProps = async () => {
-  const allEpisodeMetadata = getAllEpisodeMetadata();
-  return {
-    props: {
-      allEpisodeMetadata,
-    },
-  };
-};
+export async function getStaticProps() {
+  const allEpisodeData = await getAllEpisodeData();
+  const props: EpisodeListProps = { allEpisodeData };
+  return { props };
+}
 
 type EpisodeListProps = {
-  allEpisodeMetadata: EpisodeMetadata[];
+  allEpisodeData: RssItem[];
 };
 
-const EpisodeList: NextPage<EpisodeListProps> = ({ allEpisodeMetadata }) => {
+const EpisodeList: NextPage<EpisodeListProps> = ({ allEpisodeData }) => {
   return (
     <Layout
       title="Lista odcinków"
@@ -29,17 +26,20 @@ const EpisodeList: NextPage<EpisodeListProps> = ({ allEpisodeMetadata }) => {
       <PageContainer>
         <Typography variant="h1">Lista odcinków</Typography>
         <nav>
-          {allEpisodeMetadata.map((episode) => {
-            const { id, date, title } = episode.params;
+          {allEpisodeData.map((episode) => {
+            const { title, anchorLink, pubDate, episodeLink } = episode;
             return (
-              <Stack key={id} sx={{ gap: '3px', margin: '2rem 0' }}>
+              <Stack key={anchorLink} sx={{ gap: '3px', margin: '2rem 0' }}>
                 <Typography variant="h5" component="h2">
-                  <Link href={`/episodes/${id}`} style={{ lineBreak: 'auto' }}>
+                  <Link
+                    href={`/blog/${episodeLink}`}
+                    style={{ lineBreak: 'auto' }}
+                  >
                     {title}
                   </Link>
                 </Typography>
                 <Typography variant="subtitle1">
-                  <DateDisplay dateString={date} />
+                  <DateDisplay dateString={pubDate} />
                 </Typography>
               </Stack>
             );
