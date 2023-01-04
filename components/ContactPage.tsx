@@ -1,9 +1,9 @@
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import Hosts from '../HomePage/Hosts';
-import PageContainer from '../Layout/PageContainer';
+import Hosts from './HomePage/Hosts';
+import PageContainer from './Layout/PageContainer';
 import Link from 'next/link';
-import CopyToClipboardButton from '../CopyToClipboardButton';
+import CopyToClipboardButton from './CopyToClipboardButton';
 
 const contactEmail = process.env.CONTACT_EMAIL || 'email missing';
 

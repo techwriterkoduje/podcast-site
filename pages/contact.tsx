@@ -1,4 +1,4 @@
-import ContactPage from '../components/ContactPage/ContactPage';
+import ContactPage from '../components/ContactPage';
 import Layout from '../components/Layout/Layout';
 
 export default function Contact() {
