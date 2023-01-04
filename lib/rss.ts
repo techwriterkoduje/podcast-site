@@ -3,11 +3,13 @@ import { DOMParser } from 'xmldom';
 export type RssItem = {
   title: string;
   description: string;
+  blurb: string;
   episodeNumber: number;
   pubDate: string;
   anchorLink: string;
   audioUrl: string;
   episodeLink: string;
+  duration: string;
 };
 
 async function getRssDocument(url: string): Promise<Document | string> {
@@ -28,14 +30,8 @@ async function getRssDocument(url: string): Promise<Document | string> {
   }
 }
 
-function getContentsByTagName(
-  element: Element,
-  tagName: string,
-  nameSpace?: string
-): string {
-  const matchingElements = nameSpace
-    ? element.getElementsByTagNameNS(nameSpace, tagName)
-    : element.getElementsByTagName(tagName);
+function getContentsByTagName(element: Element, tagName: string): string {
+  const matchingElements = element.getElementsByTagName(tagName);
 
   if (!matchingElements || matchingElements.length === 0) {
     return `${tagName} missing`;
@@ -67,14 +63,24 @@ function getAudioUrl(element: Element): string {
 function getEpisodeLink(dateString: string, episodeNumber: string) {
   const [year, month, day] = getDateAsStrings(dateString);
 
-  return `${year}/${month}/${day}/${episodeNumber}`;
+  return `/blog/${year}/${month}/${day}/${episodeNumber}`;
 }
 
 function replaceUrlsWithLinks(text: string): string {
-  var regularExpression =
+  var urlReplacerExpression =
     /((http|https|ftp):\/\/[\w?=&.\/-;#~%-]+(?![\w\s?&.\/;#~%"=-]*>))/g;
 
-  return text.replace(regularExpression, '<a href="$1" target="_blank">$1</a>');
+  return text.replace(
+    urlReplacerExpression,
+    '<a href="$1" target="_blank">$1</a>'
+  );
+}
+
+function getBlurb(description: string): string {
+  return description
+    .replace(/<[^>+]>/g, '')
+    .replace(/&nbsp;/g, ' ')
+    .slice(0, 160);
 }
 
 export async function getAllEpisodeData(): Promise<RssItem[]> {
@@ -98,20 +104,24 @@ export async function getAllEpisodeData(): Promise<RssItem[]> {
     const description = replaceUrlsWithLinks(
       getContentsByTagName(item, 'description')
     );
+    const blurb = getBlurb(description);
     const episodeNumber = getContentsByTagName(item, 'itunes:episode');
     const pubDate = getContentsByTagName(item, 'pubDate');
     const anchorLink = getContentsByTagName(item, 'link');
+    const duration = getContentsByTagName(item, 'itunes:duration');
     const audioUrl = getAudioUrl(item);
     const episodeLink = getEpisodeLink(pubDate, episodeNumber);
 
     return {
       title,
       description,
+      blurb,
       pubDate,
       anchorLink,
       audioUrl,
       episodeNumber: parseInt(episodeNumber),
       episodeLink,
+      duration,
     };
   });
 }

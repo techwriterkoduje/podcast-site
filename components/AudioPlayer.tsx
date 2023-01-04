@@ -3,5 +3,12 @@ type AudioPlayerProps = {
 };
 
 export default function AudioPlayer({ audioSrc }: AudioPlayerProps) {
-  return <audio controls preload="none" src={audioSrc}></audio>;
+  return (
+    <audio
+      controls
+      preload="none"
+      src={audioSrc}
+      style={{ width: '100%' }}
+    ></audio>
+  );
 }

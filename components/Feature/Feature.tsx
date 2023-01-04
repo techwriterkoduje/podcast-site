@@ -1,4 +1,5 @@
 import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
 import ActionButtonLink from '../ActionButtonLink/ActionButtonLink';
 
 export type FeatureProps = {
@@ -17,8 +18,8 @@ export default function Feature({
 }: FeatureProps) {
   return (
     <>
-      <h2>{title}</h2>
-      <div>{description}</div>
+      <Typography variant="h2">{title}</Typography>
+      <Typography>{description}</Typography>
       <Stack
         direction={{ xs: 'column', sm: 'row' }}
         sx={{
