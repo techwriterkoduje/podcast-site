@@ -19,8 +19,7 @@ Konsultant i trener Pythona, mój znajomy z konferencji EuroPython 2019.
 
 Dziękuję za recenzję merytoryczną.
 
-W
-[14. odcinku podcasta "Tech Writer koduje"](/blog/2020/03/24/tech-writer-zaczyna-kodowac-w-pythonie),
+W [14. odcinku podcasta "Tech Writer koduje"](/blog/2020/03/24/14),
 rozmawialiśmy z Sebastianem o tym jak ustawić sobie środowisko do kodowania w
 Pythonie i jakich błędów unikać zaczynając swoją przygodę z tym językiem
 programowania. Polecam też warsztat "Modern Python Developer's

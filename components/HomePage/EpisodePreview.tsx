@@ -1,35 +1,35 @@
+import Card from '@mui/material/Card';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import { RssItem } from '../../lib/rss';
-import ActionButtonLink from '../ActionButtonLink/ActionButtonLink';
 import AudioPlayer from '../AudioPlayer';
+import BlurbWithLink from '../BlurbWithLink';
+import DateDisplay from '../DateDisplay/DateDisplay';
+import DurationDisplay from '../DurationDisplay';
 
 export default function EpisodePreview({
   audioUrl,
   title,
-  anchorLink,
+  blurb,
   episodeLink,
+  pubDate,
+  duration,
 }: RssItem) {
   return (
-    <Stack
-      spacing={2}
-      alignItems="center"
-      justifyContent="center"
-      sx={{ padding: '2rem', border: 1 }}
-    >
-      <Typography>{title}</Typography>
-      <AudioPlayer audioSrc={audioUrl} />
-      <Stack
-        direction="row"
-        spacing={3}
-        alignItems="center"
-        justifyContent="space-between"
-      >
-        <ActionButtonLink to={`/blog/${episodeLink}`}>
-          Opis odcinka
-        </ActionButtonLink>
-        <ActionButtonLink to={anchorLink}>Anchor</ActionButtonLink>
+    <Card key={episodeLink} variant="outlined">
+      <Stack spacing={2} sx={{ padding: '2rem' }}>
+        <Typography fontWeight="bold">{title}</Typography>
+        <Typography
+          variant="subtitle1"
+          sx={{ display: 'flex', gap: '1rem' }}
+          fontSize="small"
+        >
+          <DateDisplay dateString={pubDate} />
+          <DurationDisplay duration={duration} />
+        </Typography>
+        <AudioPlayer audioSrc={audioUrl} />
+        <BlurbWithLink blurb={blurb} link={episodeLink} />
       </Stack>
-    </Stack>
+    </Card>
   );
 }
