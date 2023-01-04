@@ -18,7 +18,7 @@ export default function EpisodePreview({
   return (
     <Card key={episodeLink} variant="outlined">
       <Stack spacing={2} sx={{ padding: '2rem' }}>
-        <Typography fontWeight="bold">{title}</Typography>
+        <Typography fontWeight="bold" fontSize="1.1rem">{title}</Typography>
         <Typography
           variant="subtitle1"
           sx={{ display: 'flex', gap: '1rem' }}

@@ -32,8 +32,8 @@ export default function DurationDisplay({ duration }: DurationDisplayProps) {
         gap: '1rem',
       }}
     >
-      <DisplayIfRelevant value={hours} suffix="hours" />
-      <DisplayIfRelevant value={minutes} suffix="minut" />
+      <DisplayIfRelevant value={hours} suffix="h" />
+      <DisplayIfRelevant value={minutes} suffix="min" />
     </time>
   );
 }

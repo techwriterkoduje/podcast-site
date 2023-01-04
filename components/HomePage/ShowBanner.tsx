@@ -19,7 +19,7 @@ export default function ShowBanner() {
         sx={{ margin: 'auto', padding: '1.5rem' }}
       >
         <PodcastDescription />
-        <Hosts />
+        <Hosts size="small" />
         <SubscribeButtons />
       </Grid>
     </Grid>
