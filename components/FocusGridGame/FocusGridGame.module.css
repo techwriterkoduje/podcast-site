@@ -59,7 +59,6 @@
 }
 
 .toolbar {
-  background-color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -73,7 +72,7 @@
 }
 
 .startScreen {
-  background-color: white;
+  position: relative;
   color: #202020;
   width: 100%;
   height: 100%;
@@ -86,10 +85,20 @@
   text-align: center;
   gap: 2rem;
   padding: 0 1rem 10% 1rem;
-  background-position: top;
-  background-size: cover;
-  background-image: url('/img/focus-grid.png');
   color: white;
+}
+
+.startScreenBackgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.startScreen > * {
+  z-index: 2;
 }
 
 .gameTitle {
@@ -99,8 +108,7 @@
 }
 
 .gameDescription {
-  background-color: rgba(255, 255, 255, 0.9);
-  color: black;
+  background-color: rgba(0, 0, 0, 0.9);
   padding: 1rem;
   border-radius: 6px;
   display: flex;
