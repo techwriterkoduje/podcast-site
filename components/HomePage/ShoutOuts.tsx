@@ -31,14 +31,19 @@ const shoutOutLinks: ShoutOutLink[] = [
 
 export default function ShoutOuts() {
   return (
-    <Stack sx={{ alignItems: 'center', gap: '2rem', maxWidth: '100%' }}>
+    <Stack
+      sx={{
+        alignItems: 'center',
+        gap: '2rem',
+        maxWidth: '100%',
+      }}
+    >
       <Typography variant="h2">Szanujemy i wspieramy</Typography>
       <ImageList sx={{ width: '100%' }} cols={3} rowHeight={200}>
         {shoutOutLinks.map((l) => (
           <Link href={l.href} key={l.href} target="_blank">
             <ImageListItem
               sx={{
-                border: '3px dotted black',
                 aspectRatio: '1/1',
                 cursor: 'pointer',
                 justifyContent: 'center',
