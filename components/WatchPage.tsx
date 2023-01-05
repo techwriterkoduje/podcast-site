@@ -1,5 +1,6 @@
 import PageContainer from './Layout/PageContainer';
 import Feature, { FeatureProps } from './Feature/Feature';
+import Typography from '@mui/material/Typography';
 
 const videos: FeatureProps[] = [
   {
@@ -30,6 +31,7 @@ const videos: FeatureProps[] = [
 export default function WatchPage() {
   return (
     <PageContainer>
+      <Typography variant="h1">Filmiki</Typography>
       {videos.map((video) => (
         <Feature key={video.title} {...video} />
       ))}

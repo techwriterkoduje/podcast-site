@@ -66,7 +66,7 @@ const features: FeatureProps[] = [
 export default function ReadPage() {
   return (
     <PageContainer>
-      <Typography variant="h1">Poczytaj</Typography>
+      <Typography variant="h1">Czytelnia</Typography>
       {features.map((featureProps) => (
         <Feature key={featureProps.title} {...featureProps} />
       ))}

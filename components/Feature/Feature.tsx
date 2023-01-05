@@ -28,13 +28,16 @@ export default function Feature({
   const theme = useTheme();
   const isLargeScreen = useMediaQuery(theme.breakpoints.up('sm'));
   const contentPadding = isLargeScreen ? '1rem 3rem' : undefined;
+  const cardMediaCommonStyles = {
+    height: isLargeScreen ? '350px' : '160px',
+  };
 
   return (
     <Card variant="outlined" sx={{ width: '100%', paddingBottom: '1rem' }}>
       {imageUrl && (
         <CardMedia
           image={`${process.env.REPO}${imageUrl}`}
-          sx={{ height: isLargeScreen ? '350px' : '160px' }}
+          sx={{ ...cardMediaCommonStyles }}
         />
       )}
       {embedId && (
@@ -42,6 +45,7 @@ export default function Feature({
           component="iframe"
           src={`https://www.youtube.com/embed/${embedId}`}
           allowFullScreen
+          sx={{ border: 'none', ...cardMediaCommonStyles }}
         />
       )}
       <CardContent sx={{ padding: contentPadding }}>
