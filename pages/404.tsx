@@ -6,6 +6,7 @@ import Image from '../components/Image';
 import Layout from '../components/Layout/Layout';
 import NavLink from '../components/Layout/NavLink';
 import PageContainer from '../components/Layout/PageContainer';
+import { useCurrentRoute } from '../hooks/router';
 import { findMatchingEpisode, getAllEpisodeData, RssItem } from '../lib/rss';
 
 export async function getStaticProps() {
@@ -20,20 +21,11 @@ type Custom404Props = {
 
 export default function Custom404({ allEpisodeData }: Custom404Props) {
   const router = useRouter();
-  const [currentPage, setCurrentPage] = useState('');
+  const { currentRoute } = useCurrentRoute();
 
   useEffect(
     function () {
-      if (router) {
-        setCurrentPage(router.asPath);
-      }
-    },
-    [router]
-  );
-
-  useEffect(
-    function () {
-      const dateMatch = currentPage.match(
+      const dateMatch = currentRoute.match(
         /\/([0-9][0-9][0-9][0-9]\/[0-9][0-9]\/[0-9][0-9])/
       );
 
@@ -51,7 +43,7 @@ export default function Custom404({ allEpisodeData }: Custom404Props) {
         }
       }
     },
-    [currentPage, allEpisodeData, router]
+    [currentRoute, allEpisodeData, router]
   );
 
   return (
@@ -63,7 +55,7 @@ export default function Custom404({ allEpisodeData }: Custom404Props) {
         <Typography variant="h1">404: nie udało sie znaleźć strony</Typography>
         <Image src="dreamer.svg" alt="" width={400} height={400} />
         <Typography>
-          Strona <code>{currentPage}</code> nie istnieje
+          Strona <code>{currentRoute}</code> nie istnieje
         </Typography>
         <NavLink href="/">
           <Button>Wróć do strony głównej</Button>
