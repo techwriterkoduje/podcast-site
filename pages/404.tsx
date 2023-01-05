@@ -1,15 +1,59 @@
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { NextPage } from 'next';
 import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 import Image from '../components/Image';
 import Layout from '../components/Layout/Layout';
 import NavLink from '../components/Layout/NavLink';
 import PageContainer from '../components/Layout/PageContainer';
+import { findMatchingEpisode, getAllEpisodeData, RssItem } from '../lib/rss';
 
-const Custom404: NextPage = () => {
+export async function getStaticProps() {
+  const allEpisodeData = await getAllEpisodeData();
+  const props: Custom404Props = { allEpisodeData };
+  return { props };
+}
+
+type Custom404Props = {
+  allEpisodeData: RssItem[];
+};
+
+export default function Custom404({ allEpisodeData }: Custom404Props) {
   const router = useRouter();
-  const currentPage = router.asPath;
+  const [currentPage, setCurrentPage] = useState('');
+
+  useEffect(
+    function () {
+      if (router) {
+        setCurrentPage(router.asPath);
+      }
+    },
+    [router]
+  );
+
+  useEffect(
+    function () {
+      const dateMatch = currentPage.match(
+        /\/([0-9][0-9][0-9][0-9]\/[0-9][0-9]\/[0-9][0-9])/
+      );
+
+      if (dateMatch) {
+        const [year, month, day] = dateMatch[1].split('/');
+        const matchingEpisode = findMatchingEpisode(
+          year,
+          month,
+          day,
+          allEpisodeData
+        );
+
+        if (matchingEpisode) {
+          router.push(matchingEpisode.episodeLink);
+        }
+      }
+    },
+    [currentPage, allEpisodeData, router]
+  );
+
   return (
     <Layout
       title="404: strona nie istnieje"
@@ -17,7 +61,7 @@ const Custom404: NextPage = () => {
     >
       <PageContainer centered>
         <Typography variant="h1">404: nie udało sie znaleźć strony</Typography>
-        <Image src="/dreamer.svg" alt="" width={400} height={400} />
+        <Image src="dreamer.svg" alt="" width={400} height={400} />
         <Typography>
           Strona <code>{currentPage}</code> nie istnieje
         </Typography>
@@ -27,6 +71,4 @@ const Custom404: NextPage = () => {
       </PageContainer>
     </Layout>
   );
-};
-
-export default Custom404;
+}
