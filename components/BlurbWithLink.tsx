@@ -17,9 +17,7 @@ export default function BlurbWithLink({ blurb, link }: BlurbWithLinkProps) {
         component="span"
       >
         <Link href={link}>
-          <Button endIcon={<ArrowRightAltIcon />}>
-            pełny opis
-          </Button>
+          <Button endIcon={<ArrowRightAltIcon />}>pełny opis</Button>
         </Link>
       </Typography>
     </Typography>

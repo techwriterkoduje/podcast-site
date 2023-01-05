@@ -18,7 +18,12 @@ export default function PreviousNext({
   const next = getOffsetItem(1);
 
   return (
-    <Grid container justifyContent="space-between" alignItems="center" spacing={2}>
+    <Grid
+      container
+      justifyContent="space-between"
+      alignItems="center"
+      spacing={2}
+    >
       <Grid>
         {previous && (
           <Button
