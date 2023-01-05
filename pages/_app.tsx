@@ -3,20 +3,29 @@ import '../styles/globals.css';
 import 'prism-theme-one-light-dark/prism-onedark.css';
 import type { AppProps } from 'next/app';
 import ThemeProvider from '@mui/material/styles/ThemeProvider';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import createTheme from '@mui/material/styles/createTheme';
 import { ColorModeContext } from '../context/ColorModeContext';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
+type ColorMode = 'light' | 'dark';
+
 function MyApp({ Component, pageProps }: AppProps) {
+  const MODE_STORAGE_KEY = 'colorMode';
   const prefersLightMode = useMediaQuery('(prefers-color-scheme: light)');
-  const [mode, setMode] = useState<'light' | 'dark'>(
+
+  const [mode, setMode] = useState<ColorMode>(
     prefersLightMode ? 'light' : 'dark'
   );
+
   const colorMode = useMemo(
     () => ({
       toggleColorMode: () => {
-        setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
+        setMode((prevMode) => {
+          const newMode = prevMode === 'light' ? 'dark' : 'light';
+          localStorage.setItem(MODE_STORAGE_KEY, newMode);
+          return newMode;
+        });
       },
     }),
     []
@@ -56,6 +65,17 @@ function MyApp({ Component, pageProps }: AppProps) {
       }),
     [mode]
   );
+
+  useEffect(function () {
+    const fromLocalStorage = localStorage.getItem(MODE_STORAGE_KEY);
+
+    if (
+      fromLocalStorage &&
+      (fromLocalStorage === 'light' || fromLocalStorage === 'dark')
+    ) {
+      setMode(fromLocalStorage);
+    }
+  }, []);
 
   return (
     <ColorModeContext.Provider value={colorMode}>
