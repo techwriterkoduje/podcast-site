@@ -1,13 +1,10 @@
 import Stack from '@mui/material/Stack';
-import { navLinks } from './SiteLinks';
-import NavLink from './NavLink';
 import { useState } from 'react';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Drawer from '@mui/material/Drawer';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
 import LogoLink from './LogoLink';
+import Nav from './Nav';
 
 export default function MobileHeader() {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,26 +32,9 @@ export default function MobileHeader() {
           toggleNav(false);
         }}
       >
-        <List>
-          {navLinks.map(({ href, label, icon }) => (
-            <ListItem key={label}>
-              <NavLink
-                href={href}
-                sx={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '1rem',
-                  padding: '0.5rem 1rem',
-                  fontSize: '1.5rem',
-                  lineHeight: '1.5',
-                }}
-              >
-                <div>{icon}</div>
-                <div>{label}</div>
-              </NavLink>
-            </ListItem>
-          ))}
-        </List>
+        <Stack spacing={2} sx={{ padding: '1rem'}}>
+          <Nav />
+        </Stack>
       </Drawer>
     </Stack>
   );

@@ -28,7 +28,9 @@ export default function LatestEpisodes({
           </Grid>
         ))}
       </Grid>
-      <ActionButtonLink to="/episode-list">Wszystkie odcinki</ActionButtonLink>
+      <ActionButtonLink href="/episode-list">
+        Wszystkie odcinki
+      </ActionButtonLink>
     </Stack>
   );
 }

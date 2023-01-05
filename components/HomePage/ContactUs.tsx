@@ -13,7 +13,7 @@ export default function ContactUs() {
       <Typography variant="h2">
         Masz pomysł na odcinek? Chcesz być naszym gościem?
       </Typography>
-      <ActionButtonLink to="/contact">Skontaktuj się z nami</ActionButtonLink>
+      <ActionButtonLink href="/contact">Skontaktuj się z nami</ActionButtonLink>
     </Stack>
   );
 }
