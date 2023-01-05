@@ -26,6 +26,7 @@ export default function YoutubeEmbed({
       <CardMedia
         component="iframe"
         src={`https://www.youtube.com/embed/${embedId}`}
+        allowFullScreen
       />
       <CardContent>
         <Typography variant="h5" component="div" gutterBottom>
