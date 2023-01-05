@@ -135,16 +135,30 @@ export function getDateAsStrings(dateString: string): string[] {
   ];
 }
 
+export function findMatchingEpisode(
+  yearToMatch: string,
+  monthToMatch: string,
+  dayToMatch: string,
+  allEpisodeData: RssItem[]
+) {
+  return allEpisodeData.find((episode) => {
+    const [year, month, day] = getDateAsStrings(episode.pubDate);
+    return year === yearToMatch && month === monthToMatch && day === dayToMatch;
+  });
+}
+
 export async function getOneEpisodeData(
   yearToMatch: string,
   monthToMatch: string,
   dayToMatch: string
 ): Promise<RssItem> {
   const allEpisodeData = await getAllEpisodeData();
-  const matchingEpisode = allEpisodeData.find((episode) => {
-    const [year, month, day] = getDateAsStrings(episode.pubDate);
-    return year === yearToMatch && month === monthToMatch && day === dayToMatch;
-  });
+  const matchingEpisode = findMatchingEpisode(
+    yearToMatch,
+    monthToMatch,
+    dayToMatch,
+    allEpisodeData
+  );
 
   if (!matchingEpisode) {
     throw new Error(
