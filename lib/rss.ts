@@ -78,7 +78,7 @@ function replaceUrlsWithLinks(text: string): string {
 
 function getBlurb(description: string): string {
   return description
-    .replace(/<[^>+]>/g, '')
+    .replace(/<[^>]+>/g, '')
     .replace(/&nbsp;/g, ' ')
     .slice(0, 160);
 }

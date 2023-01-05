@@ -1,13 +1,12 @@
 import PageContainer from './Layout/PageContainer';
-import Grid from '@mui/material/Unstable_Grid2/Grid2';
-import YoutubeEmbed, { YoutubeEmbedProps } from './YoutubeEmbed';
+import Feature, { FeatureProps } from './Feature/Feature';
 
-const videos: YoutubeEmbedProps[] = [
+const videos: FeatureProps[] = [
   {
     embedId: 'JkU2n2mpuU0',
     title: 'Doing docs like code (soap!)',
     description: <>Nasza prezentacja z konferencji soap! w 2019 roku.</>,
-    links: [{ label: 'soapconf.com', href: 'http://soapconf.com' }],
+    actionLinks: [{ label: 'soapconf.com', to: 'http://soapconf.com' }],
   },
   {
     embedId: 'PIXNG3agLhg',
@@ -19,9 +18,9 @@ const videos: YoutubeEmbedProps[] = [
         pisanie testów, które sprawdzają dokumentację z kodem lub aplikacją.
       </>
     ),
-    links: [
+    actionLinks: [
       {
-        href: 'https://github.com/techwriterkoduje/dita-semantic-tests',
+        to: 'https://github.com/techwriterkoduje/dita-semantic-tests',
         label: 'Przykładowy projekt',
       },
     ],
@@ -31,13 +30,9 @@ const videos: YoutubeEmbedProps[] = [
 export default function WatchPage() {
   return (
     <PageContainer>
-      <Grid container spacing={2}>
-        {videos.map((video) => (
-          <Grid key={video.title} md={6}>
-            <YoutubeEmbed {...video} />
-          </Grid>
-        ))}
-      </Grid>
+      {videos.map((video) => (
+        <Feature key={video.title} {...video} />
+      ))}
     </PageContainer>
   );
 }

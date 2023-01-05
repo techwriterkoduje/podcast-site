@@ -1,5 +1,11 @@
 export default function Image(
   props: React.ImgHTMLAttributes<HTMLImageElement>
 ) {
-  return <img {...props} src={`${process.env.REPO}${props.src}`} />;
+  return (
+    <img
+      {...props}
+      alt={props.alt || ''}
+      src={`${process.env.REPO}${props.src}`}
+    />
+  );
 }

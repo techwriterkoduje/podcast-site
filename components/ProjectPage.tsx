@@ -5,7 +5,7 @@ import PageContainer from './Layout/PageContainer';
 const projects: FeatureProps[] = [
   {
     title: 'Semantyczne testy w DITA (Python)',
-    imageUrl: 'img/semantics.png',
+    imageUrl: 'semantics.png',
     description: (
       <>
         Semantyczne tagi w standardzie DITA pozwalają na na pisanie bardzo
@@ -23,7 +23,7 @@ const projects: FeatureProps[] = [
   },
   {
     title: 'Statyczna strona z dokumentacja do wielu API (Next.js + Redoc)',
-    imageUrl: 'img/next-redoc.png',
+    imageUrl: 'next-redoc.png',
     description: (
       <>
         Zobacz przykład strony, która wyświetla zbiór specyfikacji OpenAPI.
@@ -40,7 +40,7 @@ const projects: FeatureProps[] = [
   },
   {
     title: 'Focus Grid',
-    imageUrl: 'img/focus-grid.png',
+    imageUrl: 'focus-grid.png',
     description: (
       <>
         <p>
@@ -58,7 +58,7 @@ const projects: FeatureProps[] = [
   },
   {
     title: 'Źródło tej strony (Next.js)',
-    imageUrl: 'img/website.png',
+    imageUrl: 'website.png',
     description: (
       <>
         <p>
