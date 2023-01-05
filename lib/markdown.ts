@@ -5,7 +5,6 @@ import { remark } from 'remark';
 import remarkGfm from 'remark-gfm';
 import html from 'remark-html';
 import remarkPrism from 'remark-prism';
-import emoji from 'remark-emoji';
 
 export const markdownDir = join(process.cwd(), 'docs');
 
@@ -44,7 +43,6 @@ export async function getMarkdownContent(
 
   const processedContent = await remark()
     .use(remarkGfm)
-    .use(emoji)
     .use(html, { sanitize: false })
     .use(remarkPrism)
     .process(matterResult.content);

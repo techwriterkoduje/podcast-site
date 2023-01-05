@@ -2837,13 +2837,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"emoticon@npm:^4.0.0":
-  version: 4.0.1
-  resolution: "emoticon@npm:4.0.1"
-  checksum: 991ab6421927601af4eb44036b60e3125759a4d81f32d2ad96b66e3491e2fdb6a026eeb6bffbfa66724592dca95235570785963607d16961ea73a62ecce715e2
-  languageName: node
-  linkType: hard
-
 "encoding@npm:^0.1.13":
   version: 0.1.13
   resolution: "encoding@npm:0.1.13"
@@ -5062,7 +5055,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash@npm:^4.17.15, lodash@npm:^4.17.21, lodash@npm:^4.7.0":
+"lodash@npm:^4.17.15, lodash@npm:^4.7.0":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: eb835a2e51d381e561e508ce932ea50a8e5a68f4ebdd771ea240d3048244a8d13658acbd502cd4829768c56f2e16bdd4340b9ea141297d472517b83868e677f7
@@ -5920,15 +5913,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-emoji@npm:^1.11.0":
-  version: 1.11.0
-  resolution: "node-emoji@npm:1.11.0"
-  dependencies:
-    lodash: ^4.17.21
-  checksum: e8c856c04a1645062112a72e59a98b203505ed5111ff84a3a5f40611afa229b578c7d50f1e6a7f17aa62baeea4a640d2e2f61f63afc05423aa267af10977fb2b
-  languageName: node
-  linkType: hard
-
 "node-gyp@npm:latest":
   version: 9.1.0
   resolution: "node-gyp@npm:9.1.0"
@@ -6341,7 +6325,6 @@ __metadata:
     react-dom: latest
     react-timer-hook: ^3.0.5
     remark: ^14.0.2
-    remark-emoji: ^3.0.2
     remark-gfm: ^3.0.1
     remark-html: ^15.0.1
     remark-prism: ^1.3.6
@@ -6603,17 +6586,6 @@ __metadata:
   version: 3.2.0
   resolution: "regexpp@npm:3.2.0"
   checksum: a78dc5c7158ad9ddcfe01aa9144f46e192ddbfa7b263895a70a5c6c73edd9ce85faf7c0430e59ac38839e1734e275b9c3de5c57ee3ab6edc0e0b1bdebefccef8
-  languageName: node
-  linkType: hard
-
-"remark-emoji@npm:^3.0.2":
-  version: 3.0.2
-  resolution: "remark-emoji@npm:3.0.2"
-  dependencies:
-    emoticon: ^4.0.0
-    node-emoji: ^1.11.0
-    unist-util-visit: ^4.1.0
-  checksum: e5e3cccca64424073f7421d40ebf50e9ea3ca4604ee09cda7d0c8d3dba31f29fb99a6fac249709937e4eba259bca78431401eb11e319471b55a22d9eaf05471f
   languageName: node
   linkType: hard
 
@@ -7617,7 +7589,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unist-util-visit@npm:^4.0.0, unist-util-visit@npm:^4.1.0":
+"unist-util-visit@npm:^4.0.0":
   version: 4.1.1
   resolution: "unist-util-visit@npm:4.1.1"
   dependencies:
