@@ -52,7 +52,7 @@ export default function Feature({
         <Typography gutterBottom variant="h5" component="div">
           {title}
         </Typography>
-        <Typography>{description}</Typography>
+        <Typography component="div">{description}</Typography>
       </CardContent>
       <CardActions sx={{ padding: contentPadding }}>
         {actionLinks.map(({ to, label }, idx) => (
