@@ -1,11 +1,9 @@
-import useTheme from '@mui/material/styles/useTheme';
+import { useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { RssItem } from '../../lib/rss';
 import AudioPlayer from '../AudioPlayer';
 import BlurbWithLink from '../BlurbWithLink';
-import DateDisplay from '../DateDisplay/DateDisplay';
-import DurationDisplay from '../DurationDisplay';
 
 export default function EpisodePreviewSmall({
   title,

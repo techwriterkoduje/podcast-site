@@ -2,9 +2,8 @@ import CssBaseline from '@mui/material/CssBaseline';
 import '../styles/globals.css';
 import 'prism-theme-one-light-dark/prism-onedark.css';
 import type { AppProps } from 'next/app';
-import ThemeProvider from '@mui/material/styles/ThemeProvider';
 import { useEffect, useMemo, useState } from 'react';
-import createTheme from '@mui/material/styles/createTheme';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { ColorModeContext } from '../context/ColorModeContext';
 import useMediaQuery from '@mui/material/useMediaQuery';
 

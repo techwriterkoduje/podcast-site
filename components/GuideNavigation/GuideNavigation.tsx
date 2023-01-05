@@ -1,7 +1,7 @@
 import Stack from '@mui/material/Stack';
-import useTheme from '@mui/material/styles/useTheme';
+import { useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Unstable_Grid2/Grid2';
+import Grid from '@mui/material/Unstable_Grid2';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import BackLink from '../BackLink/BackLink';
 import MarkdownDisplay from '../MarkdownDisplay';
