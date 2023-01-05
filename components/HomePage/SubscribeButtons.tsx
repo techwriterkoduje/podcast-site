@@ -61,7 +61,6 @@ export default function SubscribeButtons() {
           key={l.label}
           variant="text"
           size="small"
-          sx={{ color: 'white' }}
         >
           {l.label}
         </Button>

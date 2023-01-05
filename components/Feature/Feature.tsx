@@ -56,7 +56,7 @@ export default function Feature({
       </CardContent>
       <CardActions sx={{ padding: contentPadding }}>
         {actionLinks.map(({ to, label }, idx) => (
-          <ActionButtonLink key={idx} to={to}>
+          <ActionButtonLink key={idx} href={to}>
             {label}
           </ActionButtonLink>
         ))}

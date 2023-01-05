@@ -3,6 +3,7 @@ import SizeSelector, { SizeSelectorProps } from './SizeSelector';
 import styles from './FocusGridGame.module.css';
 import Button from '@mui/material/Button';
 import Image from '../Image';
+import Card from '@mui/material/Card';
 
 type StartScreenProps = SizeSelectorProps & {
   handleStart: Dispatch<SetStateAction<boolean>>;
@@ -20,7 +21,7 @@ export default function StartScreen({
         alt=""
         className={styles.startScreenBackgroundImage}
       />
-      <div className={styles.gameDescription}>
+      <Card className={styles.gameDescription}>
         <h1 className={styles.gameTitle}>Focus Grid</h1>
         <p>
           Ćwicz koncentrację! Wybierz rozmiar tablicy i odsłoń kolejne liczby
@@ -34,7 +35,7 @@ export default function StartScreen({
         >
           Start
         </Button>
-      </div>
+      </Card>
     </div>
   );
 }
