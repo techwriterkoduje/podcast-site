@@ -5,6 +5,7 @@ import ActionButtonLink from '../ActionButtonLink/ActionButtonLink';
 export type FeatureProps = {
   title: string;
   description: React.ReactElement | string;
+  imageUrl?: string;
   actionLinks: {
     to: string;
     label: string;

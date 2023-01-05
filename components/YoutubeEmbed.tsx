@@ -22,13 +22,12 @@ export default function YoutubeEmbed({
   links,
 }: YoutubeEmbedProps) {
   return (
-    <Card sx={{ height: '100%' }} variant='outlined'>
+    <Card sx={{ height: '100%' }} variant="outlined">
       <CardMedia
         component="iframe"
         src={`https://www.youtube.com/embed/${embedId}`}
       />
-      <CardContent
-      >
+      <CardContent>
         <Typography variant="h5" component="div" gutterBottom>
           {title}
         </Typography>
