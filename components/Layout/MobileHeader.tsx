@@ -15,7 +15,13 @@ export default function MobileHeader() {
   }
 
   return (
-    <Stack alignItems="center" direction="row">
+    <Stack
+      alignItems="center"
+      direction="row"
+      sx={{
+        borderBottom: '1px solid #ed6e5f',
+      }}
+    >
       <LogoLink />
       <IconButton
         aria-label="Otwórz listę podstron"
