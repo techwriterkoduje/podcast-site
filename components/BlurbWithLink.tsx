@@ -6,20 +6,20 @@ import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 type BlurbWithLinkProps = {
   blurb: string;
   link: string;
+  fontSize?: 'small' | 'large';
 };
 
-export default function BlurbWithLink({ blurb, link }: BlurbWithLinkProps) {
+export default function BlurbWithLink({
+  blurb,
+  link,
+  fontSize,
+}: BlurbWithLinkProps) {
   return (
-    <Typography>
+    <Typography component="div" fontSize={fontSize}>
       {blurb}...
-      <Typography
-        sx={{ textDecoration: 'underline', color: 'pink' }}
-        component="span"
-      >
-        <Link href={link}>
-          <Button endIcon={<ArrowRightAltIcon />}>pełny opis</Button>
-        </Link>
-      </Typography>
+      <Link href={link}>
+        <Button endIcon={<ArrowRightAltIcon />}>pełny opis</Button>
+      </Link>
     </Typography>
   );
 }

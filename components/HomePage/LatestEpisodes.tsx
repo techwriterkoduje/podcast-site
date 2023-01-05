@@ -1,9 +1,9 @@
 import Typography from '@mui/material/Typography';
 import { RssItem } from '../../lib/rss';
-import EpisodePreview from './EpisodePreview';
 import ActionButtonLink from '../ActionButtonLink/ActionButtonLink';
 import Stack from '@mui/material/Stack';
 import Grid from '@mui/material/Unstable_Grid2/Grid2';
+import EpisodePreviewSmall from '../EpisodePreview/EpisodePreviewSmall';
 
 type LatestEpisodesProps = {
   lastThreeEpisodes: RssItem[];
@@ -24,7 +24,7 @@ export default function LatestEpisodes({
       <Grid container spacing={2}>
         {lastThreeEpisodes.map((episode) => (
           <Grid key={episode.anchorLink} md={4}>
-            <EpisodePreview {...episode} />
+            <EpisodePreviewSmall {...episode} />
           </Grid>
         ))}
       </Grid>
