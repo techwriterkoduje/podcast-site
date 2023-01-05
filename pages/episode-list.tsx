@@ -1,7 +1,7 @@
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import { NextPage } from 'next';
-import EpisodePreview from '../components/HomePage/EpisodePreview';
+import EpisodePreview from '../components/EpisodePreview/EpisodePreview';
 import Layout from '../components/Layout/Layout';
 import PageContainer from '../components/Layout/PageContainer';
 import { getAllEpisodeData, RssItem } from '../lib/rss';

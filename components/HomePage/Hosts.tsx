@@ -27,9 +27,10 @@ const hosts: Host[] = [
 
 type HostsProps = {
   size?: 'small' | 'medium' | 'large';
+  overrideLink?: string;
 };
 
-export default function Hosts({ size }: HostsProps) {
+export default function Hosts({ size, overrideLink }: HostsProps) {
   const imageSizes = {
     small: '60px',
     medium: '150px',
@@ -51,10 +52,19 @@ export default function Hosts({ size }: HostsProps) {
           key={host.name}
           alignItems="center"
           justifyContent="center"
-          spacing={3}
+          spacing={1}
         >
-          <Image src={host.img} height={imageSize} alt={host.alt} />
-          <Link href={host.linkedIn} target="_blank">
+          <Link
+            href={overrideLink ? overrideLink : host.linkedIn}
+            target={overrideLink ? undefined : '_blank'}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              flexDirection: 'column',
+            }}
+          >
+            <Image src={host.img} height={imageSize} alt={host.alt} />
             <Typography fontSize={size}>{host.name}</Typography>
           </Link>
         </Stack>
