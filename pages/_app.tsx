@@ -31,10 +31,6 @@ function MyApp({ Component, pageProps }: AppProps) {
             main: '#ed6e5f',
             dark: '#eb5645',
           },
-          secondary: {
-            main: '#fafafa',
-            dark: '#dbdbdb',
-          },
         },
         typography: {
           fontFamily: ['Roboto', 'Helvetica', 'Arial', 'sans-serif'].join(','),
