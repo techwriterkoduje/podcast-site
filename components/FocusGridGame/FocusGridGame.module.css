@@ -21,8 +21,6 @@
   transition: transform 0.6s ease;
   transform-style: preserve-3d;
   cursor: pointer;
-  background-color: white;
-  color: #111;
   border: 1px solid gray;
   border-radius: 4px;
   padding: 0;
@@ -41,9 +39,6 @@
 }
 
 .victory {
-  border: 2px solid rgb(165, 163, 163);
-  background-color: black;
-  color: white;
   font-size: 1.3rem;
   padding: 3rem;
   max-width: 100%;
@@ -104,11 +99,9 @@
 .gameTitle {
   font-size: 3rem;
   text-shadow: 1px 1px 2px black;
-  color: lightgray;
 }
 
 .gameDescription {
-  background-color: rgba(0, 0, 0, 0.9);
   padding: 1rem;
   border-radius: 6px;
   display: flex;

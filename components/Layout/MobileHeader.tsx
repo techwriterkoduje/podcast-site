@@ -5,6 +5,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Drawer from '@mui/material/Drawer';
 import LogoLink from './LogoLink';
 import Nav from './Nav';
+import ModeSwitcher from './ModeSwitcher';
 
 export default function MobileHeader() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,9 +23,11 @@ export default function MobileHeader() {
           toggleNav(true);
         }}
         size="large"
+        color="primary"
       >
-        <MenuIcon htmlColor="white" />
+        <MenuIcon />
       </IconButton>
+      <ModeSwitcher />
       <Drawer
         anchor="left"
         open={isOpen}
@@ -32,7 +35,7 @@ export default function MobileHeader() {
           toggleNav(false);
         }}
       >
-        <Stack spacing={2} sx={{ padding: '1rem'}}>
+        <Stack spacing={2} sx={{ padding: '1rem' }}>
           <Nav />
         </Stack>
       </Drawer>

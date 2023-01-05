@@ -7,6 +7,7 @@ export default function PodcastLogo() {
       style={{
         width: '450px',
         maxWidth: '100%',
+        backgroundColor: 'black'
       }}
       alt="Logo podcastu Tech Writer koduje"
     />
