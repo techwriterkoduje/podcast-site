@@ -16,7 +16,11 @@ export default function EpisodePreview({
   duration,
 }: RssItem) {
   return (
-    <Card key={episodeLink} variant="outlined">
+    <Card
+      key={episodeLink}
+      variant="outlined"
+      sx={{ height: '100%', width: '100%' }}
+    >
       <Stack spacing={2} sx={{ padding: '2rem' }}>
         <Typography fontWeight="bold" fontSize="1.1rem">
           {title}

@@ -9,7 +9,7 @@ export default function DesktopHeader() {
         direction="row"
         sx={{
           color: '#ed6e5f',
-          borderBottom: '2px solid #ed6e5f',
+          borderBottom: '1px solid #ed6e5f',
           alignItems: 'center',
           height: '50px',
           padding: '0 1rem',
