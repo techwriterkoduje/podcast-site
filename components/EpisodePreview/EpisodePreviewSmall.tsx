@@ -1,5 +1,6 @@
-import Stack from '@mui/material/Stack';
+import useTheme from '@mui/material/styles/useTheme';
 import Typography from '@mui/material/Typography';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import { RssItem } from '../../lib/rss';
 import AudioPlayer from '../AudioPlayer';
 import BlurbWithLink from '../BlurbWithLink';
@@ -14,22 +15,48 @@ export default function EpisodePreviewSmall({
   episodeLink,
   audioUrl,
 }: RssItem) {
+  const theme = useTheme();
+  const isLargeScreen = useMediaQuery(theme.breakpoints.up('sm'));
+
+  const gridStyle: React.CSSProperties = {
+    display: 'grid',
+    gridTemplateColumns: '1fr',
+    gridTemplateRows: '1.4fr 1fr 1.5fr 2fr',
+    height: '100%',
+    padding: '4px',
+  };
+
+  const flexStyle: React.CSSProperties = {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '12px',
+    marginBottom: '1rem',
+  };
+
+  const divStyle = isLargeScreen ? gridStyle : flexStyle;
+
   return (
-    <Stack spacing={1} sx={{ padding: '1rem' }}>
-      <Typography fontWeight="bold" component="div">
+    <div style={divStyle}>
+      <Typography fontWeight="500" component="div" fontSize="90%">
         {title}
       </Typography>
       <Typography
         variant="subtitle1"
-        sx={{ display: 'flex', gap: '1rem' }}
+        sx={{
+          display: 'flex',
+          gap: '4px',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+        }}
         fontSize="small"
         component="div"
       >
         <DateDisplay dateString={pubDate} />
         <DurationDisplay duration={duration} />
       </Typography>
+
       <AudioPlayer audioSrc={audioUrl} />
       <BlurbWithLink blurb={blurb} link={episodeLink} fontSize="small" />
-    </Stack>
+    </div>
   );
 }

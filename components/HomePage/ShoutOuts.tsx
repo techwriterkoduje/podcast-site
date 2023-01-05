@@ -3,7 +3,7 @@ import Typography from '@mui/material/Typography';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import Image from '../Image';
-import NavLink from '../Layout/NavLink';
+import Link from 'next/link';
 
 type ShoutOutLink = {
   img: string;
@@ -35,7 +35,7 @@ export default function ShoutOuts() {
       <Typography variant="h2">Szanujemy i wspieramy</Typography>
       <ImageList sx={{ width: '100%' }} cols={3} rowHeight={200}>
         {shoutOutLinks.map((l) => (
-          <NavLink href={l.href} key={l.href}>
+          <Link href={l.href} key={l.href} target="_blank">
             <ImageListItem
               sx={{
                 border: '3px dotted black',
@@ -48,7 +48,7 @@ export default function ShoutOuts() {
             >
               <Image src={l.img} alt={l.alt} width="100%" height="100%" />
             </ImageListItem>
-          </NavLink>
+          </Link>
         ))}
       </ImageList>
     </Stack>
