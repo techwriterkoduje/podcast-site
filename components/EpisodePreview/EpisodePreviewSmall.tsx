@@ -21,7 +21,7 @@ export default function EpisodePreviewSmall({
   const gridStyle: React.CSSProperties = {
     display: 'grid',
     gridTemplateColumns: '1fr',
-    gridTemplateRows: '1.4fr 1fr 1.5fr 2fr',
+    gridTemplateRows: '1.4fr 1.5fr 2fr',
     height: '100%',
     padding: '4px',
   };
@@ -40,21 +40,6 @@ export default function EpisodePreviewSmall({
       <Typography fontWeight="500" component="div" fontSize="90%">
         {title}
       </Typography>
-      <Typography
-        variant="subtitle1"
-        sx={{
-          display: 'flex',
-          gap: '4px',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-        }}
-        fontSize="small"
-        component="div"
-      >
-        <DateDisplay dateString={pubDate} />
-        <DurationDisplay duration={duration} />
-      </Typography>
-
       <AudioPlayer audioSrc={audioUrl} />
       <BlurbWithLink blurb={blurb} link={episodeLink} fontSize="small" />
     </div>
