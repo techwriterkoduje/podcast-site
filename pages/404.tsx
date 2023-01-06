@@ -1,11 +1,9 @@
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import ActionButtonLink from '../components/ActionButtonLink/ActionButtonLink';
 import Image from '../components/Image';
 import Layout from '../components/Layout/Layout';
-import NavLink from '../components/GuideNavigation/NavLink';
 import PageContainer from '../components/Layout/PageContainer';
 import { useCurrentRoute } from '../hooks/router';
 import { findMatchingEpisode, getAllEpisodeData, RssItem } from '../lib/rss';
