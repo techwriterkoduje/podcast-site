@@ -1,7 +1,7 @@
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import BackLink from '../BackLink/BackLink';
-import MarkdownDisplay from '../MarkdownDisplay';
+import HtmlDisplay from '../HtmlDisplay';
 import { GuideNavigationProps, GuidePageProps } from './GuideNavigation';
 import MobileNav from './MobileNav';
 import PreviousNext from './PreviousNext';
@@ -19,7 +19,7 @@ export default function MobileGuideNavigation({
 
       <BackLink href={backLinkHref}>{backLinkLabel}</BackLink>
       <Typography variant="h1">{selectedPage.pageTitle}</Typography>
-      <MarkdownDisplay htmlString={selectedPage.pageContent} />
+      <HtmlDisplay htmlString={selectedPage.pageContent} />
 
       <PreviousNext currentItemId={selectedPageId} items={guidePages} />
     </Stack>

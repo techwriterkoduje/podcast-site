@@ -1,6 +1,5 @@
 import NorthWestIcon from '@mui/icons-material/NorthWest';
-import Link from 'next/link';
-import styles from './BackLink.module.css';
+import ActionButtonLink from '../ActionButtonLink/ActionButtonLink';
 
 type BackLinkProps = {
   href: string;
@@ -9,9 +8,12 @@ type BackLinkProps = {
 
 export default function BackLink({ href, children }: BackLinkProps) {
   return (
-    <Link href={href} className={styles.iconLink}>
-      <NorthWestIcon fontSize="small" />
-      <span>{children}</span>
-    </Link>
+    <ActionButtonLink
+      href={href}
+      startIcon={<NorthWestIcon fontSize="small" />}
+      variant="text"
+    >
+      {children}
+    </ActionButtonLink>
   );
 }

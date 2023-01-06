@@ -4,7 +4,7 @@ import { join } from 'path';
 import BackLink from '../components/BackLink/BackLink';
 import Layout from '../components/Layout/Layout';
 import PageContainer from '../components/Layout/PageContainer';
-import MarkdownDisplay from '../components/MarkdownDisplay';
+import HtmlDisplay from '../components/HtmlDisplay';
 import {
   getMarkdownContent,
   markdownDir,
@@ -32,7 +32,7 @@ const DitaAsCode: NextPage<MarkdownProps> = ({
       <PageContainer>
         <BackLink href="/read">więcej artykułów</BackLink>
         <Typography variant="h1">{title}</Typography>
-        <MarkdownDisplay htmlString={contentHtml} />
+        <HtmlDisplay htmlString={contentHtml} />
       </PageContainer>
     </Layout>
   );
