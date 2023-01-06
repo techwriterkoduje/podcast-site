@@ -10,7 +10,6 @@ export default function LeftNav({ items, currentItemId }: NavControlProps) {
           key={item.pageId}
           selected={item.pageId === currentItemId}
           href={item.pageId}
-          sx={{ width: '200px' }}
         >
           {item.pageTitle}
         </ListItemButton>

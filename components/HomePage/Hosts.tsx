@@ -1,6 +1,7 @@
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Link from 'next/link';
+import ActionButtonLink from '../ActionButtonLink';
 import Image from '../Image';
 
 type Host = {
@@ -13,13 +14,13 @@ type Host = {
 const hosts: Host[] = [
   {
     name: 'Michał Skowron',
-    img: '/michal-skowron.png',
+    img: 'michal-skowron.png',
     alt: 'Zdjęcie Michała Skowrona',
     linkedIn: 'https://www.linkedin.com/in/michalskowron/',
   },
   {
     name: 'Paweł Kowaluk',
-    img: '/pawel-kowaluk.png',
+    img: 'pawel-kowaluk.png',
     alt: 'Zdjęcie Pawła Kowaluka',
     linkedIn: 'https://www.linkedin.com/in/pawel-kowaluk/',
   },
@@ -32,9 +33,9 @@ type HostsProps = {
 
 export default function Hosts({ size, overrideLink }: HostsProps) {
   const imageSizes = {
-    small: '60px',
-    medium: '150px',
-    large: '300px',
+    small: 60,
+    medium: 150,
+    large: 300,
   };
 
   const imageSize = size ? imageSizes[size] : imageSizes['medium'];
@@ -54,9 +55,10 @@ export default function Hosts({ size, overrideLink }: HostsProps) {
           justifyContent="center"
           spacing={1}
         >
-          <Link
+          <ActionButtonLink
             href={overrideLink ? overrideLink : host.linkedIn}
-            target={overrideLink ? undefined : '_blank'}
+            endIcon={null}
+            variant="text"
             style={{
               display: 'flex',
               alignItems: 'center',
@@ -64,9 +66,14 @@ export default function Hosts({ size, overrideLink }: HostsProps) {
               flexDirection: 'column',
             }}
           >
-            <Image src={host.img} height={imageSize} alt={host.alt} />
+            <Image
+              src={host.img}
+              height={imageSize}
+              width={imageSize}
+              alt={host.alt}
+            />
             <Typography fontSize={size}>{host.name}</Typography>
-          </Link>
+          </ActionButtonLink>
         </Stack>
       ))}
     </Stack>

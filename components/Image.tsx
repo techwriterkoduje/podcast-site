@@ -1,8 +1,10 @@
+import NextImage, { ImageProps } from 'next/image';
+
 export default function Image(
-  props: React.ImgHTMLAttributes<HTMLImageElement>
+  props: ImageProps
 ) {
   return (
-    <img
+    <NextImage
       {...props}
       alt={props.alt || ''}
       src={`${process.env.REPO}${props.src}`}

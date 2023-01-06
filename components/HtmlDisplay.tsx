@@ -1,5 +1,7 @@
 import Typography from '@mui/material/Typography';
 import { useTheme } from '@mui/material/styles';
+import Prism from 'prismjs';
+import { useEffect } from 'react';
 
 type HtmlDisplayProps = {
   htmlString: string;
@@ -12,6 +14,11 @@ const noLineBreakStyle = {
 
 export default function HtmlDisplay({ htmlString }: HtmlDisplayProps) {
   const theme = useTheme();
+
+  useEffect(function () {
+    Prism.highlightAll();
+  }, []);
+
   return (
     <div style={{ width: 'fit-content' }}>
       <Typography
@@ -27,6 +34,7 @@ export default function HtmlDisplay({ htmlString }: HtmlDisplayProps) {
         }}
         fontSize="1.1rem"
         component="article"
+        className="line-numbers"
       />
     </div>
   );

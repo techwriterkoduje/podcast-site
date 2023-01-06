@@ -75,7 +75,7 @@ export default function GuideNavigation({
         },
       }}
     >
-      <Grid sx={{ overflowY: 'scroll', height: '100%' }} sm={3}>
+      <Grid sx={{ overflowY: 'scroll', height: '100%', width: '200px' }} sm={3}>
         <LeftNav items={guidePages} currentItemId={selectedPageId} />
       </Grid>
       <Grid sx={{ overflowY: 'scroll', height: '100%' }} sm={9}>
