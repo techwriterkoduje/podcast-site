@@ -4,8 +4,7 @@ export default function PodcastLogo() {
   return (
     <Image
       src="logo.png"
-      width={450}
-      height={450}
+      fill
       style={{
         maxWidth: '100%',
         aspectRatio: 1,
