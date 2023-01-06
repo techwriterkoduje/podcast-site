@@ -8,11 +8,15 @@ się **The Python Standard Library**. Żeby móc skorzystać z jakiegoś kompone
 musimy go zaimportować w naszej aplikacji, czyli tak jakby dodać do niego link.
 Możemy to zrobić wpisując:
 
-`import nazwaKomponentu`
+```python
+import nazwaKomponentu
+```
 
 albo
 
-`from nazwaKomponentu import nazwaElementu`
+```python
+from nazwaKomponentu import nazwaElementu
+```
 
 Różnica jest taka, że w pierwszym sposobie importujemy cały komponent a w drugim
 tylko określone elementy, których akurat potrzebujemy.

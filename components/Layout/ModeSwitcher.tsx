@@ -15,7 +15,9 @@ export default function ModeSwitcher(props: IconButtonProps) {
         sx={{ ml: 1 }}
         onClick={colorMode.toggleColorMode}
         color="primary"
-        title={`${theme.palette.mode} mode is on, click here to switch mode.`}
+        title={`aktywny jest tryb ${
+          theme.palette.mode === 'dark' ? 'ciemny' : 'jasny'
+        }, kliknij, żeby zmienić tryb`}
         {...props}
       >
         {theme.palette.mode === 'dark' ? (

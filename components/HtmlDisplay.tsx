@@ -28,8 +28,9 @@ export default function HtmlDisplay({ htmlString }: HtmlDisplayProps) {
           '& a': { color: theme.palette.primary.main, ...noLineBreakStyle },
           '& p code': noLineBreakStyle,
           '& li code': noLineBreakStyle,
-          '.remark-highlight': {
+          '.line-numbers': {
             maxWidth: '90vw',
+            fontSize: '90%',
           },
         }}
         fontSize="1.1rem"
