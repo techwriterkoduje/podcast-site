@@ -1,6 +1,6 @@
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import BackLink from '../BackLink/BackLink';
+import BackLink from '../BackLink';
 import HtmlDisplay from '../HtmlDisplay';
 import { GuideNavigationProps, GuidePageProps } from './GuideNavigation';
 import MobileNav from './MobileNav';

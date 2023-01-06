@@ -1,7 +1,7 @@
 import Typography from '@mui/material/Typography';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
-import ActionButtonLink from '../components/ActionButtonLink/ActionButtonLink';
+import ActionButtonLink from '../components/ActionButtonLink';
 import Image from '../components/Image';
 import Layout from '../components/Layout/Layout';
 import PageContainer from '../components/Layout/PageContainer';

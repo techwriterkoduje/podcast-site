@@ -3,7 +3,7 @@ import { useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Unstable_Grid2';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import BackLink from '../BackLink/BackLink';
+import BackLink from '../BackLink';
 import HtmlDisplay from '../HtmlDisplay';
 import LeftNav from './LeftNav';
 import MobileGuideNavigation from './MobileGuideNavigation';

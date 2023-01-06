@@ -1,6 +1,6 @@
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
-import ActionButtonLink from '../ActionButtonLink/ActionButtonLink';
+import ActionButtonLink from '../ActionButtonLink';
 
 export default function ContactUs() {
   return (

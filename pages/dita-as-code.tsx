@@ -1,7 +1,7 @@
 import Typography from '@mui/material/Typography';
 import { GetStaticProps, NextPage } from 'next';
 import { join } from 'path';
-import BackLink from '../components/BackLink/BackLink';
+import BackLink from '../components/BackLink';
 import Layout from '../components/Layout/Layout';
 import PageContainer from '../components/Layout/PageContainer';
 import HtmlDisplay from '../components/HtmlDisplay';

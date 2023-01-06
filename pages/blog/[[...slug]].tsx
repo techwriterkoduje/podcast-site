@@ -1,7 +1,7 @@
 import Typography from '@mui/material/Typography';
 import { NextPage } from 'next';
 import AudioPlayer from '../../components/AudioPlayer';
-import BackLink from '../../components/BackLink/BackLink';
+import BackLink from '../../components/BackLink';
 import DateDisplay from '../../components/DateDisplay/DateDisplay';
 import Layout from '../../components/Layout/Layout';
 import PageContainer from '../../components/Layout/PageContainer';

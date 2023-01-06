@@ -1,5 +1,5 @@
 import NorthWestIcon from '@mui/icons-material/NorthWest';
-import ActionButtonLink from '../ActionButtonLink/ActionButtonLink';
+import ActionButtonLink from './ActionButtonLink';
 
 type BackLinkProps = {
   href: string;

@@ -1,6 +1,6 @@
 import Typography from '@mui/material/Typography';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
-import ActionButtonLink from './ActionButtonLink/ActionButtonLink';
+import ActionButtonLink from './ActionButtonLink';
 
 type BlurbWithLinkProps = {
   blurb: string;

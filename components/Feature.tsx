@@ -1,5 +1,5 @@
 import Typography from '@mui/material/Typography';
-import ActionButtonLink from '../ActionButtonLink/ActionButtonLink';
+import ActionButtonLink from './ActionButtonLink';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
