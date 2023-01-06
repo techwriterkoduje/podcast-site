@@ -1,5 +1,5 @@
 import { useCurrentRoute } from '../../hooks/router';
-import ActionButtonLink from '../ActionButtonLink/ActionButtonLink';
+import ActionButtonLink from '../ActionButtonLink';
 import { navLinks } from './SiteLinks';
 
 type NavProps = {

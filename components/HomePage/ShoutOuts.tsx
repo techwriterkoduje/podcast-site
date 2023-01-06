@@ -13,17 +13,17 @@ type ShoutOutLink = {
 
 const shoutOutLinks: ShoutOutLink[] = [
   {
-    img: '/switkowski-logo.svg',
+    img: 'switkowski-logo.svg',
     alt: 'Logo strony Sebastian Witowskiego',
     href: 'https://switowski.com/',
   },
   {
-    img: '/techwriter-logo.png',
+    img: 'techwriter-logo.png',
     alt: 'Logo strony Techwriter.pl',
     href: 'http://techwriter.pl/',
   },
   {
-    img: '/soapconf-logo.png',
+    img: 'soapconf-logo.png',
     alt: 'Logo konferencji soap!',
     href: 'https://soapconf.com/',
   },
@@ -51,7 +51,7 @@ export default function ShoutOuts() {
                 backgroundColor: 'white',
               }}
             >
-              <Image src={l.img} alt={l.alt} width="100%" height="100%" />
+              <Image src={l.img} alt={l.alt} width={200} height={200} />
             </ImageListItem>
           </Link>
         ))}

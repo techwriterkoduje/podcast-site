@@ -4,7 +4,6 @@ import { join, parse } from 'path';
 import { remark } from 'remark';
 import remarkGfm from 'remark-gfm';
 import html from 'remark-html';
-import remarkPrism from 'remark-prism';
 
 export const markdownDir = join(process.cwd(), 'docs');
 
@@ -44,7 +43,6 @@ export async function getMarkdownContent(
   const processedContent = await remark()
     .use(remarkGfm)
     .use(html, { sanitize: false })
-    .use(remarkPrism)
     .process(matterResult.content);
   const contentHtml = processedContent.toString();
 

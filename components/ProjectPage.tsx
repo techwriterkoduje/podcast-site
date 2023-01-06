@@ -1,5 +1,5 @@
 import Typography from '@mui/material/Typography';
-import Feature, { FeatureProps } from './Feature/Feature';
+import Feature, { FeatureProps } from './Feature';
 import PageContainer from './Layout/PageContainer';
 
 const projects: FeatureProps[] = [

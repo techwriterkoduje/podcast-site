@@ -1,6 +1,9 @@
 import Typography from '@mui/material/Typography';
+import { useTheme } from '@mui/material/styles';
+import Prism from 'prismjs';
+import { useEffect } from 'react';
 
-type MarkdownDisplayProps = {
+type HtmlDisplayProps = {
   htmlString: string;
 };
 
@@ -9,23 +12,29 @@ const noLineBreakStyle = {
   lineBreak: 'anywhere',
 };
 
-export default function MarkdownDisplay({ htmlString }: MarkdownDisplayProps) {
+export default function HtmlDisplay({ htmlString }: HtmlDisplayProps) {
+  const theme = useTheme();
+
+  useEffect(function () {
+    Prism.highlightAll();
+  }, []);
+
   return (
     <div style={{ width: 'fit-content' }}>
       <Typography
         dangerouslySetInnerHTML={{ __html: htmlString }}
         sx={{
           maxWidth: contentWidth,
-          '& .markdown a': noLineBreakStyle,
-          '& .markdown p code': noLineBreakStyle,
-          '& .markdown li code': noLineBreakStyle,
+          '& a': { color: theme.palette.primary.main, ...noLineBreakStyle },
+          '& p code': noLineBreakStyle,
+          '& li code': noLineBreakStyle,
           '.remark-highlight': {
             maxWidth: '90vw',
           },
         }}
         fontSize="1.1rem"
-        className="markdown"
         component="article"
+        className="line-numbers"
       />
     </div>
   );

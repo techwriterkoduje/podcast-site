@@ -3,8 +3,8 @@ import { useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Unstable_Grid2';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import BackLink from '../BackLink/BackLink';
-import MarkdownDisplay from '../MarkdownDisplay';
+import BackLink from '../BackLink';
+import HtmlDisplay from '../HtmlDisplay';
 import LeftNav from './LeftNav';
 import MobileGuideNavigation from './MobileGuideNavigation';
 import PreviousNext from './PreviousNext';
@@ -57,15 +57,32 @@ export default function GuideNavigation({
   }
 
   return (
-    <Grid container spacing={2} sx={{ height: '100vh' }}>
-      <Grid sx={{ overflowY: 'scroll', height: '100%' }} sm={3}>
+    <Grid
+      container
+      spacing={2}
+      sx={{
+        height: '100vh',
+        '& *::-webkit-scrollbar': {
+          width: '3px',
+        },
+        '*::-webkit-scrollbar-track': {
+          '-webkit-box-shadow': 'inset 0 0 3px rgba(0,0,0,0.00)',
+        },
+        '*::-webkit-scrollbar-thumb': {
+          backgroundColor: 'rgba(0,0,0,.1)',
+          outline: `1px solid ${theme.palette.primary.main}`,
+          borderRadius: '4px',
+        },
+      }}
+    >
+      <Grid sx={{ overflowY: 'scroll', height: '100%', width: '200px' }} sm={3}>
         <LeftNav items={guidePages} currentItemId={selectedPageId} />
       </Grid>
       <Grid sx={{ overflowY: 'scroll', height: '100%' }} sm={9}>
         <Stack spacing="1rem">
           <BackLink href={backLinkHref}>{backLinkLabel}</BackLink>
           <Typography variant="h1">{selectedPage.pageTitle}</Typography>
-          <MarkdownDisplay htmlString={selectedPage.pageContent} />
+          <HtmlDisplay htmlString={selectedPage.pageContent} />
         </Stack>
         <PreviousNext currentItemId={selectedPageId} items={guidePages} />
       </Grid>

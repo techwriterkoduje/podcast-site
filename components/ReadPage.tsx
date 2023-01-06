@@ -1,6 +1,6 @@
 import Typography from '@mui/material/Typography';
 import { guideIds } from '../docs/python/guideIds';
-import Feature, { FeatureProps } from './Feature/Feature';
+import Feature, { FeatureProps } from './Feature';
 import PageContainer from './Layout/PageContainer';
 
 const features: FeatureProps[] = [

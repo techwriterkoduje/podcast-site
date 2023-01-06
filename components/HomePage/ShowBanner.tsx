@@ -7,7 +7,7 @@ import Hosts from './Hosts';
 export default function ShowBanner() {
   return (
     <Grid container flexDirection="row-reverse" justifyContent="center">
-      <Grid lg={4}>
+      <Grid lg={4} height={450} width={450} sx={{ position: 'relative' }}>
         <PodcastLogo />
       </Grid>
       <Grid

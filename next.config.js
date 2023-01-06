@@ -17,7 +17,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
     loader: 'akamai',
-    path: '',
+    path: 'nothing-here',
   },
 };
 

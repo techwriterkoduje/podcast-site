@@ -3,11 +3,12 @@ import Image from '../Image';
 export default function PodcastLogo() {
   return (
     <Image
-      src="/logo.png"
+      src="logo.png"
+      fill
       style={{
-        width: '450px',
         maxWidth: '100%',
-        backgroundColor: 'black'
+        aspectRatio: 1,
+        backgroundColor: 'black',
       }}
       alt="Logo podcastu Tech Writer koduje"
     />

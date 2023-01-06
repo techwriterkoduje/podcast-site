@@ -1,5 +1,5 @@
 import PageContainer from './Layout/PageContainer';
-import Feature, { FeatureProps } from './Feature/Feature';
+import Feature, { FeatureProps } from './Feature';
 import Typography from '@mui/material/Typography';
 
 const videos: FeatureProps[] = [
