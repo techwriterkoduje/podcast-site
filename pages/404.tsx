@@ -2,9 +2,10 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+import ActionButtonLink from '../components/ActionButtonLink/ActionButtonLink';
 import Image from '../components/Image';
 import Layout from '../components/Layout/Layout';
-import NavLink from '../components/Layout/NavLink';
+import NavLink from '../components/GuideNavigation/NavLink';
 import PageContainer from '../components/Layout/PageContainer';
 import { useCurrentRoute } from '../hooks/router';
 import { findMatchingEpisode, getAllEpisodeData, RssItem } from '../lib/rss';
@@ -57,9 +58,7 @@ export default function Custom404({ allEpisodeData }: Custom404Props) {
         <Typography>
           Strona <code>{currentRoute}</code> nie istnieje
         </Typography>
-        <NavLink href="/">
-          <Button>Wróć do strony głównej</Button>
-        </NavLink>
+        <ActionButtonLink href="/">Wróć do strony głównej</ActionButtonLink>
       </PageContainer>
     </Layout>
   );

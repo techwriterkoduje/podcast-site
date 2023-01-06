@@ -2,7 +2,7 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { useState } from 'react';
-import NavLink from '../Layout/NavLink';
+import NavLink from './NavLink';
 import { NavControlProps } from './GuideNavigation';
 import TocIcon from '@mui/icons-material/Toc';
 
