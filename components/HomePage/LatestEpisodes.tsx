@@ -14,21 +14,14 @@ export default function LatestEpisodes({
   lastThreeEpisodes,
 }: LatestEpisodesProps) {
   return (
-    <>
-      <Grid container spacing={2}>
-        {lastThreeEpisodes.map((episode, idx) => (
-          <Grid key={episode.anchorLink} md={idx === 0 ? 12 : 6}>
-            <HomeCard>
-              <HomeEpisodePreview {...episode} />
-            </HomeCard>
-          </Grid>
-        ))}
-      </Grid>
-      <Grid md={12} alignItems="center" justifyContent="center">
-        <ActionButtonLink href="/episode-list" variant="text">
-          Wszystkie odcinki
-        </ActionButtonLink>
-      </Grid>
-    </>
+    <Grid container spacing={2}>
+      {lastThreeEpisodes.map((episode, idx) => (
+        <Grid key={episode.anchorLink} md={idx === 0 ? 12 : 6}>
+          <HomeCard>
+            <HomeEpisodePreview {...episode} />
+          </HomeCard>
+        </Grid>
+      ))}
+    </Grid>
   );
 }

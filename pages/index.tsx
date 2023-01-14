@@ -7,7 +7,7 @@ import LatestEpisodes from '../components/HomePage/LatestEpisodes';
 import ContactUs from '../components/HomePage/ContactUs';
 import ShoutOuts from '../components/HomePage/ShoutOuts';
 import { getAllEpisodeData, RssItem } from '../lib/rss';
-import Stack from '@mui/material/Stack';
+import AllEpisodesButton from '../components/HomePage/AllEpisodesButton';
 
 const podcastTitle = process.env.PODCAST_TITLE;
 
@@ -41,6 +41,7 @@ const Home: NextPage<HomePageProps> = ({ allEpisodeData }) => {
         >
           <ShowBanner />
           <LatestEpisodes lastThreeEpisodes={allEpisodeData.slice(0, 3)} />
+          <AllEpisodesButton />
           <ContactUs />
           <ShoutOuts />
         </Grid>
