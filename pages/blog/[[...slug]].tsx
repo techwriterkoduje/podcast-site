@@ -1,6 +1,6 @@
 import Typography from '@mui/material/Typography';
 import { NextPage } from 'next';
-import AudioPlayer from '../../components/AudioPlayer';
+import AudioPlayer from '../../components/AudioPlayer/AudioPlayer';
 import BackLink from '../../components/BackLink';
 import DateDisplay from '../../components/DateDisplay/DateDisplay';
 import Layout from '../../components/Layout/Layout';

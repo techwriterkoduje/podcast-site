@@ -8,13 +8,14 @@ export default function PodcastLogo() {
   const imageSize = isLargeScreen ? 350 : 250;
   return (
     <Image
-      src="logo.png"
+      src={`logo-${isLargeScreen ? 350 : 250}.png`}
       width={imageSize}
       height={imageSize}
       style={{
         backgroundColor: 'black',
       }}
       alt="Logo podcastu Tech Writer koduje"
+      priority
     />
   );
 }

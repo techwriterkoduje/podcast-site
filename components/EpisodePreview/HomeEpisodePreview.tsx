@@ -2,7 +2,7 @@ import { useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { RssItem } from '../../lib/rss';
-import AudioPlayer from '../AudioPlayer';
+import AudioPlayer from '../AudioPlayer/AudioPlayer';
 import BlurbWithLink from '../BlurbWithLink';
 
 export default function HomeEpisodePreview({

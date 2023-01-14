@@ -2,7 +2,7 @@ import Card from '@mui/material/Card';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import { RssItem } from '../../lib/rss';
-import AudioPlayer from '../AudioPlayer';
+import AudioPlayer from '../AudioPlayer/AudioPlayer';
 import BlurbWithLink from '../BlurbWithLink';
 import DateDisplay from '../DateDisplay/DateDisplay';
 import DurationDisplay from '../DurationDisplay';
