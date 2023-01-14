@@ -37,18 +37,26 @@ function MyApp({ Component, pageProps }: AppProps) {
             main: '#ed6e5f',
             dark: '#eb5645',
           },
+          info: {
+            main: '#1e1e1e',
+          },
         },
         typography: {
           fontFamily: ['Roboto', 'Helvetica', 'Arial', 'sans-serif'].join(','),
           h1: {
             fontSize: 36,
             textAlign: 'left',
-            fontWeight: 600,
+            fontWeight: 900,
+            textTransform: 'uppercase',
           },
           h2: {
             fontSize: 30,
             textAlign: 'left',
-            fontWeight: 400,
+            fontWeight: 900,
+          },
+          h5: {
+            fontSize: '1.25rem',
+            fontWeight: 900,
           },
         },
         components: {

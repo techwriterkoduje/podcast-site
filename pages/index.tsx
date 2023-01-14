@@ -8,6 +8,8 @@ import ContactUs from '../components/HomePage/ContactUs';
 import ShoutOuts from '../components/HomePage/ShoutOuts';
 import { getAllEpisodeData, RssItem } from '../lib/rss';
 import AllEpisodesButton from '../components/HomePage/AllEpisodesButton';
+import SubscribeButtons from '../components/HomePage/SubscribeButtons';
+import Hosts from '../components/HomePage/Hosts';
 
 const podcastTitle = process.env.PODCAST_TITLE;
 
@@ -40,8 +42,10 @@ const Home: NextPage<HomePageProps> = ({ latestEpisodes }) => {
           sx={{ paddingTop: '75px' }}
         >
           <ShowBanner />
+          <SubscribeButtons />
           <LatestEpisodes lastThreeEpisodes={latestEpisodes} />
           <AllEpisodesButton />
+          <Hosts />
           <ContactUs />
           <ShoutOuts />
         </Grid>

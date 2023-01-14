@@ -4,6 +4,7 @@ import PodcastButton from '../PodcastButton';
 import Image from '../Image';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Button from '@mui/material/Button';
+import PodcastCard from '../PodcastCard';
 
 type Host = {
   name: string;
@@ -41,62 +42,64 @@ export default function Hosts({ size, overrideLink }: HostsProps) {
 
   const imageSize = size ? imageSizes[size] : imageSizes['medium'];
   return (
-    <Stack
-      direction="row"
-      alignItems="center"
-      justifyContent="center"
-      flexWrap="wrap"
-      spacing={3}
-      width="100%"
-      sx={{ padding: '1rem 0' }}
-    >
-      {hosts.map((host) => (
-        <Stack
-          key={host.name}
-          alignItems="center"
-          justifyContent="center"
-          spacing={1}
-        >
-          {overrideLink ? (
-            <PodcastButton
-              href={overrideLink}
-              endIcon={null}
-              variant="text"
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                flexDirection: 'column',
-              }}
-            >
-              <Image
-                src={host.img}
-                height={imageSize}
-                width={imageSize}
-                alt={host.alt}
-              />
-              <Typography fontSize={size}>{host.name}</Typography>
-            </PodcastButton>
-          ) : (
-            <>
-              <Image
-                src={host.img}
-                height={imageSize}
-                width={imageSize}
-                alt={host.alt}
-              />
-              <Button
-                href={host.linkedIn}
-                target="_blank"
-                startIcon={<LinkedInIcon />}
-                sx={{ textTransform: 'none', fontSize: size }}
+    <PodcastCard>
+      <Stack
+        direction="row"
+        alignItems="center"
+        justifyContent="center"
+        flexWrap="wrap"
+        spacing={3}
+        width="100%"
+        sx={{ padding: '1rem 0' }}
+      >
+        {hosts.map((host) => (
+          <Stack
+            key={host.name}
+            alignItems="center"
+            justifyContent="center"
+            spacing={1}
+          >
+            {overrideLink ? (
+              <PodcastButton
+                href={overrideLink}
+                endIcon={null}
+                variant="text"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexDirection: 'column',
+                }}
               >
-                {host.name}
-              </Button>
-            </>
-          )}
-        </Stack>
-      ))}
-    </Stack>
+                <Image
+                  src={host.img}
+                  height={imageSize}
+                  width={imageSize}
+                  alt={host.alt}
+                />
+                <Typography fontSize={size}>{host.name}</Typography>
+              </PodcastButton>
+            ) : (
+              <>
+                <Image
+                  src={host.img}
+                  height={imageSize}
+                  width={imageSize}
+                  alt={host.alt}
+                />
+                <Button
+                  href={host.linkedIn}
+                  target="_blank"
+                  startIcon={<LinkedInIcon />}
+                  sx={{ textTransform: 'none', fontSize: size }}
+                >
+                  {host.name}
+                </Button>
+              </>
+            )}
+          </Stack>
+        ))}
+      </Stack>
+    </PodcastCard>
   );
 }

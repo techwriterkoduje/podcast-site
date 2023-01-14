@@ -1,6 +1,7 @@
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import Image from '../Image';
+import PodcastCard from '../PodcastCard';
 
 const subscribeLinks = [
   {
@@ -42,29 +43,41 @@ const subscribeLinks = [
 
 export default function SubscribeButtons() {
   return (
-    <Stack
-      direction="row"
+    <PodcastCard
       sx={{
-        flexWrap: 'wrap',
-        alignItems: 'center',
-        justifyContent: 'center',
-        gap: '0.25rem',
-        width: '100%',
-        maxWidth: '100%',
+        background:
+          'linear-gradient(rgba(237, 117, 103, 0.3), rgba(237, 117, 103, 0.3))',
+        margin: '0 -200% 1rem',
+        padding: '.5rem 0',
+        width: '500%',
       }}
     >
-      {subscribeLinks.map((l) => (
-        <Button
-          startIcon={<Image width={20} height={20} src={l.icon} alt="" />}
-          href={l.href}
-          target="_blank"
-          key={l.label}
-          variant="text"
-          size="small"
-        >
-          {l.label}
-        </Button>
-      ))}
-    </Stack>
+      <Stack
+        direction="row"
+        sx={{
+          flexWrap: 'wrap',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: '1.75rem',
+          width: '100%',
+          maxWidth: '100%',
+        }}
+      >
+        {subscribeLinks.map((l) => (
+          <Button
+            startIcon={<Image width={20} height={20} src={l.icon} alt="" />}
+            href={l.href}
+            target="_blank"
+            key={l.label}
+            variant="contained"
+            size="small"
+            color="info"
+            sx={{ padding: '8px 15px', boxShadow: 0 }}
+          >
+            {l.label}
+          </Button>
+        ))}
+      </Stack>
+    </PodcastCard>
   );
 }

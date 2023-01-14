@@ -7,7 +7,15 @@ import PodcastCard from '../PodcastCard';
 
 export default function ShowBanner() {
   return (
-    <PodcastCard>
+    <PodcastCard
+      sx={{
+        padding: '4px',
+        width: '100%',
+        height: '100%',
+        background: 'none',
+        marginBottom: '1.5rem',
+      }}
+    >
       <Grid
         container
         flexDirection="row-reverse"
@@ -26,8 +34,6 @@ export default function ShowBanner() {
           sx={{ margin: 'auto', padding: '1.5rem 0' }}
         >
           <PodcastDescription />
-          <Hosts size="small" overrideLink="/contact" />
-          <SubscribeButtons />
         </Grid>
       </Grid>
     </PodcastCard>
