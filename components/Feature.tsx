@@ -6,6 +6,7 @@ import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
+import PodcastCard from './PodcastCard';
 
 export type FeatureProps = {
   title: string;
@@ -33,7 +34,7 @@ export default function Feature({
   };
 
   return (
-    <Card variant="outlined" sx={{ width: '100%', paddingBottom: '1rem' }}>
+    <PodcastCard>
       {imageUrl && (
         <CardMedia
           image={`${process.env.REPO}${imageUrl}`}
@@ -61,6 +62,6 @@ export default function Feature({
           </PodcastButton>
         ))}
       </CardActions>
-    </Card>
+    </PodcastCard>
   );
 }

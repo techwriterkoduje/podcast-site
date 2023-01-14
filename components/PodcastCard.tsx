@@ -1,16 +1,13 @@
-import Card from '@mui/material/Card';
+import Card, { CardProps } from '@mui/material/Card';
 
-type PodcastCardProps = {
-  children: React.ReactElement | React.ReactElement[];
-};
-
-export default function PodcastCard({ children }: PodcastCardProps) {
+export default function PodcastCard(props: CardProps) {
   return (
     <Card
       variant="outlined"
       sx={{ padding: '4px', width: '100%', height: '100%' }}
+      {...props}
     >
-      {children}
+      {props.children}
     </Card>
   );
 }

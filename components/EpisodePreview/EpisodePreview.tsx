@@ -6,6 +6,7 @@ import AudioPlayer from '../AudioPlayer/AudioPlayer';
 import BlurbWithLink from '../BlurbWithLink';
 import DateDisplay from '../DateDisplay/DateDisplay';
 import DurationDisplay from '../DurationDisplay';
+import PodcastCard from '../PodcastCard';
 
 export default function EpisodePreview({
   audioUrl,
@@ -16,11 +17,7 @@ export default function EpisodePreview({
   duration,
 }: RssItem) {
   return (
-    <Card
-      key={episodeLink}
-      variant="outlined"
-      sx={{ height: '100%', width: '100%' }}
-    >
+    <PodcastCard>
       <Stack spacing={2} sx={{ padding: '2rem' }}>
         <Typography fontWeight="bold" fontSize="1.1rem">
           {title}
@@ -36,6 +33,6 @@ export default function EpisodePreview({
         <AudioPlayer audioSrc={audioUrl} />
         <BlurbWithLink blurb={blurb} link={episodeLink} />
       </Stack>
-    </Card>
+    </PodcastCard>
   );
 }
