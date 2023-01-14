@@ -14,7 +14,7 @@ export default function ShowBanner() {
         justifyContent="center"
         alignItems="center"
       >
-        <Grid lg={4}>
+        <Grid lg={4} paddingTop={1}>
           <PodcastLogo />
         </Grid>
         <Grid

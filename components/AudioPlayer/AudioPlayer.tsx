@@ -5,6 +5,7 @@ import Slider from '@mui/material/Slider';
 import TimeDisplay from './TimeDisplay';
 import { useAudio } from './useAudio';
 import PodcastIconButton from '../PodcastIconButton';
+import { useTheme } from '@mui/material/styles';
 
 type AudioPlayerProps = {
   audioSrc: string;
@@ -21,6 +22,7 @@ export default function AudioPlayer({ audioSrc }: AudioPlayerProps) {
     setSpeed,
     speeds,
   } = useAudio(audioSrc);
+  const theme = useTheme();
 
   function handleTogglePlay() {
     setIsPlaying(!isPLaying);
@@ -47,7 +49,12 @@ export default function AudioPlayer({ audioSrc }: AudioPlayerProps) {
   }
 
   return (
-    <Stack direction="row" alignItems="center" spacing={1} width="100%">
+    <Stack
+      direction="row"
+      alignItems="center"
+      spacing={1}
+      width="100%"
+    >
       <PodcastIconButton
         onClick={handleTogglePlay}
         color="primary"

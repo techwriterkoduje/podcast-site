@@ -6,9 +6,11 @@ import LogoLink from './LogoLink';
 import Nav from './Nav';
 import ModeSwitcher from './ModeSwitcher';
 import PodcastIconButton from '../PodcastIconButton';
+import { useTheme } from '@mui/material/styles';
 
 export default function MobileHeader() {
   const [isOpen, setIsOpen] = useState(false);
+  const theme = useTheme();
 
   function toggleNav(toValue: boolean) {
     setIsOpen(toValue);
@@ -18,9 +20,8 @@ export default function MobileHeader() {
     <Stack
       alignItems="center"
       direction="row"
-      sx={{
-        borderBottom: '1px solid #ed6e5f',
-      }}
+      borderBottom={`1px solid ${theme.palette.primary.main}`}
+      padding={1}
     >
       <LogoLink />
       <PodcastIconButton

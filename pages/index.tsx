@@ -13,17 +13,17 @@ const podcastTitle = process.env.PODCAST_TITLE;
 
 export async function getStaticProps() {
   const allEpisodeData = await getAllEpisodeData();
-  const props: HomePageProps = { allEpisodeData };
+  const props: HomePageProps = { latestEpisodes: allEpisodeData.slice(0, 3) };
   return {
     props,
   };
 }
 
 type HomePageProps = {
-  allEpisodeData: RssItem[];
+  latestEpisodes: RssItem[];
 };
 
-const Home: NextPage<HomePageProps> = ({ allEpisodeData }) => {
+const Home: NextPage<HomePageProps> = ({ latestEpisodes }) => {
   return (
     <Layout
       title={`Podcast ${podcastTitle}`}
@@ -40,7 +40,7 @@ const Home: NextPage<HomePageProps> = ({ allEpisodeData }) => {
           sx={{ paddingTop: '75px' }}
         >
           <ShowBanner />
-          <LatestEpisodes lastThreeEpisodes={allEpisodeData.slice(0, 3)} />
+          <LatestEpisodes lastThreeEpisodes={latestEpisodes} />
           <AllEpisodesButton />
           <ContactUs />
           <ShoutOuts />

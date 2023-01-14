@@ -11,7 +11,13 @@ export default function HomeEpisodePreview({
   audioUrl,
 }: RssItem) {
   return (
-    <Stack width="100%" spacing={2} sx={{ padding: '1rem' }}>
+    <Stack
+      width="100%"
+      height="100%"
+      justifyContent="space-between"
+      spacing={2}
+      sx={{ padding: '1rem' }}
+    >
       <Typography variant="h5" component="div">
         {title}
       </Typography>

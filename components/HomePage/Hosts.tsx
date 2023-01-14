@@ -2,7 +2,6 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import PodcastButton from '../PodcastButton';
 import Image from '../Image';
-import PodcastIconButton from '../PodcastIconButton';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Button from '@mui/material/Button';
 
