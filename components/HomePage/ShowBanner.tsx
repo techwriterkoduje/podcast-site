@@ -3,25 +3,33 @@ import PodcastDescription from './PodcastDescription';
 import PodcastLogo from '../Layout/PodcastLogo';
 import Grid from '@mui/material/Unstable_Grid2';
 import Hosts from './Hosts';
+import HomeCard from './HomeCard';
 
 export default function ShowBanner() {
   return (
-    <Grid container flexDirection="row-reverse" justifyContent="center">
-      <Grid lg={4}>
-        <PodcastLogo />
-      </Grid>
+    <HomeCard>
       <Grid
-        lg={7}
         container
-        alignItems="center"
+        flexDirection="row-reverse"
         justifyContent="center"
-        spacing={1}
-        sx={{ margin: 'auto', padding: '1.5rem' }}
+        alignItems="center"
       >
-        <PodcastDescription />
-        <Hosts size="small" overrideLink="/contact" />
-        <SubscribeButtons />
+        <Grid lg={4}>
+          <PodcastLogo />
+        </Grid>
+        <Grid
+          lg={7}
+          container
+          alignItems="center"
+          justifyContent="center"
+          spacing={1}
+          sx={{ margin: 'auto', padding: '1.5rem 0' }}
+        >
+          <PodcastDescription />
+          <Hosts size="small" overrideLink="/contact" />
+          <SubscribeButtons />
+        </Grid>
       </Grid>
-    </Grid>
+    </HomeCard>
   );
 }

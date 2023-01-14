@@ -3,7 +3,8 @@ import { RssItem } from '../../lib/rss';
 import ActionButtonLink from '../ActionButtonLink';
 import Stack from '@mui/material/Stack';
 import Grid from '@mui/material/Unstable_Grid2';
-import EpisodePreviewSmall from '../EpisodePreview/EpisodePreviewSmall';
+import HomeEpisodePreview from '../EpisodePreview/HomeEpisodePreview';
+import HomeCard from './HomeCard';
 
 type LatestEpisodesProps = {
   lastThreeEpisodes: RssItem[];
@@ -13,24 +14,21 @@ export default function LatestEpisodes({
   lastThreeEpisodes,
 }: LatestEpisodesProps) {
   return (
-    <Stack
-      sx={{
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-      spacing={3}
-    >
-      <Typography variant="h2">Posłuchaj ostatnich odcinków</Typography>
+    <>
       <Grid container spacing={2}>
-        {lastThreeEpisodes.map((episode) => (
-          <Grid key={episode.anchorLink} md={4}>
-            <EpisodePreviewSmall {...episode} />
+        {lastThreeEpisodes.map((episode, idx) => (
+          <Grid key={episode.anchorLink} md={idx === 0 ? 12 : 6}>
+            <HomeCard>
+              <HomeEpisodePreview {...episode} />
+            </HomeCard>
           </Grid>
         ))}
       </Grid>
-      <ActionButtonLink href="/episode-list">
-        Wszystkie odcinki
-      </ActionButtonLink>
-    </Stack>
+      <Grid md={12} alignItems="center" justifyContent="center">
+        <ActionButtonLink href="/episode-list" variant="text">
+          Wszystkie odcinki
+        </ActionButtonLink>
+      </Grid>
+    </>
   );
 }

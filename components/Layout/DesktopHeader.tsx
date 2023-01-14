@@ -1,4 +1,4 @@
-import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import LogoLink from './LogoLink';
 import ModeSwitcher from './ModeSwitcher';
@@ -16,9 +16,15 @@ export default function DesktopHeader() {
       }}
       spacing={2}
     >
-      <LogoLink />
-      <Nav hideIcons />
-      <ModeSwitcher />
+      <Container>
+        <Stack direction="row" justifyContent="space-between">
+          <div>
+            <LogoLink />
+            <Nav hideIcons />
+          </div>
+          <ModeSwitcher />
+        </Stack>
+      </Container>
     </Stack>
   );
 }

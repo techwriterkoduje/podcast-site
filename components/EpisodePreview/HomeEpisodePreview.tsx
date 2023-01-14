@@ -5,10 +5,8 @@ import { RssItem } from '../../lib/rss';
 import AudioPlayer from '../AudioPlayer';
 import BlurbWithLink from '../BlurbWithLink';
 
-export default function EpisodePreviewSmall({
+export default function HomeEpisodePreview({
   title,
-  pubDate,
-  duration,
   blurb,
   episodeLink,
   audioUrl,

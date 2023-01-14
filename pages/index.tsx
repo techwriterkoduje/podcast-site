@@ -36,17 +36,13 @@ const Home: NextPage<HomePageProps> = ({ allEpisodeData }) => {
           container
           gap="4rem"
           alignItems="center"
-          justifyContent="center"
+          justifyContent="space-between"
           sx={{ paddingTop: '75px' }}
         >
           <ShowBanner />
-          <Container maxWidth="md">
-            <Stack spacing={4}>
-              <LatestEpisodes lastThreeEpisodes={allEpisodeData.slice(0, 3)} />
-              <ContactUs />
-              <ShoutOuts />
-            </Stack>
-          </Container>
+          <LatestEpisodes lastThreeEpisodes={allEpisodeData.slice(0, 3)} />
+          <ContactUs />
+          <ShoutOuts />
         </Grid>
       </Container>
     </Layout>
