@@ -1,8 +1,9 @@
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import Link from 'next/link';
 import PodcastButton from '../PodcastButton';
 import Image from '../Image';
+import PodcastIconButton from '../PodcastIconButton';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 type Host = {
   name: string;
@@ -44,6 +45,7 @@ export default function Hosts({ size, overrideLink }: HostsProps) {
       direction="row"
       alignItems="center"
       justifyContent="center"
+      flexWrap="wrap"
       spacing={3}
       width="100%"
       sx={{ padding: '1rem 0' }}
@@ -55,25 +57,44 @@ export default function Hosts({ size, overrideLink }: HostsProps) {
           justifyContent="center"
           spacing={1}
         >
-          <PodcastButton
-            href={overrideLink ? overrideLink : host.linkedIn}
-            endIcon={null}
-            variant="text"
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              flexDirection: 'column',
-            }}
-          >
-            <Image
-              src={host.img}
-              height={imageSize}
-              width={imageSize}
-              alt={host.alt}
-            />
-            <Typography fontSize={size}>{host.name}</Typography>
-          </PodcastButton>
+          {overrideLink ? (
+            <PodcastButton
+              href={overrideLink}
+              endIcon={null}
+              variant="text"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                flexDirection: 'column',
+              }}
+            >
+              <Image
+                src={host.img}
+                height={imageSize}
+                width={imageSize}
+                alt={host.alt}
+              />
+              <Typography fontSize={size}>{host.name}</Typography>
+            </PodcastButton>
+          ) : (
+            <>
+              <Image
+                src={host.img}
+                height={imageSize}
+                width={imageSize}
+                alt={host.alt}
+              />
+              <Stack direction="row" flexWrap="wrap">
+                <PodcastIconButton
+                  href={host.linkedIn}
+                  title="łącze do Linkedin"
+                >
+                  <LinkedInIcon />
+                </PodcastIconButton>
+              </Stack>
+            </>
+          )}
         </Stack>
       ))}
     </Stack>

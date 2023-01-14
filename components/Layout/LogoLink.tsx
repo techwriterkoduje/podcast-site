@@ -10,6 +10,7 @@ export default function LogoLink() {
       sx={{ width: '24px', height: '24px' }}
       color="primary"
       disabled={currentRoute === '/'}
+      title="wróć do strony głównej"
     >
       <HomeIcon />
     </PodcastIconButton>

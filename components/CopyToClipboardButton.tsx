@@ -1,17 +1,17 @@
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import Alert from '@mui/material/Alert';
-import IconButton from '@mui/material/IconButton';
 import Snackbar from '@mui/material/Snackbar';
 import { useState } from 'react';
+import PodcastButton, { PodcastButtonProps } from './PodcastButton';
 
-type CopyToClipboardButtonProps = {
-  title: string;
+type CopyToClipboardButtonProps = PodcastButtonProps & {
   textToCopy: string;
 };
 
 export default function CopyToClipboardButton({
-  title,
   textToCopy,
+  children,
+  ...otherProps
 }: CopyToClipboardButtonProps) {
   const [open, setOpen] = useState(false);
 
@@ -26,9 +26,15 @@ export default function CopyToClipboardButton({
 
   return (
     <>
-      <IconButton aria-label={title} color="primary" disabled={open}>
-        <ContentCopyIcon onClick={handleCLick} />
-      </IconButton>
+      <PodcastButton
+        color="primary"
+        disabled={open}
+        onClick={handleCLick}
+        startIcon={<ContentCopyIcon />}
+        {...otherProps}
+      >
+        {children}
+      </PodcastButton>
       <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
         <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
           Skopiowano do schowka

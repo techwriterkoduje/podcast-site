@@ -2,9 +2,18 @@ import IconButton from '@mui/material/IconButton';
 import { ButtonProps } from '@mui/material/Button';
 import Link from 'next/link';
 
-export default function PodcastIconButton(props: ButtonProps) {
+type PodcastIconButtonProps = ButtonProps & {
+  title: string;
+};
+
+export default function PodcastIconButton(props: PodcastIconButtonProps) {
   return (
-    <IconButton LinkComponent={Link} color="primary" {...props}>
+    <IconButton
+      LinkComponent={Link}
+      color="primary"
+      aria-label={props.title}
+      {...props}
+    >
       {props.children}
     </IconButton>
   );

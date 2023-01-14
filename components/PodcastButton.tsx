@@ -2,7 +2,9 @@ import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import Button, { ButtonProps } from '@mui/material/Button';
 import Link from 'next/link';
 
-export default function PodcastButton(props: ButtonProps) {
+export type PodcastButtonProps = ButtonProps;
+
+export default function PodcastButton(props: PodcastButtonProps) {
   const isExternal = props.href?.startsWith('http');
 
   return (
