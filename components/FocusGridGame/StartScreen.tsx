@@ -14,12 +14,14 @@ export default function StartScreen({
   setSize,
   handleStart,
 }: StartScreenProps) {
+  const imageSize = 500;
   return (
     <div className={styles.startScreen}>
       <Image
-        src="/focus-grid.png"
+        src="focus-grid.png"
         alt=""
         className={styles.startScreenBackgroundImage}
+        fill
       />
       <Card className={styles.gameDescription}>
         <h1 className={styles.gameTitle}>Focus Grid</h1>

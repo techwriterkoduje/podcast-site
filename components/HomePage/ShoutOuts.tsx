@@ -4,6 +4,8 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import Image from '../Image';
 import Link from 'next/link';
+import PodcastCard from '../PodcastCard';
+import { useTheme } from '@mui/material/styles';
 
 type ShoutOutLink = {
   img: string;
@@ -30,32 +32,37 @@ const shoutOutLinks: ShoutOutLink[] = [
 ];
 
 export default function ShoutOuts() {
+  const theme = useTheme();
+
   return (
-    <Stack
-      sx={{
-        alignItems: 'center',
-        gap: '2rem',
-        maxWidth: '100%',
-      }}
-    >
-      <Typography variant="h2">Szanujemy i wspieramy</Typography>
-      <ImageList sx={{ width: '100%' }} cols={3} rowHeight={200}>
-        {shoutOutLinks.map((l) => (
-          <Link href={l.href} key={l.href} target="_blank">
-            <ImageListItem
-              sx={{
-                aspectRatio: '1/1',
-                cursor: 'pointer',
-                justifyContent: 'center',
-                textAlign: 'center',
-                backgroundColor: 'white',
-              }}
-            >
-              <Image src={l.img} alt={l.alt} width={200} height={200} />
-            </ImageListItem>
-          </Link>
-        ))}
-      </ImageList>
-    </Stack>
+    <PodcastCard>
+      <Stack
+        sx={{
+          alignItems: 'center',
+          gap: '2rem',
+          maxWidth: '100%',
+        }}
+      >
+        <Typography variant="h2">Szanujemy i wspieramy</Typography>
+        <ImageList sx={{ width: '100%' }} cols={3} rowHeight={200}>
+          {shoutOutLinks.map((l) => (
+            <Link href={l.href} key={l.href} target="_blank">
+              <ImageListItem
+                sx={{
+                  aspectRatio: '1/1',
+                  cursor: 'pointer',
+                  justifyContent: 'center',
+                  textAlign: 'center',
+                  backgroundColor: 'white',
+                  border: `1px solid ${theme.palette.primary.main}`,
+                }}
+              >
+                <Image src={l.img} alt={l.alt} width={200} height={200} />
+              </ImageListItem>
+            </Link>
+          ))}
+        </ImageList>
+      </Stack>
+    </PodcastCard>
   );
 }

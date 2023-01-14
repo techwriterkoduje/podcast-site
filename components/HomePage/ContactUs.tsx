@@ -1,19 +1,23 @@
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
-import ActionButtonLink from '../ActionButtonLink';
+import PodcastButton from '../PodcastButton';
+import PodcastCard from '../PodcastCard';
 
 export default function ContactUs() {
   return (
-    <Stack
-      sx={{
-        alignItems: 'center',
-        gap: '2rem',
-      }}
-    >
-      <Typography variant="h2">
-        Masz pomysł na odcinek? Chcesz być naszym gościem?
-      </Typography>
-      <ActionButtonLink href="/contact">Skontaktuj się z nami</ActionButtonLink>
-    </Stack>
+    <PodcastCard>
+      <Stack
+        sx={{
+          alignItems: 'center',
+          padding: '2rem',
+        }}
+        spacing={2}
+      >
+        <Typography variant="h2">
+          Masz pomysł na odcinek? Chcesz być naszym gościem?
+        </Typography>
+        <PodcastButton href="/contact">Skontaktuj się z nami</PodcastButton>
+      </Stack>
+    </PodcastCard>
   );
 }

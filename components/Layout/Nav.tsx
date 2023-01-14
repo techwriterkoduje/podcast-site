@@ -1,5 +1,5 @@
 import { useCurrentRoute } from '../../hooks/router';
-import ActionButtonLink from '../ActionButtonLink';
+import PodcastButton from '../PodcastButton';
 import { navLinks } from './SiteLinks';
 
 type NavProps = {
@@ -12,7 +12,7 @@ export default function Nav({ hideIcons }: NavProps) {
   return (
     <>
       {navLinks.map(({ href, label, icon }) => (
-        <ActionButtonLink
+        <PodcastButton
           startIcon={!hideIcons && icon}
           key={href}
           href={href}
@@ -20,7 +20,7 @@ export default function Nav({ hideIcons }: NavProps) {
           disabled={href === currentRoute}
         >
           {label}
-        </ActionButtonLink>
+        </PodcastButton>
       ))}
     </>
   );

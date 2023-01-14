@@ -14,10 +14,10 @@ export default function ModeSwitcher(props: IconButtonProps) {
       <IconButton
         sx={{ ml: 1 }}
         onClick={colorMode.toggleColorMode}
-        color="primary"
         title={`aktywny jest tryb ${
           theme.palette.mode === 'dark' ? 'ciemny' : 'jasny'
         }, kliknij, żeby zmienić tryb`}
+        color="primary"
         {...props}
       >
         {theme.palette.mode === 'dark' ? (

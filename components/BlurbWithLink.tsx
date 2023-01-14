@@ -1,6 +1,6 @@
 import Typography from '@mui/material/Typography';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
-import ActionButtonLink from './ActionButtonLink';
+import PodcastButton from './PodcastButton';
 
 type BlurbWithLinkProps = {
   blurb: string;
@@ -16,13 +16,9 @@ export default function BlurbWithLink({
   return (
     <Typography component="div" fontSize={fontSize}>
       {blurb}...
-      <ActionButtonLink
-        href={link}
-        endIcon={<ArrowRightAltIcon />}
-        variant="text"
-      >
+      <PodcastButton href={link} endIcon={<ArrowRightAltIcon />} variant="text">
         pełny opis
-      </ActionButtonLink>
+      </PodcastButton>
     </Typography>
   );
 }

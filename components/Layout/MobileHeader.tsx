@@ -1,14 +1,16 @@
 import Stack from '@mui/material/Stack';
 import { useState } from 'react';
-import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Drawer from '@mui/material/Drawer';
 import LogoLink from './LogoLink';
 import Nav from './Nav';
 import ModeSwitcher from './ModeSwitcher';
+import PodcastIconButton from '../PodcastIconButton';
+import { useTheme } from '@mui/material/styles';
 
 export default function MobileHeader() {
   const [isOpen, setIsOpen] = useState(false);
+  const theme = useTheme();
 
   function toggleNav(toValue: boolean) {
     setIsOpen(toValue);
@@ -18,21 +20,19 @@ export default function MobileHeader() {
     <Stack
       alignItems="center"
       direction="row"
-      sx={{
-        borderBottom: '1px solid #ed6e5f',
-      }}
+      borderBottom={`1px solid ${theme.palette.primary.main}`}
+      padding={1}
     >
       <LogoLink />
-      <IconButton
-        aria-label="Otwórz listę podstron"
+      <PodcastIconButton
+        title="Otwórz listę podstron"
         onClick={() => {
           toggleNav(true);
         }}
         size="large"
-        color="primary"
       >
         <MenuIcon />
-      </IconButton>
+      </PodcastIconButton>
       <ModeSwitcher />
       <Drawer
         anchor="left"

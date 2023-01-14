@@ -7,23 +7,23 @@ import LatestEpisodes from '../components/HomePage/LatestEpisodes';
 import ContactUs from '../components/HomePage/ContactUs';
 import ShoutOuts from '../components/HomePage/ShoutOuts';
 import { getAllEpisodeData, RssItem } from '../lib/rss';
-import Stack from '@mui/material/Stack';
+import AllEpisodesButton from '../components/HomePage/AllEpisodesButton';
 
 const podcastTitle = process.env.PODCAST_TITLE;
 
 export async function getStaticProps() {
   const allEpisodeData = await getAllEpisodeData();
-  const props: HomePageProps = { allEpisodeData };
+  const props: HomePageProps = { latestEpisodes: allEpisodeData.slice(0, 3) };
   return {
     props,
   };
 }
 
 type HomePageProps = {
-  allEpisodeData: RssItem[];
+  latestEpisodes: RssItem[];
 };
 
-const Home: NextPage<HomePageProps> = ({ allEpisodeData }) => {
+const Home: NextPage<HomePageProps> = ({ latestEpisodes }) => {
   return (
     <Layout
       title={`Podcast ${podcastTitle}`}
@@ -34,19 +34,16 @@ const Home: NextPage<HomePageProps> = ({ allEpisodeData }) => {
       <Container>
         <Grid
           container
-          gap="4rem"
+          gap="1rem"
           alignItems="center"
-          justifyContent="center"
+          justifyContent="space-between"
           sx={{ paddingTop: '75px' }}
         >
           <ShowBanner />
-          <Container maxWidth="md">
-            <Stack spacing={4}>
-              <LatestEpisodes lastThreeEpisodes={allEpisodeData.slice(0, 3)} />
-              <ContactUs />
-              <ShoutOuts />
-            </Stack>
-          </Container>
+          <LatestEpisodes lastThreeEpisodes={latestEpisodes} />
+          <AllEpisodesButton />
+          <ContactUs />
+          <ShoutOuts />
         </Grid>
       </Container>
     </Layout>

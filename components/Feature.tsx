@@ -1,11 +1,11 @@
 import Typography from '@mui/material/Typography';
-import ActionButtonLink from './ActionButtonLink';
-import Card from '@mui/material/Card';
+import PodcastButton from './PodcastButton';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
+import PodcastCard from './PodcastCard';
 
 export type FeatureProps = {
   title: string;
@@ -33,7 +33,7 @@ export default function Feature({
   };
 
   return (
-    <Card variant="outlined" sx={{ width: '100%', paddingBottom: '1rem' }}>
+    <PodcastCard>
       {imageUrl && (
         <CardMedia
           image={`${process.env.REPO}${imageUrl}`}
@@ -56,11 +56,11 @@ export default function Feature({
       </CardContent>
       <CardActions sx={{ padding: contentPadding }}>
         {actionLinks.map(({ to, label }, idx) => (
-          <ActionButtonLink key={idx} href={to}>
+          <PodcastButton key={idx} href={to}>
             {label}
-          </ActionButtonLink>
+          </PodcastButton>
         ))}
       </CardActions>
-    </Card>
+    </PodcastCard>
   );
 }

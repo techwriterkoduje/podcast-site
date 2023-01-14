@@ -1,7 +1,7 @@
 import Typography from '@mui/material/Typography';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
-import ActionButtonLink from '../components/ActionButtonLink';
+import PodcastButton from '../components/PodcastButton';
 import Image from '../components/Image';
 import Layout from '../components/Layout/Layout';
 import PageContainer from '../components/Layout/PageContainer';
@@ -56,7 +56,7 @@ export default function Custom404({ allEpisodeData }: Custom404Props) {
         <Typography>
           Strona <code>{currentRoute}</code> nie istnieje
         </Typography>
-        <ActionButtonLink href="/">Wróć do strony głównej</ActionButtonLink>
+        <PodcastButton href="/">Wróć do strony głównej</PodcastButton>
       </PageContainer>
     </Layout>
   );
