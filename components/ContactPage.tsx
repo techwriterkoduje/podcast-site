@@ -50,15 +50,20 @@ export default function ContactPage() {
           <PodcastCard>
             <Grid container alignItems="center" spacing={4} padding={4}>
               <Grid md={6}>
-                <Typography variant="h2">Skontaktuj się z nami!</Typography>
-                <Typography>
-                  Chcesz nam coś przekazać? Masz pytanie lub sugestię? Może masz
-                  pomysł na odcinek podcastu albo chcesz być gościem naszej
-                  audycji? Po prostu napisz do nas.
-                </Typography>
+                <Stack spacing={4}>
+                  <Typography variant="h2">Skontaktuj się z nami!</Typography>
+                  <Typography>
+                    Chcesz nam coś przekazać? Masz pytanie lub sugestię? Może
+                    masz pomysł na odcinek podcastu albo chcesz być gościem
+                    naszej audycji? Po prostu napisz do nas.
+                  </Typography>
+                </Stack>
               </Grid>
               <Grid md={6}>
-                <Stack spacing={2} width="100%">
+                <Stack
+                  spacing={4}
+                  width="100%"
+                >
                   <PodcastButton
                     startIcon={<EmailIcon />}
                     href={`mailto:${contactEmail}`}
@@ -68,7 +73,7 @@ export default function ContactPage() {
                   <CopyToClipboardButton
                     textToCopy={contactEmail}
                     fullWidth
-                    variant="text"
+                    variant="outlined"
                   >
                     skopiuj e-mail do schowka
                   </CopyToClipboardButton>

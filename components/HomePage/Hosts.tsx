@@ -4,6 +4,7 @@ import PodcastButton from '../PodcastButton';
 import Image from '../Image';
 import PodcastIconButton from '../PodcastIconButton';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import Button from '@mui/material/Button';
 
 type Host = {
   name: string;
@@ -85,14 +86,14 @@ export default function Hosts({ size, overrideLink }: HostsProps) {
                 width={imageSize}
                 alt={host.alt}
               />
-              <Stack direction="row" flexWrap="wrap">
-                <PodcastIconButton
-                  href={host.linkedIn}
-                  title="łącze do Linkedin"
-                >
-                  <LinkedInIcon />
-                </PodcastIconButton>
-              </Stack>
+              <Button
+                href={host.linkedIn}
+                target="_blank"
+                startIcon={<LinkedInIcon />}
+                sx={{ textTransform: 'none', fontSize: size }}
+              >
+                {host.name}
+              </Button>
             </>
           )}
         </Stack>
