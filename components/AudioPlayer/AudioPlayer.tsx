@@ -1,10 +1,8 @@
-import { useEffect, useRef, useState } from 'react';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import PauseIcon from '@mui/icons-material/Pause';
 import IconButton from '@mui/material/IconButton';
 import Stack from '@mui/material/Stack';
 import Slider from '@mui/material/Slider';
-import Button from '@mui/material/Button';
 import TimeDisplay from './TimeDisplay';
 import { useAudio } from './useAudio';
 
@@ -49,8 +47,8 @@ export default function AudioPlayer({ audioSrc }: AudioPlayerProps) {
   }
 
   return (
-    <Stack direction="row" alignItems="center" spacing={2}>
-      <IconButton onClick={handleTogglePlay}>
+    <Stack direction="row" alignItems="center" spacing={1} width="100%">
+      <IconButton onClick={handleTogglePlay} color="primary">
         {isPLaying ? <PauseIcon /> : <PlayArrowIcon />}
       </IconButton>
       <TimeDisplay currentTime={progress} duration={audio?.duration || 0} />
@@ -61,14 +59,17 @@ export default function AudioPlayer({ audioSrc }: AudioPlayerProps) {
         min={0}
         max={audio?.duration || 0}
         step={1}
+        size="small"
       />
-      <Button
+      <IconButton
         title="ustaw prędkość odtwarzania"
         sx={{ textTransform: 'none' }}
         onClick={handleSpeedChange}
+        size="small"
+        color="primary"
       >
         x{speed}
-      </Button>
+      </IconButton>
     </Stack>
   );
 }

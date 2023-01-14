@@ -1,6 +1,6 @@
 import Typography from '@mui/material/Typography';
 import { RssItem } from '../../lib/rss';
-import ActionButtonLink from '../ActionButtonLink';
+import PodcastButton from '../PodcastButton';
 import Stack from '@mui/material/Stack';
 import Grid from '@mui/material/Unstable_Grid2';
 import HomeEpisodePreview from '../EpisodePreview/HomeEpisodePreview';

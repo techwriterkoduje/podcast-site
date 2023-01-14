@@ -1,6 +1,6 @@
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
-import ActionButtonLink from '../ActionButtonLink';
+import PodcastButton from '../PodcastButton';
 import HomeCard from './HomeCard';
 
 export default function ContactUs() {
@@ -16,9 +16,7 @@ export default function ContactUs() {
         <Typography variant="h2">
           Masz pomysł na odcinek? Chcesz być naszym gościem?
         </Typography>
-        <ActionButtonLink href="/contact">
-          Skontaktuj się z nami
-        </ActionButtonLink>
+        <PodcastButton href="/contact">Skontaktuj się z nami</PodcastButton>
       </Stack>
     </HomeCard>
   );

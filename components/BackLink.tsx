@@ -1,5 +1,5 @@
 import NorthWestIcon from '@mui/icons-material/NorthWest';
-import ActionButtonLink from './ActionButtonLink';
+import PodcastButton from './PodcastButton';
 
 type BackLinkProps = {
   href: string;
@@ -8,12 +8,12 @@ type BackLinkProps = {
 
 export default function BackLink({ href, children }: BackLinkProps) {
   return (
-    <ActionButtonLink
+    <PodcastButton
       href={href}
       startIcon={<NorthWestIcon fontSize="small" />}
       variant="text"
     >
       {children}
-    </ActionButtonLink>
+    </PodcastButton>
   );
 }

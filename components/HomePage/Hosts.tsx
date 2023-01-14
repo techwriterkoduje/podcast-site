@@ -1,7 +1,7 @@
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Link from 'next/link';
-import ActionButtonLink from '../ActionButtonLink';
+import PodcastButton from '../PodcastButton';
 import Image from '../Image';
 
 type Host = {
@@ -55,7 +55,7 @@ export default function Hosts({ size, overrideLink }: HostsProps) {
           justifyContent="center"
           spacing={1}
         >
-          <ActionButtonLink
+          <PodcastButton
             href={overrideLink ? overrideLink : host.linkedIn}
             endIcon={null}
             variant="text"
@@ -73,7 +73,7 @@ export default function Hosts({ size, overrideLink }: HostsProps) {
               alt={host.alt}
             />
             <Typography fontSize={size}>{host.name}</Typography>
-          </ActionButtonLink>
+          </PodcastButton>
         </Stack>
       ))}
     </Stack>

@@ -1,5 +1,5 @@
 import Typography from '@mui/material/Typography';
-import ActionButtonLink from './ActionButtonLink';
+import PodcastButton from './PodcastButton';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
@@ -56,9 +56,9 @@ export default function Feature({
       </CardContent>
       <CardActions sx={{ padding: contentPadding }}>
         {actionLinks.map(({ to, label }, idx) => (
-          <ActionButtonLink key={idx} href={to}>
+          <PodcastButton key={idx} href={to}>
             {label}
-          </ActionButtonLink>
+          </PodcastButton>
         ))}
       </CardActions>
     </Card>

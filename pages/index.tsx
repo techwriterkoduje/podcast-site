@@ -34,7 +34,7 @@ const Home: NextPage<HomePageProps> = ({ allEpisodeData }) => {
       <Container>
         <Grid
           container
-          gap="4rem"
+          gap="1rem"
           alignItems="center"
           justifyContent="space-between"
           sx={{ paddingTop: '75px' }}
