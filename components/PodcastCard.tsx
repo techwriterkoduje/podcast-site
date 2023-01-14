@@ -1,10 +1,10 @@
 import Card from '@mui/material/Card';
 
-type HomeCardProps = {
+type PodcastCardProps = {
   children: React.ReactElement | React.ReactElement[];
 };
 
-export default function HomeCard({ children }: HomeCardProps) {
+export default function PodcastCard({ children }: PodcastCardProps) {
   return (
     <Card
       variant="outlined"

@@ -4,7 +4,7 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import Image from '../Image';
 import Link from 'next/link';
-import HomeCard from './HomeCard';
+import PodcastCard from '../PodcastCard';
 import { useTheme } from '@mui/material/styles';
 
 type ShoutOutLink = {
@@ -35,7 +35,7 @@ export default function ShoutOuts() {
   const theme = useTheme();
 
   return (
-    <HomeCard>
+    <PodcastCard>
       <Stack
         sx={{
           alignItems: 'center',
@@ -63,6 +63,6 @@ export default function ShoutOuts() {
           ))}
         </ImageList>
       </Stack>
-    </HomeCard>
+    </PodcastCard>
   );
 }

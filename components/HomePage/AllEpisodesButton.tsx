@@ -1,12 +1,12 @@
 import Grid from '@mui/material/Unstable_Grid2';
 import PodcastButton from '../PodcastButton';
-import HomeCard from './HomeCard';
+import PodcastCard from '../PodcastCard';
 import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 
 export default function AllEpisodesButton() {
   return (
     <Grid md={12} alignItems="center" justifyContent="center">
-      <HomeCard>
+      <PodcastCard>
         <PodcastButton
           href="/episode-list"
           variant="text"
@@ -15,7 +15,7 @@ export default function AllEpisodesButton() {
         >
           Wszystkie odcinki
         </PodcastButton>
-      </HomeCard>
+      </PodcastCard>
     </Grid>
   );
 }

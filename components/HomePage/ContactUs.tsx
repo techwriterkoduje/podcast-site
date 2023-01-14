@@ -1,11 +1,11 @@
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import PodcastButton from '../PodcastButton';
-import HomeCard from './HomeCard';
+import PodcastCard from '../PodcastCard';
 
 export default function ContactUs() {
   return (
-    <HomeCard>
+    <PodcastCard>
       <Stack
         sx={{
           alignItems: 'center',
@@ -18,6 +18,6 @@ export default function ContactUs() {
         </Typography>
         <PodcastButton href="/contact">Skontaktuj się z nami</PodcastButton>
       </Stack>
-    </HomeCard>
+    </PodcastCard>
   );
 }

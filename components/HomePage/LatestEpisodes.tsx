@@ -4,7 +4,7 @@ import PodcastButton from '../PodcastButton';
 import Stack from '@mui/material/Stack';
 import Grid from '@mui/material/Unstable_Grid2';
 import HomeEpisodePreview from '../EpisodePreview/HomeEpisodePreview';
-import HomeCard from './HomeCard';
+import PodcastCard from '../PodcastCard';
 
 type LatestEpisodesProps = {
   lastThreeEpisodes: RssItem[];
@@ -17,9 +17,9 @@ export default function LatestEpisodes({
     <Grid container spacing={2}>
       {lastThreeEpisodes.map((episode, idx) => (
         <Grid key={episode.anchorLink} md={idx === 0 ? 12 : 6}>
-          <HomeCard>
+          <PodcastCard>
             <HomeEpisodePreview {...episode} />
-          </HomeCard>
+          </PodcastCard>
         </Grid>
       ))}
     </Grid>

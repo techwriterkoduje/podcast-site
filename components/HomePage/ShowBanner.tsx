@@ -3,11 +3,11 @@ import PodcastDescription from './PodcastDescription';
 import PodcastLogo from '../Layout/PodcastLogo';
 import Grid from '@mui/material/Unstable_Grid2';
 import Hosts from './Hosts';
-import HomeCard from './HomeCard';
+import PodcastCard from '../PodcastCard';
 
 export default function ShowBanner() {
   return (
-    <HomeCard>
+    <PodcastCard>
       <Grid
         container
         flexDirection="row-reverse"
@@ -30,6 +30,6 @@ export default function ShowBanner() {
           <SubscribeButtons />
         </Grid>
       </Grid>
-    </HomeCard>
+    </PodcastCard>
   );
 }
