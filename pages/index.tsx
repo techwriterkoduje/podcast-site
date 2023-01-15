@@ -19,10 +19,12 @@ export async function getStaticProps() {
   const allEpisodeData = await getAllEpisodeData();
   const episodeList = allEpisodeData
     .slice(0, 3)
-    .map(({ title, episodeLink, audioUrl }) => ({
+    .map(({ title, episodeLink, audioUrl, pubDate, duration }) => ({
       title,
       episodeLink,
       audioUrl,
+      pubDate,
+      duration,
     }));
   const props: HomePageProps = {
     episodeList,

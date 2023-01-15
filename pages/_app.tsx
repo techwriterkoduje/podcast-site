@@ -54,6 +54,10 @@ function MyApp({ Component, pageProps }: AppProps) {
             textAlign: 'left',
             fontWeight: 900,
           },
+          h3: {
+            fontSize: 26,
+            fontWeight: 900,
+          },
           h5: {
             fontSize: '1.25rem',
             fontWeight: 900,

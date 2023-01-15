@@ -31,7 +31,8 @@ export default function TimeDisplay({
     <Typography
       component="div"
       paddingRight="6px"
-      color={theme.palette.primary.main}
+      color="white"
+      sx={{ fontSize: '18px' }}
     >
       <Stack direction="row" spacing={1}>
         <div>{formatDuration(currentTime)}</div>

@@ -8,12 +8,7 @@ type PodcastIconButtonProps = ButtonProps & {
 
 export default function PodcastIconButton(props: PodcastIconButtonProps) {
   return (
-    <IconButton
-      LinkComponent={Link}
-      color="primary"
-      aria-label={props.title}
-      {...props}
-    >
+    <IconButton LinkComponent={Link} aria-label={props.title} {...props}>
       {props.children}
     </IconButton>
   );

@@ -10,17 +10,21 @@ export type LatestEpisodesProps = { episodeList: HomeEpisodePreviewProps[] };
 export default function LatestEpisodes({ episodeList }: LatestEpisodesProps) {
   return (
     <Grid container spacing={2}>
-      {episodeList.map(({ title, audioUrl, episodeLink }, idx) => (
-        <Grid key={episodeLink} md={idx === 0 ? 12 : 6}>
-          <PodcastCard>
-            <HomeEpisodePreview
-              title={title}
-              audioUrl={audioUrl}
-              episodeLink={episodeLink}
-            />
-          </PodcastCard>
-        </Grid>
-      ))}
+      {episodeList.map(
+        ({ title, audioUrl, episodeLink, pubDate, duration }, idx) => (
+          <Grid key={episodeLink} md={idx === 0 ? 12 : 6}>
+            <PodcastCard>
+              <HomeEpisodePreview
+                title={title}
+                audioUrl={audioUrl}
+                episodeLink={episodeLink}
+                pubDate={pubDate}
+                duration={duration}
+              />
+            </PodcastCard>
+          </Grid>
+        )
+      )}
     </Grid>
   );
 }
