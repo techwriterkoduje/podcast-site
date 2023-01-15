@@ -2,6 +2,7 @@ import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import Image from '../Image';
 import PodcastCard from '../PodcastCard';
+import Grid from '@mui/material/Unstable_Grid2';
 
 const subscribeLinks = [
   {
@@ -43,41 +44,37 @@ const subscribeLinks = [
 
 export default function SubscribeButtons() {
   return (
-    <PodcastCard
-      sx={{
-        background:
-          'linear-gradient(rgba(237, 117, 103, 0.3), rgba(237, 117, 103, 0.3))',
-        margin: '0 -200% 1rem',
-        padding: '.5rem 0',
-        width: '500%',
-      }}
-    >
-      <Stack
-        direction="row"
+    <Grid md={12}>
+      <PodcastCard
         sx={{
-          flexWrap: 'wrap',
-          alignItems: 'center',
-          justifyContent: 'center',
-          gap: '1.75rem',
-          width: '100%',
-          maxWidth: '100%',
+          background:
+            'linear-gradient(rgba(237, 117, 103, 0.3), rgba(237, 117, 103, 0.3))',
+          padding: '.5rem 0',
         }}
       >
-        {subscribeLinks.map((l) => (
-          <Button
-            startIcon={<Image width={20} height={20} src={l.icon} alt="" />}
-            href={l.href}
-            target="_blank"
-            key={l.label}
-            variant="contained"
-            size="small"
-            color="info"
-            sx={{ padding: '8px 15px', boxShadow: 0 }}
-          >
-            {l.label}
-          </Button>
-        ))}
-      </Stack>
-    </PodcastCard>
+        <Stack
+          direction="row"
+          gap={3}
+          flexWrap="wrap"
+          alignItems="center"
+          justifyContent="center"
+        >
+          {subscribeLinks.map((l) => (
+            <Button
+              startIcon={<Image width={20} height={20} src={l.icon} alt="" />}
+              href={l.href}
+              target="_blank"
+              key={l.label}
+              variant="contained"
+              size="small"
+              color="info"
+              sx={{ padding: '8px 15px', boxShadow: 0 }}
+            >
+              {l.label}
+            </Button>
+          ))}
+        </Stack>
+      </PodcastCard>
+    </Grid>
   );
 }

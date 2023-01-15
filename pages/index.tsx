@@ -1,6 +1,5 @@
 import type { NextPage } from 'next';
 import Layout from '../components/Layout/Layout';
-import Grid from '@mui/material/Unstable_Grid2';
 import Container from '@mui/material/Container';
 import ShowBanner from '../components/HomePage/ShowBanner';
 import LatestEpisodes from '../components/HomePage/LatestEpisodes';
@@ -10,6 +9,7 @@ import { getAllEpisodeData, RssItem } from '../lib/rss';
 import AllEpisodesButton from '../components/HomePage/AllEpisodesButton';
 import SubscribeButtons from '../components/HomePage/SubscribeButtons';
 import Hosts from '../components/HomePage/Hosts';
+import HomeGridContainer from '../components/HomePage/HomeGridContainer';
 
 const podcastTitle = process.env.PODCAST_TITLE;
 
@@ -34,21 +34,21 @@ const Home: NextPage<HomePageProps> = ({ latestEpisodes }) => {
       mainStyle={{ textAlign: 'center' }}
     >
       <Container>
-        <Grid
-          container
-          gap="1rem"
-          alignItems="center"
-          justifyContent="space-between"
-          sx={{ paddingTop: '75px' }}
-        >
+        <HomeGridContainer>
           <ShowBanner />
-          <SubscribeButtons />
+        </HomeGridContainer>
+      </Container>
+      <HomeGridContainer>
+        <SubscribeButtons />
+      </HomeGridContainer>
+      <Container>
+        <HomeGridContainer>
           <LatestEpisodes lastThreeEpisodes={latestEpisodes} />
           <AllEpisodesButton />
           <Hosts />
           <ContactUs />
           <ShoutOuts />
-        </Grid>
+        </HomeGridContainer>
       </Container>
     </Layout>
   );
