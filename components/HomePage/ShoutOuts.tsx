@@ -33,6 +33,7 @@ const shoutOutLinks: ShoutOutLink[] = [
 
 export default function ShoutOuts() {
   const theme = useTheme();
+  const imageSize = 200;
 
   return (
     <PodcastCard>
@@ -50,6 +51,8 @@ export default function ShoutOuts() {
               <ImageListItem
                 sx={{
                   aspectRatio: '1/1',
+                  width: imageSize,
+                  height: imageSize,
                   cursor: 'pointer',
                   justifyContent: 'center',
                   textAlign: 'center',
@@ -57,7 +60,12 @@ export default function ShoutOuts() {
                   border: `1px solid ${theme.palette.primary.main}`,
                 }}
               >
-                <Image src={l.img} alt={l.alt} width={200} height={200} />
+                <Image
+                  src={l.img}
+                  alt={l.alt}
+                  width={imageSize}
+                  height={imageSize}
+                />
               </ImageListItem>
             </Link>
           ))}
