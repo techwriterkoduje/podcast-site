@@ -2,7 +2,9 @@ import type { NextPage } from 'next';
 import Layout from '../components/Layout/Layout';
 import Container from '@mui/material/Container';
 import ShowBanner from '../components/HomePage/ShowBanner';
-import LatestEpisodes from '../components/HomePage/LatestEpisodes';
+import LatestEpisodes, {
+  LatestEpisodesProps,
+} from '../components/HomePage/LatestEpisodes';
 import ContactUs from '../components/HomePage/ContactUs';
 import ShoutOuts from '../components/HomePage/ShoutOuts';
 import { getAllEpisodeData, RssItem } from '../lib/rss';
@@ -15,14 +17,25 @@ const podcastTitle = process.env.PODCAST_TITLE;
 
 export async function getStaticProps() {
   const allEpisodeData = await getAllEpisodeData();
-  const props: HomePageProps = { latestEpisodes: allEpisodeData.slice(0, 3) };
+  const latestEpisodes = allEpisodeData
+    .slice(0, 3)
+    .map(({ title, episodeLink, audioUrl }) => ({
+      title,
+      episodeLink,
+      audioUrl,
+    }));
+  const props: HomePageProps = {
+    latestEpisodes: {
+      latestEpisodes,
+    },
+  };
   return {
     props,
   };
 }
 
 type HomePageProps = {
-  latestEpisodes: RssItem[];
+  latestEpisodes: LatestEpisodesProps;
 };
 
 const Home: NextPage<HomePageProps> = ({ latestEpisodes }) => {
@@ -43,7 +56,7 @@ const Home: NextPage<HomePageProps> = ({ latestEpisodes }) => {
       </HomeGridContainer>
       <Container>
         <HomeGridContainer>
-          <LatestEpisodes lastThreeEpisodes={latestEpisodes} />
+          <LatestEpisodes latestEpisodes={latestEpisodes.latestEpisodes} />
           <AllEpisodesButton />
           <Hosts />
           <ContactUs />

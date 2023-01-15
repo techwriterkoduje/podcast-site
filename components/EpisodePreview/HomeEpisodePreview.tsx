@@ -5,11 +5,17 @@ import AudioPlayer from '../AudioPlayer/AudioPlayer';
 import DescriptionIcon from '@mui/icons-material/Description';
 import PodcastIconButton from '../PodcastIconButton';
 
+export type HomeEpisodePreviewProps = {
+  title: RssItem['title'];
+  episodeLink: RssItem['episodeLink'];
+  audioUrl: RssItem['audioUrl'];
+};
+
 export default function HomeEpisodePreview({
   title,
   episodeLink,
   audioUrl,
-}: RssItem) {
+}: HomeEpisodePreviewProps) {
   return (
     <Stack
       width="100%"

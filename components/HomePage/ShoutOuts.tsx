@@ -15,7 +15,7 @@ type ShoutOutLink = {
 
 const shoutOutLinks: ShoutOutLink[] = [
   {
-    img: 'switkowski-logo.svg',
+    img: 'switowski-logo.svg',
     alt: 'Logo strony Sebastian Witowskiego',
     href: 'https://switowski.com/',
   },
