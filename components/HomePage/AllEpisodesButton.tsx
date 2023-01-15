@@ -8,7 +8,7 @@ export default function AllEpisodesButton() {
     <Grid md={12} alignItems="center" justifyContent="center">
       <PodcastCard>
         <PodcastButton
-          href="/episode-list"
+          href="/episode-list/1"
           variant="text"
           fullWidth
           startIcon={<FormatListBulletedIcon />}
