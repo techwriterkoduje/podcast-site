@@ -5,16 +5,12 @@ import HomeEpisodePreview, {
 } from '../EpisodePreview/HomeEpisodePreview';
 import PodcastCard from '../PodcastCard';
 
-export type LatestEpisodesProps = {
-  latestEpisodes: HomeEpisodePreviewProps[];
-};
+export type LatestEpisodesProps = { episodeList: HomeEpisodePreviewProps[] };
 
-export default function LatestEpisodes({
-  latestEpisodes,
-}: LatestEpisodesProps) {
+export default function LatestEpisodes({ episodeList }: LatestEpisodesProps) {
   return (
     <Grid container spacing={2}>
-      {latestEpisodes.map(({ title, audioUrl, episodeLink }, idx) => (
+      {episodeList.map(({ title, audioUrl, episodeLink }, idx) => (
         <Grid key={episodeLink} md={idx === 0 ? 12 : 6}>
           <PodcastCard>
             <HomeEpisodePreview

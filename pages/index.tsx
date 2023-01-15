@@ -7,7 +7,7 @@ import LatestEpisodes, {
 } from '../components/HomePage/LatestEpisodes';
 import ContactUs from '../components/HomePage/ContactUs';
 import ShoutOuts from '../components/HomePage/ShoutOuts';
-import { getAllEpisodeData, RssItem } from '../lib/rss';
+import { getAllEpisodeData } from '../lib/rss';
 import AllEpisodesButton from '../components/HomePage/AllEpisodesButton';
 import SubscribeButtons from '../components/HomePage/SubscribeButtons';
 import Hosts from '../components/HomePage/Hosts';
@@ -17,7 +17,7 @@ const podcastTitle = process.env.PODCAST_TITLE;
 
 export async function getStaticProps() {
   const allEpisodeData = await getAllEpisodeData();
-  const latestEpisodes = allEpisodeData
+  const episodeList = allEpisodeData
     .slice(0, 3)
     .map(({ title, episodeLink, audioUrl }) => ({
       title,
@@ -25,9 +25,7 @@ export async function getStaticProps() {
       audioUrl,
     }));
   const props: HomePageProps = {
-    latestEpisodes: {
-      latestEpisodes,
-    },
+    episodeList,
   };
   return {
     props,
@@ -35,10 +33,10 @@ export async function getStaticProps() {
 }
 
 type HomePageProps = {
-  latestEpisodes: LatestEpisodesProps;
+  episodeList: LatestEpisodesProps['episodeList'];
 };
 
-const Home: NextPage<HomePageProps> = ({ latestEpisodes }) => {
+const Home: NextPage<HomePageProps> = ({ episodeList }) => {
   return (
     <Layout
       title={`Podcast ${podcastTitle}`}
@@ -56,7 +54,7 @@ const Home: NextPage<HomePageProps> = ({ latestEpisodes }) => {
       </HomeGridContainer>
       <Container>
         <HomeGridContainer>
-          <LatestEpisodes latestEpisodes={latestEpisodes.latestEpisodes} />
+          <LatestEpisodes episodeList={episodeList} />
           <AllEpisodesButton />
           <Hosts />
           <ContactUs />
