@@ -38,7 +38,13 @@ export default function HomeEpisodePreview({
         <DateDisplay dateString={pubDate} />
         <DurationDisplay duration={duration} />
       </Typography>
-      <Typography variant="h3" component="div" color="#ed6e5f">
+      <Typography
+        variant="h3"
+        component="div"
+        color="primary"
+        fontSize="24px"
+        textAlign="left"
+      >
         {title}
       </Typography>
       <Stack direction="row" width="100%">

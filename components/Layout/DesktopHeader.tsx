@@ -1,7 +1,6 @@
 import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import LogoLink from './LogoLink';
-import ModeSwitcher from './ModeSwitcher';
 import Nav from './Nav';
 
 export default function DesktopHeader() {
@@ -22,7 +21,6 @@ export default function DesktopHeader() {
             <LogoLink />
             <Nav hideIcons />
           </div>
-          <ModeSwitcher />
         </Stack>
       </Container>
     </Stack>

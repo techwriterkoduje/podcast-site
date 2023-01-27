@@ -8,7 +8,6 @@ import LatestEpisodes, {
 import ContactUs from '../components/HomePage/ContactUs';
 import ShoutOuts from '../components/HomePage/ShoutOuts';
 import { getAllEpisodeData } from '../lib/rss';
-import AllEpisodesButton from '../components/HomePage/AllEpisodesButton';
 import SubscribeButtons from '../components/HomePage/SubscribeButtons';
 import Hosts from '../components/HomePage/Hosts';
 import HomeGridContainer from '../components/HomePage/HomeGridContainer';
@@ -57,7 +56,6 @@ const Home: NextPage<HomePageProps> = ({ episodeList }) => {
       <Container>
         <HomeGridContainer>
           <LatestEpisodes episodeList={episodeList} />
-          <AllEpisodesButton />
           <Hosts />
           <ContactUs />
           <ShoutOuts />

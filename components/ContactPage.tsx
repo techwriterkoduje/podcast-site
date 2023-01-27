@@ -38,12 +38,7 @@ export default function ContactPage() {
         </Grid>
         <Grid md={5}>
           <PodcastCard>
-            <Stack spacing={4} padding={4}>
-              <Typography variant="h2" textAlign="center">
-                Prowadzący
-              </Typography>
-              <Hosts />
-            </Stack>
+            <Hosts />
           </PodcastCard>
         </Grid>
         <Grid md={12}>
@@ -60,10 +55,7 @@ export default function ContactPage() {
                 </Stack>
               </Grid>
               <Grid md={6}>
-                <Stack
-                  spacing={4}
-                  width="100%"
-                >
+                <Stack spacing={4} width="100%">
                   <PodcastButton
                     startIcon={<EmailIcon />}
                     href={`mailto:${contactEmail}`}

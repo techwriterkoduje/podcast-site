@@ -3,6 +3,7 @@ import Stack from '@mui/material/Stack';
 import Image from '../Image';
 import PodcastCard from '../PodcastCard';
 import Grid from '@mui/material/Unstable_Grid2';
+import Divider from '@mui/material/Divider';
 
 const subscribeLinks = [
   {
@@ -45,13 +46,7 @@ const subscribeLinks = [
 export default function SubscribeButtons() {
   return (
     <Grid md={12}>
-      <PodcastCard
-        sx={{
-          background:
-            'linear-gradient(rgba(237, 117, 103, 0.3), rgba(237, 117, 103, 0.3))',
-          padding: '.5rem 0',
-        }}
-      >
+      <PodcastCard elevation={0}>
         <Stack
           direction="row"
           gap={3}
@@ -65,16 +60,16 @@ export default function SubscribeButtons() {
               href={l.href}
               target="_blank"
               key={l.label}
-              variant="contained"
+              variant="text"
               size="small"
-              color="info"
-              sx={{ padding: '8px 15px', boxShadow: 0 }}
+              sx={{ padding: '8px 15px', boxShadow: 0, color: 'white' }}
             >
               {l.label}
             </Button>
           ))}
         </Stack>
       </PodcastCard>
+      <Divider sx={{ borderWidth: 2, marginTop: 3 }} />
     </Grid>
   );
 }

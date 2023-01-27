@@ -11,8 +11,8 @@ export default function ShowBanner() {
         width: '100%',
         height: '100%',
         background: 'none',
-        marginBottom: '1.5rem',
       }}
+      elevation={0}
     >
       <Grid
         container
@@ -29,7 +29,7 @@ export default function ShowBanner() {
           alignItems="center"
           justifyContent="center"
           spacing={1}
-          sx={{ margin: 'auto', padding: '1.5rem 0' }}
+          sx={{ margin: 'auto' }}
         >
           <PodcastDescription />
         </Grid>

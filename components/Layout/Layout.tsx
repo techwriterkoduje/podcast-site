@@ -15,6 +15,7 @@ type LayoutProps = {
 export default function Layout({
   title,
   description,
+  mainStyle,
   isHome,
   children,
 }: LayoutProps) {
@@ -29,7 +30,7 @@ export default function Layout({
         <link rel="icon" href={`${process.env.REPO}favicon.ico`} />
       </Head>
       <Header />
-      {children}
+      <main style={{ paddingBottom: '1rem', ...mainStyle }}>{children}</main>
       <Footer />
     </>
   );

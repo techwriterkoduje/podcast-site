@@ -25,7 +25,7 @@ export default function EpisodePreview({
 }: EpisodePreviewProps) {
   return (
     <Stack spacing={2} padding="1rem">
-      <Typography fontWeight="bold" fontSize="1.1rem">
+      <Typography variant="h2" component="div" color="primary" fontSize="24px">
         {title}
       </Typography>
       <Typography

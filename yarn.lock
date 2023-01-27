@@ -606,6 +606,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource/quicksand@npm:^4.5.12":
+  version: 4.5.12
+  resolution: "@fontsource/quicksand@npm:4.5.12"
+  checksum: c33858cc15a5d4c937d3ec1fff1c6a132337d7417587c0a7a7f55504c3cae93736531fe066c6c3a9dba555196ef213b497544bcc99176d548adc01e74748ff5d
+  languageName: node
+  linkType: hard
+
 "@fontsource/roboto@npm:^4.5.8":
   version: 4.5.8
   resolution: "@fontsource/roboto@npm:4.5.8"
@@ -6111,6 +6118,7 @@ __metadata:
   dependencies:
     "@emotion/react": ^11.10.4
     "@emotion/styled": ^11.10.4
+    "@fontsource/quicksand": ^4.5.12
     "@fontsource/roboto": ^4.5.8
     "@mui/icons-material": ^5.10.6
     "@mui/material": ^5.10.7
