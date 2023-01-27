@@ -17,7 +17,7 @@ export default function ContactPage() {
         <Grid md={12} justifyContent="center">
           <Typography variant="h1">Kontakt</Typography>
         </Grid>
-        <Grid md={7} sx={12}>
+        <Grid md={7} xs={12}>
           <PodcastCard>
             <Stack spacing={4} padding={4}>
               <Typography variant="h2">O podcaście</Typography>
