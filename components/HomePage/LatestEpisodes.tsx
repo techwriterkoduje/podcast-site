@@ -1,24 +1,33 @@
-import { RssItem } from '../../lib/rss';
 import Grid from '@mui/material/Unstable_Grid2';
-import HomeEpisodePreview from '../EpisodePreview/HomeEpisodePreview';
+import HomeEpisodePreview, {
+  HomeEpisodePreviewProps,
+} from '../EpisodePreview/HomeEpisodePreview';
 import PodcastCard from '../PodcastCard';
+import AllEpisodesButton from './AllEpisodesButton';
 
-type LatestEpisodesProps = {
-  lastThreeEpisodes: RssItem[];
-};
+export type LatestEpisodesProps = { episodeList: HomeEpisodePreviewProps[] };
 
-export default function LatestEpisodes({
-  lastThreeEpisodes,
-}: LatestEpisodesProps) {
+export default function LatestEpisodes({ episodeList }: LatestEpisodesProps) {
   return (
-    <Grid container spacing={2}>
-      {lastThreeEpisodes.map((episode, idx) => (
-        <Grid key={episode.anchorLink} md={idx === 0 ? 12 : 6}>
-          <PodcastCard>
-            <HomeEpisodePreview {...episode} />
-          </PodcastCard>
+    <PodcastCard>
+      <Grid container spacing={4}>
+        {episodeList.map(
+          ({ title, audioUrl, episodeLink, pubDate, duration }, idx) => (
+            <Grid key={episodeLink} md={12}>
+              <HomeEpisodePreview
+                title={title}
+                audioUrl={audioUrl}
+                episodeLink={episodeLink}
+                pubDate={pubDate}
+                duration={duration}
+              />
+            </Grid>
+          )
+        )}
+        <Grid md={12}>
+          <AllEpisodesButton />
         </Grid>
-      ))}
-    </Grid>
+      </Grid>
+    </PodcastCard>
   );
 }

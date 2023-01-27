@@ -1,29 +1,43 @@
 import type { NextPage } from 'next';
 import Layout from '../components/Layout/Layout';
-import Grid from '@mui/material/Unstable_Grid2';
 import Container from '@mui/material/Container';
 import ShowBanner from '../components/HomePage/ShowBanner';
-import LatestEpisodes from '../components/HomePage/LatestEpisodes';
+import LatestEpisodes, {
+  LatestEpisodesProps,
+} from '../components/HomePage/LatestEpisodes';
 import ContactUs from '../components/HomePage/ContactUs';
 import ShoutOuts from '../components/HomePage/ShoutOuts';
-import { getAllEpisodeData, RssItem } from '../lib/rss';
-import AllEpisodesButton from '../components/HomePage/AllEpisodesButton';
+import { getAllEpisodeData } from '../lib/rss';
+import SubscribeButtons from '../components/HomePage/SubscribeButtons';
+import Hosts from '../components/HomePage/Hosts';
+import HomeGridContainer from '../components/HomePage/HomeGridContainer';
 
 const podcastTitle = process.env.PODCAST_TITLE;
 
 export async function getStaticProps() {
   const allEpisodeData = await getAllEpisodeData();
-  const props: HomePageProps = { latestEpisodes: allEpisodeData.slice(0, 3) };
+  const episodeList = allEpisodeData
+    .slice(0, 3)
+    .map(({ title, episodeLink, audioUrl, pubDate, duration }) => ({
+      title,
+      episodeLink,
+      audioUrl,
+      pubDate,
+      duration,
+    }));
+  const props: HomePageProps = {
+    episodeList,
+  };
   return {
     props,
   };
 }
 
 type HomePageProps = {
-  latestEpisodes: RssItem[];
+  episodeList: LatestEpisodesProps['episodeList'];
 };
 
-const Home: NextPage<HomePageProps> = ({ latestEpisodes }) => {
+const Home: NextPage<HomePageProps> = ({ episodeList }) => {
   return (
     <Layout
       title={`Podcast ${podcastTitle}`}
@@ -32,19 +46,20 @@ const Home: NextPage<HomePageProps> = ({ latestEpisodes }) => {
       mainStyle={{ textAlign: 'center' }}
     >
       <Container>
-        <Grid
-          container
-          gap="1rem"
-          alignItems="center"
-          justifyContent="space-between"
-          sx={{ paddingTop: '75px' }}
-        >
+        <HomeGridContainer>
           <ShowBanner />
-          <LatestEpisodes lastThreeEpisodes={latestEpisodes} />
-          <AllEpisodesButton />
+        </HomeGridContainer>
+      </Container>
+      <HomeGridContainer>
+        <SubscribeButtons />
+      </HomeGridContainer>
+      <Container>
+        <HomeGridContainer>
+          <LatestEpisodes episodeList={episodeList} />
+          <Hosts />
           <ContactUs />
           <ShoutOuts />
-        </Grid>
+        </HomeGridContainer>
       </Container>
     </Layout>
   );

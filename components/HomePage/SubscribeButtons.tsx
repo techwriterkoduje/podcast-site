@@ -1,6 +1,9 @@
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import Image from '../Image';
+import PodcastCard from '../PodcastCard';
+import Grid from '@mui/material/Unstable_Grid2';
+import Divider from '@mui/material/Divider';
 
 const subscribeLinks = [
   {
@@ -42,29 +45,31 @@ const subscribeLinks = [
 
 export default function SubscribeButtons() {
   return (
-    <Stack
-      direction="row"
-      sx={{
-        flexWrap: 'wrap',
-        alignItems: 'center',
-        justifyContent: 'center',
-        gap: '0.25rem',
-        width: '100%',
-        maxWidth: '100%',
-      }}
-    >
-      {subscribeLinks.map((l) => (
-        <Button
-          startIcon={<Image width={20} height={20} src={l.icon} alt="" />}
-          href={l.href}
-          target="_blank"
-          key={l.label}
-          variant="text"
-          size="small"
+    <Grid md={12}>
+      <PodcastCard elevation={0}>
+        <Stack
+          direction="row"
+          gap={3}
+          flexWrap="wrap"
+          alignItems="center"
+          justifyContent="center"
         >
-          {l.label}
-        </Button>
-      ))}
-    </Stack>
+          {subscribeLinks.map((l) => (
+            <Button
+              startIcon={<Image width={20} height={20} src={l.icon} alt="" />}
+              href={l.href}
+              target="_blank"
+              key={l.label}
+              variant="text"
+              size="small"
+              sx={{ padding: '8px 15px', boxShadow: 0, color: 'white' }}
+            >
+              {l.label}
+            </Button>
+          ))}
+        </Stack>
+      </PodcastCard>
+      <Divider sx={{ borderWidth: 2, marginTop: 3 }} />
+    </Grid>
   );
 }

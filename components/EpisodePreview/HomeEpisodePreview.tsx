@@ -4,12 +4,25 @@ import { RssItem } from '../../lib/rss';
 import AudioPlayer from '../AudioPlayer/AudioPlayer';
 import DescriptionIcon from '@mui/icons-material/Description';
 import PodcastIconButton from '../PodcastIconButton';
+import DateDisplay from '../DateDisplay/DateDisplay';
+import DurationDisplay from '../DurationDisplay';
+import Divider from '@mui/material/Divider';
+
+export type HomeEpisodePreviewProps = {
+  title: RssItem['title'];
+  episodeLink: RssItem['episodeLink'];
+  audioUrl: RssItem['audioUrl'];
+  pubDate: RssItem['pubDate'];
+  duration: RssItem['duration'];
+};
 
 export default function HomeEpisodePreview({
   title,
   episodeLink,
   audioUrl,
-}: RssItem) {
+  pubDate,
+  duration,
+}: HomeEpisodePreviewProps) {
   return (
     <Stack
       width="100%"
@@ -18,7 +31,24 @@ export default function HomeEpisodePreview({
       spacing={2}
       sx={{ padding: '1rem' }}
     >
-      <Typography variant="h5" component="div">
+      <Typography
+        variant="subtitle1"
+        sx={{
+          display: 'flex',
+          gap: '3rem',
+        }}
+        fontSize="medium"
+      >
+        <DateDisplay dateString={pubDate} />
+        <DurationDisplay duration={duration} />
+      </Typography>
+      <Typography
+        variant="h3"
+        component="div"
+        color="primary"
+        fontSize="24px"
+        textAlign="left"
+      >
         {title}
       </Typography>
       <Stack direction="row" width="100%">

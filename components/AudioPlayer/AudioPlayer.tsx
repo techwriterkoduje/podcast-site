@@ -6,6 +6,7 @@ import TimeDisplay from './TimeDisplay';
 import { useAudio } from './useAudio';
 import PodcastIconButton from '../PodcastIconButton';
 import { useTheme } from '@mui/material/styles';
+import Typography from '@mui/material/Typography';
 
 type AudioPlayerProps = {
   audioSrc: string;
@@ -49,18 +50,17 @@ export default function AudioPlayer({ audioSrc }: AudioPlayerProps) {
   }
 
   return (
-    <Stack
-      direction="row"
-      alignItems="center"
-      spacing={1}
-      width="100%"
-    >
+    <Stack direction="row" alignItems="center" spacing={1} width="100%">
       <PodcastIconButton
         onClick={handleTogglePlay}
         color="primary"
         title={isPLaying ? 'pauza' : 'play'}
       >
-        {isPLaying ? <PauseIcon /> : <PlayArrowIcon />}
+        {isPLaying ? (
+          <PauseIcon fontSize="large" />
+        ) : (
+          <PlayArrowIcon fontSize="large" />
+        )}
       </PodcastIconButton>
       <TimeDisplay currentTime={progress} duration={audio?.duration || 0} />
       <Slider
@@ -71,13 +71,13 @@ export default function AudioPlayer({ audioSrc }: AudioPlayerProps) {
         max={audio?.duration || 0}
         step={1}
         size="small"
+        sx={{ color: 'white' }}
       />
       <PodcastIconButton
         title="ustaw prędkość odtwarzania"
         sx={{ textTransform: 'none' }}
         onClick={handleSpeedChange}
         size="small"
-        color="primary"
       >
         x{speed}
       </PodcastIconButton>

@@ -7,7 +7,7 @@ const podcastTitle = process.env.PODCAST_TITLE;
 type LayoutProps = {
   title: string;
   description: string;
-  children: React.ReactElement | string;
+  children: React.ReactElement | React.ReactElement[] | string;
   isHome?: boolean;
   mainStyle?: React.CSSProperties;
 };
@@ -15,6 +15,7 @@ type LayoutProps = {
 export default function Layout({
   title,
   description,
+  mainStyle,
   isHome,
   children,
 }: LayoutProps) {
@@ -29,7 +30,7 @@ export default function Layout({
         <link rel="icon" href={`${process.env.REPO}favicon.ico`} />
       </Head>
       <Header />
-      {children}
+      <main style={{ paddingBottom: '1rem', ...mainStyle }}>{children}</main>
       <Footer />
     </>
   );

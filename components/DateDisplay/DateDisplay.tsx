@@ -4,7 +4,7 @@ type DateDisplayProps = {
 
 export default function DateDisplay({ dateString }: DateDisplayProps) {
   const readableDate = Intl.DateTimeFormat('pl-PL', {
-    dateStyle: 'full',
+    dateStyle: 'long',
   }).format(new Date(dateString));
 
   return <time dateTime={dateString}>{readableDate}</time>;

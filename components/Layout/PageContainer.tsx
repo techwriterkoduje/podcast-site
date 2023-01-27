@@ -18,10 +18,9 @@ export default function PageContainer({
         padding: '3rem 1rem',
         minHeight: '100vh',
       }}
-      maxWidth={wide ? 'lg' : 'md'}
     >
       <Stack
-        spacing={2}
+        spacing={6}
         sx={{
           alignItems: centered ? 'center' : 'flex-start',
           justifyContent: centered ? 'center' : 'flex-start',

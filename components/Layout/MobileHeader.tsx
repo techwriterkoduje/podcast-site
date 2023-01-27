@@ -4,7 +4,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Drawer from '@mui/material/Drawer';
 import LogoLink from './LogoLink';
 import Nav from './Nav';
-import ModeSwitcher from './ModeSwitcher';
 import PodcastIconButton from '../PodcastIconButton';
 import { useTheme } from '@mui/material/styles';
 
@@ -33,7 +32,6 @@ export default function MobileHeader() {
       >
         <MenuIcon />
       </PodcastIconButton>
-      <ModeSwitcher />
       <Drawer
         anchor="left"
         open={isOpen}

@@ -17,7 +17,7 @@ export default function ContactPage() {
         <Grid md={12} justifyContent="center">
           <Typography variant="h1">Kontakt</Typography>
         </Grid>
-        <Grid md={7}>
+        <Grid md={7} xs={12}>
           <PodcastCard>
             <Stack spacing={4} padding={4}>
               <Typography variant="h2">O podcaście</Typography>
@@ -36,15 +36,8 @@ export default function ContactPage() {
             </Stack>
           </PodcastCard>
         </Grid>
-        <Grid md={5}>
-          <PodcastCard>
-            <Stack spacing={4} padding={4}>
-              <Typography variant="h2" textAlign="center">
-                Prowadzący
-              </Typography>
-              <Hosts />
-            </Stack>
-          </PodcastCard>
+        <Grid md={5} xs={12}>
+          <Hosts />
         </Grid>
         <Grid md={12}>
           <PodcastCard>
@@ -60,10 +53,7 @@ export default function ContactPage() {
                 </Stack>
               </Grid>
               <Grid md={6}>
-                <Stack
-                  spacing={4}
-                  width="100%"
-                >
+                <Stack spacing={4}>
                   <PodcastButton
                     startIcon={<EmailIcon />}
                     href={`mailto:${contactEmail}`}
@@ -72,7 +62,6 @@ export default function ContactPage() {
                   </PodcastButton>
                   <CopyToClipboardButton
                     textToCopy={contactEmail}
-                    fullWidth
                     variant="outlined"
                   >
                     skopiuj e-mail do schowka

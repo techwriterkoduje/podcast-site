@@ -1,13 +1,19 @@
-import SubscribeButtons from './SubscribeButtons';
 import PodcastDescription from './PodcastDescription';
 import PodcastLogo from '../Layout/PodcastLogo';
 import Grid from '@mui/material/Unstable_Grid2';
-import Hosts from './Hosts';
 import PodcastCard from '../PodcastCard';
 
 export default function ShowBanner() {
   return (
-    <PodcastCard>
+    <PodcastCard
+      sx={{
+        padding: '4px',
+        width: '100%',
+        height: '100%',
+        background: 'none',
+      }}
+      elevation={0}
+    >
       <Grid
         container
         flexDirection="row-reverse"
@@ -23,11 +29,9 @@ export default function ShowBanner() {
           alignItems="center"
           justifyContent="center"
           spacing={1}
-          sx={{ margin: 'auto', padding: '1.5rem 0' }}
+          sx={{ margin: 'auto' }}
         >
           <PodcastDescription />
-          <Hosts size="small" overrideLink="/contact" />
-          <SubscribeButtons />
         </Grid>
       </Grid>
     </PodcastCard>
