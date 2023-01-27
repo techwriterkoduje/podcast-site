@@ -56,7 +56,11 @@ export default function AudioPlayer({ audioSrc }: AudioPlayerProps) {
         color="primary"
         title={isPLaying ? 'pauza' : 'play'}
       >
-        {isPLaying ? <PauseIcon /> : <PlayArrowIcon />}
+        {isPLaying ? (
+          <PauseIcon fontSize="large" />
+        ) : (
+          <PlayArrowIcon fontSize="large" />
+        )}
       </PodcastIconButton>
       <TimeDisplay currentTime={progress} duration={audio?.duration || 0} />
       <Slider

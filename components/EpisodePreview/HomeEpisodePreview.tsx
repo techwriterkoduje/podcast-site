@@ -6,6 +6,7 @@ import DescriptionIcon from '@mui/icons-material/Description';
 import PodcastIconButton from '../PodcastIconButton';
 import DateDisplay from '../DateDisplay/DateDisplay';
 import DurationDisplay from '../DurationDisplay';
+import Divider from '@mui/material/Divider';
 
 export type HomeEpisodePreviewProps = {
   title: RssItem['title'];
@@ -32,7 +33,10 @@ export default function HomeEpisodePreview({
     >
       <Typography
         variant="subtitle1"
-        sx={{ display: 'flex', gap: '1rem' }}
+        sx={{
+          display: 'flex',
+          gap: '3rem',
+        }}
         fontSize="medium"
       >
         <DateDisplay dateString={pubDate} />
