@@ -17,34 +17,11 @@ export default function ContactPage() {
         <Grid md={12} justifyContent="center">
           <Typography variant="h1">Kontakt</Typography>
         </Grid>
-        <Grid md={7} xs={12}>
-          <PodcastCard>
-            <Stack spacing={4} padding={4}>
-              <Typography variant="h2">O podcaście</Typography>
-              <Typography>
-                Od kilku lat zajmujemy się zawodowo dokumentacją do
-                oprogramowania. Właściwie od samego początku, techniczna strona
-                tworzenia dokumentacji była dla nas najbardziej interesująca.
-                Dlatego uwielbiamy pisać skrypty, konfigurować narzędzia i
-                automatyzować. Szukamy rozwiązań, które pozwolą Tech Writerom
-                skupić się na tym co ważne.
-              </Typography>
-              <Typography>
-                Na co dzień zastanawiamy się jak świat dokumentacji może czerpać
-                korzyści z technologii, których używa się w świecie IT.
-              </Typography>
-            </Stack>
-          </PodcastCard>
-        </Grid>
-        <Grid md={5} xs={12}>
-          <Hosts />
-        </Grid>
         <Grid md={12}>
           <PodcastCard>
             <Grid container alignItems="center" spacing={4} padding={4}>
               <Grid md={6}>
                 <Stack spacing={4}>
-                  <Typography variant="h2">Skontaktuj się z nami!</Typography>
                   <Typography>
                     Chcesz nam coś przekazać? Masz pytanie lub sugestię? Może
                     masz pomysł na odcinek podcastu albo chcesz być gościem

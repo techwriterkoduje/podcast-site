@@ -48,6 +48,17 @@ export default function Hosts({ size, overrideLink }: HostsProps) {
         <Typography variant="h2" textAlign="center">
           Prowadzący
         </Typography>
+        <Typography>
+          Od kilku lat zajmujemy się zawodowo dokumentacją do oprogramowania.
+          Właściwie od samego początku, techniczna strona tworzenia dokumentacji
+          była dla nas najbardziej interesująca. Dlatego uwielbiamy pisać
+          skrypty, konfigurować narzędzia i automatyzować. Szukamy rozwiązań,
+          które pozwolą Tech Writerom skupić się na tym co ważne.
+        </Typography>
+        <Typography>
+          Na co dzień zastanawiamy się jak świat dokumentacji może czerpać
+          korzyści z technologii, których używa się w świecie IT.
+        </Typography>
         <Stack
           direction="row"
           alignItems="center"

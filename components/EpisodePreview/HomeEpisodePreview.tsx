@@ -32,17 +32,6 @@ export default function HomeEpisodePreview({
       sx={{ padding: '1rem' }}
     >
       <Typography
-        variant="subtitle1"
-        sx={{
-          display: 'flex',
-          gap: '3rem',
-        }}
-        fontSize="medium"
-      >
-        <DateDisplay dateString={pubDate} />
-        <DurationDisplay duration={duration} />
-      </Typography>
-      <Typography
         variant="h3"
         component="div"
         color="primary"
@@ -50,6 +39,14 @@ export default function HomeEpisodePreview({
         textAlign="left"
       >
         {title}
+      </Typography>
+      <Typography
+        variant="subtitle1"
+        sx={{ display: 'flex', gap: '1rem' }}
+        fontSize="small"
+      >
+        <DateDisplay dateString={pubDate} />
+        <DurationDisplay duration={duration} />
       </Typography>
       <Stack direction="row" width="100%">
         <AudioPlayer audioSrc={audioUrl} />
