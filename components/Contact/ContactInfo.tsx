@@ -23,7 +23,7 @@ export default function ContactInfo() {
             </Stack>
           </Grid>
           <Grid md={6}>
-            <Stack spacing={4}>
+            <Stack spacing={4} sx={{ textAlign: 'center' }}>
               <PodcastButton
                 startIcon={<EmailIcon />}
                 href={`mailto:${contactEmail}`}
