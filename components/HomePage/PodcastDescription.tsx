@@ -3,7 +3,7 @@ import Typography from '@mui/material/Typography';
 
 export default function PodcastDescription() {
   return (
-    <Stack sx={{ textAlign: 'left' }} spacing={1}>
+    <Stack sx={{ textAlign: { md: 'center', lg: 'left' } }} spacing={1}>
       <Typography
         component="h1"
         sx={{ fontSize: '40px', fontWeight: 700, lineHeight: 1.1 }}

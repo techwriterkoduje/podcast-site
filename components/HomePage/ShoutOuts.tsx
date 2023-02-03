@@ -43,7 +43,9 @@ export default function ShoutOuts() {
   return (
     <PodcastCard>
       <SectionStack>
-        <Typography variant="h2">Szanujemy i wspieramy</Typography>
+        <Typography variant="h2" textAlign="center">
+          Szanujemy i wspieramy
+        </Typography>
         <ImageList
           sx={{ width: '100%', justifyItems: 'center' }}
           cols={shoutOutLinks.length}

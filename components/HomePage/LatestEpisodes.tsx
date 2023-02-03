@@ -13,7 +13,9 @@ export default function LatestEpisodes({ episodeList }: LatestEpisodesProps) {
   return (
     <PodcastCard>
       <SectionStack>
-        <Typography variant="h2">Najnowsze odcinki</Typography>
+        <Typography variant="h2" textAlign="center">
+          Najnowsze odcinki
+        </Typography>
         <Grid container spacing={4}>
           {episodeList.map(
             ({ title, audioUrl, episodeLink, pubDate, duration }, idx) => (
