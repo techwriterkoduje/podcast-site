@@ -8,7 +8,7 @@ export default function FocusGrid() {
       title="Focus Grid"
       description="Aplikacja do ćwiczenia koncentracji"
     >
-      <PageContainer>
+      <PageContainer centered>
         <FocusGridGame />
       </PageContainer>
     </Layout>

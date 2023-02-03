@@ -10,6 +10,7 @@ import StopWatch from './StopWatch';
 import { useStopwatch } from 'react-timer-hook';
 import BestTime from './BestTime';
 import StartScreen from './StartScreen';
+import Container from '@mui/material/Container';
 
 export function getTimeInSeconds(
   seconds: number,
@@ -159,7 +160,7 @@ export default function FocusGridGame() {
   }
 
   return (
-    <>
+    <Container maxWidth="sm">
       <div className={styles.toolbar}>
         {gridSize && (
           <TextField
@@ -195,9 +196,12 @@ export default function FocusGridGame() {
       <div className={styles.toolbar}>
         <Reset handleReset={() => resetBoard(true)} disabled={resetDisabled} />
       </div>
-      <div className={styles.toolbar}>
-        {bestTime && <BestTime time={bestTime} />}
-      </div>
+
+      {bestTime && (
+        <div className={styles.toolbar}>
+          <BestTime time={bestTime} />
+        </div>
+      )}
       <Victory
         startNewGame={() => resetBoard(false)}
         open={gameIsWon}
@@ -206,6 +210,6 @@ export default function FocusGridGame() {
         hours={stopwatch.hours}
         bestTime={bestTime}
       />
-    </>
+    </Container>
   );
 }
