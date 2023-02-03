@@ -3,15 +3,16 @@ import Stack from '@mui/material/Stack';
 import PodcastButton from '../PodcastButton';
 import PodcastCard from '../PodcastCard';
 import SectionStack from '../SectionStack';
+import ContactInfo from '../Contact/ContactInfo';
 
 export default function ContactUs() {
   return (
     <PodcastCard>
       <SectionStack>
         <Typography variant="h2" textAlign="center">
-          Masz pomysł na odcinek? Chcesz być naszym gościem?
+          Kontakt
         </Typography>
-        <PodcastButton href="/contact">Skontaktuj się z nami</PodcastButton>
+        <ContactInfo />
       </SectionStack>
     </PodcastCard>
   );
