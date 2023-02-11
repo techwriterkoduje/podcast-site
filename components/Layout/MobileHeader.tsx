@@ -6,7 +6,7 @@ import LogoLink from './LogoLink';
 import Nav from './Nav';
 import PodcastIconButton from '../PodcastIconButton';
 import { useTheme } from '@mui/material/styles';
-import SearchBox from './SearchBox';
+import SearchBox from '../Search/SearchBox';
 
 export default function MobileHeader() {
   const [isOpen, setIsOpen] = useState(false);

@@ -2,7 +2,7 @@ import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import LogoLink from './LogoLink';
 import Nav from './Nav';
-import SearchBox from './SearchBox';
+import SearchBox from '../Search/SearchBox';
 
 export default function DesktopHeader() {
   return (
