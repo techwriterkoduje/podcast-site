@@ -4,11 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build && next export && yarn index",
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "index": "ts-node lib/createSearchIndex.ts"
   },
   "dependencies": {
     "@emotion/react": "^11.10.4",
@@ -20,6 +21,7 @@
     "babel-plugin-prismjs": "^2.1.0",
     "clsx": "^1.2.1",
     "gray-matter": "^4.0.3",
+    "jsdom": "^21.1.0",
     "next": "latest",
     "prismjs": "^1.29.0",
     "react": "latest",
@@ -28,6 +30,7 @@
     "remark": "^14.0.2",
     "remark-gfm": "^3.0.1",
     "remark-html": "^15.0.1",
+    "ts-node": "^10.9.1",
     "xmldom": "^0.6.0"
   },
   "devDependencies": {
