@@ -64,6 +64,13 @@ console.log('Created a search index. Saving...');
 
 writeFileSync(
   resolve(buildPath, 'search.json'),
-  JSON.stringify(searchIndex, null, 2)
+  JSON.stringify(searchIndex, null, 2),
+  { encoding: 'utf-8' }
 );
+
+const devSearchIndexPath = resolve(__dirname, '..', 'public', 'search.json');
+writeFileSync(devSearchIndexPath, JSON.stringify(searchIndex, null, 2), {
+  encoding: 'utf-8',
+});
+
 console.log('Index saved. Success rate: 100%');
