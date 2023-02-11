@@ -4,7 +4,7 @@ import WatchPage from '../components/WatchPage';
 export default function Watch() {
   return (
     <Layout
-      title="Pooglądaj"
+      title="Filmiki"
       description="Wystąpienia, screencasty, webinary i inne przydatne filmiki dla Tech Writerów"
     >
       <WatchPage />

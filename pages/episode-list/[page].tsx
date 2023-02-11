@@ -97,7 +97,7 @@ const EpisodeList: NextPage<EpisodeListProps> = ({
 
   return (
     <Layout
-      title="Lista odcinków"
+      title={`Lista odcinków (${page})`}
       description="Wybierz odcinek podcastu do posłuchania"
     >
       <Container>
