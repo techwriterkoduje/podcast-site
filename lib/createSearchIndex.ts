@@ -31,7 +31,8 @@ function parseHtmlFile(filePath: string) {
 
   const fileContents = readFileSync(filePath, { encoding: 'utf-8' });
   const { document } = new JSDOM(fileContents).window;
-  const title = document.querySelector('title')?.textContent;
+  const titleText = document.querySelector('title')?.textContent;
+  const title = titleText?.substring(0, titleText.lastIndexOf('|')).trim();
 
   const mainHtml = document.querySelector('main')?.innerHTML || '';
   const withExtraSpaces = mainHtml.replaceAll('>', '> ');

@@ -20,6 +20,7 @@
     "@mui/material": "^5.10.7",
     "babel-plugin-prismjs": "^2.1.0",
     "clsx": "^1.2.1",
+    "fuse.js": "^6.6.2",
     "gray-matter": "^4.0.3",
     "jsdom": "^21.1.0",
     "next": "latest",
