@@ -20,7 +20,7 @@ function SearchResultLink({ href, label }: SearchResultLinkProps) {
   return (
     <Link
       style={{ color: theme.palette.primary.main }}
-      href={`${href !== '/' && '/'}${href}`}
+      href={`${href === '/' ? '' : '/'}${href}`}
     >
       {label}
     </Link>

@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import TextField from '@mui/material/TextField';
 import Fuse from 'fuse.js';
 import Dialog from '@mui/material/Dialog';
 import Stack from '@mui/material/Stack';
@@ -9,8 +8,13 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogActions from '@mui/material/DialogActions';
 import Button from '@mui/material/Button';
 import SearchResult, { SearchResultProps } from './SearchResult';
+import InputBase from '@mui/material/InputBase';
+import IconButton from '@mui/material/IconButton';
+import SearchIcon from '@mui/icons-material/Search';
 
 const fuseOptions: Fuse.IFuseOptions<SearchResultProps> = {
+  threshold: 0.3,
+  ignoreLocation: true,
   keys: [
     {
       name: 'title',
@@ -78,13 +82,19 @@ export default function SearchBox() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <TextField
+      <InputBase
+        sx={{ ml: 1, flex: 1 }}
+        placeholder="Szukaj"
+        inputProps={{ 'aria-label': 'Szukaj' }}
         name="query"
-        label="Szukaj"
-        type="search"
-        variant="outlined"
-        size="small"
       />
+      <IconButton
+        type="submit"
+        sx={{ p: '10px', fontColor: 'primary' }}
+        aria-label="szukaj"
+      >
+        <SearchIcon />
+      </IconButton>
       <Dialog open={dialogOpen} onClose={handleCloseDialog} sx={{ padding: 3 }}>
         <DialogTitle>
           <Typography variant="h1" component="div">
