@@ -16,6 +16,16 @@ type ShoutOutLink = {
 
 const shoutOutLinks: ShoutOutLink[] = [
   {
+    img: 'soapconf-logo.png',
+    alt: 'Logo konferencji soap!',
+    href: 'https://soapconf.com/',
+  },
+  {
+    img: 'itcqf-logo.png',
+    alt: 'Logo ITCQF',
+    href: 'https://itcqf.org/',
+  },
+  {
     img: 'switowski-logo.svg',
     alt: 'Logo strony Sebastian Witowskiego',
     href: 'https://switowski.com/',
@@ -24,16 +34,6 @@ const shoutOutLinks: ShoutOutLink[] = [
     img: 'techwriter-logo.png',
     alt: 'Logo strony Techwriter.pl',
     href: 'http://techwriter.pl/',
-  },
-  {
-    img: 'itcqf-logo.png',
-    alt: 'Logo ITCQF',
-    href: 'https://itcqf.org/',
-  },
-  {
-    img: 'soapconf-logo.png',
-    alt: 'Logo konferencji soap!',
-    href: 'https://soapconf.com/',
   },
 ];
 
