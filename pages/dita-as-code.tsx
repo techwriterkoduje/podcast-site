@@ -10,6 +10,7 @@ import {
   markdownDir,
   MarkdownProps,
 } from '../lib/markdown';
+import ExcludeFromIndex from '../components/ExcludeFromIndex';
 
 export const getStaticProps: GetStaticProps = async () => {
   const markdownContent = await getMarkdownContent(
@@ -30,8 +31,10 @@ const DitaAsCode: NextPage<MarkdownProps> = ({
   return (
     <Layout title={title} description={description || ''}>
       <PageContainer>
-        <BackLink href="/read">więcej artykułów</BackLink>
-        <Typography variant="h1">{title}</Typography>
+        <ExcludeFromIndex>
+          <BackLink href="/read">więcej artykułów</BackLink>
+          <Typography variant="h1">{title}</Typography>
+        </ExcludeFromIndex>
         <HtmlDisplay htmlString={contentHtml} />
       </PageContainer>
     </Layout>

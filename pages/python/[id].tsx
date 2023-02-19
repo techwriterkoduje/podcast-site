@@ -78,7 +78,10 @@ const Python: NextPage<GuidePages> = ({ guidePages }) => {
 
   return (
     <Layout
-      title={guidePages.find((page) => page.pageId == id)?.pageTitle || 'Tech Wruiter Koduje w Pythonie'}
+      title={
+        guidePages.find((page) => page.pageId == id)?.pageTitle ||
+        'Tech Writer Koduje w Pythonie'
+      }
       description="Jako Tech Writer, możesz zrobić bardzo dużo przy użyciu odrobiny programowania. Nie musisz być ekspertem, wystarczy, że umiesz użyć Pythona jako narzędzia. A zacząć jest bardzo łatwo. Udostępniamy darmowy przewodnik szybkiego startu."
     >
       <PageContainer wide>

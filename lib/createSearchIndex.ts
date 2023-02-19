@@ -23,6 +23,17 @@ function getHtmlFilePaths(dirPath: string): string[] {
     );
 }
 
+function removeExcludedChildNodes(mainNode: Element) {
+  const childNodeElements = mainNode?.querySelectorAll('.exclude-from-index');
+  childNodeElements.forEach((c) => {
+    const childNodeElementParent = c.parentNode;
+    if (childNodeElementParent) {
+      childNodeElementParent.removeChild(c);
+    }
+  });
+  return mainNode.innerHTML;
+}
+
 function parseHtmlFile(filePath: string) {
   const relativeFilename = relative(buildPath, filePath);
   const href = relativeFilename
@@ -34,7 +45,8 @@ function parseHtmlFile(filePath: string) {
   const titleText = document.querySelector('title')?.textContent;
   const title = titleText?.substring(0, titleText.lastIndexOf('|')).trim();
 
-  const mainHtml = document.querySelector('main')?.innerHTML || '';
+  const mainHtmlRaw = document.querySelector('main');
+  const mainHtml = mainHtmlRaw ? removeExcludedChildNodes(mainHtmlRaw) : '';
   const withExtraSpaces = mainHtml.replaceAll('>', '> ');
   const noStyleTags = withExtraSpaces.replace(
     /<style[^>]*>[^<]+<\/style>/g,

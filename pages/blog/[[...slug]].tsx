@@ -12,6 +12,7 @@ import {
   getOneEpisodeData,
   RssItem,
 } from '../../lib/rss';
+import ExcludeFromIndex from '../../components/ExcludeFromIndex';
 
 export async function getStaticProps({ params }: { params: any }) {
   const slug = params.slug;
@@ -49,10 +50,12 @@ const Episode: NextPage<EpisodeProps> = ({ episodeData }: EpisodeProps) => {
   return (
     <Layout title={title} description={title}>
       <PageContainer>
-        <BackLink href="/episode-list/1">lista odcinków</BackLink>
-        <Typography variant="h1">{title}</Typography>
-        {pubDate && <DateDisplay dateString={pubDate} />}
-        <AudioPlayer audioSrc={audioUrl} />
+        <ExcludeFromIndex>
+          <BackLink href="/episode-list/1">lista odcinków</BackLink>
+          <Typography variant="h1">{title}</Typography>
+          {pubDate && <DateDisplay dateString={pubDate} />}
+          <AudioPlayer audioSrc={audioUrl} />
+        </ExcludeFromIndex>
         <HtmlDisplay htmlString={description} />
       </PageContainer>
     </Layout>

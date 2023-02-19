@@ -8,6 +8,7 @@ import HtmlDisplay from '../HtmlDisplay';
 import LeftNav from './LeftNav';
 import MobileGuideNavigation from './MobileGuideNavigation';
 import PreviousNext from './PreviousNext';
+import ExcludeFromIndex from '../ExcludeFromIndex';
 
 export type GuidePageProps = {
   pageId: string;
@@ -80,8 +81,10 @@ export default function GuideNavigation({
       </Grid>
       <Grid sx={{ overflowY: 'scroll', height: '100%' }} sm={9}>
         <Stack spacing="1rem">
-          <BackLink href={backLinkHref}>{backLinkLabel}</BackLink>
-          <Typography variant="h1">{selectedPage.pageTitle}</Typography>
+          <ExcludeFromIndex>
+            <BackLink href={backLinkHref}>{backLinkLabel}</BackLink>
+            <Typography variant="h1">{selectedPage.pageTitle}</Typography>
+          </ExcludeFromIndex>
           <HtmlDisplay htmlString={selectedPage.pageContent} />
         </Stack>
         <PreviousNext currentItemId={selectedPageId} items={guidePages} />
