@@ -35,10 +35,7 @@ export default function Feature({
   return (
     <PodcastCard>
       {imageUrl && (
-        <CardMedia
-          image={`${process.env.REPO}${imageUrl}`}
-          sx={{ ...cardMediaCommonStyles }}
-        />
+        <CardMedia image={imageUrl} sx={{ ...cardMediaCommonStyles }} />
       )}
       {embedId && (
         <CardMedia
