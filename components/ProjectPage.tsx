@@ -1,6 +1,6 @@
-import Typography from '@mui/material/Typography';
 import Feature, { FeatureProps } from './Feature';
 import PageContainer from './Layout/PageContainer';
+import Heading1 from './Heading1';
 
 const projects: FeatureProps[] = [
   {
@@ -85,7 +85,7 @@ const projects: FeatureProps[] = [
 export default function ProjectPage() {
   return (
     <PageContainer>
-      <Typography variant="h1">Projekty</Typography>
+      <Heading1>Projekty</Heading1>
       {projects.map((project) => (
         <Feature {...project} key={project.title} />
       ))}

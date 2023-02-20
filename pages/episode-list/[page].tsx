@@ -1,7 +1,6 @@
 import Container from '@mui/material/Container';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
 import { GetStaticProps, NextPage } from 'next';
 import EpisodePreview, {
   EpisodePreviewProps,
@@ -11,6 +10,7 @@ import PodcastCard from '../../components/PodcastCard';
 import { getAllEpisodeData } from '../../lib/rss';
 import { useRouter } from 'next/router';
 import { ParsedUrlQuery } from 'querystring';
+import Heading1 from '../../components/Heading1';
 
 const pageSize = 10;
 
@@ -102,7 +102,7 @@ const EpisodeList: NextPage<EpisodeListProps> = ({
     >
       <Container>
         <Stack spacing={4} paddingTop={4} paddingBottom={4}>
-          <Typography variant="h1">Lista odcinków</Typography>
+          <Heading1>Lista odcinków</Heading1>
           <Stack spacing={2}>
             {episodePreviews.map((episode) => (
               <PodcastCard key={episode.episodeLink}>

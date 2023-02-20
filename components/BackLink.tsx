@@ -1,5 +1,6 @@
 import NorthWestIcon from '@mui/icons-material/NorthWest';
 import PodcastButton from './PodcastButton';
+import React from 'react';
 
 type BackLinkProps = {
   href: string;
@@ -9,6 +10,7 @@ type BackLinkProps = {
 export default function BackLink({ href, children }: BackLinkProps) {
   return (
     <PodcastButton
+      className="exclude-from-index"
       href={href}
       startIcon={<NorthWestIcon fontSize="small" />}
       variant="text"

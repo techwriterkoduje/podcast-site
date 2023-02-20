@@ -1,4 +1,3 @@
-import Typography from '@mui/material/Typography';
 import { NextPage } from 'next';
 import AudioPlayer from '../../components/AudioPlayer/AudioPlayer';
 import BackLink from '../../components/BackLink';
@@ -12,6 +11,7 @@ import {
   getOneEpisodeData,
   RssItem,
 } from '../../lib/rss';
+import Heading1 from '../../components/Heading1';
 
 export async function getStaticProps({ params }: { params: any }) {
   const slug = params.slug;
@@ -50,7 +50,7 @@ const Episode: NextPage<EpisodeProps> = ({ episodeData }: EpisodeProps) => {
     <Layout title={title} description={title}>
       <PageContainer>
         <BackLink href="/episode-list/1">lista odcinków</BackLink>
-        <Typography variant="h1">{title}</Typography>
+        <Heading1>{title}</Heading1>
         {pubDate && <DateDisplay dateString={pubDate} />}
         <AudioPlayer audioSrc={audioUrl} />
         <HtmlDisplay htmlString={description} />
