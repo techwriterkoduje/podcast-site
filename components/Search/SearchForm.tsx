@@ -1,16 +1,10 @@
 import { useState, useEffect } from 'react';
 import Fuse from 'fuse.js';
-import Dialog from '@mui/material/Dialog';
-import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
-import DialogTitle from '@mui/material/DialogTitle';
-import DialogContent from '@mui/material/DialogContent';
-import DialogActions from '@mui/material/DialogActions';
-import Button from '@mui/material/Button';
-import SearchResult, { SearchResultProps } from './SearchResult';
 import InputBase from '@mui/material/InputBase';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
+import { SearchResultProps } from './SearchResult';
+import SearchDialog from './SearchDialog';
 
 const fuseOptions: Fuse.IFuseOptions<SearchResultProps> = {
   threshold: 0.3,
@@ -27,7 +21,7 @@ const fuseOptions: Fuse.IFuseOptions<SearchResultProps> = {
   ],
 };
 
-export default function SearchBox() {
+export default function SearchForm() {
   const [fuse, setFuse] = useState<undefined | Fuse<SearchResultProps>>();
   const [results, setResults] = useState<
     undefined | Fuse.FuseResult<SearchResultProps>[]
@@ -81,40 +75,36 @@ export default function SearchBox() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <InputBase
-        sx={{ ml: 1, flex: 1 }}
-        placeholder="Szukaj"
-        inputProps={{ 'aria-label': 'Szukaj' }}
-        name="query"
-      />
-      <IconButton
-        type="submit"
-        sx={{ p: '10px', fontColor: 'primary' }}
-        aria-label="szukaj"
+    <>
+      <form
+        onSubmit={handleSubmit}
+        style={{
+          border: '1px solid white',
+          borderRadius: '8px',
+        }}
       >
-        <SearchIcon />
-      </IconButton>
-      <Dialog open={dialogOpen} onClose={handleCloseDialog} sx={{ padding: 3 }}>
-        <DialogTitle>
-          <Typography variant="h1" component="div">
-            {query} ({results?.length || 0})
-          </Typography>
-        </DialogTitle>
-        <DialogActions>
-          <Button onClick={handleCloseDialog}>Zamknij</Button>
-        </DialogActions>
-        <DialogContent>
-          {results && results.length > 0 && (
-            <Stack gap={2}>
-              {results.map(({ item }) => (
-                <SearchResult {...item} key={item.href} />
-              ))}
-            </Stack>
-          )}
-          {results?.length === 0 && <Typography>Brak wyników 🤷‍♀️</Typography>}
-        </DialogContent>
-      </Dialog>
-    </form>
+        <InputBase
+          sx={{ ml: 1, flex: 1 }}
+          placeholder="Szukaj"
+          inputProps={{ 'aria-label': 'Szukaj' }}
+          name="query"
+        />
+        <IconButton
+          type="submit"
+          sx={{ p: '10px', fontColor: 'primary' }}
+          aria-label="szukaj"
+        >
+          <SearchIcon />
+        </IconButton>
+      </form>
+      {results && (
+        <SearchDialog
+          onClose={handleCloseDialog}
+          open={dialogOpen}
+          query={query}
+          results={results.map(({ item }) => ({ ...item }))}
+        />
+      )}
+    </>
   );
 }
