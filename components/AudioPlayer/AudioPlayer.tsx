@@ -5,25 +5,14 @@ import Slider from '@mui/material/Slider';
 import TimeDisplay from './TimeDisplay';
 import { useAudio } from './useAudio';
 import PodcastIconButton from '../PodcastIconButton';
-import { useTheme } from '@mui/material/styles';
-import Typography from '@mui/material/Typography';
 
 type AudioPlayerProps = {
   audioSrc: string;
 };
 
 export default function AudioPlayer({ audioSrc }: AudioPlayerProps) {
-  const {
-    isPLaying,
-    setIsPlaying,
-    progress,
-    setProgress,
-    audio,
-    speed,
-    setSpeed,
-    speeds,
-  } = useAudio(audioSrc);
-  const theme = useTheme();
+  const { isPLaying, setIsPlaying, progress, audio, speed, setSpeed, speeds } =
+    useAudio(audioSrc);
 
   function handleTogglePlay() {
     setIsPlaying(!isPLaying);

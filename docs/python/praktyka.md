@@ -42,7 +42,7 @@ z gotowymi notami. Jest to prosty plik z tabelką przedstawiającą zmiany w
 aplikacji. Chodzi o coś takiego.
 
 | Numer zgłoszenia | Opis                                                                                                                                                                    |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | PROJ-102         | Naprawiliśmy błąd, który powodował, że aplikacja zawieszała się na kilka sekund, a następnie okno aplikacji przesuwało się poza ekran przez co stawało się niewidoczne. |
 | PROJ-101         | Dodaliśmy nową funkcję, która pozwala na szybkie pobieranie zasobów sieciowych.                                                                                         |
 

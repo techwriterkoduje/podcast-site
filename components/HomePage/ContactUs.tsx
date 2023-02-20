@@ -1,6 +1,4 @@
 import Typography from '@mui/material/Typography';
-import Stack from '@mui/material/Stack';
-import PodcastButton from '../PodcastButton';
 import PodcastCard from '../PodcastCard';
 import SectionStack from '../SectionStack';
 import ContactInfo from '../Contact/ContactInfo';
