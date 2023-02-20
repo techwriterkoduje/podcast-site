@@ -6,7 +6,7 @@ import LogoLink from './LogoLink';
 import Nav from './Nav';
 import PodcastIconButton from '../PodcastIconButton';
 import { useTheme } from '@mui/material/styles';
-import SearchBox from '../Search/SearchBox';
+import SearchForm from '../Search/SearchForm';
 
 export default function MobileHeader() {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,7 +41,7 @@ export default function MobileHeader() {
         }}
       >
         <Stack spacing={2} sx={{ padding: '1rem' }}>
-          <SearchBox />
+          <SearchForm />
           <Nav />
         </Stack>
       </Drawer>
