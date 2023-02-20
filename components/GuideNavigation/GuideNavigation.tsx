@@ -1,6 +1,5 @@
 import Stack from '@mui/material/Stack';
 import { useTheme } from '@mui/material/styles';
-import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Unstable_Grid2';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import BackLink from '../BackLink';
@@ -8,7 +7,7 @@ import HtmlDisplay from '../HtmlDisplay';
 import LeftNav from './LeftNav';
 import MobileGuideNavigation from './MobileGuideNavigation';
 import PreviousNext from './PreviousNext';
-import ExcludeFromIndex from '../ExcludeFromIndex';
+import Heading1 from '../Heading1';
 
 export type GuidePageProps = {
   pageId: string;
@@ -59,6 +58,7 @@ export default function GuideNavigation({
 
   return (
     <Grid
+      className="exclude-from-index"
       container
       spacing={2}
       sx={{
@@ -81,10 +81,8 @@ export default function GuideNavigation({
       </Grid>
       <Grid sx={{ overflowY: 'scroll', height: '100%' }} sm={9}>
         <Stack spacing="1rem">
-          <ExcludeFromIndex>
-            <BackLink href={backLinkHref}>{backLinkLabel}</BackLink>
-            <Typography variant="h1">{selectedPage.pageTitle}</Typography>
-          </ExcludeFromIndex>
+          <BackLink href={backLinkHref}>{backLinkLabel}</BackLink>
+          <Heading1>{selectedPage.pageTitle}</Heading1>
           <HtmlDisplay htmlString={selectedPage.pageContent} />
         </Stack>
         <PreviousNext currentItemId={selectedPageId} items={guidePages} />

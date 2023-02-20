@@ -50,7 +50,13 @@ export default function AudioPlayer({ audioSrc }: AudioPlayerProps) {
   }
 
   return (
-    <Stack direction="row" alignItems="center" spacing={1} width="100%">
+    <Stack
+      className="exclude-from-index"
+      direction="row"
+      alignItems="center"
+      spacing={1}
+      width="100%"
+    >
       <PodcastIconButton
         onClick={handleTogglePlay}
         color="primary"

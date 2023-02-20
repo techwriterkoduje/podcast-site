@@ -1,4 +1,3 @@
-import Typography from '@mui/material/Typography';
 import { GetStaticProps, NextPage } from 'next';
 import { join } from 'path';
 import BackLink from '../components/BackLink';
@@ -10,7 +9,7 @@ import {
   markdownDir,
   MarkdownProps,
 } from '../lib/markdown';
-import ExcludeFromIndex from '../components/ExcludeFromIndex';
+import Heading1 from '../components/Heading1';
 
 export const getStaticProps: GetStaticProps = async () => {
   const markdownContent = await getMarkdownContent(
@@ -31,10 +30,8 @@ const DitaAsCode: NextPage<MarkdownProps> = ({
   return (
     <Layout title={title} description={description || ''}>
       <PageContainer>
-        <ExcludeFromIndex>
-          <BackLink href="/read">więcej artykułów</BackLink>
-          <Typography variant="h1">{title}</Typography>
-        </ExcludeFromIndex>
+        <BackLink href="/read">więcej artykułów</BackLink>
+        <Heading1>{title}</Heading1>
         <HtmlDisplay htmlString={contentHtml} />
       </PageContainer>
     </Layout>

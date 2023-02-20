@@ -19,6 +19,7 @@ export default function PreviousNext({
 
   return (
     <Grid
+      className="exclude-from-index"
       container
       justifyContent="space-between"
       alignItems="center"

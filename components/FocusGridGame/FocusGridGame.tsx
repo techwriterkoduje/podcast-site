@@ -160,7 +160,7 @@ export default function FocusGridGame() {
   }
 
   return (
-    <Container maxWidth="sm">
+    <Container className="exclude-from-index" maxWidth="sm">
       <div className={styles.toolbar}>
         {gridSize && (
           <TextField

@@ -31,6 +31,7 @@ export default function StartScreen({
         </p>
         <SizeSelector currentSize={currentSize} setSize={setSize} />
         <Button
+          className="exclude-from-index"
           variant="contained"
           size="large"
           onClick={() => handleStart(true)}

@@ -1,7 +1,7 @@
-import Typography from '@mui/material/Typography';
 import { guideIds } from '../docs/python/guideIds';
 import Feature, { FeatureProps } from './Feature';
 import PageContainer from './Layout/PageContainer';
+import Heading1 from './Heading1';
 
 const features: FeatureProps[] = [
   {
@@ -66,7 +66,7 @@ const features: FeatureProps[] = [
 export default function ReadPage() {
   return (
     <PageContainer>
-      <Typography variant="h1">Czytelnia</Typography>
+      <Heading1>Czytelnia</Heading1>
       {features.map((featureProps) => (
         <Feature key={featureProps.title} {...featureProps} />
       ))}

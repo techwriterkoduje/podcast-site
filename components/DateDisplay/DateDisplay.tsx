@@ -7,5 +7,9 @@ export default function DateDisplay({ dateString }: DateDisplayProps) {
     dateStyle: 'long',
   }).format(new Date(dateString));
 
-  return <time dateTime={dateString}>{readableDate}</time>;
+  return (
+    <time className="exclude-from-index" dateTime={dateString}>
+      {readableDate}
+    </time>
+  );
 }

@@ -18,7 +18,12 @@ export default function MobileNav({ items, currentItemId }: NavControlProps) {
 
   return (
     <>
-      <Button onClick={handleClick} startIcon={<TocIcon />} variant="outlined">
+      <Button
+        className="exclude-from-index"
+        onClick={handleClick}
+        startIcon={<TocIcon />}
+        variant="outlined"
+      >
         Spis treści
       </Button>
       <Menu
