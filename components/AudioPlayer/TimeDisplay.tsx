@@ -1,6 +1,5 @@
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import { useTheme } from '@mui/material/styles';
 
 type TimeDisplayProps = {
   currentTime: number;
@@ -25,8 +24,6 @@ export default function TimeDisplay({
   currentTime,
   duration,
 }: TimeDisplayProps) {
-  const theme = useTheme();
-
   return (
     <Typography
       component="div"

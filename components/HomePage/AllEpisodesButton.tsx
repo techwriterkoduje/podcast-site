@@ -1,8 +1,6 @@
 import Grid from '@mui/material/Unstable_Grid2';
 import PodcastButton from '../PodcastButton';
-import PodcastCard from '../PodcastCard';
 import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
-import Box from '@mui/material/Box';
 
 export default function AllEpisodesButton() {
   return (

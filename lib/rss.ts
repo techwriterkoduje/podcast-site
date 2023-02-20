@@ -67,7 +67,7 @@ function getEpisodeLink(dateString: string, episodeNumber: string) {
 }
 
 function replaceUrlsWithLinks(text: string): string {
-  var urlReplacerExpression =
+  const urlReplacerExpression =
     /((http|https|ftp):\/\/[\w?=&.\/-;#~%-]+(?![\w\s?&.\/;#~%"=-]*>))/g;
 
   return text.replace(

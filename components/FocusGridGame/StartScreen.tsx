@@ -14,7 +14,6 @@ export default function StartScreen({
   setSize,
   handleStart,
 }: StartScreenProps) {
-  const imageSize = 500;
   return (
     <div className={styles.startScreen}>
       <Image

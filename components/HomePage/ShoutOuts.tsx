@@ -1,11 +1,9 @@
-import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import Image from '../Image';
 import Link from 'next/link';
 import PodcastCard from '../PodcastCard';
-import { useTheme } from '@mui/material/styles';
 import SectionStack from '../SectionStack';
 
 type ShoutOutLink = {

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 const speeds = [1, 1.5, 1.75, 2];
 
@@ -9,11 +9,14 @@ export function useAudio(audioSrc: string) {
   const [speed, setSpeed] = useState(speeds[0]);
   const intervalRef = useRef<number | null>(null);
 
-  useEffect(function () {
-    setAudio(new Audio(audioSrc));
-  }, []);
+  useEffect(
+    function () {
+      setAudio(new Audio(audioSrc));
+    },
+    [audioSrc]
+  );
 
-  function startTimer() {
+  const startTimer = useCallback(() => {
     if (intervalRef.current) {
       clearInterval(intervalRef.current);
     }
@@ -21,7 +24,7 @@ export function useAudio(audioSrc: string) {
     intervalRef.current = window.setInterval(function () {
       setProgress(audio?.currentTime || 0);
     }, 1000);
-  }
+  }, [intervalRef, audio]);
 
   useEffect(
     function () {
@@ -35,7 +38,7 @@ export function useAudio(audioSrc: string) {
         audio?.pause();
       }
     },
-    [isPLaying]
+    [isPLaying, audio, startTimer]
   );
 
   useEffect(
@@ -44,7 +47,7 @@ export function useAudio(audioSrc: string) {
         audio.playbackRate = speed;
       }
     },
-    [speed]
+    [speed, audio]
   );
 
   return {
