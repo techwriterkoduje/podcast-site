@@ -15,6 +15,7 @@ export const navLinks: SiteLinkProps[] = [
   { label: 'Czytelnia', href: '/read', icon: <MenuBookIcon /> },
   { label: 'Filmiki', href: '/watch', icon: <MovieCreationIcon /> },
   { label: 'Projekty', href: '/projects', icon: <CodeIcon /> },
+  { label: 'Focus Grid', href: '/focusgrid', icon: <CodeIcon /> },
 
   { label: 'Kontakt', href: '/contact', icon: <EmailIcon /> },
 ];

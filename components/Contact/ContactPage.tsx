@@ -2,6 +2,7 @@ import Grid from '@mui/material/Unstable_Grid2';
 import Container from '@mui/material/Container';
 import ContactInfo from './ContactInfo';
 import Heading1 from '../Heading1';
+import PodcastCard from '../PodcastCard';
 
 export default function ContactPage() {
   return (
@@ -10,7 +11,9 @@ export default function ContactPage() {
         <Grid md={12} justifyContent="center">
           <Heading1>Kontakt</Heading1>
         </Grid>
-        <ContactInfo />
+        <PodcastCard>
+          <ContactInfo />
+        </PodcastCard>
       </Grid>
     </Container>
   );

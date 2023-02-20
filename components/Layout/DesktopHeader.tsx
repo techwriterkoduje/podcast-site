@@ -2,7 +2,7 @@ import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import LogoLink from './LogoLink';
 import Nav from './Nav';
-import SearchBox from '../Search/SearchBox';
+import SearchForm from '../Search/SearchForm';
 
 export default function DesktopHeader() {
   return (
@@ -27,7 +27,7 @@ export default function DesktopHeader() {
             <Nav hideIcons />
           </div>
           <div>
-            <SearchBox />
+            <SearchForm />
           </div>
         </Stack>
       </Container>
