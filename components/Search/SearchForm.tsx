@@ -31,7 +31,7 @@ export default function SearchForm() {
 
   async function getIndex() {
     try {
-      const response = await fetch(`${process.env.REPO}search.json`);
+      const response = await fetch('search.json');
       if (!response.ok) {
         throw new Error(`Cannot get search index: ${response.status}.`);
       }
