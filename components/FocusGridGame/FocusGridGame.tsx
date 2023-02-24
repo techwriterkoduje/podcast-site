@@ -73,7 +73,7 @@ export default function FocusGridGame() {
         setResetDisabled(false);
       }
     },
-    [gameStarted, stopwatch]
+    [gameStarted]
   );
 
   useEffect(
