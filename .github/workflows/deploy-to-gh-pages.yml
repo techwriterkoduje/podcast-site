@@ -1,7 +1,10 @@
 # .github/workflows/build-and-deploy.yml
 name: Build and deploy website
 on:
-  - workflow_dispatch
+  - workflow_dispatch:
+      inputs:
+        howAreYouFeeling:
+          description: 'How are you feeling today? :)'
   - push:
       branches: [main]
 jobs:
