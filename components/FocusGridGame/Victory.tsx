@@ -42,7 +42,7 @@ export default function Victory({
           Graj dalej
         </Button>
         <Button onClick={resetGame} variant="outlined">
-          Wybierz inny rozmiar planszy
+          Wybierz inną planszę
         </Button>
       </div>
     </Dialog>
