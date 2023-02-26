@@ -5,6 +5,7 @@ on:
       inputs:
         howAreYouFeeling:
           description: 'How are you feeling today? :)'
+          type: string
   - push:
       branches: [main]
 jobs:
