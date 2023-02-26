@@ -1,13 +1,13 @@
 # .github/workflows/build-and-deploy.yml
 name: Build and deploy website
 on:
-  - workflow_dispatch:
-      inputs:
-        howAreYouFeeling:
-          description: 'How are you feeling today? :)'
-          type: string
-  - push:
-      branches: [main]
+  workflow_dispatch:
+    inputs:
+      howAreYouFeeling:
+        description: 'How are you feeling today? :)'
+        type: string
+  push:
+    branches: [ main ]
 jobs:
   build:
     runs-on: ubuntu-latest
