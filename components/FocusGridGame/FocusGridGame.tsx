@@ -5,12 +5,12 @@ import styles from './FocusGridGame.module.css';
 import { availableSizes } from './SizeSelector';
 import TileButton, { TileButtonProps } from './TileButton';
 import Victory from './Victory';
-import Reset from './Reset';
 import StopWatch from './StopWatch';
 import { useStopwatch } from 'react-timer-hook';
 import BestTime from './BestTime';
 import StartScreen from './StartScreen';
 import Container from '@mui/material/Container';
+import Button from '@mui/material/Button';
 
 export function getTimeInSeconds(
   seconds: number,
@@ -194,7 +194,13 @@ export default function FocusGridGame() {
         </Grid>
       )}
       <div className={styles.toolbar}>
-        <Reset handleReset={() => resetBoard(true)} disabled={resetDisabled} />
+        <Button
+          fullWidth
+          onClick={() => resetBoard(true)}
+          disabled={resetDisabled}
+        >
+          Resetuj grę
+        </Button>
       </div>
 
       {bestTime && (
@@ -204,6 +210,7 @@ export default function FocusGridGame() {
       )}
       <Victory
         startNewGame={() => resetBoard(false)}
+        resetGame={() => resetBoard(true)}
         open={gameIsWon}
         seconds={stopwatch.seconds}
         minutes={stopwatch.minutes}

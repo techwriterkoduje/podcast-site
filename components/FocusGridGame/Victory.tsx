@@ -8,6 +8,7 @@ import styles from './FocusGridGame.module.css';
 type VictoryProps = {
   open: boolean;
   startNewGame: () => void;
+  resetGame: () => void;
   seconds: number;
   minutes: number;
   hours: number;
@@ -16,6 +17,7 @@ type VictoryProps = {
 
 export default function Victory({
   startNewGame,
+  resetGame,
   open,
   seconds,
   minutes,
@@ -38,6 +40,9 @@ export default function Victory({
         <p>Spróbuj swoich sił z innym rozmiarem planszy.</p>
         <Button onClick={startNewGame} variant="contained">
           Graj dalej
+        </Button>
+        <Button onClick={resetGame} variant="outlined">
+          Wybierz inny rozmiar planszy
         </Button>
       </div>
     </Dialog>
