@@ -19,6 +19,11 @@ const shoutOutLinks: ShoutOutLink[] = [
     href: 'https://soapconf.com/',
   },
   {
+    img: 'meetcontent-logo.png',
+    alt: 'Logo MeetContent',
+    href: 'http://meetcontent.org/',
+  },
+  {
     img: 'itcqf-logo.png',
     alt: 'Logo ITCQF',
     href: 'https://itcqf.org/',
@@ -41,7 +46,7 @@ export default function ShoutOuts() {
   return (
     <PodcastCard>
       <SectionStack>
-        <Typography variant="h2" textAlign="center">
+        <Typography variant="h2" textAlign="center" id="shout-outs">
           Szanujemy i wspieramy
         </Typography>
         <ImageList
