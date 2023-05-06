@@ -3,29 +3,49 @@ import PauseIcon from '@mui/icons-material/Pause';
 import Stack from '@mui/material/Stack';
 import Slider from '@mui/material/Slider';
 import TimeDisplay from './TimeDisplay';
-import { useAudio } from './useAudio';
 import PodcastIconButton from '../PodcastIconButton';
+import { useContext, useEffect, useState } from 'react';
+import {
+  AUDIO_ACTIONS,
+  AudioContext,
+  AudioDispatchContext,
+} from '../../context/AudioContext';
+
+const speeds = [1, 1.5, 1.75, 2];
 
 type AudioPlayerProps = {
   audioSrc: string;
 };
 
 export default function AudioPlayer({ audioSrc }: AudioPlayerProps) {
-  const { isPLaying, setIsPlaying, progress, audio, speed, setSpeed, speeds } =
-    useAudio(audioSrc);
+  const audioDispatch = useContext(AudioDispatchContext) as any;
+  const audioContext = useContext(AudioContext);
+  const { src, isPLaying, progress, speed, duration } = audioContext;
+  const [isCurrent, setIsCurrent] = useState(false);
+
+  useEffect(() => {
+    setIsCurrent(src === audioSrc);
+  }, [src, audioSrc]);
 
   function handleTogglePlay() {
-    setIsPlaying(!isPLaying);
-  }
+    if (src !== audioSrc) {
+      audioDispatch({
+        type: AUDIO_ACTIONS.START_AUDIO,
+        src: audioSrc,
+      });
+      return;
+    }
 
-  function handleSeek(event: Event, newValue: number | number[]) {
-    if (audio) {
-      audio.currentTime = newValue as number;
+    if (src === audioSrc) {
+      audioDispatch({
+        type: AUDIO_ACTIONS.TOGGLE_PLAY,
+      });
+      return;
     }
   }
 
-  function handleSpeedChange() {
-    setSpeed(getNextSpeed());
+  function handleSeek(event: Event, newValue: number | number[]) {
+    audioDispatch({ type: AUDIO_ACTIONS.SKIP_TO, skipTo: newValue });
   }
 
   function getNextSpeed() {
@@ -36,6 +56,10 @@ export default function AudioPlayer({ audioSrc }: AudioPlayerProps) {
     }
 
     return speeds[index + 1];
+  }
+
+  function handleSpeedChange() {
+    audioDispatch({ type: AUDIO_ACTIONS.SET_SPEED, speed: getNextSpeed() });
   }
 
   return (
@@ -51,19 +75,22 @@ export default function AudioPlayer({ audioSrc }: AudioPlayerProps) {
         color="primary"
         title={isPLaying ? 'pauza' : 'play'}
       >
-        {isPLaying ? (
+        {isCurrent && isPLaying ? (
           <PauseIcon fontSize="large" />
         ) : (
           <PlayArrowIcon fontSize="large" />
         )}
       </PodcastIconButton>
-      <TimeDisplay currentTime={progress} duration={audio?.duration || 0} />
+      <TimeDisplay
+        currentTime={isCurrent ? progress : 0}
+        duration={isCurrent ? duration : 0}
+      />
       <Slider
         aria-label="Volume"
         value={progress}
         onChange={handleSeek}
         min={0}
-        max={audio?.duration || 0}
+        max={duration || 0}
         step={1}
         size="small"
         sx={{ color: 'white' }}
@@ -74,7 +101,7 @@ export default function AudioPlayer({ audioSrc }: AudioPlayerProps) {
         onClick={handleSpeedChange}
         size="small"
       >
-        x{speed}
+        x{isCurrent ? speed : 1}
       </PodcastIconButton>
     </Stack>
   );

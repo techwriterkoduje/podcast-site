@@ -18,7 +18,7 @@ export default function LatestEpisodes({ episodeList }: LatestEpisodesProps) {
         </Typography>
         <Grid container spacing={4}>
           {episodeList.map(
-            ({ title, audioUrl, episodeLink, pubDate, duration }, idx) => (
+            ({ title, audioUrl, episodeLink, pubDate, duration }) => (
               <Grid key={episodeLink} md={12}>
                 <HomeEpisodePreview
                   title={title}
