@@ -93,7 +93,7 @@ export default function AudioPlayer({ audioSrc }: AudioPlayerProps) {
       />
       <Slider
         aria-label="Volume"
-        value={progress}
+        value={isCurrent && progress ? progress : 0}
         onChange={handleSeek}
         min={0}
         max={duration || 0}

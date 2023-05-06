@@ -19,7 +19,8 @@ const initialAudio: AudioObject = {
 };
 
 export const AudioContext = createContext(initialAudio);
-export const AudioDispatchContext = createContext<React.Dispatch<Action> | null>(null);
+export const AudioDispatchContext =
+  createContext<React.Dispatch<Action> | null>(null);
 
 type AudioProviderProps = {
   children: React.ReactNode;
@@ -94,6 +95,7 @@ export function AudioProvider({ children }: AudioProviderProps) {
 
 export enum AUDIO_ACTION {
   START_AUDIO = 'START_AUDIO',
+  CLOSE_AUDIO = 'CLOSE_AUDIO',
   TOGGLE_PLAY = 'TOGGLE_PLAY',
   SET_DURATION = 'SET_DURATION',
   SET_PROGRESS = 'SET_PROGRESS',
@@ -120,6 +122,8 @@ function audioReducer(audio: AudioObject, action: Action) {
       return { ...audio, speed: action.payload.speed };
     case AUDIO_ACTION.SKIP_TO:
       return { ...audio, requestedSkip: action.payload.requestedSkip };
+    case AUDIO_ACTION.CLOSE_AUDIO:
+      return initialAudio;
     default:
       return audio;
   }
