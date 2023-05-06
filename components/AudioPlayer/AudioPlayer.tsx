@@ -6,7 +6,7 @@ import TimeDisplay from './TimeDisplay';
 import PodcastIconButton from '../PodcastIconButton';
 import { useContext, useEffect, useState } from 'react';
 import {
-  AUDIO_ACTIONS,
+  AUDIO_ACTION,
   AudioContext,
   AudioDispatchContext,
 } from '../../context/AudioContext';
@@ -30,26 +30,29 @@ export default function AudioPlayer({ audioSrc }: AudioPlayerProps) {
   function handleTogglePlay() {
     if (src !== audioSrc) {
       audioDispatch({
-        type: AUDIO_ACTIONS.START_AUDIO,
-        src: audioSrc,
+        type: AUDIO_ACTION.START_AUDIO,
+        payload: { src: audioSrc },
       });
       return;
     }
 
     if (src === audioSrc) {
       audioDispatch({
-        type: AUDIO_ACTIONS.TOGGLE_PLAY,
+        type: AUDIO_ACTION.TOGGLE_PLAY,
       });
       return;
     }
   }
 
   function handleSeek(event: Event, newValue: number | number[]) {
-    audioDispatch({ type: AUDIO_ACTIONS.SKIP_TO, skipTo: newValue });
+    audioDispatch({
+      type: AUDIO_ACTION.SKIP_TO,
+      payload: { requestedSkip: newValue },
+    });
   }
 
   function getNextSpeed() {
-    const index = speeds.indexOf(speed);
+    const index = speeds.indexOf(speed || 1);
 
     if (index === speeds.length - 1) {
       return speeds[0];
@@ -59,7 +62,10 @@ export default function AudioPlayer({ audioSrc }: AudioPlayerProps) {
   }
 
   function handleSpeedChange() {
-    audioDispatch({ type: AUDIO_ACTIONS.SET_SPEED, speed: getNextSpeed() });
+    audioDispatch({
+      type: AUDIO_ACTION.SET_SPEED,
+      payload: { speed: getNextSpeed() },
+    });
   }
 
   return (
@@ -82,8 +88,8 @@ export default function AudioPlayer({ audioSrc }: AudioPlayerProps) {
         )}
       </PodcastIconButton>
       <TimeDisplay
-        currentTime={isCurrent ? progress : 0}
-        duration={isCurrent ? duration : 0}
+        currentTime={isCurrent && progress ? progress : 0}
+        duration={isCurrent && duration ? duration : 0}
       />
       <Slider
         aria-label="Volume"
