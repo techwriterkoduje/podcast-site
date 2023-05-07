@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import Header from './Header';
 import Footer from './Footer';
+import NowPlaying from '../NowPlaying';
+import Box from '@mui/material/Box';
 
 const podcastTitle = process.env.PODCAST_TITLE;
 
@@ -23,7 +25,8 @@ export default function Layout({
     !isHome ? ' | ' + podcastTitle : ''
   }`;
   return (
-    <>
+    <Box sx={{ position: 'relative' }}>
+      <NowPlaying />
       <Head>
         <title>{processedTitle}</title>
         <meta name="description" content={description} />
@@ -32,6 +35,6 @@ export default function Layout({
       <Header />
       <main style={{ paddingBottom: '1rem', ...mainStyle }}>{children}</main>
       <Footer />
-    </>
+    </Box>
   );
 }

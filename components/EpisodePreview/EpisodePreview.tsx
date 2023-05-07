@@ -36,7 +36,7 @@ export default function EpisodePreview({
         <DateDisplay dateString={pubDate} />
         <DurationDisplay duration={duration} />
       </Typography>
-      <AudioPlayer audioSrc={audioUrl} />
+      <AudioPlayer audioSrc={audioUrl} title={title} />
       <BlurbWithLink blurb={blurb} link={episodeLink} />
     </Stack>
   );

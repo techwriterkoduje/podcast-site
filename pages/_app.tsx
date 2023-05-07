@@ -6,6 +6,7 @@ import '@fontsource/quicksand/400.css';
 import '@fontsource/quicksand/500.css';
 import '@fontsource/quicksand/600.css';
 import '@fontsource/quicksand/700.css';
+import { AudioProvider } from '../context/AudioContext';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const theme = createTheme({
@@ -53,8 +54,10 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Component {...pageProps} />
+      <AudioProvider>
+        <CssBaseline />
+        <Component {...pageProps} />
+      </AudioProvider>
     </ThemeProvider>
   );
 }

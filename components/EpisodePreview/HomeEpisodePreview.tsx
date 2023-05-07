@@ -48,7 +48,7 @@ export default function HomeEpisodePreview({
         <DurationDisplay duration={duration} />
       </Typography>
       <Stack direction="row" width="100%">
-        <AudioPlayer audioSrc={audioUrl} />
+        <AudioPlayer audioSrc={audioUrl} title={title} />
         <PodcastIconButton href={episodeLink} title="opis odcinka" size="small">
           <DescriptionIcon />
         </PodcastIconButton>
