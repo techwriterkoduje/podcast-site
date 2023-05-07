@@ -52,7 +52,7 @@ const Episode: NextPage<EpisodeProps> = ({ episodeData }: EpisodeProps) => {
         <BackLink href="/episode-list/1">lista odcinków</BackLink>
         <Heading1>{title}</Heading1>
         {pubDate && <DateDisplay dateString={pubDate} />}
-        <AudioPlayer audioSrc={audioUrl} />
+        <AudioPlayer audioSrc={audioUrl} title={title} />
         <HtmlDisplay htmlString={description} />
       </PageContainer>
     </Layout>
