@@ -33,6 +33,7 @@ export default function NowPlaying() {
           width: '350px',
         },
       }}
+      className="exclude-from-index"
     >
       <CardHeader
         action={
