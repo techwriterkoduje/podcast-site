@@ -8,6 +8,7 @@ import {
 
 type AudioObject = {
   src?: string;
+  title?: string;
   isPLaying?: boolean;
   progress?: number;
   duration?: number;
@@ -17,6 +18,7 @@ type AudioObject = {
 
 const initialAudio: AudioObject = {
   src: '',
+  title: '',
   isPLaying: false,
   progress: 0,
   duration: 0,
@@ -98,7 +100,7 @@ export function AudioProvider({ children }: AudioProviderProps) {
   );
 }
 
-export enum AUDIO_ACTION {
+enum AUDIO_ACTION {
   START_AUDIO = 'START_AUDIO',
   CLOSE_AUDIO = 'CLOSE_AUDIO',
   TOGGLE_PLAY = 'TOGGLE_PLAY',
@@ -116,7 +118,13 @@ type Action = {
 function audioReducer(audio: AudioObject, action: Action) {
   switch (action.type) {
     case AUDIO_ACTION.START_AUDIO:
-      return { ...audio, src: action.payload.src, speed: 1, isPLaying: true };
+      return {
+        ...audio,
+        src: action.payload.src,
+        title: action.payload.title,
+        speed: 1,
+        isPLaying: true,
+      };
     case AUDIO_ACTION.TOGGLE_PLAY:
       return { ...audio, isPLaying: !audio.isPLaying };
     case AUDIO_ACTION.SET_DURATION:
@@ -138,8 +146,8 @@ export const useAudio = () => {
   const audio = useContext(AudioContext);
   const dispatch = useContext(AudioDispatchContext) as React.Dispatch<Action>;
 
-  function startAudio(src: string) {
-    dispatch({ type: AUDIO_ACTION.START_AUDIO, payload: { src } });
+  function startAudio(src: string, title: string) {
+    dispatch({ type: AUDIO_ACTION.START_AUDIO, payload: { src, title } });
   }
 
   function closeAudio() {

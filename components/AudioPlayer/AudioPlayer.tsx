@@ -11,9 +11,10 @@ const speeds = [1, 1.5, 1.75, 2];
 
 type AudioPlayerProps = {
   audioSrc: string;
+  title: string;
 };
 
-export default function AudioPlayer({ audioSrc }: AudioPlayerProps) {
+export default function AudioPlayer({ audioSrc, title }: AudioPlayerProps) {
   const { audio, startAudio, togglePlay, changeSpeed, skipTo } = useAudio();
   const { src, isPLaying, progress, speed, duration } = audio;
   const [isCurrent, setIsCurrent] = useState(false);
@@ -24,7 +25,7 @@ export default function AudioPlayer({ audioSrc }: AudioPlayerProps) {
 
   function handleTogglePlay() {
     if (src !== audioSrc) {
-      startAudio(audioSrc);
+      startAudio(audioSrc, title);
       return;
     }
 

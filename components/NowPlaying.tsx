@@ -7,7 +7,7 @@ import PodcastIconButton from './PodcastIconButton';
 
 export default function NowPlaying() {
   const { audio, closeAudio } = useAudio();
-  const { src } = audio;
+  const { src, title } = audio;
 
   if (!src) {
     return null;
@@ -24,8 +24,8 @@ export default function NowPlaying() {
         bottom: 10,
         right: 10,
         border: '1px solid #ddd',
-        padding: '1rem',
-        width: '400px',
+        padding: '0.5rem',
+        width: '350px',
         maxWidth: '100%',
         zIndex: '999',
       }}
@@ -33,12 +33,13 @@ export default function NowPlaying() {
       <CardHeader
         action={
           <PodcastIconButton title="zamknij" onClick={handleClose}>
-            <CloseIcon />
+            <CloseIcon fontSize='small' />
           </PodcastIconButton>
         }
-        title="Odtwarzanie"
+        title={title || 'Odtwarzanie'}
+        titleTypographyProps={{ variant: 'h6', fontSize: '1rem' }}
       />
-      <AudioPlayer audioSrc={src} />
+      <AudioPlayer audioSrc={src} title={title || 'nieznany'} />
     </PodcastCard>
   );
 }
