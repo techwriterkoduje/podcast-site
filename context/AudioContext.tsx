@@ -1,4 +1,10 @@
-import { createContext, useEffect, useReducer, useRef } from 'react';
+import {
+  createContext,
+  useEffect,
+  useReducer,
+  useRef,
+  useContext,
+} from 'react';
 
 type AudioObject = {
   src?: string;
@@ -18,9 +24,8 @@ const initialAudio: AudioObject = {
   requestedSkip: null,
 };
 
-export const AudioContext = createContext(initialAudio);
-export const AudioDispatchContext =
-  createContext<React.Dispatch<Action> | null>(null);
+const AudioContext = createContext(initialAudio);
+const AudioDispatchContext = createContext<React.Dispatch<Action> | null>(null);
 
 type AudioProviderProps = {
   children: React.ReactNode;
@@ -128,3 +133,34 @@ function audioReducer(audio: AudioObject, action: Action) {
       return audio;
   }
 }
+
+export const useAudio = () => {
+  const audio = useContext(AudioContext);
+  const dispatch = useContext(AudioDispatchContext) as React.Dispatch<Action>;
+
+  function startAudio(src: string) {
+    dispatch({ type: AUDIO_ACTION.START_AUDIO, payload: { src } });
+  }
+
+  function closeAudio() {
+    dispatch({ type: AUDIO_ACTION.CLOSE_AUDIO, payload: {} });
+  }
+
+  function togglePlay() {
+    dispatch({ type: AUDIO_ACTION.TOGGLE_PLAY, payload: {} });
+  }
+
+  function skipTo(time: number) {
+    dispatch({ type: AUDIO_ACTION.SKIP_TO, payload: { requestedSkip: time } });
+  }
+
+  function changeSpeed(speed: number) {
+    dispatch({ type: AUDIO_ACTION.SET_SPEED, payload: { speed } });
+  }
+
+  if (!dispatch) {
+    throw new Error('useAudio must be used within an AudioProvider');
+  }
+
+  return { audio, startAudio, closeAudio, togglePlay, skipTo, changeSpeed };
+};

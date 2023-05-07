@@ -1,23 +1,20 @@
-import Typography from '@mui/material/Typography';
 import AudioPlayer from './AudioPlayer/AudioPlayer';
-import { useContext } from 'react';
-import { AudioContext, AudioDispatchContext } from '../context/AudioContext';
+import { useAudio } from '../context/AudioContext';
 import PodcastCard from './PodcastCard';
 import CardHeader from '@mui/material/CardHeader';
 import CloseIcon from '@mui/icons-material/Close';
 import PodcastIconButton from './PodcastIconButton';
 
 export default function NowPlaying() {
-  const audioContext = useContext(AudioContext);
-  const audioDispatch = useContext(AudioDispatchContext) as any;
-  const { src } = audioContext;
+  const { audio, closeAudio } = useAudio();
+  const { src } = audio;
 
   if (!src) {
     return null;
   }
 
   function handleClose() {
-    audioDispatch({ type: 'CLOSE_AUDIO' });
+    closeAudio();
   }
 
   return (

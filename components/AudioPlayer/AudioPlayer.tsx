@@ -4,12 +4,8 @@ import Stack from '@mui/material/Stack';
 import Slider from '@mui/material/Slider';
 import TimeDisplay from './TimeDisplay';
 import PodcastIconButton from '../PodcastIconButton';
-import { useContext, useEffect, useState } from 'react';
-import {
-  AUDIO_ACTION,
-  AudioContext,
-  AudioDispatchContext,
-} from '../../context/AudioContext';
+import { useEffect, useState } from 'react';
+import { useAudio } from '../../context/AudioContext';
 
 const speeds = [1, 1.5, 1.75, 2];
 
@@ -18,9 +14,8 @@ type AudioPlayerProps = {
 };
 
 export default function AudioPlayer({ audioSrc }: AudioPlayerProps) {
-  const audioDispatch = useContext(AudioDispatchContext) as any;
-  const audioContext = useContext(AudioContext);
-  const { src, isPLaying, progress, speed, duration } = audioContext;
+  const { audio, startAudio, togglePlay, changeSpeed, skipTo } = useAudio();
+  const { src, isPLaying, progress, speed, duration } = audio;
   const [isCurrent, setIsCurrent] = useState(false);
 
   useEffect(() => {
@@ -29,26 +24,18 @@ export default function AudioPlayer({ audioSrc }: AudioPlayerProps) {
 
   function handleTogglePlay() {
     if (src !== audioSrc) {
-      audioDispatch({
-        type: AUDIO_ACTION.START_AUDIO,
-        payload: { src: audioSrc },
-      });
+      startAudio(audioSrc);
       return;
     }
 
     if (src === audioSrc) {
-      audioDispatch({
-        type: AUDIO_ACTION.TOGGLE_PLAY,
-      });
+      togglePlay();
       return;
     }
   }
 
   function handleSeek(event: Event, newValue: number | number[]) {
-    audioDispatch({
-      type: AUDIO_ACTION.SKIP_TO,
-      payload: { requestedSkip: newValue },
-    });
+    skipTo(Array.isArray(newValue) ? newValue[0] : newValue);
   }
 
   function getNextSpeed() {
@@ -62,10 +49,7 @@ export default function AudioPlayer({ audioSrc }: AudioPlayerProps) {
   }
 
   function handleSpeedChange() {
-    audioDispatch({
-      type: AUDIO_ACTION.SET_SPEED,
-      payload: { speed: getNextSpeed() },
-    });
+    changeSpeed(getNextSpeed());
   }
 
   return (
