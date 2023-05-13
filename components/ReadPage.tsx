@@ -12,7 +12,7 @@ const features: FeatureProps[] = [
       <>
         <p>
           Nasza prezentacja ze spotkania MeetContent, które odbyło się w
-          Techie's Space w Krakowie 9 maja 2023.
+          Techie&apos;s Space w Krakowie 9 maja 2023.
         </p>
         <p>
           Tematem spotkania była sztuczna inteligencja w komunikacji technicznej
