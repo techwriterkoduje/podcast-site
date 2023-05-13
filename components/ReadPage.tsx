@@ -11,15 +11,20 @@ const features: FeatureProps[] = [
     description: (
       <>
         <p>
-          Prezentacja, którą przedstawiliśmy na MeetContent w Krakowie, 9 maja
-          2023. W prezentacji między innymi:
+          Nasza prezentacja ze spotkania MeetContent, które odbyło się w
+          Techie's Space w Krakowie 9 maja 2023.
         </p>
-        <ul>
-          <li>Jak używać AI w codziennej pracy z dokumentacją</li>
-          <li>Dlaczego nie można polegać na treści, ale można na stylu</li>
-          <li>Czy zastąpią nas roboty?</li>
-        </ul>
-        <p>To tylko slajdy, więc może dołączysz do nas następnym razem.</p>
+        <p>
+          Tematem spotkania była sztuczna inteligencja w komunikacji technicznej
+          - jej możliwości, ograniczenia, narzędzia i zastosowania. W
+          prezentacji podzieliliśmy się naszymi spostrzeżeniami i
+          doświadczeniami związanymi z tworzeniem treści wspomaganych przez AI.
+        </p>
+        <p>
+          Mamy nadzieję, że zainspiruje Cię to do dalszego poznawania tego
+          fascynującego tematu. Pamiętaj jednak, że branża AI rozwija się bardzo
+          szybko i niektóre informacje mogą się przedawnić.
+        </p>
       </>
     ),
     actionLinks: [
