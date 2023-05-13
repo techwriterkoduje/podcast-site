@@ -29,7 +29,11 @@ export default function ContactInfo() {
             >
               Napisz na {contactEmail}
             </PodcastButton>
-            <CopyToClipboardButton textToCopy={contactEmail} variant="outlined">
+            <CopyToClipboardButton
+              textToCopy={contactEmail}
+              variant="outlined"
+              href=""
+            >
               skopiuj e-mail do schowka
             </CopyToClipboardButton>
           </Stack>
