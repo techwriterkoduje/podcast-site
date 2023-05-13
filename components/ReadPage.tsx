@@ -5,6 +5,35 @@ import Heading1 from './Heading1';
 
 const features: FeatureProps[] = [
   {
+    title:
+      "Don't panic! How to ride the wave of AI in technical communication and not drown",
+    imageUrl: 'dont-panic.png',
+    description: (
+      <>
+        <p>
+          Prezentacja, którą przedstawiliśmy na MeetContent w Krakowie, 9 maja
+          2023. W prezentacji między innymi:
+        </p>
+        <ul>
+          <li>Jak używać AI w codziennej pracy z dokumentacją</li>
+          <li>Dlaczego nie można polegać na treści, ale można na stylu</li>
+          <li>Czy zastąpią nas roboty?</li>
+        </ul>
+        <p>To tylko slajdy, więc może dołączysz do nas następnym razem.</p>
+      </>
+    ),
+    actionLinks: [
+      {
+        to: 'https://www.canva.com/design/DAFhwQaRefE/Mp2-2koQ8VD44ye2f6eRLw/edit?utm_content=DAFhwQaRefE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton',
+        label: 'Przeglądaj slajdy',
+      },
+      {
+        to: 'http://www.meetcontent.org',
+        label: 'meetcontent.org',
+      },
+    ],
+  },
+  {
     title: 'DITA as code - a modern approach to the classic standard',
     imageUrl: 'dita-as-code.jpg',
     description: (
