@@ -3,6 +3,7 @@ import Alert from '@mui/material/Alert';
 import Snackbar from '@mui/material/Snackbar';
 import { useState } from 'react';
 import PodcastButton, { PodcastButtonProps } from './PodcastButton';
+import Button from '@mui/material/Button';
 
 type CopyToClipboardButtonProps = PodcastButtonProps & {
   textToCopy: string;
@@ -26,7 +27,7 @@ export default function CopyToClipboardButton({
 
   return (
     <>
-      <PodcastButton
+      <Button
         color="primary"
         disabled={open}
         onClick={handleCLick}
@@ -34,7 +35,7 @@ export default function CopyToClipboardButton({
         {...otherProps}
       >
         {children}
-      </PodcastButton>
+      </Button>
       <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
         <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
           Skopiowano do schowka

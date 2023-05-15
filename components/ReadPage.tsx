@@ -5,6 +5,40 @@ import Heading1 from './Heading1';
 
 const features: FeatureProps[] = [
   {
+    title:
+      "Don't panic! How to ride the wave of AI in technical communication and not drown",
+    imageUrl: 'dont-panic.png',
+    description: (
+      <>
+        <p>
+          Nasza prezentacja ze spotkania MeetContent, które odbyło się w
+          Techie&apos;s Space w Krakowie 9 maja 2023.
+        </p>
+        <p>
+          Tematem spotkania była sztuczna inteligencja w komunikacji technicznej
+          - jej możliwości, ograniczenia, narzędzia i zastosowania. W
+          prezentacji podzieliliśmy się naszymi spostrzeżeniami i
+          doświadczeniami związanymi z tworzeniem treści wspomaganych przez AI.
+        </p>
+        <p>
+          Mamy nadzieję, że zainspiruje Cię to do dalszego poznawania tego
+          fascynującego tematu. Pamiętaj jednak, że branża AI rozwija się bardzo
+          szybko i niektóre informacje mogą się przedawnić.
+        </p>
+      </>
+    ),
+    actionLinks: [
+      {
+        to: 'https://www.canva.com/design/DAFhwQaRefE/Mp2-2koQ8VD44ye2f6eRLw/edit?utm_content=DAFhwQaRefE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton',
+        label: 'Przeglądaj slajdy',
+      },
+      {
+        to: 'http://www.meetcontent.org',
+        label: 'meetcontent.org',
+      },
+    ],
+  },
+  {
     title: 'DITA as code - a modern approach to the classic standard',
     imageUrl: 'dita-as-code.jpg',
     description: (
