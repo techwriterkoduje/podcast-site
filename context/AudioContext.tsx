@@ -9,7 +9,7 @@ import {
 type AudioObject = {
   src?: string;
   title?: string;
-  isPLaying?: boolean;
+  isPlaying?: boolean;
   progress?: number;
   duration?: number;
   speed?: number;
@@ -19,7 +19,7 @@ type AudioObject = {
 const initialAudio: AudioObject = {
   src: '',
   title: '',
-  isPLaying: false,
+  isPlaying: false,
   progress: 0,
   duration: 0,
   speed: 1,
@@ -33,24 +33,41 @@ type AudioProviderProps = {
   children: React.ReactNode;
 };
 
+const localStorageKey = 'podcastListeningTo';
+
 export function AudioProvider({ children }: AudioProviderProps) {
   const [audio, dispatch] = useReducer(audioReducer, initialAudio);
   const audioRef = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
+    const fromStorage = localStorage.getItem(localStorageKey);
+    if (fromStorage) {
+      dispatch({
+        type: AUDIO_ACTION.SET_AUDIO,
+        payload: JSON.parse(fromStorage),
+      });
+    }
+  }, []);
+
+  useEffect(() => {
+    if (audio !== initialAudio) {
+      localStorage.setItem(localStorageKey, JSON.stringify(audio));
+    }
+  }, [audio]);
+
+  useEffect(() => {
     if (audio.src && audioRef.current) {
       audioRef.current.setAttribute('src', audio.src);
-      audioRef.current.play();
     }
   }, [audio.src]);
 
   useEffect(() => {
-    if (audio.isPLaying) {
+    if (audio.isPlaying) {
       audioRef.current?.play();
     } else {
       audioRef.current?.pause();
     }
-  }, [audio.isPLaying]);
+  }, [audio.isPlaying]);
 
   useEffect(() => {
     if (
@@ -93,6 +110,7 @@ export function AudioProvider({ children }: AudioProviderProps) {
           src={audio.src}
           onLoadedData={handleLoadedData}
           onTimeUpdate={handleTimeUpdate}
+          autoPlay
         ></audio>
         {children}
       </AudioDispatchContext.Provider>
@@ -101,6 +119,7 @@ export function AudioProvider({ children }: AudioProviderProps) {
 }
 
 enum AUDIO_ACTION {
+  SET_AUDIO = 'SET_AUDIO',
   START_AUDIO = 'START_AUDIO',
   CLOSE_AUDIO = 'CLOSE_AUDIO',
   TOGGLE_PLAY = 'TOGGLE_PLAY',
@@ -115,18 +134,25 @@ type Action = {
   payload: AudioObject;
 };
 
-function audioReducer(audio: AudioObject, action: Action) {
+function audioReducer(audio: AudioObject, action: Action): AudioObject {
+  console.log('REDUCER CALLED', { action, audio });
   switch (action.type) {
+    case AUDIO_ACTION.SET_AUDIO:
+      return {
+        ...action.payload,
+        isPlaying: false,
+        progress: action.payload.progress,
+      };
     case AUDIO_ACTION.START_AUDIO:
       return {
         ...audio,
         src: action.payload.src,
         title: action.payload.title,
         speed: 1,
-        isPLaying: true,
+        isPlaying: true,
       };
     case AUDIO_ACTION.TOGGLE_PLAY:
-      return { ...audio, isPLaying: !audio.isPLaying };
+      return { ...audio, isPlaying: !audio.isPlaying };
     case AUDIO_ACTION.SET_DURATION:
       return { ...audio, duration: action.payload.duration };
     case AUDIO_ACTION.SET_PROGRESS:

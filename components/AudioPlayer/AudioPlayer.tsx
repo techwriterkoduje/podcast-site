@@ -16,7 +16,7 @@ type AudioPlayerProps = {
 
 export default function AudioPlayer({ audioSrc, title }: AudioPlayerProps) {
   const { audio, startAudio, togglePlay, changeSpeed, skipTo } = useAudio();
-  const { src, isPLaying, progress, speed, duration } = audio;
+  const { src, isPlaying, progress, speed, duration } = audio;
   const [isCurrent, setIsCurrent] = useState(false);
 
   useEffect(() => {
@@ -64,9 +64,9 @@ export default function AudioPlayer({ audioSrc, title }: AudioPlayerProps) {
       <PodcastIconButton
         onClick={handleTogglePlay}
         color="primary"
-        title={isPLaying ? 'pauza' : 'play'}
+        title={isPlaying ? 'pauza' : 'play'}
       >
-        {isCurrent && isPLaying ? (
+        {isCurrent && isPlaying ? (
           <PauseIcon fontSize="large" />
         ) : (
           <PlayArrowIcon fontSize="large" />
