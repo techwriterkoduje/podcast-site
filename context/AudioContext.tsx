@@ -135,13 +135,13 @@ type Action = {
 };
 
 function audioReducer(audio: AudioObject, action: Action): AudioObject {
-  console.log('REDUCER CALLED', { action, audio });
   switch (action.type) {
     case AUDIO_ACTION.SET_AUDIO:
       return {
         ...action.payload,
         isPlaying: false,
         progress: action.payload.progress,
+        requestedSkip: action.payload.progress,
       };
     case AUDIO_ACTION.START_AUDIO:
       return {
