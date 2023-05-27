@@ -3,13 +3,23 @@ import { useAudio } from '../context/AudioContext';
 import PodcastCard from './PodcastCard';
 import CardHeader from '@mui/material/CardHeader';
 import CloseIcon from '@mui/icons-material/Close';
+import MinimizeIcon from '@mui/icons-material/Minimize';
+import AudiotrackIcon from '@mui/icons-material/Audiotrack';
 import PodcastIconButton from './PodcastIconButton';
 import { useTheme } from '@mui/material/styles';
+import { useState } from 'react';
 
 export default function NowPlaying() {
+  const [isMinimized, setIsMinimized] = useState(false);
   const { audio, closeAudio } = useAudio();
   const { src, title } = audio;
   const theme = useTheme();
+
+  const positionProps = {
+    position: 'fixed',
+    bottom: 10,
+    right: 10,
+  };
 
   if (!src) {
     return null;
@@ -19,12 +29,22 @@ export default function NowPlaying() {
     closeAudio();
   }
 
+  if (isMinimized) {
+    return (
+      <PodcastIconButton
+        title={`słuchaj dalej odcinka ${audio.title}`}
+        onClick={() => setIsMinimized(false)}
+        sx={{ ...positionProps }}
+      >
+        <AudiotrackIcon />
+      </PodcastIconButton>
+    );
+  }
+
   return (
     <PodcastCard
       sx={{
-        position: 'fixed',
-        bottom: 10,
-        right: 10,
+        ...positionProps,
         border: '1px solid #ddd',
         padding: '0.5rem',
         width: '500px',
@@ -37,9 +57,17 @@ export default function NowPlaying() {
     >
       <CardHeader
         action={
-          <PodcastIconButton title="zamknij" onClick={handleClose}>
-            <CloseIcon fontSize="small" />
-          </PodcastIconButton>
+          <>
+            <PodcastIconButton
+              title="minimalizuj"
+              onClick={() => setIsMinimized(true)}
+            >
+              <MinimizeIcon fontSize="small" />
+            </PodcastIconButton>
+            <PodcastIconButton title="zamknij" onClick={handleClose}>
+              <CloseIcon fontSize="small" />
+            </PodcastIconButton>
+          </>
         }
         title={title || 'Odtwarzanie'}
         titleTypographyProps={{
