@@ -54,8 +54,8 @@ export default function ShoutOuts() {
           cols={shoutOutLinks.length}
           rowHeight={imageSize}
         >
-          {shoutOutLinks.map((l) => (
-            <Link href={l.href} key={l.href} target="_blank">
+          {shoutOutLinks.map(({ alt, href, img }) => (
+            <Link href={href} key={href} target="_blank">
               <ImageListItem
                 sx={{
                   aspectRatio: '1/1',
@@ -70,8 +70,8 @@ export default function ShoutOuts() {
                 }}
               >
                 <Image
-                  src={l.img}
-                  alt={l.alt}
+                  src={img}
+                  alt={alt}
                   width={imageSize}
                   height={imageSize}
                 />
