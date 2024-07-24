@@ -84,7 +84,7 @@ const Python: NextPage<GuidePages> = ({ guidePages }) => {
       }
       description="Jako Tech Writer, możesz zrobić bardzo dużo przy użyciu odrobiny programowania. Nie musisz być ekspertem, wystarczy, że umiesz użyć Pythona jako narzędzia. A zacząć jest bardzo łatwo. Udostępniamy darmowy przewodnik szybkiego startu."
     >
-      <PageContainer wide>
+      <PageContainer>
         <GuideNavigation
           selectedPageId={id}
           backLinkHref="/read"
