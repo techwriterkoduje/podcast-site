@@ -5,6 +5,24 @@ import Heading1 from './Heading1';
 
 const features: FeatureProps[] = [
   {
+    title: 'Golden rules for writing docs',
+    imageUrl: 'ten-golden-rules.png',
+    description: (
+      <>
+        Zestaw podstawowych zasad, który został stworzony, 
+        żeby pomóc programistom pisać dobrą dokumentację. 
+        Infografika w sposób zwięzły i przystępny przedstawia stare prawidła tech writingu, 
+        przez co dobrze sprawdza się jako ściągawka na co dzień.
+      </>
+    ),
+    actionLinks: [
+      {
+        to: '/golden-rules',
+        label: 'Czytaj zasady',
+      },
+    ],
+  },
+  {
     title:
       "Don't panic! How to ride the wave of AI in technical communication and not drown",
     imageUrl: 'dont-panic.png',
