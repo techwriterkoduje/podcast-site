@@ -7,9 +7,9 @@ import Divider from '@mui/material/Divider';
 
 const subscribeLinks = [
   {
-    href: 'https://anchor.fm/docdeveloper/',
-    label: 'Anchor.fm',
-    icon: 'anchor-fm-icon.png',
+    href: 'https://podcasters.spotify.com/pod/show/docdeveloper',
+    label: 'Spotify for podcasters',
+    icon: 'spotify-for-podcasters.webp',
   },
   {
     href: 'https://open.spotify.com/show/2jhQ1Z1nAOY686RVok7O9I',
@@ -25,11 +25,6 @@ const subscribeLinks = [
     href: 'https://podcasts.apple.com/us/podcast/tech-writer-koduje/id1463669718?uo=4',
     label: 'Apple Podcasts',
     icon: 'apple-podcasts-icon.png',
-  },
-  {
-    href: 'https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy84YWZiYTljL3BvZGNhc3QvcnNz',
-    label: 'Google Podcasts',
-    icon: 'google-podcasts-icon.png',
   },
   {
     href: 'https://pca.st/H7El',
