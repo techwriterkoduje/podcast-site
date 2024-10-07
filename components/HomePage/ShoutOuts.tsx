@@ -8,39 +8,39 @@ import SectionStack from '../SectionStack';
 
 type ShoutOutLink = {
   img: string;
-  alt: string;
+  label: string;
   href: string;
 };
 
 const shoutOutLinks: ShoutOutLink[] = [
   {
     img: 'content-bytes.png',
-    alt: 'Content Bytes',
+    label: 'Content Bytes',
     href: 'https://www.linkedin.com/company/content-bytes/about/',
   },
   {
     img: 'soapconf-logo.png',
-    alt: 'konferencji soap!',
+    label: 'Konferencja soap!',
     href: 'https://soapconf.com/',
   },
   {
     img: 'meetcontent-logo.png',
-    alt: 'MeetContent',
+    label: 'MeetContent',
     href: 'http://meetcontent.org/',
   },
   {
     img: 'itcqf-logo.png',
-    alt: 'ITCQF',
+    label: 'ITCQF',
     href: 'https://itcqf.org/',
   },
   {
     img: 'switowski-logo.svg',
-    alt: 'Sebastian Witowski',
+    label: 'Sebastian Witowski',
     href: 'https://switowski.com/',
   },
   {
     img: 'techwriter-logo.png',
-    alt: 'Techwriter.pl',
+    label: 'Techwriter.pl',
     href: 'http://techwriter.pl/',
   },
 ];
@@ -59,8 +59,8 @@ export default function ShoutOuts() {
           cols={shoutOutLinks.length}
           rowHeight={imageSize}
         >
-          {shoutOutLinks.map(({ alt, href, img }) => (
-            <Link href={href} key={href} target="_blank">
+          {shoutOutLinks.map(({ label, href, img }) => (
+            <Link href={href} key={href} target="_blank" aria-label={label}>
               <ImageListItem
                 sx={{
                   aspectRatio: '1/1',
@@ -74,12 +74,7 @@ export default function ShoutOuts() {
                   overflow: 'hidden',
                 }}
               >
-                <Image
-                  src={img}
-                  alt={alt}
-                  width={imageSize}
-                  height={imageSize}
-                />
+                <Image src={img} alt="" width={imageSize} height={imageSize} />
               </ImageListItem>
             </Link>
           ))}
