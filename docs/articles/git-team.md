@@ -9,8 +9,8 @@ In addition to using tools, I’ve also learnt to look at them from a different 
 
 # Technology is not the answer… but IT has the answer
 
-My latest “epiphany” was about modelling work in my team after git.  
-Despite its flaws and quirks, for me, [Git](https://git-scm.com/) is the most awesome tool that I have had a chance to learn during my time in the IT industry. I’m still amazed by its power and how it is simple and complicated at the same time. And how it’s free, and how most of the world of software development runs on it. Simply amazing\!  
+My latest “epiphany” was about modelling work in my team after [Git](https://git-scm.com/).  
+Despite its flaws and quirks, for me, Git is the most awesome tool that I have had a chance to learn during my time in the IT industry. I’m still amazed by its power and how it is simple and complicated at the same time. And how it’s free, and how most of the world of software development runs on it. Simply amazing\!  
 Ok, now you know that I love this tool, but what does it have to do with organizing work in a team?  
 Let me start explaining the whole idea by giving you some context.
 
