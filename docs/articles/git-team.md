@@ -9,8 +9,8 @@ In addition to using tools, I’ve also learnt to look at them from a different 
 
 # Technology is not the answer… but IT has the answer
 
-My latest “epiphany” was about modelling work in my team after git.  
-Despite its flaws and quirks, for me, [Git](https://git-scm.com/) is the most awesome tool that I have had a chance to learn during my time in the IT industry. I’m still amazed by its power and how it is simple and complicated at the same time. And how it’s free, and how most of the world of software development runs on it. Simply amazing\!  
+My latest “epiphany” was about modelling work in my team after [Git](https://git-scm.com/).  
+Despite its flaws and quirks, for me, Git is the most awesome tool that I have had a chance to learn during my time in the IT industry. I’m still amazed by its power and how it is simple and complicated at the same time. And how it’s free, and how most of the world of software development runs on it. Simply amazing\!  
 Ok, now you know that I love this tool, but what does it have to do with organizing work in a team?  
 Let me start explaining the whole idea by giving you some context.
 
@@ -22,7 +22,7 @@ We wanted our work to be both efficient and comfortable.  But we noticed we were
 However, the idea of having a manager that would be a proxy between the director and the ICs didn’t seem reasonable given the size of our team.   
 I thought we were in a pickle, but then it hit me. Technology has the answer\!
 
-# We are distributed like… git\!
+# We are distributed like… Git\!
 
 If a tool can work efficiently in a distributed model, the team can as well. We are human beings, not pieces of software, but we need structures, processes and rules to work efficiently.
 
@@ -39,7 +39,7 @@ When I looked at this model, it struck me that basically our team is like git .
 The remote repository is the team itself. It’s the most important part and everyone contributes to it.  
 The hierarchy among ICs is flat \- we don’t have a leader or a manager. Apart from official titles and seniority grades, we are all equal. Everyone has the same rights and obligations. We could say that everyone has the same stake in the team. Therefore, everyone has the exact same local copy of the remote repository.
 
-![Diagram showing team and its members. It has the same structe as the diagram showing git repos](team-members-diagram.png)
+![Diagram showing team and its members. It has the same structure as the diagram showing git repos](team-members-diagram.png)
 
 A local repository allows you to work independently. Even if the central repository is offline or inaccessible, you can continue to work on your local copy and then push your changes to the central repository when you have access to it again.
 
@@ -71,7 +71,7 @@ You should do the same in your team \- record decisions and rules you agreed upo
 
 ## Communication is key
 
-In git, you should commit and push often. That way your teammates know what you’re up to at all times. I think it’s a bad practice to work on something locally for a long time and to not share your work. The later you get feedback from your peers, the worse the consequences may be. Imagine that you were asked to implement a new feature in an app. After you developed it for 2 months without sharing your code with anyone, someone finally had a look at it and told you that you misunderstood a basic requirement. If you had shared your work on a regular basis, you wouldn’t have wasted so much time (and money).  
+In Git, you should commit and push often. That way your teammates know what you’re up to at all times. I think it’s a bad practice to work on something locally for a long time and to not share your work. The later you get feedback from your peers, the worse the consequences may be. Imagine that you were asked to implement a new feature in an app. After you developed it for 2 months without sharing your code with anyone, someone finally had a look at it and told you that you misunderstood a basic requirement. If you had shared your work on a regular basis, you wouldn’t have wasted so much time (and money).  
 Same goes for your team. Sync with your teammates often. I’ve learnt throughout my career that communication is the key to success, especially in a distributed team. When you don’t work in the same physical location, sometimes you should even **over**communicate. I would compare it to audio descriptions. When you work in a distributed team, you need to put in some extra effort to inform others what is going on because they can’t see what you are doing.  
 It takes practice to communicate well the same way it takes practice to make good commit messages. In both cases, it’s not enough to do it often. Your messages must be clear, informative and to the point. Otherwise, you will create too much noise that won’t serve anyone.
 
@@ -82,10 +82,10 @@ In your team, you should also mark checkpoints. For example, you can divide the 
 
 ## This one feature is off limits
 
-I'm a huge fan of git, but there's one thing that shouldn't be copied as a good practice to your team \- [`git blame`](https://git-scm.com/docs/git-blame). Don’t get me wrong, the team must be aware of their issues and who or what caused them. I just think that the name of this feature isn't fortunate.   
+I'm a huge fan of Git, but there's one thing that shouldn't be copied as a good practice to your team \- [`git blame`](https://git-scm.com/docs/git-blame). Don’t get me wrong, the team must be aware of their issues and who or what caused them. I just think that the name of this feature isn't fortunate.   
 In my team, we don't blame one another, mostly because we don't have to. Instead, we try to create a safe environment where everyone feels comfortable to admit openly to their mistakes, even before others discover them. We don't hide that we broke something and always inform others proactively about issues that may result from our actions. Very often, we even joke about our screwups. Our healthy work environment removes the need to blame others because everyone takes care of blaming themselves really well.
 
 # What’s next?
 
-If you buy the analogy that I presented in this article and you think that the git model would work for you, don't wait. Just **git init** your team.
+If you buy the analogy that I presented in this article and you think that the git model would work for you, don't wait. Just `git init` your team.
 
