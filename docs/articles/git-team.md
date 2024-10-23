@@ -82,7 +82,7 @@ In your team, you should also mark checkpoints. For example, you can divide the 
 
 ## This one feature is off limits
 
-I'm a huge fan of git, but there's one thing that shouldn't be copied as a good practice to your team \- [`git blame`](https://git-scm.com/docs/git-blame). Don’t get me wrong, the team must be aware of their issues and who or what caused them. I just think that the name of this feature isn't fortunate.   
+I'm a huge fan of Git, but there's one thing that shouldn't be copied as a good practice to your team \- [`git blame`](https://git-scm.com/docs/git-blame). Don’t get me wrong, the team must be aware of their issues and who or what caused them. I just think that the name of this feature isn't fortunate.   
 In my team, we don't blame one another, mostly because we don't have to. Instead, we try to create a safe environment where everyone feels comfortable to admit openly to their mistakes, even before others discover them. We don't hide that we broke something and always inform others proactively about issues that may result from our actions. Very often, we even joke about our screwups. Our healthy work environment removes the need to blame others because everyone takes care of blaming themselves really well.
 
 # What’s next?
