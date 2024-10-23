@@ -87,5 +87,5 @@ In my team, we don't blame one another, mostly because we don't have to. Instead
 
 # What’s next?
 
-If you buy the analogy that I presented in this article and you think that the git model would work for you, don't wait. Just **git init** your team.
+If you buy the analogy that I presented in this article and you think that the git model would work for you, don't wait. Just `git init` your team.
 
