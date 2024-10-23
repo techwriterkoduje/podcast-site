@@ -39,7 +39,7 @@ When I looked at this model, it struck me that basically our team is like git .
 The remote repository is the team itself. It’s the most important part and everyone contributes to it.  
 The hierarchy among ICs is flat \- we don’t have a leader or a manager. Apart from official titles and seniority grades, we are all equal. Everyone has the same rights and obligations. We could say that everyone has the same stake in the team. Therefore, everyone has the exact same local copy of the remote repository.
 
-![Diagram showing team and its members. It has the same structe as the diagram showing git repos](team-members-diagram.png)
+![Diagram showing team and its members. It has the same structure as the diagram showing git repos](team-members-diagram.png)
 
 A local repository allows you to work independently. Even if the central repository is offline or inaccessible, you can continue to work on your local copy and then push your changes to the central repository when you have access to it again.
 
