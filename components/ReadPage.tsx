@@ -5,6 +5,23 @@ import Heading1 from './Heading1';
 
 const features: FeatureProps[] = [
   {
+    title: 'Organize your team like git (Michał Skowron)',
+    imageUrl: 'git-logo.png',
+    description: (
+      <>
+        (Napisałem ten artykuł po angielsku!) This article aims to show how
+        you can use concepts from git, a distributed version control system, to 
+        organize your team.
+      </>
+    ),
+    actionLinks: [
+      {
+        to: '/git-team',
+        label: 'Czytaj artykuł',
+      },
+    ],
+  },
+  {
     title: 'Golden rules for writing docs',
     imageUrl: 'ten-golden-rules.png',
     description: (
