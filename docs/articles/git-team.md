@@ -22,7 +22,7 @@ We wanted our work to be both efficient and comfortable.  But we noticed we were
 However, the idea of having a manager that would be a proxy between the director and the ICs didn’t seem reasonable given the size of our team.   
 I thought we were in a pickle, but then it hit me. Technology has the answer\!
 
-# We are distributed like… git\!
+# We are distributed like… Git\!
 
 If a tool can work efficiently in a distributed model, the team can as well. We are human beings, not pieces of software, but we need structures, processes and rules to work efficiently.
 
