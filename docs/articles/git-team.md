@@ -1,7 +1,7 @@
 ---
-title: Organize your team like git (Michał Skowron)
+title: Organize your team like Git (Michał Skowron)
 description: 
-  This article aims to show how you can use concepts from git, a distributed version control system, to organize your team.
+  This article aims to show how you can use concepts from Git, a distributed version control system, to organize your team.
 ---
 
 Through all these years that I’ve spent working in the IT industry, I learned that very often technology is not the answer to your problems. The issue that people try to solve with new and shiny tools usually can be solved by improving a process or introducing some good practices. Don’t get me wrong, I love tools and I think they can help a lot, but they are not a silver bullet or some kind of a magic remedy.  
@@ -28,14 +28,14 @@ If a tool can work efficiently in a distributed model, the team can as well. We 
 
 ## Everyone owns the team
 
-When you work with git, you usually have the following setup.
+When you work with Git, you usually have the following setup.
 
-![Diagram showing remote and local git repos](git-repos-diagram.png)
+![Diagram showing remote and local Git repos](git-repos-diagram.png)
 
 The remote repository is a central repository that is shared among team members. It’s usually hosted on a platform like GitHub, Bitbucker or GitLab.  
 A local repository is a full copy of the remote repository. It’s hosted on a machine of an individual user. 
 
-When I looked at this model, it struck me that basically our team is like git .  
+When I looked at this model, it struck me that basically our team is like Git .  
 The remote repository is the team itself. It’s the most important part and everyone contributes to it.  
 The hierarchy among ICs is flat \- we don’t have a leader or a manager. Apart from official titles and seniority grades, we are all equal. Everyone has the same rights and obligations. We could say that everyone has the same stake in the team. Therefore, everyone has the exact same local copy of the remote repository.
 
