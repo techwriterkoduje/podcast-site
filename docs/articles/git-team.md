@@ -47,7 +47,7 @@ It’s the same with our team. We are spread across different locations and time
 
 ## Repos have branches, teams have domains
 
-In our team, we share our technical and non-technical responsibilities equally. Every domain has its owner. For example, one person is the owner of backend technology, supporting users and making sure that we record our work in Jira. Being owner of a domain doesn't mean that you do all the tasks related to it. Instead, you make sure that all work in this domain is done on time.  
+In our team, we share our technical and non-technical responsibilities equally. Every domain has its owner. For example, one person is the owner of backend technology, supporting users and making sure that we record our work in Jira. Being the owner of a domain doesn't mean that you do all the tasks related to it. Instead, you make sure that all work in this domain is done on time.  
 Each domain in our team is like a feature branch in Git. The branch owner makes sure everything in their branch is on track but can share work with other team members. When the owner delegates a task to a colleague, they create a sub-branch off the feature branch. These sub-branches represent individual tasks that team members handle, merging their contributions back into the feature branch and then by extension to the main branch.  
 Owners of feature branches also collaborate when their work overlaps and they merge changes between their branches. This ensures that all work fits together well. In the end, all the work from the feature branches and their sub-branches is merged into the central repository.
 
@@ -87,5 +87,5 @@ In my team, we don't blame one another, mostly because we don't have to. Instead
 
 # What’s next?
 
-If you buy the analogy that I presented in this article and you think that the git model would work for you, don't wait. Just [`git init`](https://git-scm.com/docs/git-init) your team.
+If you buy the analogy that I presented in this article and you think that the Git model would work for you, don't wait. Just [`git init`](https://git-scm.com/docs/git-init) your team.
 
