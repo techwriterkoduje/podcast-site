@@ -5,7 +5,27 @@ import Heading1 from './Heading1';
 
 const features: FeatureProps[] = [
   {
-    title: 'Organize your team like git (Michał Skowron)',
+    title: 'Are people abandoning docs as code?',
+    author: 'Paweł Kowaluk',
+    imageUrl: 'abandon.png',
+    description: (
+      <>
+        (Napisałem ten artykuł po angielsku) Based on interviews with content
+        professionals. Are people looking to swap their open-source tools for an
+        enterprise doc writing experience? Find out the answer! (Spoiler alert:
+        it&apos;s &ldquo;no&rdquo;)
+      </>
+    ),
+    actionLinks: [
+      {
+        to: '/abandon-docs-as-code',
+        label: 'Czytaj artykuł',
+      },
+    ],
+  },
+  {
+    title: 'Organize your team like git',
+    author: 'Michał Skowron',
     imageUrl: 'git-logo.png',
     description: (
       <>
@@ -24,6 +44,7 @@ const features: FeatureProps[] = [
   {
     title: 'Golden rules for writing docs',
     imageUrl: 'ten-golden-rules.png',
+    author: 'Michał Skowron',
     description: (
       <>
         Zestaw podstawowych zasad, który został stworzony, żeby pomóc
@@ -43,6 +64,7 @@ const features: FeatureProps[] = [
     title:
       "Don't panic! How to ride the wave of AI in technical communication and not drown",
     imageUrl: 'dont-panic.png',
+    author: 'Michał Skowron, Paweł Kowaluk',
     description: (
       <>
         <p>
@@ -75,6 +97,7 @@ const features: FeatureProps[] = [
   },
   {
     title: 'DITA as code - a modern approach to the classic standard',
+    author: 'Michał Skowron, Paweł Kowaluk',
     imageUrl: 'dita-as-code.jpg',
     description: (
       <>
@@ -95,6 +118,7 @@ const features: FeatureProps[] = [
   },
   {
     title: 'Tech Writer koduje w Pythonie. Przewodnik szybkiego startu.',
+    author: 'Michał Skowron',
     imageUrl: 'python.png',
     description: (
       <>
@@ -113,6 +137,7 @@ const features: FeatureProps[] = [
   },
   {
     title: 'Dokumentacja do oprogramowania. Poradnik dla managerów.',
+    author: 'Paweł Kowaluk',
     imageUrl: 'managers.png',
     description: (
       <>

@@ -6,6 +6,7 @@ import CardActions from '@mui/material/CardActions';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 import PodcastCard from './PodcastCard';
+import Stack from '@mui/material/Stack';
 
 export type FeatureProps = {
   title: string;
@@ -16,6 +17,7 @@ export type FeatureProps = {
     to: string;
     label: string;
   }[];
+  author?: string;
 };
 
 export default function Feature({
@@ -24,6 +26,7 @@ export default function Feature({
   actionLinks,
   imageUrl,
   embedId,
+  author,
 }: FeatureProps) {
   const theme = useTheme();
   const isLargeScreen = useMediaQuery(theme.breakpoints.up('sm'));
@@ -46,9 +49,16 @@ export default function Feature({
         />
       )}
       <CardContent sx={{ padding: contentPadding }}>
-        <Typography gutterBottom variant="h5" component="div">
-          {title}
-        </Typography>
+        <Stack sx={{ mb: 2 }}>
+          <Typography gutterBottom variant="h5" component="div" sx={{ mb: 0 }}>
+            {title}
+          </Typography>
+          {author && (
+            <Typography variant="h6" component="div" sx={{ fontSize: 14 }}>
+              {author}
+            </Typography>
+          )}
+        </Stack>
         <Typography component="div">{description}</Typography>
       </CardContent>
       <CardActions sx={{ padding: contentPadding }}>
