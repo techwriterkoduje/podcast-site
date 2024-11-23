@@ -9,7 +9,7 @@ import {
 
 export const getStaticProps: GetStaticProps = async () => {
   const markdownContent = await getMarkdownContent(
-    join(markdownDir, 'articles', 'dita-as-code.md')
+    join(markdownDir, 'articles', 'abandon-docs-as-code.md')
   );
   return {
     props: {
@@ -18,8 +18,8 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-const DitaAsCode: NextPage<MarkdownProps> = (props) => {
+const AbandonDocsAsCode: NextPage<MarkdownProps> = (props) => {
   return <MarkdownArticle {...props} />;
 };
 
-export default DitaAsCode;
+export default AbandonDocsAsCode;

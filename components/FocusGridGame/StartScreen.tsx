@@ -28,9 +28,7 @@ export default function StartScreen({
           Ćwicz koncentrację! Wybierz rozmiar tablicy i odsłoń kolejne liczby
           jak najszybciej.
         </p>
-        <p>
-          Pomysłodawcą i projektantem gry jest rad89.
-        </p>
+        <p>Pomysłodawcą i projektantem gry jest rad89.</p>
         <SizeSelector currentSize={currentSize} setSize={setSize} />
         <Button
           className="exclude-from-index"

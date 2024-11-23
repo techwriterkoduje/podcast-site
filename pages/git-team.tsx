@@ -10,6 +10,7 @@ import {
   MarkdownProps,
 } from '../lib/markdown';
 import Heading1 from '../components/Heading1';
+import MarkdownArticle from '../components/MarkdownArticle';
 
 export const getStaticProps: GetStaticProps = async () => {
   const markdownContent = await getMarkdownContent(
@@ -22,20 +23,8 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-const GitTeam: NextPage<MarkdownProps> = ({
-  contentHtml,
-  title,
-  description,
-}) => {
-  return (
-    <Layout title={title} description={description || ''}>
-      <PageContainer>
-        <BackLink href="/read">więcej artykułów</BackLink>
-        <Heading1>{title}</Heading1>
-        <HtmlDisplay htmlString={contentHtml} />
-      </PageContainer>
-    </Layout>
-  );
+const GitTeam: NextPage<MarkdownProps> = (props) => {
+  return <MarkdownArticle {...props} />;
 };
 
 export default GitTeam;
