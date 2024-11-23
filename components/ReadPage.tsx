@@ -9,8 +9,8 @@ const features: FeatureProps[] = [
     imageUrl: 'git-logo.png',
     description: (
       <>
-        (Napisałem ten artykuł po angielsku!) This article aims to show how
-        you can use concepts from git, a distributed version control system, to 
+        (Napisałem ten artykuł po angielsku!) This article aims to show how you
+        can use concepts from git, a distributed version control system, to
         organize your team.
       </>
     ),
@@ -26,10 +26,10 @@ const features: FeatureProps[] = [
     imageUrl: 'ten-golden-rules.png',
     description: (
       <>
-        Zestaw podstawowych zasad, który został stworzony, 
-        żeby pomóc programistom pisać dobrą dokumentację. 
-        Infografika w sposób zwięzły i przystępny przedstawia stare prawidła tech writingu, 
-        przez co dobrze sprawdza się jako ściągawka na co dzień.
+        Zestaw podstawowych zasad, który został stworzony, żeby pomóc
+        programistom pisać dobrą dokumentację. Infografika w sposób zwięzły i
+        przystępny przedstawia stare prawidła tech writingu, przez co dobrze
+        sprawdza się jako ściągawka na co dzień.
       </>
     ),
     actionLinks: [
