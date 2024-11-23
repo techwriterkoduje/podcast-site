@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002F","\u002F404","\u002Fabandon-docs-as-code","\u002Fblog\u002F[[...slug]]","\u002Fdita-as-code","\u002Fepisode-list\u002F[page]","\u002Fgit-team","\u002Fpython\u002F[id]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
