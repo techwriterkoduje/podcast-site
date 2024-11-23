@@ -1,8 +1,9 @@
 ---
-title: Organize your team like Git (Michał Skowron)
+title: Organize your team like Git
 description:
   This article aims to show how you can use concepts from Git, a distributed
   version control system, to organize your team.
+author: Michał Skowron
 ---
 
 Through all these years that I’ve spent working in the IT industry, I learned

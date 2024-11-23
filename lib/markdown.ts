@@ -14,6 +14,7 @@ export type MarkdownProps = {
   date?: string;
   contentHtml: string;
   description?: string;
+  author?: string;
 };
 
 export function getMarkdownMatter(
@@ -54,5 +55,6 @@ export async function getMarkdownContent(
     title: matterResult.data.title,
     episodeId: matterResult.data.episodeId || null,
     description: matterResult.data.description || null,
+    author: matterResult.data.author || null,
   };
 }

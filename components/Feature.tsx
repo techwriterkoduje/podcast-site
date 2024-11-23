@@ -50,7 +50,7 @@ export default function Feature({
       )}
       <CardContent sx={{ padding: contentPadding }}>
         <Stack sx={{ mb: 2 }}>
-          <Typography gutterBottom variant="h5" component="div" sx={{ mb: 0 }}>
+          <Typography gutterBottom variant="h5" component="h2" sx={{ mb: 0 }}>
             {title}
           </Typography>
           {author && (
