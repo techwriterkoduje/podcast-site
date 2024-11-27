@@ -3,6 +3,7 @@ import Header from './Header';
 import Footer from './Footer';
 import NowPlaying from '../NowPlaying';
 import Box from '@mui/material/Box';
+import PrismLoader from '../PrismLoader';
 
 const podcastTitle = process.env.PODCAST_TITLE;
 
@@ -35,6 +36,7 @@ export default function Layout({
       <Header />
       <main style={{ paddingBottom: '1rem', ...mainStyle }}>{children}</main>
       <Footer />
+      <PrismLoader />
     </Box>
   );
 }

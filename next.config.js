@@ -14,9 +14,6 @@ const nextConfig = {
     loader: 'akamai',
     path: 'nothing-here',
   },
-  experimental: {
-    forceSwcTransforms: true,
-  },
 };
 
 module.exports = nextConfig;
