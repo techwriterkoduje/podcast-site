@@ -1,7 +1,9 @@
-/** @type {import('next').NextConfig} */
+/**
+ * @type {import('next').NextConfig}
+ */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
+  output: 'export',
   env: {
     PODCAST_TITLE: 'Tech Writer Koduje',
     CONTACT_EMAIL: 'techwriterkoduje@gmail.com',
@@ -11,6 +13,9 @@ const nextConfig = {
     unoptimized: true,
     loader: 'akamai',
     path: 'nothing-here',
+  },
+  experimental: {
+    forceSwcTransforms: true,
   },
 };
 
