@@ -3,7 +3,7 @@ title: A tech Writing CCMS can also be a broken promise
 description:
   CCMS vendors are creating a flase equivalency between docs as code and their
   systems. If naything is wrong with docs as code, their CCMS is supposed to be
-  the answer. We say no.
+  the answer. We beg to differ.
 author: Paweł Kowaluk, Michał Skowron
 ---
 
