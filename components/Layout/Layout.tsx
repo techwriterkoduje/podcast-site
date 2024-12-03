@@ -8,9 +8,9 @@ import PrismLoader from '../PrismLoader';
 const podcastTitle = process.env.PODCAST_TITLE;
 
 type LayoutProps = {
-  title: string;
-  description: string;
-  children: React.ReactElement | React.ReactElement[] | string;
+  children: React.ReactNode | React.ReactNode[];
+  title?: string;
+  description?: string;
   isHome?: boolean;
   mainStyle?: React.CSSProperties;
 };

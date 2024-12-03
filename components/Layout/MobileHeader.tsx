@@ -1,3 +1,5 @@
+'use client';
+
 import Stack from '@mui/material/Stack';
 import { useState } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';

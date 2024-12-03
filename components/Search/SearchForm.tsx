@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect } from 'react';
 import Fuse from 'fuse.js';
 import InputBase from '@mui/material/InputBase';
