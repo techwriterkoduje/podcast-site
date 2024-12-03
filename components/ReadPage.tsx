@@ -5,6 +5,24 @@ import Heading1 from './Heading1';
 
 const features: FeatureProps[] = [
   {
+    title: 'A tech writing CCMS can also be a broken promise',
+    author: 'Paweł Kowaluk, Michał Skowron',
+    imageUrl: 'broken-promise.png',
+    description: (
+      <>
+        (Napisaliśmy ten artykuł po angielsku) CCMS vendors are creating a false
+        equivalency between docs as code and their systems. If anything is wrong
+        with docs as code, their CCMS is supposed to be the answer. We beg to differ.
+      </>
+    ),
+    actionLinks: [
+      {
+        to: '/broken-promise',
+        label: 'Czytaj o złamanej obietnicy',
+      },
+    ],
+  },
+  {
     title: 'Are people abandoning docs as code?',
     author: 'Paweł Kowaluk',
     imageUrl: 'abandon.png',
@@ -90,7 +108,7 @@ const features: FeatureProps[] = [
         label: 'Przeglądaj slajdy',
       },
       {
-        to: 'http://www.meetcontent.org',
+        to: 'https://meetcontent.github.io/',
         label: 'meetcontent.org',
       },
     ],

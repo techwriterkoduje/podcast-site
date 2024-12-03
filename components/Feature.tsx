@@ -38,7 +38,12 @@ export default function Feature({
   return (
     <PodcastCard>
       {imageUrl && (
-        <CardMedia image={imageUrl} sx={{ ...cardMediaCommonStyles }} />
+        <CardMedia
+          component="a"
+          href={actionLinks[0].to}
+          image={imageUrl}
+          sx={{ ...cardMediaCommonStyles }}
+        />
       )}
       {embedId && (
         <CardMedia
