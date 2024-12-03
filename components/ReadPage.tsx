@@ -12,7 +12,7 @@ const features: FeatureProps[] = [
       <>
         (Napisaliśmy ten artykuł po angielsku) CCMS vendors are creating a false
         equivalency between docs as code and their systems. If naything is wrong
-        with docs as code, their CCMS is supposed to be the answer. We say no.
+        with docs as code, their CCMS is supposed to be the answer. We beg to differ.
       </>
     ),
     actionLinks: [
