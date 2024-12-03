@@ -11,7 +11,7 @@ const features: FeatureProps[] = [
     description: (
       <>
         (Napisaliśmy ten artykuł po angielsku) CCMS vendors are creating a false
-        equivalency between docs as code and their systems. If naything is wrong
+        equivalency between docs as code and their systems. If anything is wrong
         with docs as code, their CCMS is supposed to be the answer. We beg to differ.
       </>
     ),
