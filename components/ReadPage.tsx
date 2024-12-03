@@ -10,7 +10,7 @@ const features: FeatureProps[] = [
     imageUrl: 'broken-promise.png',
     description: (
       <>
-        (Napisaliśmy ten artykuł po angielsku) CCMS vendors are creating a flase
+        (Napisaliśmy ten artykuł po angielsku) CCMS vendors are creating a false
         equivalency between docs as code and their systems. If naything is wrong
         with docs as code, their CCMS is supposed to be the answer. We say no.
       </>
