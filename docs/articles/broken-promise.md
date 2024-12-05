@@ -281,9 +281,9 @@ grievances somebody has. And then a CCMS vendor grabs the article and uses it in
 their marketing to say: "look at all these bad things, they never happen with
 our tools\!"
 
-For us, the docs as code model isn't the culprit. The author doesn't give us any
+For us, the docs as code model isn't the culprit. Sarah doesn't give us any
 background on who and how decided to implement this model, but we're pretty sure
-that these issues could have been avoided. Maybe it's by involving all
+that the issues she described could have been avoided. Maybe it's by involving all
 interested parties in the decision making process, stating goals and
 requirements together, and setting the right expectations before implementing
 the solution. We don't know the exact situation, so we're only hinting at one
