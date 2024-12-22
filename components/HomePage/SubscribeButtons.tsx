@@ -7,8 +7,8 @@ import Divider from '@mui/material/Divider';
 
 const subscribeLinks = [
   {
-    href: 'https://podcasters.spotify.com/pod/show/docdeveloper',
-    label: 'Spotify for podcasters',
+    href: 'https://creators.spotify.com/pod/show/docdeveloper',
+    label: 'Spotify for Creators',
     icon: 'spotify-for-podcasters.webp',
   },
   {
