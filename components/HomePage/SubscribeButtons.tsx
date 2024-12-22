@@ -9,7 +9,7 @@ const subscribeLinks = [
   {
     href: 'https://creators.spotify.com/pod/show/docdeveloper',
     label: 'Spotify for Creators',
-    icon: 'spotify-for-podcasters.webp',
+    icon: 'spotify-for-creators.webp',
   },
   {
     href: 'https://open.spotify.com/show/2jhQ1Z1nAOY686RVok7O9I',
