@@ -1,3 +1,4 @@
+import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
@@ -32,9 +33,9 @@ export default function TimeDisplay({
       sx={{ fontSize: '18px' }}
     >
       <Stack direction="row" spacing={1}>
-        <div>{formatDuration(currentTime)}</div>
-        <div>/</div>
-        <div>{formatDuration(duration)}</div>
+        <Box sx={{ minWidth: 45 }}>{formatDuration(currentTime)}</Box>
+        <Box>/</Box>
+        <Box sx={{ minWidth: 45 }}>{formatDuration(duration)}</Box>
       </Stack>
     </Typography>
   );
