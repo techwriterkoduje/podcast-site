@@ -5,12 +5,50 @@ import Heading1 from './Heading1';
 
 const features: FeatureProps[] = [
   {
-    title: 'Organize your team like git (Michał Skowron)',
+    title: 'A tech writing CCMS can also be a broken promise',
+    author: 'Paweł Kowaluk, Michał Skowron',
+    imageUrl: 'broken-promise.png',
+    description: (
+      <>
+        (Napisaliśmy ten artykuł po angielsku) CCMS vendors are creating a false
+        equivalency between docs as code and their systems. If anything is wrong
+        with docs as code, their CCMS is supposed to be the answer. We beg to differ.
+      </>
+    ),
+    actionLinks: [
+      {
+        to: '/broken-promise',
+        label: 'Czytaj o złamanej obietnicy',
+      },
+    ],
+  },
+  {
+    title: 'Are people abandoning docs as code?',
+    author: 'Paweł Kowaluk',
+    imageUrl: 'abandon.png',
+    description: (
+      <>
+        (Napisałem ten artykuł po angielsku) Based on interviews with content
+        professionals. Are people looking to swap their open-source tools for an
+        enterprise doc writing experience? Find out the answer! (Spoiler alert:
+        it&apos;s &ldquo;no&rdquo;)
+      </>
+    ),
+    actionLinks: [
+      {
+        to: '/abandon-docs-as-code',
+        label: 'Czytaj artykuł',
+      },
+    ],
+  },
+  {
+    title: 'Organize your team like git',
+    author: 'Michał Skowron',
     imageUrl: 'git-logo.png',
     description: (
       <>
-        (Napisałem ten artykuł po angielsku!) This article aims to show how
-        you can use concepts from git, a distributed version control system, to 
+        (Napisałem ten artykuł po angielsku!) This article aims to show how you
+        can use concepts from git, a distributed version control system, to
         organize your team.
       </>
     ),
@@ -24,12 +62,13 @@ const features: FeatureProps[] = [
   {
     title: 'Golden rules for writing docs',
     imageUrl: 'ten-golden-rules.png',
+    author: 'Michał Skowron',
     description: (
       <>
-        Zestaw podstawowych zasad, który został stworzony, 
-        żeby pomóc programistom pisać dobrą dokumentację. 
-        Infografika w sposób zwięzły i przystępny przedstawia stare prawidła tech writingu, 
-        przez co dobrze sprawdza się jako ściągawka na co dzień.
+        Zestaw podstawowych zasad, który został stworzony, żeby pomóc
+        programistom pisać dobrą dokumentację. Infografika w sposób zwięzły i
+        przystępny przedstawia stare prawidła tech writingu, przez co dobrze
+        sprawdza się jako ściągawka na co dzień.
       </>
     ),
     actionLinks: [
@@ -43,6 +82,7 @@ const features: FeatureProps[] = [
     title:
       "Don't panic! How to ride the wave of AI in technical communication and not drown",
     imageUrl: 'dont-panic.png',
+    author: 'Michał Skowron, Paweł Kowaluk',
     description: (
       <>
         <p>
@@ -68,13 +108,14 @@ const features: FeatureProps[] = [
         label: 'Przeglądaj slajdy',
       },
       {
-        to: 'http://www.meetcontent.org',
+        to: 'https://meetcontent.github.io/',
         label: 'meetcontent.org',
       },
     ],
   },
   {
     title: 'DITA as code - a modern approach to the classic standard',
+    author: 'Michał Skowron, Paweł Kowaluk',
     imageUrl: 'dita-as-code.jpg',
     description: (
       <>
@@ -95,6 +136,7 @@ const features: FeatureProps[] = [
   },
   {
     title: 'Tech Writer koduje w Pythonie. Przewodnik szybkiego startu.',
+    author: 'Michał Skowron',
     imageUrl: 'python.png',
     description: (
       <>
@@ -113,6 +155,7 @@ const features: FeatureProps[] = [
   },
   {
     title: 'Dokumentacja do oprogramowania. Poradnik dla managerów.',
+    author: 'Paweł Kowaluk',
     imageUrl: 'managers.png',
     description: (
       <>
