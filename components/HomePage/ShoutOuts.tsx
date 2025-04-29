@@ -16,12 +16,12 @@ const shoutOutLinks: ShoutOutLink[] = [
   {
     img: 'content-bytes.png',
     label: 'Content Bytes',
-    href: 'https://www.linkedin.com/company/content-bytes/about/',
+    href: 'https://contentbytes.pl/',
   },
   {
-    img: 'soapconf-logo.png',
-    label: 'Konferencja soap!',
-    href: 'https://soapconf.com/',
+    img: 'cake-conf-logo.png',
+    label: 'CAKE conf',
+    href: 'https://cakeconf.contentbytes.pl/',
   },
   {
     img: 'meetcontent-logo.png',
