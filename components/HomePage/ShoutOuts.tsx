@@ -29,11 +29,6 @@ const shoutOutLinks: ShoutOutLink[] = [
     href: 'http://meetcontent.org/',
   },
   {
-    img: 'itcqf-logo.png',
-    label: 'ITCQF',
-    href: 'https://itcqf.org/',
-  },
-  {
     img: 'switowski-logo.svg',
     label: 'Sebastian Witowski',
     href: 'https://switowski.com/',
