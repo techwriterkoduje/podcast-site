@@ -1,3 +1,5 @@
+"use client";
+
 import AudioPlayer from './AudioPlayer/AudioPlayer';
 import { useAudio } from '../context/AudioContext';
 import PodcastCard from './PodcastCard';

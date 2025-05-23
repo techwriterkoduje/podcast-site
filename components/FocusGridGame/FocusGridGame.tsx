@@ -1,3 +1,5 @@
+"use client";
+
 import React, { SyntheticEvent, useEffect, useState } from 'react';
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';

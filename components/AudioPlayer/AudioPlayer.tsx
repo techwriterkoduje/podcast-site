@@ -1,3 +1,5 @@
+"use client";
+
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import PauseIcon from '@mui/icons-material/Pause';
 import Stack from '@mui/material/Stack';

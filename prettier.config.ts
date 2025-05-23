@@ -1,4 +1,6 @@
-module.exports = {
+import type { Config } from 'prettier';
+
+const config: Config = {
   tabWidth: 2,
   useTabs: false,
   semi: true,
@@ -20,3 +22,5 @@ module.exports = {
     },
   ],
 };
+
+export default config;

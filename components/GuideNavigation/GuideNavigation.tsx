@@ -1,3 +1,5 @@
+"use client"; // Marking as a client component
+
 import Stack from '@mui/material/Stack';
 import { useTheme } from '@mui/material/styles';
 import Grid from '@mui/material/Unstable_Grid2';
