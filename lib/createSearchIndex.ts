@@ -43,7 +43,7 @@ function parseHtmlFile(filePath: string) {
   const fileContents = readFileSync(filePath, { encoding: 'utf-8' });
   const { document } = new JSDOM(fileContents).window;
   const titleText = document.querySelector('title')?.textContent;
-  const title = titleText?.substring(0, titleText.lastIndexOf('|')).trim();
+  const title = titleText ? (titleText.includes('|') ? titleText.substring(0, titleText.lastIndexOf('|')).trim() : titleText.trim()) : '';
 
   const mainHtmlRaw = document.querySelector('main');
   const mainHtml = mainHtmlRaw ? removeExcludedChildNodes(mainHtmlRaw) : '';
