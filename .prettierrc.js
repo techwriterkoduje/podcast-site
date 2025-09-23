@@ -18,5 +18,11 @@ module.exports = {
         proseWrap: 'always',
       },
     },
+    {
+      files: '*.tsx',
+      options: {
+        proseWrap: 'always',
+      },
+    },
   ],
 };

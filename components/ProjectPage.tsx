@@ -4,6 +4,23 @@ import Heading1 from './Heading1';
 
 const projects: FeatureProps[] = [
   {
+    title: 'Git for docs: basics, not only for beginners',
+    imageUrl: 'git-for-docs-workshops-poster.png',
+    description: (
+      <>
+        Materiały do warsztatu &quot;Git for docs: basics, not only for
+        beginners&quot;, który poprowadziliśmy 19 września 2025, podczas
+        pierwszej edycji CAKE conf.
+      </>
+    ),
+    actionLinks: [
+      {
+        to: 'https://github.com/techwriterkoduje/cake-conf-2025-git-for-docs',
+        label: 'Zacznij się uczyć',
+      },
+    ],
+  },
+  {
     title: 'Semantyczne testy w DITA (Python)',
     imageUrl: 'semantics.png',
     description: (
@@ -35,24 +52,6 @@ const projects: FeatureProps[] = [
       {
         to: 'https://github.com/techwriterkoduje/next-js-redoc',
         label: 'Dokumentuj API',
-      },
-    ],
-  },
-  {
-    title: 'Focus Grid',
-    imageUrl: 'focus-grid.png',
-    description: (
-      <>
-        <p>
-          Gra poprawiająca koncentrację. Wybierz rozmiar tablicy i odsłoń
-          kolejne liczby w jak najkrótszym czasie.
-        </p>
-      </>
-    ),
-    actionLinks: [
-      {
-        to: '/focusgrid',
-        label: 'Zagraj',
       },
     ],
   },
