@@ -2,7 +2,42 @@ import PageContainer from './Layout/PageContainer';
 import Feature, { FeatureProps } from './Feature';
 import Heading1 from './Heading1';
 
-const videos: FeatureProps[] = [
+const multimediaItems: FeatureProps[] = [
+  {
+    title: '#114: Technical writer (Porozmawiajmy o IT)',
+    description: (
+      <>
+        <p>
+          Nasz gościnny występ w podcaście &quot;Porozmawiajmy o IT&quot;
+          (POIT), w którym opowiadamy o zawodzie Technical Writera.
+        </p>
+      </>
+    ),
+    actionLinks: [
+      {
+        label: 'Posłuchaj',
+        to: 'https://porozmawiajmyoit.pl/poit-114-technical-writer/',
+      },
+    ],
+  },
+  {
+    title: 'Skill #11: Surviving in the Dev World (The Not-Boring Tech Writer)',
+    description: (
+      <>
+        <p>
+          Nasz gościnny występ w podcaście &quot;The Not-Boring Tech
+          Writer&quot;, w którym opowiadamy o tym, jak Technical Writer może
+          przetrwać w świecie deweloperów.
+        </p>
+      </>
+    ),
+    actionLinks: [
+      {
+        label: 'Posłuchaj',
+        to: 'https://thenotboringtechwriter.com/episodes/skill-11-surviving-in-the-dev-world',
+      },
+    ],
+  },
   {
     embedId: 'Luya41MjDO4',
     title: 'Is tech writing in Central and Eastern Europe growing? (soap!)',
@@ -51,12 +86,12 @@ const videos: FeatureProps[] = [
   },
 ];
 
-export default function WatchPage() {
+export default function MultimediaPage() {
   return (
     <PageContainer>
-      <Heading1>Filmiki</Heading1>
-      {videos.map((video) => (
-        <Feature key={video.title} {...video} />
+      <Heading1>Multimedia</Heading1>
+      {multimediaItems.map((multimediaItem) => (
+        <Feature key={multimediaItem.title} {...multimediaItem} />
       ))}
     </PageContainer>
   );
