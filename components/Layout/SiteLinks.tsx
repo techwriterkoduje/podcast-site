@@ -13,7 +13,7 @@ export type SiteLinkProps = {
 export const navLinks: SiteLinkProps[] = [
   { label: 'Odcinki', href: '/episode-list/1', icon: <MicIcon /> },
   { label: 'Czytelnia', href: '/read', icon: <MenuBookIcon /> },
-  { label: 'Filmiki', href: '/watch', icon: <MovieCreationIcon /> },
+  { label: 'Multimedia', href: '/multimedia', icon: <MovieCreationIcon /> },
   { label: 'Projekty', href: '/projects', icon: <CodeIcon /> },
   { label: 'Focus Grid', href: '/focusgrid', icon: <CodeIcon /> },
 
