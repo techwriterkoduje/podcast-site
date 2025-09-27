@@ -1,11 +1,11 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Tech Writer Koduje',
+  title: 'Podcast Tech Writer Koduje',
   tagline: 'Podcast o technicznej stronie tworzenia dokumentacji w IT',
   favicon: 'img/favicon.ico',
 
@@ -22,8 +22,8 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'techwriterkoduje', // Usually your GitHub org/user name.
+  projectName: 'podcast-site', // Usually your repo name.
 
   onBrokenLinks: 'throw',
 
@@ -66,12 +66,17 @@ const config: Config = {
         src: 'img/logo.png',
       },
       items: [
+        {
+          to: 'read',
+          label: 'Czytelnia',
+          position: 'left',
+        },
       ],
     },
     footer: {
       style: 'dark',
       links: [],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Tech Writer Koduje, logo stworzone przez rad89`,
     },
     prism: {
       theme: prismThemes.github,
