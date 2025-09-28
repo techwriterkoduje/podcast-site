@@ -1,9 +1,10 @@
 ---
-title: DITA as code - a modern approach to the classic standard
 description:
   This article aims to show how you can use DITA in the docs as code model
 author: Michał Skowron, Paweł Kowaluk
 ---
+
+# DITA as code - a modern approach to the classic standard
 
 The title of this article may raise some eyebrows among our fellow content
 specialists. We are aware that for some of them “DITA as code” may sound like an

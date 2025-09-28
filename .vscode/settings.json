@@ -1,3 +1,4 @@
 {
-  "prettier.configPath": ".prettierrc.js"
+  "prettier.configPath": ".prettierrc.js",
+  "cSpell.words": ["Audiotrack"]
 }

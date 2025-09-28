@@ -1,11 +1,12 @@
 ---
-title: Are people abandoning docs as code?
 description:
   Based on interviews with content professionals. Are people looking to swap
   their open-source tools for an enterprise doc writing experience? Find out the
   answer! (Spoiler alert, then answer is no)
 author: Paweł Kowaluk
 ---
+
+# Are people abandoning docs as code?
 
 No, they’re not.
 

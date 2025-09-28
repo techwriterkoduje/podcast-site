@@ -18,7 +18,7 @@ const features: FeatureProps[] = [
     ),
     actionLinks: [
       {
-        to: '/docs/articles/broken-promise',
+        to: 'broken-promise',
         label: 'Czytaj o złamanej obietnicy',
       },
     ],
@@ -37,7 +37,7 @@ const features: FeatureProps[] = [
     ),
     actionLinks: [
       {
-        to: '/docs/articles/abandon-docs-as-code',
+        to: 'abandon-docs-as-code',
         label: 'Czytaj artykuł',
       },
     ],
@@ -55,7 +55,7 @@ const features: FeatureProps[] = [
     ),
     actionLinks: [
       {
-        to: '/docs/articles/git-team',
+        to: 'git-team',
         label: 'Czytaj artykuł',
       },
     ],
@@ -130,7 +130,7 @@ const features: FeatureProps[] = [
     ),
     actionLinks: [
       {
-        to: '/docs/articles/dita-as-code',
+        to: 'dita-as-code',
         label: 'Czytaj artykuł',
       },
     ],
@@ -149,7 +149,7 @@ const features: FeatureProps[] = [
     ),
     actionLinks: [
       {
-        to: `/docs/python/${guideIds[0]}`,
+        to: `/python/${guideIds[0]}`,
         label: 'Czytaj przewodnik',
       },
     ],
@@ -169,7 +169,7 @@ const features: FeatureProps[] = [
     ),
     actionLinks: [
       {
-        to: 'https://pensjonatus.github.io/dokumentacja-do-oprogramowania/docs/przedslowie',
+        to: 'https://pensjonatus.github.io/dokumentacja-do-oprogramowania/przedslowie',
         label: 'Czytaj książkę',
       },
     ],

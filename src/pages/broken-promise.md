@@ -1,11 +1,12 @@
 ---
-title: A tech Writing CCMS can also be a broken promise
 description:
   CCMS vendors are creating a flase equivalency between docs as code and their
   systems. If naything is wrong with docs as code, their CCMS is supposed to be
   the answer. We beg to differ.
 author: Paweł Kowaluk, Michał Skowron
 ---
+
+# A tech Writing CCMS can also be a broken promise
 
 This article is inspired by Sarah Moir's
 [article about docs as code with a similar title](https://thisisimportant.net/posts/docs-as-code-broken-promise/),
@@ -283,8 +284,8 @@ our tools\!"
 
 For us, the docs as code model isn't the culprit. Sarah doesn't give us any
 background on who and how decided to implement this model, but we're pretty sure
-that the issues she described could have been avoided. Maybe it's by involving all
-interested parties in the decision making process, stating goals and
+that the issues she described could have been avoided. Maybe it's by involving
+all interested parties in the decision making process, stating goals and
 requirements together, and setting the right expectations before implementing
 the solution. We don't know the exact situation, so we're only hinting at one
 possible avenue.

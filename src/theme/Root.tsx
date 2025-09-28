@@ -1,13 +1,14 @@
-import { createTheme, ThemeProvider } from '@mui/material/styles';
 import '@fontsource/quicksand/300.css';
 import '@fontsource/quicksand/400.css';
 import '@fontsource/quicksand/500.css';
 import '@fontsource/quicksand/600.css';
 import '@fontsource/quicksand/700.css';
-import { AudioProvider } from '../context/AudioContext';
 import CssBaseline from '@mui/material/CssBaseline';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import NowPlaying from '../components/NowPlaying';
+import { AudioProvider } from '../context/AudioContext';
 
-export default function Root({ children }) {
+function Wrapper({ children }) {
   const theme = createTheme({
     palette: {
       mode: 'dark',
@@ -56,5 +57,14 @@ export default function Root({ children }) {
       <CssBaseline />
       <AudioProvider>{children}</AudioProvider>
     </ThemeProvider>
+  );
+}
+
+export default function Root({ children }) {
+  return (
+    <Wrapper>
+      {children}
+      <NowPlaying />
+    </Wrapper>
   );
 }

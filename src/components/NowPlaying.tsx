@@ -70,10 +70,12 @@ export default function NowPlaying() {
           </>
         }
         title={title || 'Odtwarzanie'}
-        titleTypographyProps={{
-          variant: 'h5',
-          fontSize: '1rem',
-          color: theme.palette.primary.main,
+        slotProps={{
+          title: {
+            variant: 'h5',
+            fontSize: '1rem',
+            color: theme.palette.primary.main,
+          },
         }}
       />
       <AudioPlayer audioSrc={src} title={title || 'nieznany'} />
