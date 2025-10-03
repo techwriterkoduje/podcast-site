@@ -1,4 +1,4 @@
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import HomeEpisodePreview, {
   HomeEpisodePreviewProps,
 } from '../EpisodePreview/HomeEpisodePreview';
@@ -38,7 +38,6 @@ export default function LatestEpisodes({ episodeList }: LatestEpisodesProps) {
             ({ title, audioUrl, episodeLink, pubDate, duration }) => (
               <Grid
                 key={episodeLink}
-                md={12}
                 sx={{
                   [theme.breakpoints.down('md')]: {
                     padding: '0',
@@ -55,7 +54,7 @@ export default function LatestEpisodes({ episodeList }: LatestEpisodesProps) {
               </Grid>
             )
           )}
-          <Grid md={12}>
+          <Grid>
             <AllEpisodesButton />
           </Grid>
         </Grid>

@@ -2,7 +2,7 @@ import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import Image from '../Image';
 import PodcastCard from '../PodcastCard';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import Divider from '@mui/material/Divider';
 
 const subscribeLinks = [
@@ -40,7 +40,7 @@ const subscribeLinks = [
 
 export default function SubscribeButtons() {
   return (
-    <Grid md={12}>
+    <Grid>
       <PodcastCard elevation={0}>
         <Stack
           direction="row"

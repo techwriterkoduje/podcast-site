@@ -1,6 +1,6 @@
 import Stack from '@mui/material/Stack';
 import { useTheme } from '@mui/material/styles';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import BackLink from '../BackLink';
 import HtmlDisplay from '../HtmlDisplay';
@@ -76,10 +76,16 @@ export default function GuideNavigation({
         },
       }}
     >
-      <Grid sx={{ overflowY: 'scroll', height: '100%', width: '200px' }} sm={3}>
+      <Grid
+        sx={{ overflowY: 'scroll', height: '100%', width: '200px' }}
+        size={{ sm: 3, xs: 12 }}
+      >
         <LeftNav items={guidePages} currentItemId={selectedPageId} />
       </Grid>
-      <Grid sx={{ overflowY: 'scroll', height: '100%' }} sm={9}>
+      <Grid
+        sx={{ overflowY: 'scroll', height: '100%' }}
+        size={{ sm: 9, xs: 12 }}
+      >
         <Stack spacing="1rem">
           <BackLink href={backLinkHref}>{backLinkLabel}</BackLink>
           <Heading1>{selectedPage.pageTitle}</Heading1>

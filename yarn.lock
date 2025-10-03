@@ -3866,6 +3866,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node@npm:^24.6.2":
+  version: 24.6.2
+  resolution: "@types/node@npm:24.6.2"
+  dependencies:
+    undici-types: "npm:~7.13.0"
+  checksum: 10c0/d029757711be85ec468686f66cd8eca78f5996d7e2b1a5b818436e0299b19925b0fb4f7509a6b62750abdc72d66f5750ce22fb8b55559baca86df89a9c44722e
+  languageName: node
+  linkType: hard
+
 "@types/parse-json@npm:^4.0.0":
   version: 4.0.2
   resolution: "@types/parse-json@npm:4.0.2"
@@ -4026,6 +4035,13 @@ __metadata:
   dependencies:
     "@types/node": "npm:*"
   checksum: 10c0/61aff1129143fcc4312f083bc9e9e168aa3026b7dd6e70796276dcfb2c8211c4292603f9c4864fae702f2ed86e4abd4d38aa421831c2fd7f856c931a481afbab
+  languageName: node
+  linkType: hard
+
+"@types/xmldom@npm:^0":
+  version: 0.1.34
+  resolution: "@types/xmldom@npm:0.1.34"
+  checksum: 10c0/9cd8428f2fbdedb3003d48841b62000fc218a15d9ce2129f47a768f0d0ec840b942a4dcec0ce567a35d314feb86bfc1f86bca23e180bf87f8dd52ef982f06e45
   languageName: node
   linkType: hard
 
@@ -10935,6 +10951,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-timer-hook@npm:^4.0.5":
+  version: 4.0.5
+  resolution: "react-timer-hook@npm:4.0.5"
+  peerDependencies:
+    react: ">=16.8.0"
+  checksum: 10c0/87f782e700a1afb5f436fb2919b68f236fec9c7f02cbf42b3a5a6d4e43bf8bce007cb0865b7ea0c447508942cf30bfcbdac95d37f33ed301d5f5782e6dd0cf8f
+  languageName: node
+  linkType: hard
+
 "react-transition-group@npm:^4.4.5":
   version: 4.4.5
   resolution: "react-transition-group@npm:4.4.5"
@@ -12169,11 +12194,15 @@ __metadata:
     "@mdx-js/react": "npm:^3.0.0"
     "@mui/icons-material": "npm:^7.3.2"
     "@mui/material": "npm:^7.3.2"
+    "@types/node": "npm:^24.6.2"
+    "@types/xmldom": "npm:^0"
     clsx: "npm:^2.0.0"
     prism-react-renderer: "npm:^2.3.0"
     react: "npm:^19.0.0"
     react-dom: "npm:^19.0.0"
+    react-timer-hook: "npm:^4.0.5"
     typescript: "npm:~5.6.2"
+    xmldom: "npm:^0.6.0"
   languageName: unknown
   linkType: soft
 
@@ -12384,6 +12413,13 @@ __metadata:
   version: 7.12.0
   resolution: "undici-types@npm:7.12.0"
   checksum: 10c0/326e455bbc0026db1d6b81c76a1cf10c63f7e2f9821db2e24fdc258f482814e5bfa8481f8910d07c68e305937c5c049610fdc441c5e8b7bb0daca7154fb8a306
+  languageName: node
+  linkType: hard
+
+"undici-types@npm:~7.13.0":
+  version: 7.13.0
+  resolution: "undici-types@npm:7.13.0"
+  checksum: 10c0/44bbb0935425291351bfd8039571f017295b5d6dc5727045d0a4fea8c6ffe73a6703b48ce010f9cb539b9041a75b463f8cfe1e7309cab7486452505fb0d66151
   languageName: node
   linkType: hard
 
@@ -13031,6 +13067,13 @@ __metadata:
   bin:
     xml-js: ./bin/cli.js
   checksum: 10c0/c83631057f10bf90ea785cee434a8a1a0030c7314fe737ad9bf568a281083b565b28b14c9e9ba82f11fc9dc582a3a907904956af60beb725be1c9ad4b030bc5a
+  languageName: node
+  linkType: hard
+
+"xmldom@npm:^0.6.0":
+  version: 0.6.0
+  resolution: "xmldom@npm:0.6.0"
+  checksum: 10c0/93cbb4854f73f431a402e7942baa87a59e8445fd0b4ae6bf6af3a1007809e849da8ac70bbe1509242212bce5d19e30b55ea282cbd9d87281701d1bdc13b74623
   languageName: node
   linkType: hard
 

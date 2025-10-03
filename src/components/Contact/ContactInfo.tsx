@@ -1,18 +1,18 @@
-import PodcastCard from '../PodcastCard';
-import Grid from '@mui/material/Unstable_Grid2';
+import EmailIcon from '@mui/icons-material/Email';
+import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import PodcastButton from '../PodcastButton';
 import CopyToClipboardButton from '../CopyToClipboardButton';
-import EmailIcon from '@mui/icons-material/Email';
+import PodcastButton from '../PodcastButton';
+import { CONTACT_EMAIL } from '@site/src/lib/constants';
 
-const contactEmail = process.env.CONTACT_EMAIL || 'email missing';
+const contactEmail = CONTACT_EMAIL || 'email missing';
 
 export default function ContactInfo() {
   return (
-    <Grid md={12}>
+    <Grid container>
       <Grid container alignItems="center" spacing={4} padding={4}>
-        <Grid md={6}>
+        <Grid size={{ sm: 12, md: 6 }}>
           <Stack spacing={4}>
             <Typography>
               Chcesz nam coś przekazać? Masz pytanie lub sugestię? Może masz
@@ -21,7 +21,7 @@ export default function ContactInfo() {
             </Typography>
           </Stack>
         </Grid>
-        <Grid md={6}>
+        <Grid size={{ sm: 12, md: 6 }}>
           <Stack spacing={4} sx={{ textAlign: 'center' }}>
             <PodcastButton
               startIcon={<EmailIcon />}

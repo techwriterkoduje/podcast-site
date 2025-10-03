@@ -187,7 +187,15 @@ export default function FocusGridGame() {
           margin="auto"
         >
           {tiles.map((props) => (
-            <Grid item key={props.id} xs={1} xl={1} lg={1} sm={1} md={1}>
+            <Grid
+              key={props.id}
+              size={{
+                xl: 1,
+                lg: 1,
+                sm: 1,
+                md: 1,
+              }}
+            >
               <TileButton {...props} markAsDone={markAsDone} />
             </Grid>
           ))}

@@ -1,7 +1,6 @@
-import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
-
-const podcastTitle = process.env.PODCAST_TITLE;
+import Typography from '@mui/material/Typography';
+import { PODCAST_TITLE } from '@site/src/lib/constants';
 
 export default function Footer() {
   return (
@@ -14,7 +13,7 @@ export default function Footer() {
       }}
     >
       <Typography>
-        Copyright © {new Date().getFullYear()} {podcastTitle}
+        Copyright © {new Date().getFullYear()} {PODCAST_TITLE}
       </Typography>
       <Typography>Logo stworzone przez rad89</Typography>
     </Stack>

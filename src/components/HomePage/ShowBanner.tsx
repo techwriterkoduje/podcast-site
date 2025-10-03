@@ -1,6 +1,6 @@
 import PodcastDescription from './PodcastDescription';
 import PodcastLogo from '../Layout/PodcastLogo';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import PodcastCard from '../PodcastCard';
 
 export default function ShowBanner() {
@@ -20,11 +20,11 @@ export default function ShowBanner() {
         justifyContent="center"
         alignItems="center"
       >
-        <Grid lg={4} paddingTop={1}>
+        <Grid size={{ lg: 4, md: 12 }} paddingTop={1}>
           <PodcastLogo />
         </Grid>
         <Grid
-          lg={7}
+          size={{ lg: 8, md: 12 }}
           container
           alignItems="center"
           justifyContent="center"

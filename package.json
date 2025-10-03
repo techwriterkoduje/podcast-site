@@ -4,15 +4,16 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "docusaurus start",
-    "build": "docusaurus build",
+    "start": "yarn get-episodes && docusaurus start",
+    "build": "yarn get-episodes && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "get-episodes": "npx tsx src/scripts/save-all-episode-data.ts -y"
   },
   "dependencies": {
     "@docusaurus/core": "3.9.1",
@@ -26,12 +27,16 @@
     "clsx": "^2.0.0",
     "prism-react-renderer": "^2.3.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-timer-hook": "^4.0.5",
+    "xmldom": "^0.6.0"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.9.1",
     "@docusaurus/tsconfig": "3.9.1",
     "@docusaurus/types": "3.9.1",
+    "@types/node": "^24.6.2",
+    "@types/xmldom": "^0",
     "typescript": "~5.6.2"
   },
   "browserslist": {

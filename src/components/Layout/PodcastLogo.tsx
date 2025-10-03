@@ -15,7 +15,6 @@ export default function PodcastLogo() {
         backgroundColor: 'black',
       }}
       alt="Logo podcastu Tech Writer koduje"
-      priority
     />
   );
 }

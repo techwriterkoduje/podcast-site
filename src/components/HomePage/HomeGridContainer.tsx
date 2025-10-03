@@ -1,9 +1,9 @@
-import Grid, { Grid2Props } from '@mui/material/Unstable_Grid2';
+import Grid, { GridProps } from '@mui/material/Grid';
 
 export default function HomeGridContainer({
   children,
   ...otherProps
-}: Grid2Props) {
+}: GridProps) {
   return (
     <Grid
       container
