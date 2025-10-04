@@ -1,7 +1,7 @@
-import { readFileSync, writeFileSync } from 'fs';
-import path from 'path';
+import { writeFileSync } from 'fs';
 import { DOMParser } from 'xmldom';
 import { RSS_URL } from './constants';
+import allEpisodeData from '../../all-episodes.json';
 
 export type RssItem = {
   title: string;
@@ -135,19 +135,6 @@ export async function saveAllEpisodeData() {
   console.log(`Wrote all-episodes.json 🙌`);
 }
 
-export function getAllEpisodeData(): RssItem[] {
-  try {
-    const filePath = path.resolve(__dirname, '../../all-episodes.json');
-    const fileContents = readFileSync(filePath, 'utf-8');
-    const allEpisodeData = JSON.parse(fileContents);
-    return allEpisodeData as RssItem[];
-  } catch (err) {
-    throw new Error(
-      `Could not load all-episodes.json. Did you run the get-episodes script? ${err}`
-    );
-  }
-}
-
 export function getDateAsStrings(dateString: string): string[] {
   const parsedDate = new Date(dateString);
   return [
@@ -174,7 +161,6 @@ export function getOneEpisodeData(
   monthToMatch: string,
   dayToMatch: string
 ): RssItem {
-  const allEpisodeData = getAllEpisodeData();
   const matchingEpisode = findMatchingEpisode(
     yearToMatch,
     monthToMatch,

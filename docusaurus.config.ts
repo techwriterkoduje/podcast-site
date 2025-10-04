@@ -70,6 +70,11 @@ const config: Config = {
       },
       items: [
         {
+          to: 'episode-list',
+          label: 'Odcinki',
+          position: 'left',
+        },
+        {
           to: 'read',
           label: 'Czytelnia',
           position: 'left',

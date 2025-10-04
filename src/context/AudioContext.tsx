@@ -107,7 +107,7 @@ export function AudioProvider({ children }: AudioProviderProps) {
       <AudioDispatchContext.Provider value={dispatch}>
         <audio
           ref={audioRef}
-          src={audio.src}
+          src={audio.src || undefined}
           onLoadedData={handleLoadedData}
           onTimeUpdate={handleTimeUpdate}
           autoPlay
