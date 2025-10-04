@@ -79,6 +79,26 @@ const config: Config = {
           label: 'Czytelnia',
           position: 'left',
         },
+        {
+          to: 'multimedia',
+          label: 'Multimedia',
+          position: 'left',
+        },
+        {
+          to: 'projects',
+          label: 'Projekty',
+          position: 'left',
+        },
+        {
+          to: 'focusgrid',
+          label: 'Focus Grid',
+          position: 'left',
+        },
+        {
+          to: 'contact',
+          label: 'Kontakt',
+          position: 'left',
+        },
       ],
     },
     footer: {

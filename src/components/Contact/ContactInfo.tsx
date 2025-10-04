@@ -27,14 +27,14 @@ export default function ContactInfo() {
               startIcon={<EmailIcon />}
               href={`mailto:${contactEmail}`}
             >
-              Napisz na {contactEmail}
+              Napisz maila
             </PodcastButton>
             <CopyToClipboardButton
               textToCopy={contactEmail}
               variant="outlined"
               href=""
             >
-              skopiuj e-mail do schowka
+              skopiuj adres do schowka
             </CopyToClipboardButton>
           </Stack>
         </Grid>

@@ -5,12 +5,12 @@ import Layout from '@theme/Layout';
 import { useState } from 'react';
 import allEpisodeData from '../../all-episodes.json';
 import EpisodePreview, {
-    EpisodePreviewProps,
+  EpisodePreviewProps,
 } from '../components/EpisodePreview/EpisodePreview';
 import Heading1 from '../components/Heading1';
 import PodcastCard from '../components/PodcastCard';
 
-const pageSize = 10;
+const pageSize = 7;
 
 function getNumberOfPages(numberOfEpisodes: number): number {
   const pages = Math.floor(numberOfEpisodes / pageSize);
