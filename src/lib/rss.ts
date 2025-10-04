@@ -134,8 +134,8 @@ export async function saveAllEpisodeData() {
   console.log(`Wrote all-episodes.json 🙌`);
 }
 
-function getAllEpisodeData(): RssItem[] {
-  const fileContents = readFileSync('../../all-episodes.json', 'utf-8');
+export function getAllEpisodeData(): RssItem[] {
+  const fileContents = readFileSync('all-episodes.json', 'utf-8');
   return JSON.parse(fileContents) as RssItem[];
 }
 

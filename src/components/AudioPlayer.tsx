@@ -3,9 +3,9 @@ import PauseIcon from '@mui/icons-material/Pause';
 import Stack from '@mui/material/Stack';
 import Slider from '@mui/material/Slider';
 import TimeDisplay from './TimeDisplay';
-import PodcastIconButton from '../PodcastIconButton';
 import { useEffect, useState } from 'react';
-import { useAudio } from '../../context/AudioContext';
+import { useAudio } from '../context/AudioContext';
+import PodcastIconButton from './PodcastIconButton';
 
 const speeds = [1, 1.5, 1.75, 2];
 

@@ -3097,6 +3097,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mixmark-io/domino@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "@mixmark-io/domino@npm:2.2.0"
+  checksum: 10c0/aa468a15f9217d425220fe6a4b3f9416cbe8e566ee14efc191c6d5cc04fe39338b16a90bbac190f28d44e69465db5f2cf95f479c621ce38060ca6b2a3d346e9d
+  languageName: node
+  linkType: hard
+
 "@mui/core-downloads-tracker@npm:^7.3.2":
   version: 7.3.2
   resolution: "@mui/core-downloads-tracker@npm:7.3.2"
@@ -12201,6 +12208,7 @@ __metadata:
     react: "npm:^19.0.0"
     react-dom: "npm:^19.0.0"
     react-timer-hook: "npm:^4.0.5"
+    turndown: "npm:^7.2.1"
     typescript: "npm:~5.6.2"
     xmldom: "npm:^0.6.0"
   languageName: unknown
@@ -12346,6 +12354,15 @@ __metadata:
   version: 2.8.1
   resolution: "tslib@npm:2.8.1"
   checksum: 10c0/9c4759110a19c53f992d9aae23aac5ced636e99887b51b9e61def52611732872ff7668757d4e4c61f19691e36f4da981cd9485e869b4a7408d689f6bf1f14e62
+  languageName: node
+  linkType: hard
+
+"turndown@npm:^7.2.1":
+  version: 7.2.1
+  resolution: "turndown@npm:7.2.1"
+  dependencies:
+    "@mixmark-io/domino": "npm:^2.2.0"
+  checksum: 10c0/a2ed7b05624ad20d243fab424a256f029340782ea0c023229813b732a29af8857e313761b5a9e3d224aede1712bd47a382c3d0923712592b8756c698945eccb1
   languageName: node
   linkType: hard
 

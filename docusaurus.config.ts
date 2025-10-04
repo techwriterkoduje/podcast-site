@@ -53,6 +53,11 @@ const config: Config = {
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
           routeBasePath: '/',
         },
+        blog: {
+          blogTitle: 'Podcast Tech Writer Koduje',
+          blogDescription:
+            'Podcast o technicznej stronie tworzenia dokumentacji w IT',
+        },
         theme: {
           customCss: './src/css/custom.css',
         },

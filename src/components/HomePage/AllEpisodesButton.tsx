@@ -8,9 +8,10 @@ export default function AllEpisodesButton() {
       alignItems="center"
       justifyContent="center"
       sx={{ textAlign: 'center' }}
+      size={12}
     >
       <PodcastButton
-        href="/episode-list/1"
+        href="/episode-list"
         variant="contained"
         startIcon={<FormatListBulletedIcon />}
       >

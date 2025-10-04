@@ -42,6 +42,7 @@ export default function LatestEpisodes({ episodeList }: LatestEpisodesProps) {
                   [theme.breakpoints.down('md')]: {
                     padding: '0',
                   },
+                  width: '100%',
                 }}
               >
                 <HomeEpisodePreview
@@ -54,7 +55,7 @@ export default function LatestEpisodes({ episodeList }: LatestEpisodesProps) {
               </Grid>
             )
           )}
-          <Grid>
+          <Grid size={12}>
             <AllEpisodesButton />
           </Grid>
         </Grid>
