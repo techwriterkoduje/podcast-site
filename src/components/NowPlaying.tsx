@@ -1,19 +1,26 @@
-import AudioPlayer from './AudioPlayer/AudioPlayer';
-import { useAudio } from '../context/AudioContext';
-import PodcastCard from './PodcastCard';
-import CardHeader from '@mui/material/CardHeader';
+import AudiotrackIcon from '@mui/icons-material/Audiotrack';
 import CloseIcon from '@mui/icons-material/Close';
 import MinimizeIcon from '@mui/icons-material/Minimize';
-import AudiotrackIcon from '@mui/icons-material/Audiotrack';
-import PodcastIconButton from './PodcastIconButton';
+import CardHeader from '@mui/material/CardHeader';
 import { useTheme } from '@mui/material/styles';
 import { useState } from 'react';
+import { useAudio } from '../context/AudioContext';
+import AudioPlayer from './AudioPlayer/AudioPlayer';
+import PodcastCard from './PodcastCard';
+import PodcastIconButton from './PodcastIconButton';
 
 export default function NowPlaying() {
   const [isMinimized, setIsMinimized] = useState(false);
   const { audio, closeAudio } = useAudio();
-  const { src, title } = audio;
+  const { src, title: rawTitle } = audio;
   const theme = useTheme();
+
+  const decodedTitle = rawTitle ? decodeURIComponent(rawTitle) : 'Odtwarzanie';
+  const maxLength = 50;
+  const displayTitle =
+    decodedTitle.length > maxLength
+      ? `${decodedTitle.slice(0, maxLength)}...`
+      : decodedTitle;
 
   const positionProps = {
     position: 'fixed',
@@ -32,7 +39,7 @@ export default function NowPlaying() {
   if (isMinimized) {
     return (
       <PodcastIconButton
-        title={`słuchaj dalej odcinka ${audio.title}`}
+        title={`słuchaj dalej odcinka ${displayTitle || 'nieznany'}`}
         onClick={() => setIsMinimized(false)}
         sx={{ ...positionProps }}
       >
@@ -69,7 +76,7 @@ export default function NowPlaying() {
             </PodcastIconButton>
           </>
         }
-        title={title || 'Odtwarzanie'}
+        title={displayTitle || 'Odtwarzanie'}
         slotProps={{
           title: {
             variant: 'h5',
@@ -78,7 +85,7 @@ export default function NowPlaying() {
           },
         }}
       />
-      <AudioPlayer audioSrc={src} title={title || 'nieznany'} />
+      <AudioPlayer audioSrc={src} title={displayTitle || 'nieznany'} />
     </PodcastCard>
   );
 }

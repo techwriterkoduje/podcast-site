@@ -1,5 +1,6 @@
 import Typography from '@mui/material/Typography';
 import { useTheme } from '@mui/material/styles';
+import { decodeFromBase64IfNeeded } from '@site/src/lib/base64';
 import Prism from 'prismjs';
 import { useEffect } from 'react';
 
@@ -22,7 +23,9 @@ export default function HtmlDisplay({ htmlString }: HtmlDisplayProps) {
   return (
     <div style={{ width: 'fit-content' }}>
       <Typography
-        dangerouslySetInnerHTML={{ __html: htmlString }}
+        dangerouslySetInnerHTML={{
+          __html: decodeFromBase64IfNeeded(htmlString),
+        }}
         sx={{
           maxWidth: contentWidth,
           '& a': { color: theme.palette.primary.main, ...noLineBreakStyle },

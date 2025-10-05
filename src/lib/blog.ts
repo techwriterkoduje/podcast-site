@@ -8,7 +8,7 @@ import {
   writeFileSync,
 } from 'fs';
 import { getAllEpisodeData } from '../lib/rss';
-import TurndownService from 'turndown';
+import { utf8ToBase64 } from './base64';
 
 function createDirectoryIfNeeded(filePath: string) {
   const pathParts = filePath.split('/');
@@ -46,53 +46,44 @@ function deleteTheBlogFolderIfItExists() {
   }
 }
 
-function convertHtmlToMarkdown(html: string): string {
-  const turndownService = new TurndownService({
-    linkReferenceStyle: 'collapsed',
-  });
-
-  return turndownService
-    .turndown(html)
-    .replace(/<iframe>/g, '`<iframe>`')
-    .replace(/\(\/\/\)/g, '');
-}
-
 export function createEpisodePages() {
   deleteTheBlogFolderIfItExists();
   const allEpisodeData = getAllEpisodeData();
 
   console.log(`Creating ${allEpisodeData.length} episode pages...`);
-  allEpisodeData.forEach((episode) => {
-    const episodeNumber = episode.episodeNumber.toString();
-    const episodeDate = new Date(episode.pubDate);
-    const episodeDateData = {
-      year: episodeDate.getFullYear(),
-      month: (episodeDate.getUTCMonth() + 1).toString(),
-      day: episodeDate.getDate().toString(),
-    };
-    const filePath = `blog/${episodeDateData.year}/${episodeDateData.month}/${episodeDateData.day}/${episodeNumber}.mdx`;
-    createDirectoryIfNeeded(filePath);
+  allEpisodeData.forEach(
+    ({ episodeNumber: number, pubDate, title, description, audioUrl }) => {
+      const episodeNumber = number.toString();
+      const episodeDate = new Date(pubDate);
+      const episodeDateData = {
+        year: episodeDate.getFullYear(),
+        month: (episodeDate.getUTCMonth() + 1).toString(),
+        day: episodeDate.getDate().toString(),
+      };
+      const filePath = `blog/${episodeDateData.year}/${episodeDateData.month}/${episodeDateData.day}/${episodeNumber}.mdx`;
+      createDirectoryIfNeeded(filePath);
 
-    const cleanTitle = encodeURI(episode.title);
+      const safeTitle = utf8ToBase64(title);
+      const safeDescription = utf8ToBase64(description);
 
-    const fileContents = `---
-slug: ${episodeDateData.year}/${episodeDateData.month}/${
-      episodeDateData.day
-    }/${episodeNumber}
+      const fileContents = `---
+slug: ${episodeDateData.year}/${episodeDateData.month}/${episodeDateData.day}/${episodeNumber}
 ---
 
-# ${episode.title}
+# ${title}
 
 {/* truncate */}
 
 import AudioPlayer from '@site/src/components/AudioPlayer';
+import HtmlDisplay from '@site/src/components/HtmlDisplay';
 
-<AudioPlayer audioSrc="${episode.audioUrl}" title="${cleanTitle}" />
+<AudioPlayer audioSrc="${audioUrl}" title="${safeTitle}" />
 
-${convertHtmlToMarkdown(episode.description)}
+<HtmlDisplay htmlString="${safeDescription}" />
 `;
-    writeFileSync(filePath, fileContents);
-  });
+      writeFileSync(filePath, fileContents);
+    }
+  );
 
   console.log(`📚 Wrote ${allEpisodeData.length} episode pages`);
 }
