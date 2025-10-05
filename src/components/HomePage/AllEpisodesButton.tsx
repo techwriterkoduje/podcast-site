@@ -1,0 +1,22 @@
+import Grid from '@mui/material/Grid';
+import PodcastButton from '../PodcastButton';
+import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
+
+export default function AllEpisodesButton() {
+  return (
+    <Grid
+      alignItems="center"
+      justifyContent="center"
+      sx={{ textAlign: 'center' }}
+      size={12}
+    >
+      <PodcastButton
+        href="/episode-list"
+        variant="contained"
+        startIcon={<FormatListBulletedIcon />}
+      >
+        Wszystkie odcinki
+      </PodcastButton>
+    </Grid>
+  );
+}
