@@ -7,7 +7,6 @@ export function utf8ToBase64(str: string) {
 }
 
 function base64ToUtf8(b64: string) {
-  console.log('Decoding base64 string:', b64);
   const binaryString = atob(b64);
   // Create a Uint8Array from the binary string.
   const bytes = new Uint8Array(binaryString.length);
