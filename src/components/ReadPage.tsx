@@ -18,7 +18,7 @@ const features: FeatureProps[] = [
     ),
     actionLinks: [
       {
-        to: 'broken-promise',
+        to: '/broken-promise',
         label: 'Czytaj o złamanej obietnicy',
       },
     ],
@@ -37,7 +37,7 @@ const features: FeatureProps[] = [
     ),
     actionLinks: [
       {
-        to: 'abandon-docs-as-code',
+        to: '/abandon-docs-as-code',
         label: 'Czytaj artykuł',
       },
     ],
@@ -55,7 +55,7 @@ const features: FeatureProps[] = [
     ),
     actionLinks: [
       {
-        to: 'git-team',
+        to: '/git-team',
         label: 'Czytaj artykuł',
       },
     ],
