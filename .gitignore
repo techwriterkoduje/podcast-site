@@ -30,3 +30,5 @@ yarn-error.log*
 .env
 all-episodes.json
 blog
+
+static/search.json

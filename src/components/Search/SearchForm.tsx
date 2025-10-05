@@ -1,12 +1,12 @@
-import { useState, useEffect } from 'react';
-import Fuse from 'fuse.js';
-import InputBase from '@mui/material/InputBase';
-import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
-import { SearchResultProps } from './SearchResult';
+import IconButton from '@mui/material/IconButton';
+import InputBase from '@mui/material/InputBase';
+import Fuse, { FuseResult, IFuseOptions } from 'fuse.js';
+import { useEffect, useState } from 'react';
 import SearchDialog from './SearchDialog';
+import { SearchResultProps } from './SearchResult';
 
-const fuseOptions: Fuse.IFuseOptions<SearchResultProps> = {
+const fuseOptions: IFuseOptions<SearchResultProps> = {
   threshold: 0.3,
   ignoreLocation: true,
   keys: [
@@ -24,7 +24,7 @@ const fuseOptions: Fuse.IFuseOptions<SearchResultProps> = {
 export default function SearchForm() {
   const [fuse, setFuse] = useState<undefined | Fuse<SearchResultProps>>();
   const [results, setResults] = useState<
-    undefined | Fuse.FuseResult<SearchResultProps>[]
+    undefined | FuseResult<SearchResultProps>[]
   >();
   const [dialogOpen, setDialogOpen] = useState(false);
   const [query, setQuery] = useState('');

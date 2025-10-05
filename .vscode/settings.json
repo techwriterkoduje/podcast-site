@@ -1,4 +1,11 @@
 {
   "prettier.configPath": ".prettierrc.js",
-  "cSpell.words": ["Audiotrack", "focusgrid"]
+  "cSpell.words": [
+    "Audiotrack",
+    "CCMS",
+    "focusgrid",
+    "Guidewire",
+    "Markdowna",
+    "techwriterkoduje"
+  ]
 }
