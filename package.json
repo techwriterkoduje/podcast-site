@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "yarn full-build && docusaurus start",
-    "build": "yarn full-build",
+    "start": "yarn full-build -y && docusaurus start",
+    "build": "yarn full-build -y",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
@@ -18,8 +18,8 @@
     "full-build": "yarn get-episodes && docusaurus build && yarn create-search-index && docusaurus build"
   },
   "dependencies": {
-    "@docusaurus/core": "3.9.1",
-    "@docusaurus/preset-classic": "3.9.1",
+    "@docusaurus/core": "^3.9.2",
+    "@docusaurus/preset-classic": "^3.9.2",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@fontsource/quicksand": "^5.2.10",
@@ -36,9 +36,9 @@
     "xmldom": "^0.6.0"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.9.1",
-    "@docusaurus/tsconfig": "3.9.1",
-    "@docusaurus/types": "3.9.1",
+    "@docusaurus/module-type-aliases": "^3.9.2",
+    "@docusaurus/tsconfig": "^3.9.2",
+    "@docusaurus/types": "^3.9.2",
     "@types/jsdom": "^27.0.0",
     "@types/node": "^24.6.2",
     "@types/xmldom": "^0",
