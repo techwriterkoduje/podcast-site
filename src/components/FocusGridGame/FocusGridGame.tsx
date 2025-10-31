@@ -190,10 +190,7 @@ export default function FocusGridGame() {
             <Grid
               key={props.id}
               size={{
-                xl: 1,
-                lg: 1,
-                sm: 1,
-                md: 1,
+                xs: 1,
               }}
             >
               <TileButton {...props} markAsDone={markAsDone} />
