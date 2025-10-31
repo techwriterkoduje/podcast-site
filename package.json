@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "yarn full-build -y && docusaurus start",
-    "build": "yarn full-build -y",
+    "start": "yarn full-build && docusaurus start",
+    "build": "yarn full-build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
