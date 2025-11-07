@@ -19,16 +19,6 @@ const shoutOutLinks: ShoutOutLink[] = [
     href: 'https://contentbytes.pl/',
   },
   {
-    img: 'cake-conf-logo.png',
-    label: 'CAKE conf',
-    href: 'https://cakeconf.contentbytes.pl/',
-  },
-  {
-    img: 'meetcontent-logo.png',
-    label: 'MeetContent',
-    href: 'http://meetcontent.org/',
-  },
-  {
     img: 'switowski-logo.svg',
     label: 'Sebastian Witowski',
     href: 'https://switowski.com/',
