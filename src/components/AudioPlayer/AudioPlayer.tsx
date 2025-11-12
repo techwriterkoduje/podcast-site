@@ -17,11 +17,6 @@ type AudioPlayerProps = {
 export default function AudioPlayer({ audioSrc, title }: AudioPlayerProps) {
   const { audio, startAudio, togglePlay, changeSpeed, skipTo } = useAudio();
   const { src, isPlaying, progress, speed, duration } = audio;
-  console.log('AudioPlayer render', {
-    title,
-    progress,
-    duration,
-  });
   const [isCurrent, setIsCurrent] = useState(false);
 
   useEffect(() => {
