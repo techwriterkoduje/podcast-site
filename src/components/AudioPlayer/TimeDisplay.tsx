@@ -12,10 +12,9 @@ function twoDigits(value: number): string {
 }
 
 function formatDuration(seconds: number): string {
-  const asDate = new Date(seconds * 1000);
-  const hh = asDate.getHours() - 1;
-  const mm = asDate.getMinutes();
-  const ss = asDate.getSeconds();
+  const hh = Math.floor(seconds / 3600);
+  const mm = Math.floor((seconds % 3600) / 60);
+  const ss = Math.floor(seconds % 60);
   return `${hh > 0 ? `${twoDigits(hh)}:` : ``}${twoDigits(mm)}:${twoDigits(
     ss
   )}`;

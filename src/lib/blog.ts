@@ -74,7 +74,7 @@ slug: ${episodeDateData.year}/${episodeDateData.month}/${episodeDateData.day}/${
 
 {/* truncate */}
 
-import AudioPlayer from '@site/src/components/AudioPlayer';
+import AudioPlayer from '@site/src/components/AudioPlayer/AudioPlayer';
 import HtmlDisplay from '@site/src/components/HtmlDisplay';
 
 <AudioPlayer audioSrc="${audioUrl}" title="${safeTitle}" />

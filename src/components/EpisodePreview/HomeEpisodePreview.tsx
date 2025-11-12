@@ -6,6 +6,7 @@ import DescriptionIcon from '@mui/icons-material/Description';
 import PodcastIconButton from '../PodcastIconButton';
 import DateDisplay from '../DateDisplay/DateDisplay';
 import DurationDisplay from '../DurationDisplay';
+import Link from '@docusaurus/Link';
 
 export type HomeEpisodePreviewProps = {
   title: RssItem['title'];
@@ -30,15 +31,17 @@ export default function HomeEpisodePreview({
       spacing={2}
       sx={{ padding: '1rem' }}
     >
-      <Typography
-        variant="h3"
-        component="div"
-        color="primary"
-        fontSize="24px"
-        textAlign="left"
-      >
-        {title}
-      </Typography>
+      <Link href={episodeLink} style={{ textDecoration: 'none' }}>
+        <Typography
+          variant="h3"
+          component="div"
+          color="primary"
+          fontSize="24px"
+          textAlign="left"
+        >
+          {title}
+        </Typography>
+      </Link>
       <Typography
         variant="subtitle1"
         sx={{ display: 'flex', gap: '1rem' }}

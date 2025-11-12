@@ -1,11 +1,11 @@
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import PauseIcon from '@mui/icons-material/Pause';
-import Stack from '@mui/material/Stack';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import Slider from '@mui/material/Slider';
-import TimeDisplay from './TimeDisplay';
-import PodcastIconButton from '../PodcastIconButton';
+import Stack from '@mui/material/Stack';
 import { useEffect, useState } from 'react';
 import { useAudio } from '../../context/AudioContext';
+import PodcastIconButton from '../PodcastIconButton';
+import TimeDisplay from './TimeDisplay';
 
 const speeds = [1, 1.5, 1.75, 2];
 
@@ -17,6 +17,11 @@ type AudioPlayerProps = {
 export default function AudioPlayer({ audioSrc, title }: AudioPlayerProps) {
   const { audio, startAudio, togglePlay, changeSpeed, skipTo } = useAudio();
   const { src, isPlaying, progress, speed, duration } = audio;
+  console.log('AudioPlayer render', {
+    title,
+    progress,
+    duration,
+  });
   const [isCurrent, setIsCurrent] = useState(false);
 
   useEffect(() => {
