@@ -56,18 +56,17 @@ const projects: FeatureProps[] = [
     ],
   },
   {
-    title: 'Źródło tej strony (Next.js)',
+    title: 'Źródło tej strony (Docusaurus)',
     imageUrl: 'website.png',
     description: (
       <>
         <p>
-          Podoba Ci się nasza strona? Chcesz stworzyć podobną? Strona opiera się
-          o Next.js. Odcinki są pobierane z anchor.fm przez RSS feed. Strona
-          jest statycznie generowana kiedy wychodzi nowy odcinek lub robimy
-          jakieś inne zmiany.
+          Podoba Ci się nasza strona? Chcesz stworzyć podobną? Strona opiera zbudowana jest na Docusaurusie. 
+          Odcinki są pobierane z platformy Spotify for Creators przez RSS feed. 
+          Strona jest statycznie generowana kiedy wychodzi nowy odcinek lub robimy jakieś inne zmiany.
         </p>
         <p>
-          Strona jest deployowana za pomocą GitHub Actions i hostowana na GitHub
+          Strona jest publikowana za pomocą GitHub Actions i hostowana na GitHub
           Pages.
         </p>
       </>
