@@ -1,3 +1,9 @@
+---
+description:
+  What does dating have to do with coding? Surprisingly a lot, especially if you commit too fast.
+author: Michał Skowron
+---
+
 # Coding with AI is like speed dating
 
 Speed dating is efficient. The main idea is simple: you meet potential partners, talk for a few minutes to get a first impression, and then move on. After the dates, you mark a scorecard. If there is a mutual interest, the organizers match you up. It allows you to meet a lot of people in a very short period of time.
