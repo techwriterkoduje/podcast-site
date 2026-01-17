@@ -5,6 +5,23 @@ import Heading1 from './Heading1';
 
 const features: FeatureProps[] = [
   {
+    title: 'Coding with AI is like speed dating',
+    author: 'Michał Skowron',
+    imageUrl: 'coding-with-ai.png',
+    description: (
+      <>
+        (Napisałem ten krótki artykuł po angielsku) What does dating have 
+        to do with coding? Surprisingly a lot, especially if you commit too fast.
+      </>
+    ),
+    actionLinks: [
+      {
+        to: '/coding-with-ai',
+        label: 'Czytaj o kodowaniu z AI',
+      },
+    ],
+  },
+  {
     title: 'A tech writing CCMS can also be a broken promise',
     author: 'Paweł Kowaluk, Michał Skowron',
     imageUrl: 'broken-promise.png',
