@@ -1,23 +1,58 @@
 ---
 description:
-  What does dating have to do with coding? Surprisingly a lot, especially if you commit too fast.
+  What does dating have to do with coding? Surprisingly a lot, especially if you
+  commit too fast.
 author: Michał Skowron
+image: /img/coding-with-ai.png
 ---
 
 # Coding with AI is like speed dating
 
-Speed dating is efficient. The main idea is simple: you meet potential partners, talk for a few minutes to get a first impression, and then move on. After the dates, you mark a scorecard. If there is a mutual interest, the organizers match you up. It allows you to meet a lot of people in a very short period of time.
+Speed dating is efficient. The main idea is simple: you meet potential partners,
+talk for a few minutes to get a first impression, and then move on. After the
+dates, you mark a scorecard. If there is a mutual interest, the organizers match
+you up. It allows you to meet a lot of people in a very short period of time.
 
-I've been coding with AI for a while now and at some point it struck me that this process is very much like speed dating. Full disclosure - I never participated in a speed dating event so my knowledge is purely theoretical, but I'm convinced that you could apply the same rules to generating code as you would to meeting a romantic partner.
+I've been coding with AI for a while now and at some point it struck me that
+this process is very much like speed dating. Full disclosure - I never
+participated in a speed dating event so my knowledge is purely theoretical, but
+I'm convinced that you could apply the same rules to generating code as you
+would to meeting a romantic partner.
 
-Think of AI as your speed dating venue. Each chat session is like a new person. You start by entering a prompt — that’s your opening question. You chat until the time is up (or the context window is full ;) ). You see a solution, and maybe you start a new chat to try a different approach. It’s like switching to the next table. After several chats, each offering a different solution, you pick the one you want to explore. In the world of AI, "getting a match" is definitely easier than in real speed dating.
-You discard the rest and look further into the one you picked. You know you should spend time "getting to know" it better — exploring the good and bad sides, the potential risks, and all that jazz. However, at this stage, it is very tempting to just deploy and worry later.
+Think of AI as your speed dating venue. Each chat session is like a new person.
+You start by entering a prompt — that’s your opening question. You chat until
+the time is up (or the context window is full ;) ). You see a solution, and
+maybe you start a new chat to try a different approach. It’s like switching to
+the next table. After several chats, each offering a different solution, you
+pick the one you want to explore. In the world of AI, "getting a match" is
+definitely easier than in real speed dating. You discard the rest and look
+further into the one you picked. You know you should spend time "getting to
+know" it better — exploring the good and bad sides, the potential risks, and all
+that jazz. However, at this stage, it is very tempting to just deploy and worry
+later.
 
-But would you ask a person to marry you or move in with you after a five-minute speed date? I guess not. Going to production is no different. It’s a long-term commitment you need to keep. So why do you so eagerly accept the first thing your AI Agent gives you?
+But would you ask a person to marry you or move in with you after a five-minute
+speed date? I guess not. Going to production is no different. It’s a long-term
+commitment you need to keep. So why do you so eagerly accept the first thing
+your AI Agent gives you?
 
-On top of that, the journey of getting to know someone is a joy in itself. Taking a shortcut feels good, but only in the short run. I’ve noticed that I’m not as excited about my work if I don't have a chance to really explore the code the AI created. Making my own changes, deciding how things work, and tweaking the logic makes me feel engaged. If I just review a solution and accept it because it looks "ok," the joy isn't there. The relationship between me and the code is shallow. Just like after talking to a person for a few minutes, I don't really connect with the code. When something goes wrong later, I won't know why. It will be hard to identify the root cause, and things may start falling apart. You can always part ways and look for another solution in another "speed dating" event, but if you fall into the same traps, you will end up in the same place.
+On top of that, the journey of getting to know someone is a joy in itself.
+Taking a shortcut feels good, but only in the short run. I’ve noticed that I’m
+not as excited about my work if I don't have a chance to really explore the code
+the AI created. Making my own changes, deciding how things work, and tweaking
+the logic makes me feel engaged. If I just review a solution and accept it
+because it looks "ok," the joy isn't there. The relationship between me and the
+code is shallow. Just like after talking to a person for a few minutes, I don't
+really connect with the code. When something goes wrong later, I won't know why.
+It will be hard to identify the root cause, and things may start falling apart.
+You can always part ways and look for another solution in another "speed dating"
+event, but if you fall into the same traps, you will end up in the same place.
 
-Of course, code isn't a human being, so don't take this analogy too seriously. On many occasions, creating a script using AI and not reviewing it end-to-end is perfectly fine. My main point is simple: if you are working on a production-ready solution, slow down and invest time at the early stage. It will save you time and money later.
-Remember, a divorce is never pleasant and cheap.
+Of course, code isn't a human being, so don't take this analogy too seriously.
+On many occasions, creating a script using AI and not reviewing it end-to-end is
+perfectly fine. My main point is simple: if you are working on a
+production-ready solution, slow down and invest time at the early stage. It will
+save you time and money later. Remember, a divorce is never pleasant and cheap.
 
-The image for this article was generated by Google Gemini. But that's ok, we've known each other for some time and we get along very well.
+The image for this article was generated by Google Gemini. But that's ok, we've
+known each other for some time and we get along very well.
