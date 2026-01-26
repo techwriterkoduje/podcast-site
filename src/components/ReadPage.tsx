@@ -10,8 +10,8 @@ const features: FeatureProps[] = [
     imageUrl: 'coding-with-ai.png',
     description: (
       <>
-        (Napisałem ten krótki artykuł po angielsku) What does dating have 
-        to do with coding? Surprisingly a lot, especially if you commit too fast.
+        (Napisałem ten krótki artykuł po angielsku) What does dating have to do
+        with coding? Surprisingly a lot, especially if you commit too fast.
       </>
     ),
     actionLinks: [

@@ -61,9 +61,10 @@ const projects: FeatureProps[] = [
     description: (
       <>
         <p>
-          Podoba Ci się nasza strona? Chcesz stworzyć podobną? Strona opiera zbudowana jest na Docusaurusie. 
-          Odcinki są pobierane z platformy Spotify for Creators przez RSS feed. 
-          Strona jest statycznie generowana kiedy wychodzi nowy odcinek lub robimy jakieś inne zmiany.
+          Podoba Ci się nasza strona? Chcesz stworzyć podobną? Strona opiera
+          zbudowana jest na Docusaurusie. Odcinki są pobierane z platformy
+          Spotify for Creators przez RSS feed. Strona jest statycznie generowana
+          kiedy wychodzi nowy odcinek lub robimy jakieś inne zmiany.
         </p>
         <p>
           Strona jest publikowana za pomocą GitHub Actions i hostowana na GitHub

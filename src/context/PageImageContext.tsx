@@ -13,7 +13,10 @@ interface PageImageProviderProps {
   children: ReactNode;
 }
 
-export const PageImageProvider: React.FC<PageImageProviderProps> = ({ image, children }) => {
+export const PageImageProvider: React.FC<PageImageProviderProps> = ({
+  image,
+  children,
+}) => {
   return (
     <PageImageContext.Provider value={image}>
       {children}

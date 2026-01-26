@@ -15,7 +15,8 @@
     "typecheck": "tsc",
     "get-episodes": "npx tsx src/scripts/save-all-episode-data.ts -y",
     "create-search-index": "npx tsx src/scripts/create-search-index.ts -y",
-    "full-build": "yarn get-episodes && docusaurus build && yarn create-search-index && docusaurus build"
+    "full-build": "yarn get-episodes && docusaurus build && yarn create-search-index && docusaurus build",
+    "format-with-prettier": "prettier --write ."
   },
   "dependencies": {
     "@docusaurus/core": "^3.9.2",
@@ -42,6 +43,7 @@
     "@types/jsdom": "^27.0.0",
     "@types/node": "^24.10.1",
     "@types/xmldom": "^0.1.34",
+    "prettier": "^3.8.1",
     "typescript": "~5.9.3"
   },
   "browserslist": {
