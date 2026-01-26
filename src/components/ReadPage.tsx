@@ -171,26 +171,6 @@ const features: FeatureProps[] = [
       },
     ],
   },
-  {
-    title: 'Dokumentacja do oprogramowania. Poradnik dla managerów.',
-    author: 'Paweł Kowaluk',
-    imageUrl: 'managers.png',
-    description: (
-      <>
-        Ta książka została napisana z myślą o osobach odpowiedzialnych za
-        dokumentację w firmie. Nieważne czy jesteś na stanowisku kierowniczym i
-        prowadzisz zespół, czy jesteś product ownerem i w Twoim produkcie nie ma
-        jeszcze dokumentacji czy jesteś jedynym Technical Writerem w firmie.
-        Czytaj online za darmo.
-      </>
-    ),
-    actionLinks: [
-      {
-        to: 'https://pensjonatus.github.io/dokumentacja-do-oprogramowania/przedslowie',
-        label: 'Czytaj książkę',
-      },
-    ],
-  },
 ];
 
 export default function ReadPage() {
