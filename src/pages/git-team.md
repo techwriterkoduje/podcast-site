@@ -3,6 +3,7 @@ description:
   This article aims to show how you can use concepts from Git, a distributed
   version control system, to organize your team.
 author: Michał Skowron
+image: /img/git-logo.png
 ---
 
 # Organize your team like Git

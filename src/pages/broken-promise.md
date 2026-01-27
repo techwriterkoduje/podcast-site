@@ -4,6 +4,7 @@ description:
   systems. If naything is wrong with docs as code, their CCMS is supposed to be
   the answer. We beg to differ.
 author: Paweł Kowaluk, Michał Skowron
+image: /img/broken-promise.png
 ---
 
 # A tech Writing CCMS can also be a broken promise

@@ -2,6 +2,7 @@
 description:
   This article aims to show how you can use DITA in the docs as code model
 author: Michał Skowron, Paweł Kowaluk
+image: /img/dita-as-code.jpg
 ---
 
 # DITA as code - a modern approach to the classic standard

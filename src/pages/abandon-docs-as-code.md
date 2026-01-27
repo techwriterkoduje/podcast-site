@@ -4,6 +4,7 @@ description:
   their open-source tools for an enterprise doc writing experience? Find out the
   answer! (Spoiler alert, then answer is no)
 author: Paweł Kowaluk
+image: /img/abandon.png
 ---
 
 # Are people abandoning docs as code?
