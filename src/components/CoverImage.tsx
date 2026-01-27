@@ -1,7 +1,6 @@
-import React from 'react';
-import { usePageImage } from '../context/PageImageContext';
+import { usePageImage } from '@site/src/context/PageImageContext';
 
-const CoverImage: React.FC = () => {
+export default function CoverImage() {
   const image = usePageImage();
 
   if (!image) {
@@ -22,6 +21,4 @@ const CoverImage: React.FC = () => {
       />
     </div>
   );
-};
-
-export default CoverImage;
+}

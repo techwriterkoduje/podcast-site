@@ -1,9 +1,7 @@
-import React from 'react';
 import MDXPageOriginal from '@theme-original/MDXPage';
-import type { WrapperProps } from '@docusaurus/types'; // Pomocnicze typy (opcjonalne)
 import { PageImageProvider } from '@site/src/context/PageImageContext';
 
-interface MDXPageProps {
+type MDXPageWrapperProps = {
   content: {
     frontMatter: {
       image?: string;
@@ -12,11 +10,9 @@ interface MDXPageProps {
     [key: string]: unknown;
   };
   [key: string]: unknown;
-}
+};
 
-type MDXPageType = React.FC<MDXPageProps>;
-
-const MDXPageWrapper: MDXPageType = (props) => {
+export default function MDXPageWrapper(props: MDXPageWrapperProps) {
   const { content } = props;
   const { frontMatter } = content;
 
@@ -25,6 +21,4 @@ const MDXPageWrapper: MDXPageType = (props) => {
       <MDXPageOriginal {...props} />
     </PageImageProvider>
   );
-};
-
-export default MDXPageWrapper;
+}
