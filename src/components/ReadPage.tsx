@@ -17,7 +17,7 @@ const features: FeatureProps[] = [
     ),
     actionLinks: [
       {
-        to: '/tech-wrtier-x-factor',
+        to: '/tech-writer-x-factor',
         label: 'Czytaj o poszukiwaniu unikalnego talentu tech writera',
       },
     ],
