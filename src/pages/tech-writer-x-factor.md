@@ -61,13 +61,15 @@ The next thing that comes to my mind is tools. This area is especially dear to
 my heart, that's why a few years ago I moved to the doc tools developer role.
 Since I started in tech comm in 2012, I've learned many different tools - help
 authoring tools, component content management systems, static site generators,
-DITA and Markdown, programming languages, just to name a few. Despite my love
-for these things, I have to admit very reluctantly that knowledge of tools is an
+DITA and Markdown, programming languages, just to name a few.
+
+Despite my love for these things, I have to admit very reluctantly that knowledge of tools is an
 even weaker argument for staying relevant as a tech writer than all the things I
 mentioned so far. LLMs are already very good at using tools. Plus, they know all
-of them. Ok, maybe not all of them, but definitely a lot more than I do. And
+of them. Ok, maybe not all of them, but definitely many more than I do. And
 they can learn new tools much quicker than human beings. By giving them access
 to MCP servers, you can expand their capabilities in a matter of minutes.
+
 Another lost battle.
 
 ## The reviewing part
