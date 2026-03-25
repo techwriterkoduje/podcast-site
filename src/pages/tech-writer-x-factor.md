@@ -24,7 +24,7 @@ I'm a technical writer turned software developer so I tried to address this
 question from an ultra technical and practical perspective. I'd even say I
 adopted a very de-humanized approach to the tech writer profession.
 
-When I got my first job as a Tech Writer, I was like a new LLM agent. I didn't
+When I got my first job as a tech writer, I was like a new LLM agent. I didn't
 know anything about this profession. I wasn't even aware that there was so much
 to learn. I only had my previous experience from other jobs (technical support
 agent) and language skills acquired during my studies (English philology).
