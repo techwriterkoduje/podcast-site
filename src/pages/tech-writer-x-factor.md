@@ -144,3 +144,7 @@ non-technical background confirms my theory, I hope.
 It's not the first technical revolution that tech writers (and other
 professions) are going through. Make sure that you're a communicator, not a
 writer, because communicators are here to stay.
+
+Photo
+by [Matthew Inamdar](https://unsplash.com/@matthew_inamdar?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+on [Unsplash](https://unsplash.com/photos/a-tall-building-with-a-clock-at-the-top-of-it-r54_YVF9l4E?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
