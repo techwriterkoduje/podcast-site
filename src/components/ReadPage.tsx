@@ -5,6 +5,24 @@ import Heading1 from './Heading1';
 
 const features: FeatureProps[] = [
   {
+    title: "A quest for finding the tech writer's X factor",
+    author: 'Michał Skowron',
+    imageUrl: 'tech-writer-x-factor.png',
+    description: (
+      <>
+        (Napisałem ten artykuł po angielsku) In this article, I try to find 
+        the one secret ingredient that makes tech writers unique and not easily
+        replaceable by AI.
+      </>
+    ),
+    actionLinks: [
+      {
+        to: '/tech-writer-x-factor',
+        label: 'Czytaj o poszukiwaniu unikalnego talentu tech writera',
+      },
+    ],
+  },
+  {
     title: 'Coding with AI is like speed dating',
     author: 'Michał Skowron',
     imageUrl: 'coding-with-ai.png',
