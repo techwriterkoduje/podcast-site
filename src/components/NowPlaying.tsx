@@ -16,7 +16,7 @@ export default function NowPlaying() {
   const theme = useTheme();
 
   const decodedTitle = rawTitle ? decodeURIComponent(rawTitle) : 'Odtwarzanie';
-  const maxLength = 50;
+  const maxLength = 45;
   const displayTitle =
     decodedTitle.length > maxLength
       ? `${decodedTitle.slice(0, maxLength)}...`

@@ -1,8 +1,3 @@
-import '@fontsource/quicksand/300.css';
-import '@fontsource/quicksand/400.css';
-import '@fontsource/quicksand/500.css';
-import '@fontsource/quicksand/600.css';
-import '@fontsource/quicksand/700.css';
 import CssBaseline from '@mui/material/CssBaseline';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import NowPlaying from '../components/NowPlaying';
