@@ -42,6 +42,7 @@
     "@docusaurus/types": "^3.9.2",
     "@types/jsdom": "^27.0.0",
     "@types/node": "^24.10.1",
+    "@types/react": "^19.2.14",
     "@types/xmldom": "^0.1.34",
     "prettier": "^3.8.1",
     "typescript": "~5.9.3"
