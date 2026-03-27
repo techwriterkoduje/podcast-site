@@ -22,7 +22,7 @@ const hosts: Host[] = [
     linkedIn: 'https://www.linkedin.com/in/michalskowron/',
   },
   {
-    name: 'Pawel Kowaluk',
+    name: 'Paweł Kowaluk',
     img: 'pawel-kowaluk.png',
     alt: 'Zdjęcie Pawła Kowaluka',
     linkedIn: 'https://www.linkedin.com/in/pawel-kowaluk/',
