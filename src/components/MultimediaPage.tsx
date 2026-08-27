@@ -107,7 +107,7 @@ const multimediaItems: FeatureProps[] = [
 export default function MultimediaPage() {
   return (
     <PageContainer>
-      <Heading1>Multimedia</Heading1>
+      <Heading1>Prezentacje i gościnny udział w podcastach</Heading1>
       {multimediaItems.map((multimediaItem) => (
         <Feature key={multimediaItem.title} {...multimediaItem} />
       ))}

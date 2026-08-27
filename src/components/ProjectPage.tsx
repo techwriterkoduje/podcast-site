@@ -84,7 +84,7 @@ const projects: FeatureProps[] = [
 export default function ProjectPage() {
   return (
     <PageContainer>
-      <Heading1>Projekty</Heading1>
+      <Heading1>Przykładowe projekty i materiały z warsztatów</Heading1>
       {projects.map((project) => (
         <Feature {...project} key={project.title} />
       ))}

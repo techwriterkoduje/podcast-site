@@ -10,8 +10,8 @@ const features: FeatureProps[] = [
     imageUrl: 'tech-writer-x-factor.png',
     description: (
       <>
-        (Napisałem ten artykuł po angielsku) In this article, I try to find 
-        the one secret ingredient that makes tech writers unique and not easily
+        (Napisałem ten artykuł po angielsku) In this article, I try to find the
+        one secret ingredient that makes tech writers unique and not easily
         replaceable by AI.
       </>
     ),
@@ -194,7 +194,7 @@ const features: FeatureProps[] = [
 export default function ReadPage() {
   return (
     <PageContainer>
-      <Heading1>Czytelnia</Heading1>
+      <Heading1>Materiały do poczytania</Heading1>
       {features.map((featureProps) => (
         <Feature key={featureProps.title} {...featureProps} />
       ))}

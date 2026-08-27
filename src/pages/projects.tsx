@@ -5,7 +5,7 @@ export default function Projects() {
   return (
     <Layout
       title="Projekty"
-      description="Przykładowe projekty autorów podcastu. Projekty ilustrują koncepcje omawiane w podcaście."
+      description="Przykładowe projekty i materiały z warsztatów"
     >
       <ProjectPage />
     </Layout>

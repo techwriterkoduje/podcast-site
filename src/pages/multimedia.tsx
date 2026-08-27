@@ -5,7 +5,7 @@ export default function Multimedia() {
   return (
     <Layout
       title="Wystąpienia"
-      description="Zobacz wystąpienia, prezentacje i gościnny udział w podcastach"
+      description="Prezentacje i gościnny udział w podcastach"
     >
       <MultimediaPage />
     </Layout>

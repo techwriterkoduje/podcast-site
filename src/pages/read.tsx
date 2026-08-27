@@ -4,10 +4,7 @@ import ReadPage from '../components/ReadPage';
 
 export default function Read(): JSX.Element {
   return (
-    <Layout
-      title="Artykuły"
-      description="Wybierz coś do poczytania"
-    >
+    <Layout title="Artykuły" description="Materiały do poczytania">
       <ReadPage />
     </Layout>
   );
