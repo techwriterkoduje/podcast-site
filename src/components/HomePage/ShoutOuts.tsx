@@ -33,6 +33,11 @@ const shoutOutLinks: ShoutOutLink[] = [
     label: 'DREDAR',
     href: 'https://dredar.com/',
   },
+    {
+    img: 'hakersi-logo.png',
+    label: 'Hakersi',
+    href: 'https://hakersi.pl/',
+  },
 ];
 
 export default function ShoutOuts() {
