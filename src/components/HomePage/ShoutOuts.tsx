@@ -33,7 +33,12 @@ const shoutOutLinks: ShoutOutLink[] = [
     label: 'DREDAR',
     href: 'https://dredar.com/',
   },
-    {
+  {
+    img: 'niewidomy-tester-logo.png',
+    label: 'Niewidomy Tester',
+    href: 'https://niewidomytester.pl/',
+  },
+  {
     img: 'hakersi-logo.png',
     label: 'Hakersi',
     href: 'https://hakersi.pl/',
