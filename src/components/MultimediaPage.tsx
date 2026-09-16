@@ -77,13 +77,13 @@ const multimediaItems: FeatureProps[] = [
         </p>
       </>
     ),
-    actionLinks: [{ label: 'soapconf.com', to: 'http://soapconf.com' }],
+    actionLinks: [{ label: 'YouTube', to: 'https://youtu.be/Luya41MjDO4?si=Oq7vRS04rWTVHckn' }],
   },
   {
     embedId: 'JkU2n2mpuU0',
     title: 'Doing docs like code (soap!)',
     description: <>Nasza prezentacja z konferencji soap! w 2019 roku.</>,
-    actionLinks: [{ label: 'soapconf.com', to: 'http://soapconf.com' }],
+    actionLinks: [{ label: 'YouTube', to: 'https://youtu.be/JkU2n2mpuU0?si=7FwYVslzPdUGIsPr' }],
   },
   {
     embedId: 'PIXNG3agLhg',
